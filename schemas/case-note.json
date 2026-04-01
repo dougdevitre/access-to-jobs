@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CaseNote",
+  "description": "Schema for Module 11 case notes. Compatible with MoJobs and standard workforce case management systems.",
+  "type": "object",
+  "required": ["date", "service_type", "staff_name", "summary"],
+  "properties": {
+    "id": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "participant_id": {
+      "type": "string",
+      "description": "First name + last initial only. Never SSN or full PII in notes."
+    },
+    "staff_name": { "type": "string" },
+    "staff_title": { "type": "string" },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "career_service",
+        "training_service",
+        "support_service",
+        "referral",
+        "assessment",
+        "job_placement",
+        "follow_up",
+        "workshop",
+        "employer_engagement"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "description": "1-2 sentence summary of the appointment"
+    },
+    "services_provided": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of specific services (resume review, job referral, training referral, etc.)"
+    },
+    "referrals_made": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "agency": { "type": "string" },
+          "program": { "type": "string" },
+          "reason": { "type": "string" },
+          "contact": { "type": "string" }
+        }
+      }
+    },
+    "participant_action_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string" },
+          "due_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "staff_follow_up": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string" },
+          "due_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "barriers_identified": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Document factually, not evaluatively"
+    },
+    "progress_notes": { "type": "string" },
+    "wioa_program": {
+      "type": "string",
+      "enum": ["adult", "dislocated_worker", "youth", "none"]
+    },
+    "co_enrollments": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

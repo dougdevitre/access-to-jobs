@@ -1,0 +1,22 @@
+# Compiled skill packages
+*.skill
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Secrets and credentials
+.env
+.env.*
+credentials.json
+
+# Temporary files
+*.tmp
+*.bak

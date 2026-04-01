@@ -1,0 +1,75 @@
+[
+  {
+    "prompt": "I'm a veteran with a disability who just got out of prison. What help is available?",
+    "expected_populations": ["veteran", "disability", "justice_involved"],
+    "expected_programs": ["DVOP", "MVR", "Reentry_Connect", "Fair_Chance", "Federal_Bonding"],
+    "notes": "Triple-population overlap. Should flag priority of service (veteran), VR referral (disability), AND reentry programs. No conviction disclosure."
+  },
+  {
+    "prompt": "My daughter is 16, in foster care, and wants to get a job this summer.",
+    "expected_populations": ["youth_14_24", "foster_care"],
+    "expected_programs": ["WIOA_Youth", "Futures_Program", "TANF_subsidized"],
+    "notes": "Youth + foster care. Should route to Futures Program (ages 16-23) and TANF subsidized employment. Lighter tone."
+  },
+  {
+    "prompt": "I'm on SNAP and I don't have my GED. Can I still get training?",
+    "expected_populations": ["snap_recipient", "no_diploma"],
+    "expected_programs": ["SkillUP", "AEL", "IET", "Excel_Center"],
+    "notes": "Should flag IET model (literacy + job training simultaneously) as primary pathway. Excel Center if 21+."
+  },
+  {
+    "prompt": "I'm 58, just got laid off after 25 years at the same company. I don't even have a LinkedIn.",
+    "expected_populations": ["older_worker_55_plus", "dislocated_worker"],
+    "expected_programs": ["WIOA_Dislocated_Worker", "SCSEP", "UI"],
+    "notes": "Should route to Dislocated Worker + SCSEP. Resume modernization guidance. LinkedIn building (Module 16). Validate experience value."
+  },
+  {
+    "prompt": "Necesito ayuda para encontrar trabajo. No hablo mucho inglés.",
+    "expected_populations": ["english_learner"],
+    "expected_programs": ["AEL_ELL", "IET"],
+    "notes": "Spanish language input. Should respond in plain English (or Spanish if capable). Route to AEL ELL services. Note language access rights."
+  },
+  {
+    "prompt": "I'm sleeping in my car. I need a job today.",
+    "expected_populations": ["homeless"],
+    "expected_urgency": "high",
+    "expected_programs": ["Job_Center_wraparound", "DVOP_itinerant"],
+    "notes": "HIGH urgency. Should route to Job Center physical access (computer, phone). Realistic about same-day employment. Wraparound services."
+  },
+  {
+    "prompt": "I have SSDI and I'm scared that working will cut my benefits. Can someone explain?",
+    "expected_populations": ["disability"],
+    "expected_programs": ["MVR", "benefits_counseling"],
+    "notes": "Must flag benefits counseling as CRITICAL step before accepting employment. Route to VR. Do not give specific benefits advice."
+  },
+  {
+    "prompt": "I'm a military spouse. My husband just got PCS orders and I need to find work at our new station.",
+    "expected_populations": ["military_spouse"],
+    "expected_programs": ["WIOA_Dislocated_Worker", "Show_Me_Heroes"],
+    "notes": "Military spouses qualify for dislocated worker services and Show-Me Heroes OJT. Priority of service through veteran connection."
+  },
+  {
+    "prompt": "I'm a single mom on TANF with two kids. I can only work when they're in school.",
+    "expected_populations": ["single_parent", "tanf_recipient"],
+    "expected_programs": ["MWA", "DSS_childcare", "SkillUP"],
+    "notes": "Should flag childcare support, flexible schedule roles, and DSS childcare subsidies. TANF work activities compliance."
+  },
+  {
+    "prompt": "I've been unemployed for 3 years. I've basically given up.",
+    "expected_populations": ["long_term_unemployed"],
+    "expected_urgency": "medium",
+    "expected_module": "COACH_MODE",
+    "notes": "Should trigger Coach Mode. Normalize the difficulty. Small actionable first step. Do NOT overwhelm with options. Encouraging tone."
+  },
+  {
+    "prompt": "I work at a factory but they only give me 15 hours a week. I need more.",
+    "expected_populations": ["underemployed"],
+    "expected_module": "MODULE 1",
+    "notes": "Underemployed — should suggest both full-time roles AND training pathways. May qualify for WIOA Adult services."
+  },
+  {
+    "prompt": "I'm a case manager and my participant just disclosed they were trafficked. How do I handle this in documentation?",
+    "expected_module": "MODULE 11",
+    "notes": "STAFF mode. Sensitive situation. Case note should document factually without graphic detail. Should suggest referral to specialized services. Trauma-informed language critical."
+  }
+]

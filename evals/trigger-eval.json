@@ -1,0 +1,142 @@
+[
+  {
+    "prompt": "I just got laid off from the auto plant. What should I do?",
+    "expected_module": "MODULE 0",
+    "expected_populations": ["dislocated_worker"],
+    "should_trigger": true,
+    "notes": "Should route to eligibility screener and flag Rapid Response / TAA"
+  },
+  {
+    "prompt": "Write me a resume for a CNA position at SSM Health",
+    "expected_module": "MODULE 2",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should produce ATS-optimized resume with healthcare credential references"
+  },
+  {
+    "prompt": "I need a cover letter for a warehouse supervisor job at Amazon",
+    "expected_module": "MODULE 3",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should generate tailored cover letter with logistics/operations language"
+  },
+  {
+    "prompt": "Help me follow up on my application to Boeing. I applied two weeks ago.",
+    "expected_module": "MODULE 5",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should produce follow-up email under 100 words"
+  },
+  {
+    "prompt": "I have an interview tomorrow for an electrician apprenticeship. Help me prepare.",
+    "expected_module": "MODULE 7",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should produce 5 STAR-format questions with trades-specific coaching"
+  },
+  {
+    "prompt": "I just got out of prison last month. I need to find work but I don't know where to start.",
+    "expected_module": "MODULE 0",
+    "expected_populations": ["justice_involved"],
+    "should_trigger": true,
+    "notes": "Should flag reentry programs, Fair Chance employers, no conviction disclosure guidance"
+  },
+  {
+    "prompt": "I'm a veteran, recently separated. What programs can help me find a job?",
+    "expected_module": "MODULE 0",
+    "expected_populations": ["veteran"],
+    "should_trigger": true,
+    "notes": "Should flag priority of service, DVOP/CODL, Show-Me Heroes, military skill translation"
+  },
+  {
+    "prompt": "I'm 17 and I dropped out of school. Can I get help finding a job?",
+    "expected_module": "MODULE 0",
+    "expected_populations": ["youth", "no_diploma"],
+    "should_trigger": true,
+    "notes": "Should route to WIOA Youth, AEL/GED, and flag age-appropriate programs"
+  },
+  {
+    "prompt": "Am I eligible for WIOA training? I'm on food stamps and need a better job.",
+    "expected_module": "MODULE 0",
+    "expected_populations": ["snap_recipient"],
+    "should_trigger": true,
+    "notes": "Should screen for WIOA Adult + SkillUP (SNAP E&T) co-enrollment"
+  },
+  {
+    "prompt": "What jobs are in demand right now? I have a high school diploma and forklift certification.",
+    "expected_module": "MODULE 1",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should return NOW-tier jobs emphasizing manufacturing/logistics with forklift cert"
+  },
+  {
+    "prompt": "Apply for this job for me",
+    "expected_module": "MULTI-OUTPUT",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should trigger multi-output mode: resume + cover letter + application email"
+  },
+  {
+    "prompt": "Quick apply to this posting",
+    "expected_module": "QUICK MODE",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should trigger quick mode: 3-bullet summary + cover note + short email"
+  },
+  {
+    "prompt": "Where do I start? I haven't worked in 3 years and I feel lost.",
+    "expected_module": "COACH MODE",
+    "expected_populations": ["long_term_unemployed"],
+    "should_trigger": true,
+    "notes": "Should trigger coach mode with readiness assessment + 7-day plan"
+  },
+  {
+    "prompt": "I need training to become an LPN. What funding is available?",
+    "expected_module": "MODULE 9",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should map healthcare pathway with Fast Track, WIOA ITA, HEALS funding"
+  },
+  {
+    "prompt": "I'm a case manager. Help me write case notes for a participant I saw today.",
+    "expected_module": "MODULE 11",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should detect staff mode and generate MoJobs-compatible case note template"
+  },
+  {
+    "prompt": "How do I pitch OJT to a local manufacturer?",
+    "expected_module": "MODULE 13",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should detect staff mode and produce employer outreach script for OJT"
+  },
+  {
+    "prompt": "Am I ready to apply for jobs? I have a resume but no cover letter.",
+    "expected_module": "MODULE 14",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should produce readiness assessment with scored dimensions"
+  },
+  {
+    "prompt": "I just got hired as a warehouse associate. What should I do my first week?",
+    "expected_module": "MODULE 15",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should produce 30/60/90 day retention plan for warehouse role"
+  },
+  {
+    "prompt": "They offered me $15 an hour. Is that good for a medical assistant in St. Louis?",
+    "expected_module": "MODULE 18",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should provide wage context and negotiation framework"
+  },
+  {
+    "prompt": "I have a disability and I'm worried about losing my SSI if I work. Can someone help?",
+    "expected_module": "MODULE 0",
+    "expected_populations": ["disability"],
+    "should_trigger": true,
+    "notes": "Should route to MVR/RSB and flag benefits counseling as critical step"
+  }
+]

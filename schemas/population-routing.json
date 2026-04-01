@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PopulationRouting",
+  "description": "Schema defining how each barrier population maps to program routing, tone adjustments, and content modifications across all modules.",
+  "type": "object",
+  "properties": {
+    "populations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "detection_signals", "programs", "adjustments"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "detection_signals": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Phrases or keywords that indicate this population"
+          },
+          "programs": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Programs to flag in Module 0 routing"
+          },
+          "adjustments": {
+            "type": "object",
+            "properties": {
+              "tone": { "type": "string" },
+              "resume_guidance": { "type": "string" },
+              "cover_letter_guidance": { "type": "string" },
+              "interview_guidance": { "type": "string" },
+              "action_plan_guidance": { "type": "string" },
+              "training_guidance": { "type": "string" }
+            }
+          },
+          "priority_of_service": { "type": "boolean", "default": false },
+          "wioa_barrier": { "type": "boolean", "default": true }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON schemas
+        run: |
+          echo "--- Validating JSON files ---"
+          errors=0
+          for f in schemas/*.json evals/*.json; do
+            if python3 -c "import json; json.load(open('$f'))"; then
+              echo "✅ $f"
+            else
+              echo "❌ $f"
+              errors=$((errors + 1))
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "::error::$errors JSON file(s) failed validation"
+            exit 1
+          fi
+
+      - name: Check for broken internal links
+        run: |
+          echo "--- Checking internal Markdown links ---"
+          errors=0
+          # Find all relative links in markdown files
+          for md in $(find . -name '*.md' -not -path './.git/*'); do
+            # Extract relative links like [text](path) excluding http/https/mailto/#
+            links=$(grep -oP '\]\(\K[^)]+' "$md" | grep -v '^http' | grep -v '^mailto' | grep -v '^#' || true)
+            dir=$(dirname "$md")
+            for link in $links; do
+              # Strip anchor fragments
+              target="${link%%#*}"
+              if [ -n "$target" ] && [ ! -e "${dir}/${target}" ] && [ ! -e "${target}" ]; then
+                echo "❌ Broken link in $md: $link"
+                errors=$((errors + 1))
+              fi
+            done
+          done
+          if [ $errors -gt 0 ]; then
+            echo "::error::$errors broken internal link(s) found"
+            exit 1
+          else
+            echo "✅ All internal links valid"
+          fi
+
+      - name: Validate state deployments
+        run: |
+          echo "--- Validating state deployments ---"
+          for state_dir in states/*/; do
+            state=$(basename "$state_dir")
+            echo "Checking state: $state"
+            chmod +x scripts/validate-state.sh
+            ./scripts/validate-state.sh "$state" || true
+          done
+
+      - name: Check required files exist
+        run: |
+          echo "--- Checking required repo files ---"
+          required_files=(
+            "SKILL.md"
+            "README.md"
+            "LICENSE"
+            "CONTRIBUTING.md"
+            "DEPLOYMENT.md"
+            "CHANGELOG.md"
+            "SECURITY.md"
+          )
+          for f in "${required_files[@]}"; do
+            if [ -f "$f" ]; then
+              echo "✅ $f"
+            else
+              echo "❌ Missing: $f"
+              exit 1
+            fi
+          done

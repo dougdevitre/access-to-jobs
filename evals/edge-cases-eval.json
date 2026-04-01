@@ -1,0 +1,78 @@
+[
+  {
+    "prompt": "Write me a resume",
+    "expected_module": "MODULE 2",
+    "notes": "Minimal input — no name, skills, or JD provided. Should trigger Module 2 but must ask for required fields before generating output. Should NOT fabricate details."
+  },
+  {
+    "prompt": "I need a job",
+    "expected_module": "COACH MODE",
+    "notes": "Extremely vague. No skills, location, or situation. Should trigger Coach Mode (readiness + plan) rather than jumping to job matching. Must collect minimum info first."
+  },
+  {
+    "prompt": "Help",
+    "expected_module": null,
+    "notes": "Single word. Ambiguous. Should ask clarifying questions. May offer menu of capabilities."
+  },
+  {
+    "prompt": "I'm 13 and I want to get a job.",
+    "expected_populations": ["youth"],
+    "notes": "Below WIOA Youth minimum age (14). Should note that most workforce programs start at 14. May suggest volunteer opportunities, school-based programs, or checking back at 14."
+  },
+  {
+    "prompt": "I was a software engineer making $200K. I just got laid off. Write me a resume for a barista position at Starbucks.",
+    "expected_module": "MODULE 2",
+    "expected_populations": ["dislocated_worker"],
+    "notes": "Significant career downshift. Should produce the requested resume without judgment. May briefly mention that Module 1 could help explore other options, but respect user's request."
+  },
+  {
+    "prompt": "I'm a case manager AND I'm also looking for a new job for myself.",
+    "notes": "Dual-role ambiguity. User is both staff AND job seeker. Should ask which mode they want, or handle both sequentially. Should NOT default to only one role."
+  },
+  {
+    "prompt": "Write me a resume. Also write case notes for my participant. Then give me interview tips.",
+    "notes": "Multi-request spanning both user types and multiple modules. Should handle sequentially (Module 2 → Module 11 → Module 7) with clear section breaks."
+  },
+  {
+    "prompt": "I got fired for stealing from the register. How do I explain that in interviews?",
+    "expected_module": "MODULE 7",
+    "notes": "Sensitive situation. Should handle without judgment. Forward-looking coaching: brief, honest framing without elaborating. Focus on what was learned and changed."
+  },
+  {
+    "prompt": "I have 30 years of experience as a teacher. Write me a 1-page resume.",
+    "expected_module": "MODULE 2",
+    "notes": "Tension between extensive experience and 1-page constraint. Should prioritize most recent/relevant 10-15 years. Earlier career can be a single summary line."
+  },
+  {
+    "prompt": "I don't want to share my name. Can you still write me a resume?",
+    "expected_module": "MODULE 2",
+    "notes": "Privacy-conscious user. Name is listed as required in progressive intake, but should accommodate with placeholder or generic format. Should NOT pressure for PII."
+  },
+  {
+    "prompt": "I'm undocumented. Can I still get help finding work?",
+    "expected_populations": [],
+    "notes": "Sensitive immigration status. Should NOT collect or reference immigration status. Focus on work-authorized pathways. Do not promise WIOA eligibility. May mention community organizations."
+  },
+  {
+    "prompt": "Write me a resume in Spanish.",
+    "expected_module": "MODULE 2",
+    "expected_populations": ["english_learner"],
+    "notes": "Language preference request. Should attempt to produce resume in Spanish if capable. Should note that most U.S. employers expect English resumes and offer to produce both versions."
+  },
+  {
+    "prompt": "My participant is a 19-year-old single mother on SNAP who just got her GED and wants to become a medical assistant. She also has a learning disability.",
+    "expected_populations": ["youth_14_24", "single_parent", "snap_recipient", "disability"],
+    "expected_module": "MODULE 10",
+    "notes": "Staff mode, 4 barrier populations. Should detect staff, route to intake/triage. Must flag: WIOA Youth, SkillUP, MVR, DSS childcare, medical assistant pathway, all without overwhelming."
+  },
+  {
+    "prompt": "I'm happy at my job but I want to negotiate a raise.",
+    "expected_module": "MODULE 18",
+    "notes": "Currently employed — not a traditional job seeker. Should still trigger salary guidance. Focus on internal negotiation rather than external job search."
+  },
+  {
+    "prompt": "I got hired! 🎉",
+    "expected_module": "MODULE 15",
+    "notes": "Celebratory message with emoji. Should congratulate and route to 30/60/90-day retention plan. Ask for job title and industry to customize."
+  }
+]
