@@ -1,0 +1,204 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JobSeekerIntake",
+  "description": "Intake data collected through progressive disclosure across modules. Not all fields required upfront — modules request only what they need.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this job seeker session"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user_type": {
+      "type": "string",
+      "enum": ["job_seeker", "staff", "unknown"],
+      "default": "unknown",
+      "description": "Detected via dual-user detection logic"
+    },
+    "personal": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "county": { "type": "string" },
+        "zip": { "type": "string" },
+        "linkedin_url": { "type": "string", "format": "uri" }
+      }
+    },
+    "situation": {
+      "type": "object",
+      "properties": {
+        "employment_status": {
+          "type": "string",
+          "enum": ["employed", "underemployed", "unemployed", "recently_laid_off", "never_employed", "returning_to_work"]
+        },
+        "urgency": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "default": "medium",
+          "description": "HIGH = need work immediately; MEDIUM = 30-60 days; LOW = career transition"
+        },
+        "education_level": {
+          "type": "string",
+          "enum": ["no_diploma", "ged_hiset", "high_school", "some_college", "associate", "bachelor", "graduate"]
+        },
+        "years_experience": { "type": "integer", "minimum": 0 },
+        "last_employed_date": { "type": "string", "format": "date" },
+        "reason_for_separation": { "type": "string" }
+      }
+    },
+    "populations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "justice_involved",
+          "veteran",
+          "military_spouse",
+          "youth_14_24",
+          "disability",
+          "snap_recipient",
+          "tanf_recipient",
+          "no_diploma",
+          "english_learner",
+          "homeless",
+          "foster_care",
+          "older_worker_55_plus",
+          "displaced_homemaker",
+          "single_parent",
+          "long_term_unemployed",
+          "migrant_seasonal",
+          "low_income",
+          "ui_claimant"
+        ]
+      },
+      "description": "WIOA-defined barrier populations. Multiple may apply."
+    },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Self-reported skills. Mirror JD keywords when building resume."
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "issuer": { "type": "string" },
+          "year": { "type": "integer" },
+          "active": { "type": "boolean", "default": true }
+        }
+      }
+    },
+    "work_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "job_title": { "type": "string" },
+          "employer": { "type": "string" },
+          "city_state": { "type": "string" },
+          "start_date": { "type": "string" },
+          "end_date": { "type": "string", "description": "Use 'Present' if current" },
+          "bullets": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Action verb + task + result format"
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": { "type": "string" },
+          "institution": { "type": "string" },
+          "city_state": { "type": "string" },
+          "year": { "type": "integer" }
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "job_title": { "type": "string" },
+        "job_description": { "type": "string", "description": "Full JD text pasted by user" },
+        "industry": { "type": "string" },
+        "tier": {
+          "type": "string",
+          "enum": ["NOW", "NEXT", "LATER"],
+          "description": "Assigned by Module 1 job matcher"
+        },
+        "preferred_location": { "type": "string" },
+        "willing_to_relocate": { "type": "boolean", "default": false },
+        "minimum_wage": { "type": "number" },
+        "preferred_schedule": {
+          "type": "string",
+          "enum": ["full_time", "part_time", "flexible", "any"]
+        }
+      }
+    },
+    "programs": {
+      "type": "object",
+      "description": "WIOA and partner program enrollment status",
+      "properties": {
+        "wioa_enrolled": { "type": "boolean", "default": false },
+        "wioa_track": {
+          "type": "string",
+          "enum": ["adult", "dislocated_worker", "youth"]
+        },
+        "snap_et_enrolled": { "type": "boolean", "default": false },
+        "vr_enrolled": { "type": "boolean", "default": false },
+        "ui_active": { "type": "boolean", "default": false },
+        "taa_eligible": { "type": "boolean", "default": false },
+        "other_programs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "readiness_scores": {
+      "type": "object",
+      "description": "Module 14 readiness assessment scores (1-5)",
+      "properties": {
+        "resume": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "cover_letter": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "skills_match": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "application_volume": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "interview_prep": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "program_enrollment": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "online_presence": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "total": { "type": "integer", "minimum": 7, "maximum": 35 },
+        "assessed_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "tone": {
+          "type": "string",
+          "enum": ["professional", "confident", "friendly"],
+          "default": "professional"
+        },
+        "resume_length": {
+          "type": "string",
+          "enum": ["1_page", "2_page"],
+          "default": "1_page"
+        }
+      }
+    }
+  }
+}

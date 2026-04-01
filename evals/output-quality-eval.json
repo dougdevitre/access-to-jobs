@@ -1,0 +1,99 @@
+[
+  {
+    "prompt": "Write me a resume. I was a warehouse associate at Amazon for 3 years. I have forklift certification and OSHA 10. I'm applying for a production supervisor role at Emerson Electric. Here's the JD: Production Supervisor — oversee daily production operations, manage team of 12, ensure safety compliance, track KPIs, coordinate with quality control.",
+    "expected_module": "MODULE 2",
+    "quality_checks": [
+      "Resume includes Professional Summary, Core Skills, Experience, Education, Certifications",
+      "Core Skills mirrors JD keywords: production operations, team management, safety compliance, KPIs, quality control",
+      "Forklift certification and OSHA 10 appear in Certifications section",
+      "Experience bullets use action verbs + quantified results",
+      "No fabricated experience or employers",
+      "ATS-compatible format: no tables, no columns, standard headings"
+    ]
+  },
+  {
+    "prompt": "I have an interview tomorrow for a CNA position at a nursing home. Help me prepare.",
+    "expected_module": "MODULE 7",
+    "quality_checks": [
+      "Produces exactly 5 questions",
+      "Each question has STAR-format answer structure",
+      "Questions are CNA/healthcare-specific (patient care, difficult patients, safety, teamwork, stress)",
+      "Coaching tips mention reliability and safety awareness",
+      "Includes questions to ask the interviewer"
+    ]
+  },
+  {
+    "prompt": "I just got released from DOC last week. I did 2 years. I learned welding inside — got my AWS certification. Help me find work.",
+    "expected_module": "MODULE 1",
+    "expected_populations": ["justice_involved"],
+    "quality_checks": [
+      "Does NOT recommend disclosing conviction in any output",
+      "AWS welding certification listed prominently",
+      "Flags Fair Chance employers",
+      "Mentions Federal Bonding Program",
+      "Mentions WOTC as competitive advantage",
+      "Routes to Reentry Connect / OWD Reentry Specialist",
+      "Tone is empowering and forward-looking, not pitying"
+    ]
+  },
+  {
+    "prompt": "/casenote — Met with James T. today. He's a dislocated worker from the Boeing layoff in January. We reviewed his resume, made 4 job referrals to manufacturing positions, and referred him to Fast Track for CNC machinist training. Follow-up in 2 weeks.",
+    "expected_module": "MODULE 11",
+    "quality_checks": [
+      "Uses first name + last initial only (James T.)",
+      "Includes Service Type, Staff, Date, Summary",
+      "Lists specific services: resume review, 4 job referrals, training referral",
+      "Referral to Fast Track documented with reason",
+      "Follow-up date specified (2 weeks out)",
+      "No SSN, full birthdate, or sensitive PII",
+      "Professional, neutral language"
+    ]
+  },
+  {
+    "prompt": "They offered me $14/hour for medical assistant in St. Louis. Is that good?",
+    "expected_module": "MODULE 18",
+    "quality_checks": [
+      "Provides wage context with source (BLS, MERIC, or state data)",
+      "Indicates whether $14 is below/at/above market for the role and area",
+      "Includes negotiation framework (5-step process)",
+      "Mentions WOTC if applicable",
+      "Does NOT guarantee a specific outcome",
+      "Suggests getting offer in writing before accepting"
+    ]
+  },
+  {
+    "prompt": "Quick apply to this: Medical Records Clerk at BJC HealthCare. Requirements: high school diploma, medical terminology knowledge, EMR experience preferred, attention to detail, HIPAA compliance.",
+    "expected_module": "QUICK_MODE",
+    "quality_checks": [
+      "Produces 3-bullet resume summary",
+      "Produces 1-paragraph cover note",
+      "Produces short application email",
+      "All three mirror JD keywords: medical terminology, EMR, HIPAA, attention to detail",
+      "Each section is clearly labeled and separated"
+    ]
+  },
+  {
+    "prompt": "/pitch OJT to a local construction company that's never heard of it",
+    "expected_module": "MODULE 13",
+    "quality_checks": [
+      "Produces a conversational cold call script",
+      "Explains OJT wage reimbursement clearly (50-90%)",
+      "Mentions WIOA waiver for up to 90% reimbursement",
+      "Includes a closing question/call to action",
+      "Does not use unexplained acronyms",
+      "Appropriate for a phone conversation, not a letter"
+    ]
+  },
+  {
+    "prompt": "I want to become an RN but I only have a GED. What's the fastest path and how do I pay for it?",
+    "expected_module": "MODULE 9",
+    "quality_checks": [
+      "Maps stackable credential pathway: CNA → LPN → RN",
+      "Includes timeline estimate for each step",
+      "Lists funding sources: Fast Track, WIOA ITA, HEALS, Pell Grant",
+      "Mentions community college as primary provider",
+      "Does NOT promise eligibility for any program",
+      "Routes to Job Center for official enrollment"
+    ]
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ApplicationTracker",
+  "description": "Schema for tracking job applications. Used in Module 8 action plans and exportable as CSV.",
+  "type": "object",
+  "properties": {
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["company", "job_title", "date_applied"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Auto-generated unique ID"
+          },
+          "company": { "type": "string" },
+          "job_title": { "type": "string" },
+          "source": {
+            "type": "string",
+            "description": "Where the job was found (jobs.mo.gov, Indeed, LinkedIn, Job Fair, referral, etc.)"
+          },
+          "contact_name": { "type": "string" },
+          "contact_email": { "type": "string", "format": "email" },
+          "date_applied": { "type": "string", "format": "date" },
+          "date_followed_up": { "type": "string", "format": "date" },
+          "date_interview": { "type": "string", "format": "date" },
+          "date_thank_you_sent": { "type": "string", "format": "date" },
+          "status": {
+            "type": "string",
+            "enum": [
+              "drafting",
+              "submitted",
+              "followed_up",
+              "interview_scheduled",
+              "interviewed",
+              "thank_you_sent",
+              "offer_received",
+              "offer_accepted",
+              "offer_declined",
+              "rejected",
+              "no_response",
+              "withdrawn"
+            ],
+            "default": "drafting"
+          },
+          "fit_score": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "How well user's skills match the JD (60%+ = low, 70%+ = medium, 80%+ = high)"
+          },
+          "tier": {
+            "type": "string",
+            "enum": ["NOW", "NEXT", "LATER"]
+          },
+          "salary_range": { "type": "string" },
+          "notes": { "type": "string" },
+          "modules_used": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "description": "Which modules were used for this application (e.g., [2, 3, 4] = resume + cover + email)"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "total_applications": { "type": "integer" },
+        "this_week": { "type": "integer" },
+        "follow_ups_due": { "type": "integer" },
+        "interviews_scheduled": { "type": "integer" },
+        "offers_received": { "type": "integer" },
+        "response_rate": {
+          "type": "number",
+          "description": "Percentage of applications that received any response"
+        }
+      }
+    }
+  }
+}
