@@ -8,10 +8,16 @@ All notable changes to Access to Jobs are documented here.
 - `SECURITY.md` — PII handling guidelines, privacy policy for deployers, sensitive population data rules
 - `.github/workflows/ci.yml` — GitHub Actions CI pipeline (JSON validation, internal link checking, state deployment validation, required file checks)
 - `scripts/validate-state.sh` — validates that a state deployment is complete (checks for TODO placeholders, missing files, source citations, minimum content length)
+- `scripts/build-skill.sh` — packages repo content into `.skill` zip file for Claude upload
+- `guides/quick-start.md` — one-page end-user guide for job seekers (plain language, no jargon)
+- `guides/guia-rapida-es.md` — Spanish-language quick start guide for ELL users
+- `evals/negative-eval.json` — 12 test cases for prompts that should NOT trigger the skill (legal, medical, off-topic, fabrication requests)
+- `evals/edge-cases-eval.json` — 15 test cases for ambiguous inputs, boundary scenarios, multi-role users, privacy requests, and under-age users
 
 ### Changed
 - Extracted all content from `.skill` zip to repo root for GitHub browsability and easier contribution
 - Added `.gitignore` for OS files, editor files, and compiled `.skill` packages
+- Updated README: new directory structure entries, expanded eval stats (40 → 67 test cases), new guides table rows, new scripts listing, version badge to 4.1.0, repo stats updated
 
 ---
 

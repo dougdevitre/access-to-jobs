@@ -5,7 +5,7 @@
 Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tech initiative by [CoTrackPro](https://cotrackpro.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Skill Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](CHANGELOG.md)
+[![Skill Version](https://img.shields.io/badge/version-4.1.0-blue.svg)](CHANGELOG.md)
 [![State: Missouri](https://img.shields.io/badge/reference_state-Missouri-red.svg)](states/missouri/)
 [![Modules](https://img.shields.io/badge/modules-20-orange.svg)](assets/module-map.md)
 [![Populations](https://img.shields.io/badge/barrier_populations-15-purple.svg)](references/barrier-populations.md)
@@ -182,12 +182,16 @@ access-to-jobs/
 │
 ├── guides/                           AUDIENCE-SPECIFIC GUIDES
 │   ├── community-org-guide.md        For nonprofits, libraries, shelters
-│   └── staff-onboarding.md           30-min training plan + cheat sheet
+│   ├── staff-onboarding.md           30-min training plan + cheat sheet
+│   ├── quick-start.md                One-page guide for job seekers
+│   └── guia-rapida-es.md             Guía rápida en español
 │
 ├── evals/                            EVALUATION + TESTING
 │   ├── trigger-eval.json             20 skill triggering test cases
 │   ├── population-routing-eval.json  12 multi-population edge cases
-│   └── output-quality-eval.json      8 output quality checklists
+│   ├── output-quality-eval.json      8 output quality checklists
+│   ├── negative-eval.json            12 should-NOT-trigger test cases
+│   └── edge-cases-eval.json          15 ambiguous/boundary scenarios
 │
 ├── states/                           STATE IMPLEMENTATIONS
 │   └── missouri/                     Reference implementation (default)
@@ -199,7 +203,9 @@ access-to-jobs/
 │           └── local-area.md
 │
 └── scripts/                          AUTOMATION + DEPLOYMENT
-    └── deploy-state.sh               Scaffolds new state with TODO templates
+    ├── deploy-state.sh               Scaffolds new state with TODO templates
+    ├── validate-state.sh             Validates state deployment completeness
+    └── build-skill.sh                Packages repo into .skill for upload
 ```
 
 **Legend:** ★ = Replace per state | ◐ = Light customization | ○ = Universal (no changes)
@@ -314,18 +320,22 @@ All in [`schemas/`](schemas/):
 |---|---|---|
 | [`community-org-guide.md`](guides/community-org-guide.md) | Nonprofits, libraries, shelters, reentry orgs, refugee agencies | 3 setup options, customization guide, population-specific deployment notes (reentry, DV, youth, immigrant), 30-min staff training session, impact measurement metrics, FAQ |
 | [`staff-onboarding.md`](guides/staff-onboarding.md) | Job Center career advisors, case managers, business services | 5-minute pitch to staff, 4 core workflows with examples, advanced workflows, common staff FAQ, WIOA performance metrics mapping, printable laminated cheat sheet |
+| [`quick-start.md`](guides/quick-start.md) | Job seekers using the skill directly | What it can do, what info to have ready, extra help by situation, privacy note |
+| [`guia-rapida-es.md`](guides/guia-rapida-es.md) | Buscadores de empleo hispanohablantes | Guía rápida en español con las mismas secciones |
 
 ---
 
 ## Evaluation Suite
 
-40 test cases across 3 files in [`evals/`](evals/):
+67 test cases across 5 files in [`evals/`](evals/):
 
 | File | Cases | What It Tests |
 |---|---|---|
 | `trigger-eval.json` | 20 | Skill triggering accuracy across all modules and special modes |
 | `population-routing-eval.json` | 12 | Multi-population overlap, triple-barrier scenarios, sensitive situations |
 | `output-quality-eval.json` | 8 | Output format compliance with field-by-field quality checklists |
+| `negative-eval.json` | 12 | Prompts that should NOT trigger the skill (legal, medical, off-topic) |
+| `edge-cases-eval.json` | 15 | Ambiguous inputs, boundary scenarios, multi-role users, privacy requests |
 
 ---
 
@@ -343,8 +353,10 @@ This scaffolds `states/il/` with TODO template files. Then:
 1. **Replace 4 files** from your state's WIOA Combined State Plan and LMI agency
 2. **Customize 4 files** with updated location references
 3. **Keep 2 files** as-is (universal)
-4. **Test** with the evaluation suite
-5. **Contribute back** as a PR
+4. **Validate:** `./scripts/validate-state.sh il`
+5. **Test** with the evaluation suite
+6. **Build:** `./scripts/build-skill.sh` to package for upload
+7. **Contribute back** as a PR
 
 ---
 
@@ -382,8 +394,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome state implementations, module
 
 | Metric | Count |
 |---|---|
-| Total files | 34 |
-| Total content lines | 5,500+ |
+| Total files | 40+ |
+| Total content lines | 6,500+ |
 | Modules | 20 + 3 special modes |
 | Barrier populations | 15 |
 | Slash commands | 22 |
@@ -391,12 +403,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome state implementations, module
 | Email templates | 12 |
 | Workshop scripts | 5 |
 | JSON schemas | 4 |
-| Evaluation test cases | 40 |
+| Evaluation test cases | 67 |
 | Reference files | 10 |
 | Curated prompts | 50+ |
 | Glossary terms | 55+ |
 | Data sources cited | 20+ |
-| Guides | 2 |
+| Guides | 4 |
+| Languages | English, Spanish |
 
 ---
 
