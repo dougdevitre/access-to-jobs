@@ -3,6 +3,38 @@
 Ready-to-use output structures for each module. These templates define the exact
 format Claude should produce. They are referenced by SKILL.md modules.
 
+## Template Overview
+
+```mermaid
+flowchart TD
+    TEMPLATES["Output Templates"]:::root --> DOC["Document Templates"]:::doc
+    TEMPLATES --> EMAIL["Email Templates"]:::email
+    TEMPLATES --> ASSESS["Assessment Templates"]:::assess
+    TEMPLATES --> STAFF["Staff Templates"]:::staff
+
+    DOC --> D1["Resume\nModule 2"]:::mod
+    DOC --> D2["Cover Letter\nModule 3"]:::mod
+    DOC --> D3["LinkedIn Profile\nModule 16"]:::mod
+
+    EMAIL --> E1["Application Email\nModule 4"]:::mod
+    EMAIL --> E2["Follow-Up Email\nModule 5"]:::mod
+    EMAIL --> E3["Thank You Email\nModule 6"]:::mod
+
+    ASSESS --> A1["Interview Prep\nModule 7 · 5 Qs + STAR"]:::mod
+    ASSESS --> A2["Readiness Scorecard\nModule 14 · 7 dimensions"]:::mod
+    ASSESS --> A3["Application Tracker\nModule 8 · CSV export"]:::mod
+
+    STAFF --> S1["Case Note\nModule 11"]:::mod
+    STAFF --> S2["Referral Letter\nModule 12"]:::mod
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef doc fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef email fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef assess fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef mod fill:#f5f5f5,stroke:#9E9E9E,color:#000
+```
+
 ---
 
 ## TEMPLATE: Resume (Module 2)

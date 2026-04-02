@@ -2,6 +2,50 @@
 ## Access to Jobs — Module 9
 ### Source: Missouri WIOA Combined State Plan, PY 2024–2027
 
+## Training Pathway Decision Tree
+
+```mermaid
+flowchart TD
+    START["Identify Target Role"]:::start --> TIER{"What tier?"}:::question
+
+    TIER -->|"NOW"| NOW["Short-term\nWeeks to months"]:::now
+    TIER -->|"NEXT"| NEXT["Medium-term\n3 months–2 years"]:::next
+    TIER -->|"LATER"| LATER["Long-term\n2–4+ years"]:::later
+
+    NOW --> NOW1["WorkKeys NCRC\nOSHA 10, ServSafe\nForklift, CPR"]:::cert
+    NOW --> NOW2["SkillUP training\nEmployer OJT"]:::cert
+
+    NEXT --> NEXT1["Community college\ncertificates"]:::cert
+    NEXT --> NEXT2["Apprenticeship\n(earn + learn)"]:::cert
+    NEXT --> NEXT3["CNA, LPN, HVAC\nWelding, CompTIA"]:::cert
+
+    LATER --> LATER1["Associate's degree"]:::cert
+    LATER --> LATER2["Bachelor's degree"]:::cert
+
+    NOW1 --> FUND{"Funding?"}:::question
+    NOW2 --> FUND
+    NEXT1 --> FUND
+    NEXT2 --> FUND
+    NEXT3 --> FUND
+    LATER1 --> FUND
+    LATER2 --> FUND
+
+    FUND --> F1["Fast Track\nScholarship"]:::funding
+    FUND --> F2["WIOA ITA"]:::funding
+    FUND --> F3["SkillUP /\nSNAP E&T"]:::funding
+    FUND --> F4["VR Training\nFunding"]:::funding
+    FUND --> F5["GI Bill /\nVeteran Benefits"]:::funding
+    FUND --> F6["Apprenticeship\nWage + Training"]:::funding
+
+    classDef start fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef question fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef now fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef next fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef later fill:#e1bee7,stroke:#9C27B0,color:#000
+    classDef cert fill:#f5f5f5,stroke:#9E9E9E,color:#000
+    classDef funding fill:#fff9c4,stroke:#FFC107,color:#000
+```
+
 ---
 
 ## DECISION LOGIC

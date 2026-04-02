@@ -2,6 +2,59 @@
 ## Access to Jobs Modules 10–13 — Job Center Employee Tools
 ### For: Career Advisors, Case Managers, Business Services Staff
 
+## Staff Module Overview
+
+```mermaid
+flowchart TD
+    STAFF["Staff Mode\nDetected"]:::staff --> M10["Module 10\nIntake & Triage"]:::intake
+    STAFF --> M11["Module 11\nCase Notes"]:::notes
+    STAFF --> M12["Module 12\nReferral Letter"]:::refer
+    STAFF --> M13["Module 13\nEmployer Outreach"]:::outreach
+
+    M10 --> OUT10["Structured assessment\n+ program routing"]:::out
+    M11 --> OUT11["MoJobs-compatible\ncase note"]:::out
+    M12 --> OUT12["Formal letter to\nVR, AEL, DSS, etc."]:::out
+    M13 --> OUT13["Cold call script\nOJT, IWT, WOTC"]:::out
+
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef intake fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef notes fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef refer fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef outreach fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef out fill:#f5f5f5,stroke:#9E9E9E,color:#000
+```
+
+### Intake Triage Decision Tree
+
+```mermaid
+flowchart TD
+    Q1["Step 1\nSituation Assessment"]:::step --> Q2{"Step 2\nPriority Screening"}:::decision
+
+    Q2 -->|"Veteran?"| R1["Priority queue\nDVOP + Show-Me Heroes"]:::route
+    Q2 -->|"SNAP/TANF?"| R2["SkillUP\nDSS coordination"]:::route
+    Q2 -->|"Mass layoff?"| R3["Dislocated Worker\nRapid Response + TAA"]:::route
+    Q2 -->|"UI claimant?"| R4["RESEA\nCoursera access"]:::route
+    Q2 -->|"Youth <24?"| R5["WIOA Youth\nJAG / Futures"]:::route
+    Q2 -->|"No diploma?"| R6["AEL / Excel Center"]:::route
+    Q2 -->|"Disability?"| R7["MVR / RSB referral"]:::route
+    Q2 -->|"Justice-involved?"| R8["Reentry specialist\nFair Chance employers"]:::route
+
+    R1 --> Q3["Step 3\nProgram Routing\n(track + co-enrollment)"]:::step
+    R2 --> Q3
+    R3 --> Q3
+    R4 --> Q3
+    R5 --> Q3
+    R6 --> Q3
+    R7 --> Q3
+    R8 --> Q3
+
+    Q3 --> Q4["Step 4\nService Plan\n(1–3 next steps)"]:::step
+
+    classDef step fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef decision fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef route fill:#e8f5e9,stroke:#4CAF50,color:#000
+```
+
 ---
 
 ## MODULE 10: INTAKE & TRIAGE SCRIPT

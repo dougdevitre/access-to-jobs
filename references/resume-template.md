@@ -1,6 +1,37 @@
 # Resume Template Reference
 ## Access to Jobs — Workforce Navigator — Module 2
 
+## Resume Structure
+
+```mermaid
+flowchart TD
+    RESUME["ATS-Optimized Resume"]:::root --> S1["Header\nName · City · Phone · Email · LinkedIn"]:::section
+    S1 --> S2["Professional Summary\n2–3 sentences · match JD keywords"]:::section
+    S2 --> S3["Core Skills\n10 skills · mirror JD exactly"]:::section
+    S3 --> S4["Professional Experience\nAction verb + task + result\nMost recent first"]:::section
+    S4 --> S5["Education\nDegree · Institution · Year"]:::section
+    S5 --> S6["Certifications\n(if applicable)"]:::optional
+    S6 --> S7["Volunteer / Community\n(optional)"]:::optional
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef section fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef optional fill:#f5f5f5,stroke:#9E9E9E,color:#000
+```
+
+### ATS Filtering Process
+
+```mermaid
+flowchart LR
+    A["Resume\nSubmitted"]:::input --> B{"ATS Keyword\nScan"}:::ats
+    B -->|"Keywords match JD"| C["Passed to\nHuman Reviewer"]:::pass
+    B -->|"Keywords missing"| D["Filtered Out\n(never seen)"]:::fail
+
+    classDef input fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef ats fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef pass fill:#c8e6c9,stroke:#2E7D32,color:#000
+    classDef fail fill:#ffcdd2,stroke:#C62828,color:#000
+```
+
 ---
 
 ## ATS RULES

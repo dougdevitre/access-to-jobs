@@ -2,6 +2,15 @@
 ## Access to Jobs — Module 1 — Job Matching
 ### Source: Missouri WIOA Combined State Plan, PY 2024–2027 / MERIC / Lightcast
 
+```mermaid
+flowchart LR
+    NOW["NOW\nHS diploma\nHire fast"]:::now -->|"upskill"| NEXT["NEXT\nCert/training\n3mo–2yr"]:::next -->|"upskill"| LATER["LATER\nDegree\n2–4+ yr"]:::later
+
+    classDef now fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef next fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef later fill:#e1bee7,stroke:#9C27B0,color:#000
+```
+
 ---
 
 ## MISSOURI JOB TIER FRAMEWORK

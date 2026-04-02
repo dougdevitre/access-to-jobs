@@ -13,6 +13,24 @@
 
 > DEFAULT CONFIGURATION: St. Charles County, Missouri
 
+## Local Area Configuration
+
+```mermaid
+flowchart TD
+    LOCAL["local-area.md\nConfiguration"]:::root --> SEC1["LWDA Status\n& WIOA Region"]:::section
+    LOCAL --> SEC2["Job Center\nAddress & Contact"]:::section
+    LOCAL --> SEC3["Economic Profile\nEmployment & Industries"]:::section
+    LOCAL --> SEC4["Local Employers\nby Sector"]:::section
+    LOCAL --> SEC5["Training Providers\nColleges & CTE"]:::section
+    LOCAL --> SEC6["Special Programs\nRapid Response, IWT\nVeterans, UI"]:::section
+
+    SEC1 ---|"Replace per county"| NOTE["All sections must be\nupdated when redeploying\nto a new LWDA"]:::note
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef section fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef note fill:#fff9c4,stroke:#FFC107,color:#000
+```
+
 ---
 
 # Local County Workforce Intelligence

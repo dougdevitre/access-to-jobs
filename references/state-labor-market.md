@@ -2,6 +2,33 @@
 ## Access to Jobs — Module 1 — Job Matching
 ### Source: Missouri WIOA Combined State Plan, PY 2024–2027 / MERIC / Lightcast
 
+## Job Tier Framework
+
+```mermaid
+flowchart LR
+    subgraph NOW["NOW — Hire Fast"]
+        N1["HS diploma or less"]
+        N2["Days to weeks"]
+        N3["Retail, CNA, Warehouse\nTruck Driver, Security"]
+    end
+    subgraph NEXT["NEXT — Some Training"]
+        X1["Post-secondary cert"]
+        X2["3 months–2 years"]
+        X3["LPN, HVAC, Electrician\nMedical Asst, IT Support"]
+    end
+    subgraph LATER["LATER — Degree Required"]
+        L1["Bachelor's or higher"]
+        L2["2–4+ years"]
+        L3["RN, Engineer, Accountant\nTeacher, Analyst"]
+    end
+
+    NOW -->|"upskill"| NEXT -->|"upskill"| LATER
+
+    style NOW fill:#c8e6c9,stroke:#4CAF50,color:#000
+    style NEXT fill:#bbdefb,stroke:#2196F3,color:#000
+    style LATER fill:#e1bee7,stroke:#9C27B0,color:#000
+```
+
 ---
 
 ## MISSOURI JOB TIER FRAMEWORK

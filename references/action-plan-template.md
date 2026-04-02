@@ -1,6 +1,41 @@
 # 7-Day Action Plan Template
 ## Access to Jobs — Workforce Navigator — Module 8
 
+## 7-Day Timeline
+
+```mermaid
+flowchart LR
+    D1["Day 1\nFoundation"]:::d1 --> D2["Day 2\nApply"]:::d2
+    D2 --> D3["Day 3\nNetwork"]:::d3
+    D3 --> D4["Day 4\nApply +\nSkills"]:::d4
+    D4 --> D5["Day 5\nFollow-Up"]:::d5
+    D5 --> D6["Day 6\nInterview\nPrep"]:::d6
+    D6 --> D7["Day 7\nReview +\nPlan Next"]:::d7
+
+    classDef d1 fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef d2 fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef d3 fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef d4 fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef d5 fill:#ffe0b2,stroke:#FF9800,color:#000
+    classDef d6 fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef d7 fill:#e0f2f1,stroke:#009688,color:#000
+```
+
+### Urgency Calibration
+
+```mermaid
+flowchart TD
+    URG{"Urgency Level"}:::question
+    URG -->|"HIGH"| H["3–5 apps/day\n5 follow-ups/week\n3–5 contacts/week"]:::high
+    URG -->|"MEDIUM"| M["1–2 apps/day\n2–3 follow-ups/week\n2–3 contacts/week"]:::medium
+    URG -->|"LOW"| L["1 app/day\n1 follow-up/week\n1–2 contacts/week"]:::low
+
+    classDef question fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef high fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef medium fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef low fill:#c8e6c9,stroke:#4CAF50,color:#000
+```
+
 ---
 
 ## URGENCY TIERS

@@ -1,6 +1,27 @@
 # Job Seeker Experience Modules
 ## Access to Jobs Modules 14–18 — Advanced Job Seeker Tools
 
+## Advanced Module Map
+
+```mermaid
+flowchart TD
+    ADV["Advanced Job Seeker\nModules 14–18"]:::root --> M14["Module 14\nReadiness Assessment\n7-dimension scorecard"]:::assess
+    ADV --> M15["Module 15\nJob Retention\n30/60/90-day plan"]:::retain
+    ADV --> M16["Module 16\nLinkedIn Builder\nFull profile content"]:::linkedin
+    ADV --> M17["Module 17\nJob Fair Prep\nBefore/during/after"]:::fair
+    ADV --> M18["Module 18\nSalary Guidance\nMarket data + negotiation"]:::salary
+
+    M14 --> DIM["7 Dimensions:\nResume · Cover Letter\nSkills Match · App Volume\nInterview · Programs\nOnline Presence"]:::detail
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef assess fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef retain fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef linkedin fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef fair fill:#ffe0b2,stroke:#FF9800,color:#000
+    classDef salary fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef detail fill:#f5f5f5,stroke:#9E9E9E,color:#000
+```
+
 ---
 
 ## MODULE 14: EMPLOYMENT READINESS ASSESSMENT

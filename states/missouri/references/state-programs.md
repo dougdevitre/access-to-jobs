@@ -5,6 +5,27 @@
 > ⚠️ This is educational information. Do not make eligibility determinations.
 > Always direct users to a Missouri Job Center or jobs.mo.gov for official enrollment.
 
+```mermaid
+flowchart LR
+    subgraph core["WIOA Title I"]
+        A["Adult\n18+"]:::prog
+        D["Dislocated\nWorker"]:::prog
+        Y["Youth\n14–24"]:::prog
+    end
+    subgraph partners["Missouri Partners"]
+        AEL["AEL\n(Title II)"]:::mo
+        VR["MVR / RSB\n(Title IV)"]:::mo
+        SK["SkillUP\n(SNAP E&T)"]:::mo
+        MWA["MWA\n(TANF)"]:::mo
+    end
+    core --> JC["Missouri\nJob Centers"]:::center
+    partners --> JC
+
+    classDef prog fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef mo fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef center fill:#e8f4f8,stroke:#2196F3,color:#000
+```
+
 ---
 
 ## CORE WIOA PROGRAMS (Title I)

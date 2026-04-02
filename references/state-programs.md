@@ -5,6 +5,36 @@
 > ⚠️ This is educational information. Do not make eligibility determinations.
 > Always direct users to a Missouri Job Center or jobs.mo.gov for official enrollment.
 
+## Program Ecosystem
+
+```mermaid
+flowchart TD
+    WIOA["WIOA Framework"]:::root --> T1["Title I\nWorkforce Services"]:::title
+    WIOA --> T2["Title II\nAdult Education (AEL)"]:::title
+    WIOA --> T4["Title IV\nVocational Rehab"]:::title
+    WIOA --> PARTNER["Partner Programs"]:::partner
+
+    T1 --> A["Adult Program\n18+, priority: low-income"]:::prog
+    T1 --> D["Dislocated Worker\nlaid off, plant closures"]:::prog
+    T1 --> Y["Youth Program\n14–24, with barriers"]:::prog
+
+    T2 --> AEL["AEL / GED / HiSET\n+ IET model"]:::prog
+    T4 --> MVR["MVR\nphysical/cognitive"]:::prog
+    T4 --> RSB["RSB\nvisual impairments"]:::prog
+
+    PARTNER --> SNAP["SkillUP\n(SNAP E&T)"]:::mo
+    PARTNER --> MWA["MWA\n(TANF work)"]:::mo
+    PARTNER --> VET["Show-Me Heroes\n(Veterans OJT)"]:::mo
+    PARTNER --> TAA["Trade Adjustment\nAssistance"]:::prog
+    PARTNER --> UI["Unemployment\nInsurance"]:::prog
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef title fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef prog fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef mo fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef partner fill:#f3e5f5,stroke:#9C27B0,color:#000
+```
+
 ---
 
 ## CORE WIOA PROGRAMS (Title I)

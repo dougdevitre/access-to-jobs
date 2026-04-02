@@ -1,6 +1,22 @@
 # Cover Letter Template Reference
 ## Access to Jobs — Workforce Navigator — Module 3
 
+## Cover Letter Structure
+
+```mermaid
+flowchart TD
+    CL["Cover Letter\n3–4 paragraphs · under 400 words"]:::root --> P1["Paragraph 1 — HOOK\nJob title + where found\nWhy this company appeals"]:::hook
+    P1 --> P2["Paragraph 2 — PROOF\n2–3 concrete accomplishments\nQuantify · Mirror JD language"]:::proof
+    P2 --> P3["Paragraph 3 — FIT\nWhy this company specifically\nMission · Values · Reputation"]:::fit
+    P3 --> P4["Paragraph 4 — CLOSE\nConfident, not begging\nRequest interview · Thank briefly"]:::close
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef hook fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef proof fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef fit fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef close fill:#f3e5f5,stroke:#9C27B0,color:#000
+```
+
 ---
 
 ## STRUCTURE (3–4 paragraphs, under 400 words)

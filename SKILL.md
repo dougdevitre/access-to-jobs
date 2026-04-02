@@ -42,6 +42,43 @@ Focus: getting people hired.
 
 ---
 
+## System Overview
+
+```mermaid
+flowchart TD
+    USER["User Input"]:::input --> DUD{"Dual-User\nDetection"}:::detect
+    DUD -->|"Job Seeker"| TR1["Task Router"]:::router
+    DUD -->|"Staff"| TR1
+    TR1 --> PI["Progressive Intake\n(collect only what module needs)"]:::intake
+
+    PI --> M_CORE["Modules 0–9\nCore Job Seeker"]:::seeker
+    PI --> M_STAFF["Modules 10–13\nStaff Tools"]:::staff
+    PI --> M_ADV["Modules 14–19\nAdvanced"]:::advanced
+    PI --> M_SPECIAL["Special Modes\nMulti · Quick · Coach"]:::special
+
+    M_CORE --> REF["Load Reference Files\n(on demand)"]:::ref
+    M_STAFF --> REF
+    M_ADV --> REF
+    M_SPECIAL --> REF
+
+    REF --> POP["Population Adjustment\n(15 WIOA barriers)"]:::pop
+    POP --> OUT["Formatted Output\n(per templates/)"]:::output
+
+    classDef input fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef detect fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef intake fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef seeker fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef advanced fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef special fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef ref fill:#f5f5f5,stroke:#9E9E9E,color:#000
+    classDef pop fill:#e1bee7,stroke:#9C27B0,color:#000
+    classDef output fill:#e0f2f1,stroke:#009688,color:#000
+```
+
+---
+
 ## TASK ROUTER
 
 | User says / wants | Module | Reference loaded |

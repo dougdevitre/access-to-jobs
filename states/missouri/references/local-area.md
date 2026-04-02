@@ -13,6 +13,18 @@
 
 > DEFAULT CONFIGURATION: St. Charles County, Missouri
 
+```mermaid
+flowchart TD
+    SCC["St. Charles County\nStandalone LWDA"]:::county --> JC["Job Center\nAddress & Contact"]:::section
+    SCC --> ECON["Economic Profile\n& Key Industries"]:::section
+    SCC --> EMP["Local Employers\nby Sector"]:::section
+    SCC --> TRAIN["Training Providers"]:::section
+    SCC --> SPECIAL["Rapid Response\nVeterans · IWT · UI"]:::section
+
+    classDef county fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef section fill:#e8f5e9,stroke:#4CAF50,color:#000
+```
+
 ---
 
 # Local County Workforce Intelligence

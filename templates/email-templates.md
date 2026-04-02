@@ -2,6 +2,31 @@
 
 Ready-to-customize email templates for job seeker and staff workflows.
 
+## Email Selection Guide
+
+```mermaid
+flowchart TD
+    START["What email\ndo you need?"]:::start --> TYPE{"Who's it for?"}:::question
+
+    TYPE -->|"Job Seeker"| JS{"What stage?"}:::question
+    TYPE -->|"Staff"| ST{"What purpose?"}:::question
+
+    JS -->|"Networking"| E1["Warm Introduction\nCold Introduction\nInformational Interview"]:::email
+    JS -->|"After networking"| E2["Post-Networking\nFollow-Up"]:::email
+    JS -->|"After job fair"| E3["Job Fair\nFollow-Up"]:::email
+    JS -->|"Got an offer"| E4["Offer Acceptance\nOffer Decline"]:::email
+    JS -->|"Need reference"| E5["Reference\nRequest"]:::email
+
+    ST -->|"Appointment"| E6["Appointment\nReminder"]:::staff_email
+    ST -->|"Employer intro"| E7["Employer\nIntroduction"]:::staff_email
+    ST -->|"Partner coord"| E8["Partner\nCoordination"]:::staff_email
+
+    classDef start fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef question fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef email fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef staff_email fill:#fce4ec,stroke:#E91E63,color:#000
+```
+
 ---
 
 ## JOB SEEKER EMAILS

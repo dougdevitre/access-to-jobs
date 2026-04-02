@@ -2,6 +2,13 @@
 ## Access to Jobs — Module 9
 ### Source: Missouri WIOA Combined State Plan, PY 2024–2027
 
+```mermaid
+flowchart LR
+    ID["1. Identify\ntarget role"]:::step --> GAP["2. Find skill\n& education gaps"]:::step --> PATH["3. Shortest\ncredential path"]:::step --> FUND["4. Match\nfunding source"]:::step --> TIME["5. Timeline\nestimate"]:::step
+
+    classDef step fill:#e8f4f8,stroke:#2196F3,color:#000
+```
+
 ---
 
 ## DECISION LOGIC
