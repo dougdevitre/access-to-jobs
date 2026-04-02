@@ -9,6 +9,7 @@ Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tec
 [![State: Missouri](https://img.shields.io/badge/reference_state-Missouri-red.svg)](states/missouri/)
 [![Modules](https://img.shields.io/badge/modules-20-orange.svg)](assets/module-map.md)
 [![Populations](https://img.shields.io/badge/barrier_populations-15-purple.svg)](references/barrier-populations.md)
+[![Diagrams](https://img.shields.io/badge/mermaid_diagrams-56-teal.svg)](#architecture)
 
 ---
 
@@ -17,18 +18,27 @@ Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tec
 - [What It Does](#what-it-does)
 - [Who It Serves](#who-it-serves)
 - [Architecture](#architecture)
+  - [Getting Started Journey](#getting-started-journey)
+  - [Module Tiers](#module-tiers)
+  - [Multi-Output Mode](#multi-output-mode-sequence)
+  - [Data Flow: Reference Files to Modules](#data-flow-reference-files-to-modules)
+  - [Population-Aware Routing](#population-aware-routing)
+  - [Evaluation Pipeline](#evaluation-pipeline)
+  - [State Deployment Flow](#state-deployment-flow)
 - [Directory Structure](#directory-structure)
 - [Installation](#installation)
 - [Module Reference](#module-reference)
 - [Slash Commands](#slash-commands)
-- [Population-Aware Routing](#population-aware-routing)
 - [Templates and Output Formats](#templates-and-output-formats)
 - [Data Schemas](#data-schemas)
+  - [Application Status Workflow](#application-status-workflow)
+  - [Progressive Intake Model](#progressive-intake-model)
 - [Guides](#guides)
 - [Evaluation Suite](#evaluation-suite)
 - [Deploying to a New State](#deploying-to-a-new-state)
 - [Access To Family](#access-to-family)
 - [Data Sources](#data-sources)
+- [CI/CD Pipeline](#cicd-pipeline)
 - [Contributing](#contributing)
 - [License](#license)
 - [Author](#author)
@@ -712,8 +722,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome state implementations, module
 
 | Metric | Count |
 |---|---|
-| Total files | 40+ |
-| Total content lines | 6,500+ |
+| Total files | 48 |
+| Total content lines | 8,400+ |
+| Mermaid diagrams | 56 |
 | Modules | 20 + 3 special modes |
 | Barrier populations | 15 |
 | Slash commands | 22 |
