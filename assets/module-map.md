@@ -2,55 +2,58 @@
 
 ## System Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        DUAL-USER DETECTION                         │
-│  Staff signals → STAFF MODE    Job seeker signals → SEEKER MODE    │
-└────────────────────────┬───────────────────┬────────────────────────┘
-                         │                   │
-          ┌──────────────▼──────┐  ┌─────────▼────────────────┐
-          │    STAFF MODULES    │  │   JOB SEEKER MODULES     │
-          │    10 · 11 · 12 · 13│  │   0–9 · 14–18            │
-          │    + Module 19      │  │   + Special Modes        │
-          └─────────────────────┘  └──────────────────────────┘
+```mermaid
+flowchart TD
+    A["User Input"]:::input --> B{"DUAL-USER DETECTION"}:::router
+    B -->|"Staff signals"| C["STAFF MODE\nModules 10–13 + 19"]:::staff
+    B -->|"Job seeker signals"| D["SEEKER MODE\nModules 0–9 · 14–18\n+ Special Modes"]:::seeker
+
+    classDef input fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef seeker fill:#e8f5e9,stroke:#4CAF50,color:#000
 ```
 
 ---
 
 ## Module Dependency Graph
 
+```mermaid
+flowchart TD
+    UI["USER INPUT"]:::input --> TR["TASK ROUTER"]:::router
+    TR --> CORE["CORE\n0–9"]:::seeker
+    TR --> ADV["ADVANCED\n14–19"]:::advanced
+    TR --> STAFF["STAFF\n10–13"]:::staff
+
+    CORE --> REF
+    ADV --> REF
+    STAFF --> REF
+
+    subgraph REF["REFERENCE FILE LAYER"]
+        SP["state-programs.md → Module 0"]:::state
+        LM["state-labor-market.md → Module 1"]:::state
+        RT["resume-template.md → Module 2"]:::universal
+        CT["cover-letter-template.md → Module 3"]:::universal
+        AP["action-plan-template.md → Module 8"]:::shared
+        TP["state-training-pathways.md → Module 9"]:::state
+        SW["staff-workflows.md → Modules 10–13"]:::shared
+        JE["jobseeker-experience.md → Modules 14–19"]:::shared
+        BP["barrier-populations.md → ALL modules"]:::global
+        LA["local-area.md → ALL modules"]:::global
+    end
+
+    classDef input fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef seeker fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef advanced fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef state fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef shared fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef universal fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef global fill:#f3e5f5,stroke:#9C27B0,color:#000
 ```
-                    ┌──────────────┐
-                    │  USER INPUT  │
-                    └──────┬───────┘
-                           │
-                    ┌──────▼───────┐
-                    │  TASK ROUTER │
-                    └──────┬───────┘
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                  │                  │
-   ┌────▼─────┐     ┌─────▼──────┐    ┌─────▼──────┐
-   │ CORE     │     │ ADVANCED   │    │ STAFF      │
-   │ 0–9     │     │ 14–19      │    │ 10–13      │
-   └────┬─────┘     └─────┬──────┘    └─────┬──────┘
-        │                  │                  │
-        ▼                  ▼                  ▼
-   ┌─────────────────────────────────────────────┐
-   │           REFERENCE FILE LAYER              │
-   │                                             │
-   │  state-programs.md ──────── Module 0        │
-   │  state-labor-market.md ──── Module 1        │
-   │  resume-template.md ─────── Module 2        │
-   │  cover-letter-template.md ─ Module 3        │
-   │  action-plan-template.md ── Module 8        │
-   │  state-training-pathways.md Module 9        │
-   │  staff-workflows.md ─────── Modules 10–13   │
-   │  jobseeker-experience.md ── Modules 14–19   │
-   │  barrier-populations.md ─── ALL modules     │
-   │  local-area.md ──────────── ALL modules     │
-   └─────────────────────────────────────────────┘
-```
+
+**Legend:** <span style="color:#E91E63">State-specific (replace per state)</span> | <span style="color:#FFC107">Light customization</span> | <span style="color:#4CAF50">Universal (no changes)</span> | <span style="color:#9C27B0">Global (all modules)</span>
 
 ---
 

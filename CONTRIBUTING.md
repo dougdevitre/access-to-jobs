@@ -4,6 +4,35 @@ Thank you for your interest in contributing to the Access to Jobs workforce navi
 
 ---
 
+## Contribution Workflow
+
+```mermaid
+flowchart TD
+    A["Fork Repository"]:::start --> B{"Choose Contribution Type"}:::router
+    B -->|"New State"| C["Run deploy-state.sh\nReplace 4 files"]:::state
+    B -->|"Module Fix"| D["Edit module or\nreference file"]:::fix
+    B -->|"Test Cases"| E["Add JSON entries\nto evals/"]:::test
+    B -->|"Translation"| F["Create localized\nguide in guides/"]:::translate
+    C --> G["Test with eval suite"]:::verify
+    D --> G
+    E --> G
+    F --> G
+    G --> H["Submit PR"]:::pr
+    H --> I["Review & Merge"]:::done
+
+    classDef start fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef state fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef fix fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef test fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef translate fill:#e0f2f1,stroke:#009688,color:#000
+    classDef verify fill:#f5f5f5,stroke:#9E9E9E,color:#000
+    classDef pr fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef done fill:#c8e6c9,stroke:#2E7D32,color:#000
+```
+
+---
+
 ## Ways to Contribute
 
 ### 1. Deploy to a New State

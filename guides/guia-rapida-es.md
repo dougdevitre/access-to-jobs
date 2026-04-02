@@ -4,6 +4,30 @@
 
 ---
 
+## Su Camino Hacia el Empleo
+
+```mermaid
+flowchart TD
+    START["¿Dónde está usted?"]:::start --> Q1{"¿Sabe qué trabajo\nquiere?"}:::question
+    Q1 -->|"No estoy seguro/a"| A1["'¿Qué trabajos hay?'\nBuscador de Empleos"]:::action
+    Q1 -->|"Sí"| Q2{"¿Tiene\ncurrículum?"}:::question
+    A1 --> Q2
+    Q2 -->|"No"| A2["'Escriba mi currículum'\nCreador de Currículum"]:::action
+    Q2 -->|"Sí"| Q3{"¿Listo/a para\nsolicitar?"}:::question
+    A2 --> Q3
+    Q3 -->|"Sí"| A3["'Solicitar este empleo'\nCurrículum + Carta + Correo"]:::action
+    Q3 -->|"Necesito practicar"| A4["'Tengo una entrevista'\nPreparación de Entrevista"]:::action
+    A3 --> A5["'Acabo de conseguir trabajo'\nPlan de 90 Días"]:::success
+    A4 --> A3
+
+    classDef start fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef question fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef action fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef success fill:#c8e6c9,stroke:#2E7D32,color:#000
+```
+
+---
+
 ## ¿Qué Puede Hacer Por Usted?
 
 | Diga esto | El asistente le ayudará con |

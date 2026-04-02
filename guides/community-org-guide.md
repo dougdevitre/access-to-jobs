@@ -5,6 +5,56 @@ organizations, and advocacy groups that want to use Access to Jobs to serve thei
 
 ---
 
+## Deployment Overview
+
+```mermaid
+flowchart TD
+    ORG["Your Organization"]:::org --> SETUP{"Choose Setup Option"}:::router
+    SETUP -->|"Option A"| A["Claude.ai\nSkill Upload"]:::simple
+    SETUP -->|"Option B"| B["Shared Computer\n/ Kiosk"]:::kiosk
+    SETUP -->|"Option C"| C["Staff-Assisted\nAppointments"]:::assisted
+
+    A --> CUSTOM["Customize\nlocal-area.md"]:::customize
+    B --> CUSTOM
+    C --> CUSTOM
+
+    CUSTOM --> TRAIN["Train Staff\n30 min"]:::train
+    TRAIN --> SERVE["Serve Clients"]:::serve
+
+    classDef org fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef simple fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef kiosk fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef assisted fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef customize fill:#e0f2f1,stroke:#009688,color:#000
+    classDef train fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef serve fill:#e8f5e9,stroke:#2E7D32,color:#000
+```
+
+### Population-Specific Deployment
+
+```mermaid
+flowchart LR
+    subgraph populations["Your Client Population"]
+        P1["Reentry"]:::reentry
+        P2["DV Survivors"]:::dv
+        P3["Youth"]:::youth
+        P4["Immigrants"]:::immigrant
+    end
+
+    P1 --> R1["/eligible → reentry programs\nFair Chance employers\nNo conviction disclosure"]
+    P2 --> R2["/coach → economic independence\nTrauma-informed language\nSafety-specific resources"]
+    P3 --> R3["Age-appropriate tone\nYouth programs (JAG, Futures)\nSmaller action steps"]
+    P4 --> R4["Plain language\nAEL ELL + IET model\nSimplified commands card"]
+
+    classDef reentry fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef dv fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef youth fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef immigrant fill:#e0f2f1,stroke:#009688,color:#000
+```
+
+---
+
 ## Who This Is For
 
 - **Community Action Agencies** providing workforce services alongside housing, energy, and food assistance

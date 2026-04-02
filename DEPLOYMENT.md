@@ -6,6 +6,52 @@ This guide walks you through deploying the Access to Jobs workforce navigator to
 
 ## Overview
 
+### Deployment Pipeline
+
+```mermaid
+flowchart LR
+    A["1. Gather\nState Data"]:::gather --> B["2. Replace\n4 State Files"]:::replace
+    B --> C["3. Customize\n4 Shared Files"]:::customize
+    C --> D["4. Test\nWith Eval Suite"]:::test
+    D --> E["5. Contribute\nBack as PR"]:::contribute
+
+    classDef gather fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef replace fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef customize fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef test fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef contribute fill:#c8e6c9,stroke:#4CAF50,color:#000
+```
+
+### File Effort Map
+
+```mermaid
+flowchart TD
+    subgraph high["Full Rewrite (High Effort)"]
+        F1["state-programs.md"]
+        F2["state-labor-market.md"]
+        F3["state-training-pathways.md"]
+    end
+    subgraph medium["Full Rewrite (Medium Effort)"]
+        F4["local-area.md"]
+    end
+    subgraph low["Light Customization (Low Effort)"]
+        F5["barrier-populations.md"]
+        F6["action-plan-template.md"]
+        F7["staff-workflows.md"]
+        F8["jobseeker-experience.md"]
+    end
+    subgraph none["No Changes Needed"]
+        F9["SKILL.md"]
+        F10["resume-template.md"]
+        F11["cover-letter-template.md"]
+    end
+
+    style high fill:#ffcdd2,stroke:#E91E63,color:#000
+    style medium fill:#fff3e0,stroke:#FF9800,color:#000
+    style low fill:#fff9c4,stroke:#FFC107,color:#000
+    style none fill:#c8e6c9,stroke:#4CAF50,color:#000
+```
+
 | File | Action | Effort |
 |---|---|---|
 | `SKILL.md` | No changes needed | — |

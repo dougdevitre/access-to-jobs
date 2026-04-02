@@ -4,6 +4,30 @@
 
 ---
 
+## Your Job Search Journey
+
+```mermaid
+flowchart TD
+    START["Where are you?"]:::start --> Q1{"Do you know\nwhat job you want?"}:::question
+    Q1 -->|"Not sure"| A1["'What jobs are available?'\nModule 1: Job Matcher"]:::action
+    Q1 -->|"Yes"| Q2{"Do you have\na resume?"}:::question
+    A1 --> Q2
+    Q2 -->|"No"| A2["'Write me a resume'\nModule 2: Resume Builder"]:::action
+    Q2 -->|"Yes"| Q3{"Ready to apply?"}:::question
+    A2 --> Q3
+    Q3 -->|"Yes"| A3["'Apply for this job'\nResume + Cover Letter + Email"]:::action
+    Q3 -->|"Need practice"| A4["'I have an interview'\nModule 7: Interview Prep"]:::action
+    A3 --> A5["'I just got hired'\nModule 15: 90-Day Plan"]:::success
+    A4 --> A3
+
+    classDef start fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef question fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef action fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef success fill:#c8e6c9,stroke:#2E7D32,color:#000
+```
+
+---
+
 ## What Can It Do For You?
 
 | Say this | The assistant will help with |

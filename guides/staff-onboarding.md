@@ -5,6 +5,59 @@ Access to Jobs in their daily workflow.
 
 ---
 
+## Staff Workflow Overview
+
+```mermaid
+flowchart TD
+    subgraph during["During Appointments"]
+        A1["/intake\nTriage walk-in"]:::intake
+        A2["/eligible\nScreen programs"]:::screen
+        A3["/resume\nBuild with participant"]:::resume
+    end
+    subgraph after["After Appointments"]
+        B1["/casenote\nWrite case notes"]:::notes
+        B2["/refer\nReferral letter"]:::refer
+    end
+    subgraph outreach["Employer Engagement"]
+        C1["/pitch OJT"]:::pitch
+        C2["/pitch WOTC"]:::pitch
+        C3["/pitch IWT"]:::pitch
+    end
+    subgraph workshops["Workshops"]
+        D1["/workshop resume"]:::workshop
+        D2["/workshop interview"]:::workshop
+        D3["/workshop jobsearch"]:::workshop
+    end
+
+    style during fill:#e8f5e9,stroke:#4CAF50,color:#000
+    style after fill:#fff9c4,stroke:#FFC107,color:#000
+    style outreach fill:#e8f4f8,stroke:#2196F3,color:#000
+    style workshops fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef intake fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef screen fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef resume fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef notes fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef refer fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef pitch fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef workshop fill:#e1bee7,stroke:#9C27B0,color:#000
+```
+
+### Day 1 Training Flow (30 min)
+
+```mermaid
+flowchart LR
+    A["5 min\nWhat it is\n& isn't"]:::intro --> B["10 min\nLive demo\n3 workflows"]:::demo
+    B --> C["10 min\nHands-on\npractice"]:::practice
+    C --> D["5 min\nQ&A +\nfollow-up"]:::qa
+
+    classDef intro fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef demo fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef practice fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef qa fill:#f3e5f5,stroke:#9C27B0,color:#000
+```
+
+---
+
 ## Who This Is For
 
 - Career advisors and counselors at American Job Centers

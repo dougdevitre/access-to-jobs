@@ -111,14 +111,49 @@ The skill automatically detects and adjusts for:
 
 ```mermaid
 flowchart TD
-    A["👤 User Input"] --> B{"Dual-User Detection"}
-    B -->|"Job Seeker detected"| C["Modules 0–9, 14–18\nSpecial Modes"]
-    B -->|"Staff detected"| D["Modules 10–13, 19"]
-    C --> E["Task Router\n(maps intent → module)"]
+    A["User Input"]:::input --> B{"Dual-User\nDetection"}:::router
+    B -->|"Job Seeker detected"| C["Modules 0–9, 14–18\nSpecial Modes"]:::seeker
+    B -->|"Staff detected"| D["Modules 10–13, 19"]:::staff
+    C --> E["Task Router\n(maps intent → module)"]:::router
     D --> E
-    E --> F["Module Execution\n(loads only needed reference files)"]
-    F --> G["Population Adjustment Layer\n(auto-applies per detected barriers)"]
-    G --> H["Output\n(formatted per templates/)"]
+    E --> F["Module Execution\n(loads only needed reference files)"]:::process
+    F --> G["Population Adjustment Layer\n(auto-applies per detected barriers)"]:::population
+    G --> H["Output\n(formatted per templates/)"]:::output
+
+    classDef input fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef seeker fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef process fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef population fill:#fff8e1,stroke:#FFC107,color:#000
+    classDef output fill:#e0f2f1,stroke:#009688,color:#000
+```
+
+### Getting Started Journey
+
+```mermaid
+flowchart TD
+    Start["Are you a..."]:::router --> JS["Job Seeker"]:::seeker
+    Start --> ST["Job Center Staff"]:::staff
+    Start --> CO["Community Org"]:::community
+
+    JS --> JS1["/coach\nFull assessment + plan"]:::action
+    JS --> JS2["/resume\nBuild a resume"]:::action
+    JS --> JS3["/eligible\nProgram screening"]:::action
+
+    ST --> ST1["/intake\nTriage a walk-in"]:::action
+    ST --> ST2["/casenote\nWrite case notes"]:::action
+    ST --> ST3["/pitch\nEmployer outreach"]:::action
+
+    CO --> CO1["Upload .skill\nto Claude.ai"]:::action
+    CO --> CO2["Customize\nlocal-area.md"]:::action
+    CO --> CO3["Train staff\n30-min session"]:::action
+
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef seeker fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef community fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef action fill:#f5f5f5,stroke:#9E9E9E,color:#000
 ```
 
 ### Module Tiers
@@ -156,41 +191,140 @@ flowchart LR
         SM2["Quick"]
         SM3["Coach"]
     end
+
+    style Tier1 fill:#e8f5e9,stroke:#4CAF50,color:#000
+    style Tier2 fill:#fce4ec,stroke:#E91E63,color:#000
+    style Tier3 fill:#e8f4f8,stroke:#2196F3,color:#000
+    style Tier4 fill:#fff3e0,stroke:#FF9800,color:#000
+```
+
+### Multi-Output Mode (Sequence)
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant R as Task Router
+    participant M2 as Module 2 (Resume)
+    participant M3 as Module 3 (Cover Letter)
+    participant M4 as Module 4 (Email)
+
+    U->>R: "Apply for this job" + JD
+    R->>M2: Generate ATS resume
+    M2-->>R: Resume output
+    R->>M3: Generate cover letter (using resume context)
+    M3-->>R: Cover letter output
+    R->>M4: Generate application email
+    M4-->>R: Email output
+    R-->>U: Resume + Cover Letter + Email
+```
+
+### Data Flow: Reference Files to Modules
+
+```mermaid
+flowchart LR
+    subgraph refs["references/"]
+        SP["state-programs.md"]:::state
+        LM["state-labor-market.md"]:::state
+        TP["state-training-pathways.md"]:::state
+        LA["local-area.md"]:::state
+        BP["barrier-populations.md"]:::shared
+        RT["resume-template.md"]:::universal
+        CT["cover-letter-template.md"]:::universal
+        AP["action-plan-template.md"]:::shared
+        SW["staff-workflows.md"]:::shared
+        JE["jobseeker-experience.md"]:::shared
+    end
+
+    SP --> M0["Module 0"]
+    LM --> M1["Module 1"]
+    RT --> M2["Module 2"]
+    CT --> M3["Module 3"]
+    AP --> M8["Module 8"]
+    TP --> M9["Module 9"]
+    SW --> MS["Modules 10–13"]
+    JE --> MA["Modules 14–19"]
+    BP --> ALL["ALL modules"]
+    LA --> ALL
+
+    classDef state fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef shared fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef universal fill:#c8e6c9,stroke:#4CAF50,color:#000
 ```
 
 ### Population-Aware Routing
 
 ```mermaid
 flowchart TD
-    Input["User Context"] --> Detect{"Population Detection\n(15 WIOA groups)"}
-    Detect --> P1["Justice-involved"]
-    Detect --> P2["Veterans"]
-    Detect --> P3["Youth 14–24"]
-    Detect --> P4["Disabilities"]
-    Detect --> P5["SNAP/TANF"]
-    Detect --> P6["...10 more groups"]
-    P1 --> Adjust["Adjustment Layer"]
+    Input["User Context"]:::input --> Detect{"Population Detection\n(15 WIOA groups)"}:::router
+    Detect --> P1["Justice-involved"]:::pop
+    Detect --> P2["Veterans"]:::pop
+    Detect --> P3["Youth 14–24"]:::pop
+    Detect --> P4["Disabilities"]:::pop
+    Detect --> P5["SNAP/TANF"]:::pop
+    Detect --> P6["...10 more groups"]:::pop
+    P1 --> Adjust["Adjustment Layer"]:::process
     P2 --> Adjust
     P3 --> Adjust
     P4 --> Adjust
     P5 --> Adjust
     P6 --> Adjust
-    Adjust --> R1["Program Routing"]
-    Adjust --> R2["Tone Adjustment"]
-    Adjust --> R3["Content Inclusion/Exclusion"]
-    Adjust --> R4["Partner Referrals"]
+    Adjust --> R1["Program Routing"]:::output
+    Adjust --> R2["Tone Adjustment"]:::output
+    Adjust --> R3["Content Inclusion/Exclusion"]:::output
+    Adjust --> R4["Partner Referrals"]:::output
+
+    classDef input fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef pop fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef process fill:#fff8e1,stroke:#FFC107,color:#000
+    classDef output fill:#e8f5e9,stroke:#4CAF50,color:#000
+```
+
+### Evaluation Pipeline
+
+```mermaid
+flowchart LR
+    subgraph evals["67 Test Cases"]
+        T1["trigger-eval.json\n20 cases"]:::trigger
+        T2["population-routing-eval.json\n12 cases"]:::population
+        T3["output-quality-eval.json\n8 cases"]:::quality
+        T4["negative-eval.json\n12 cases"]:::negative
+        T5["edge-cases-eval.json\n15 cases"]:::edge
+    end
+
+    T1 --> V{"Validate"}
+    T2 --> V
+    T3 --> V
+    T4 --> V
+    T5 --> V
+    V -->|Pass| OK["Ready to Deploy"]:::pass
+    V -->|Fail| FIX["Fix & Re-test"]:::fail
+
+    classDef trigger fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef population fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef quality fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef negative fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef edge fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef pass fill:#c8e6c9,stroke:#2E7D32,color:#000
+    classDef fail fill:#ffcdd2,stroke:#C62828,color:#000
 ```
 
 ### State Deployment Flow
 
 ```mermaid
 flowchart LR
-    A["deploy-state.sh\n(scaffold)"] --> B["Replace 4 files\n(programs, LMI,\npathways, local)"]
-    B --> C["Customize 4 files\n(location refs)"]
-    C --> D["validate-state.sh"]
-    D --> E["Test with\n67 eval cases"]
-    E --> F["build-skill.sh\n(package)"]
-    F --> G["Upload .skill\nor deploy via MCP"]
+    A["deploy-state.sh\n(scaffold)"]:::script --> B["Replace 4 files\n(programs, LMI,\npathways, local)"]:::high
+    B --> C["Customize 4 files\n(location refs)"]:::medium
+    C --> D["validate-state.sh"]:::script
+    D --> E["Test with\n67 eval cases"]:::test
+    E --> F["build-skill.sh\n(package)"]:::script
+    F --> G["Upload .skill\nor deploy via MCP"]:::deploy
+
+    classDef script fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef high fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef medium fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef test fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef deploy fill:#c8e6c9,stroke:#4CAF50,color:#000
 ```
 
 ### Design Principles
