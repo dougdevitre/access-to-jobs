@@ -109,18 +109,88 @@ The skill automatically detects and adjusts for:
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    A["👤 User Input"] --> B{"Dual-User Detection"}
+    B -->|"Job Seeker detected"| C["Modules 0–9, 14–18\nSpecial Modes"]
+    B -->|"Staff detected"| D["Modules 10–13, 19"]
+    C --> E["Task Router\n(maps intent → module)"]
+    D --> E
+    E --> F["Module Execution\n(loads only needed reference files)"]
+    F --> G["Population Adjustment Layer\n(auto-applies per detected barriers)"]
+    G --> H["Output\n(formatted per templates/)"]
 ```
-DUAL-USER DETECTION
-├── Job Seeker detected → Modules 0–9, 14–18, Special Modes
-└── Staff detected ────→ Modules 10–13, 19
-         │
-    TASK ROUTER (maps user intent → module)
-         │
-    MODULE EXECUTION (loads only the reference files needed)
-         │
-    POPULATION ADJUSTMENT LAYER (auto-applies based on detected barriers)
-         │
-    OUTPUT (formatted per templates/)
+
+### Module Tiers
+
+```mermaid
+flowchart LR
+    subgraph Tier1["Tier 1 — Job Seeker (0–9)"]
+        M0["0 Eligibility"]
+        M1["1 Job Match"]
+        M2["2 Resume"]
+        M3["3 Cover Letter"]
+        M4["4 Apply Email"]
+        M5["5 Follow-Up"]
+        M6["6 Thank You"]
+        M7["7 Interview"]
+        M8["8 Action Plan"]
+        M9["9 Training"]
+    end
+    subgraph Tier2["Tier 2 — Staff (10–13)"]
+        M10["10 Intake"]
+        M11["11 Case Notes"]
+        M12["12 Referral"]
+        M13["13 Outreach"]
+    end
+    subgraph Tier3["Tier 3 — Advanced (14–19)"]
+        M14["14 Readiness"]
+        M15["15 Retention"]
+        M16["16 LinkedIn"]
+        M17["17 Job Fair"]
+        M18["18 Salary"]
+        M19["19 Workshop"]
+    end
+    subgraph Tier4["Special Modes"]
+        SM1["Multi-output"]
+        SM2["Quick"]
+        SM3["Coach"]
+    end
+```
+
+### Population-Aware Routing
+
+```mermaid
+flowchart TD
+    Input["User Context"] --> Detect{"Population Detection\n(15 WIOA groups)"}
+    Detect --> P1["Justice-involved"]
+    Detect --> P2["Veterans"]
+    Detect --> P3["Youth 14–24"]
+    Detect --> P4["Disabilities"]
+    Detect --> P5["SNAP/TANF"]
+    Detect --> P6["...10 more groups"]
+    P1 --> Adjust["Adjustment Layer"]
+    P2 --> Adjust
+    P3 --> Adjust
+    P4 --> Adjust
+    P5 --> Adjust
+    P6 --> Adjust
+    Adjust --> R1["Program Routing"]
+    Adjust --> R2["Tone Adjustment"]
+    Adjust --> R3["Content Inclusion/Exclusion"]
+    Adjust --> R4["Partner Referrals"]
+```
+
+### State Deployment Flow
+
+```mermaid
+flowchart LR
+    A["deploy-state.sh\n(scaffold)"] --> B["Replace 4 files\n(programs, LMI,\npathways, local)"]
+    B --> C["Customize 4 files\n(location refs)"]
+    C --> D["validate-state.sh"]
+    D --> E["Test with\n67 eval cases"]
+    E --> F["build-skill.sh\n(package)"]
+    F --> G["Upload .skill\nor deploy via MCP"]
 ```
 
 ### Design Principles
