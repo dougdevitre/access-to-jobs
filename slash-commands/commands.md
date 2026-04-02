@@ -3,6 +3,65 @@
 Quick-trigger commands for common workflows. Users can type these to jump
 directly to a module without conversational routing.
 
+## Command Routing Map
+
+```mermaid
+flowchart TD
+    CMD["/command"]:::cmd --> TYPE{"Command Type"}:::router
+
+    TYPE -->|"Job Seeker"| JS
+    TYPE -->|"Staff"| ST
+    TYPE -->|"Utility"| UT
+
+    subgraph JS["Job Seeker Commands"]
+        direction LR
+        JS1["/eligible → M0"]:::m0
+        JS2["/match → M1"]:::core
+        JS3["/resume → M2"]:::core
+        JS4["/cover → M3"]:::core
+        JS5["/apply → Multi"]:::special
+        JS6["/quick → Quick"]:::special
+        JS7["/followup → M5"]:::core
+        JS8["/thankyou → M6"]:::core
+        JS9["/interview → M7"]:::core
+        JS10["/plan → M8"]:::core
+        JS11["/train → M9"]:::core
+        JS12["/ready → M14"]:::adv
+        JS13["/hired → M15"]:::adv
+        JS14["/linkedin → M16"]:::adv
+        JS15["/fair → M17"]:::adv
+        JS16["/salary → M18"]:::adv
+        JS17["/coach → Coach"]:::special
+    end
+
+    subgraph ST["Staff Commands"]
+        direction LR
+        ST1["/intake → M10"]:::staff
+        ST2["/casenote → M11"]:::staff
+        ST3["/refer → M12"]:::staff
+        ST4["/pitch → M13"]:::staff
+        ST5["/workshop → M19"]:::staff
+    end
+
+    subgraph UT["Utility Commands"]
+        direction LR
+        UT1["/glossary"]:::util
+        UT2["/programs"]:::util
+        UT3["/local"]:::util
+        UT4["/track"]:::util
+        UT5["/help"]:::util
+    end
+
+    classDef cmd fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef router fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef m0 fill:#dcedc8,stroke:#689F38,color:#000
+    classDef core fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef adv fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef special fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef util fill:#f5f5f5,stroke:#9E9E9E,color:#000
+```
+
 ---
 
 ## Job Seeker Commands

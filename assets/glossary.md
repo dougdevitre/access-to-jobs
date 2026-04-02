@@ -4,6 +4,30 @@ Workforce development and WIOA terminology. Use this to expand acronyms
 for job seekers (who should never see unexplained acronyms) and as a
 quick reference for staff.
 
+## Acronym Categories
+
+```mermaid
+flowchart TD
+    GLOSS["55+ Terms"]:::root --> FED["Federal Programs\n& Agencies"]:::fed
+    GLOSS --> STATE["Missouri-Specific\nPrograms"]:::state
+    GLOSS --> CRED["Credentials\n& Certifications"]:::cred
+    GLOSS --> DATA["Data Sources\n& Metrics"]:::data
+    GLOSS --> WF["Workforce\nConcepts"]:::wf
+
+    FED --> F1["WIOA, DOL, DOC\nBLS, TAA, WOTC\nSNAP, TANF, UI"]
+    STATE --> S1["MERIC, MVR, MWA\nOWD, RSB, JAG\nHEALS, OWCI"]
+    CRED --> C1["CNA, LPN, RN\nGED, HiSET, CDA\nNCRC, HVAC"]
+    DATA --> D1["LMI, LAUS, QCEW\nGSP, ETPL, O*NET"]
+    WF --> W1["AJC, LWDA, LWDB\nITA, IWT, OJT\nSTAR, ATS, IET"]
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef fed fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef state fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef cred fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef data fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef wf fill:#fff9c4,stroke:#FFC107,color:#000
+```
+
 ---
 
 ## Acronyms & Terms

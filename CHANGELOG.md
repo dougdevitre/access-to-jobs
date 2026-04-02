@@ -2,6 +2,32 @@
 
 All notable changes to Access to Jobs are documented here.
 
+## Version Timeline
+
+```mermaid
+timeline
+    title Access to Jobs Version History
+    2025 : v1.0 — stc-jobs
+         : Initial skill for St. Charles County
+         : Core resume, cover letter, interview modules
+    2025 : v2.0 — mo-jobs
+         : Modules 0–9 (core job seeker)
+         : Missouri WIOA integration
+         : Barrier populations + special modes
+    2026-02 : v3.0 — mo-jobs
+             : Modules 10–19 (staff + advanced)
+             : Dual-user detection
+             : Local county layer
+    2026-04 : v4.0 — access-to-jobs
+             : Rebrand to Access To family
+             : State-deployable architecture
+             : Templates, schemas, evals, guides
+    2026-04 : v4.1 — access-to-jobs
+             : SECURITY.md + CI/CD pipeline
+             : Spanish guide + negative evals
+             : Build and validate scripts
+```
+
 ## [4.1.0] — 2026-04-01
 
 ### Added

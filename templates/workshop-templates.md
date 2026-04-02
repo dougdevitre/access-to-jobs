@@ -2,6 +2,34 @@
 
 Turnkey facilitation scripts for Job Center staff running group workshops.
 
+## Workshop Selection Guide
+
+```mermaid
+flowchart TD
+    START["What does your\ngroup need?"]:::start --> Q1{"Topic?"}:::question
+
+    Q1 -->|"Resume help"| WA["Workshop A\nResume in 60 Minutes\n8–20 participants"]:::resume
+    Q1 -->|"Interview skills"| WB["Workshop B\nInterview Skills\n90 min · 8–15 participants"]:::interview
+    Q1 -->|"Job search basics"| WC["Workshop C\nJob Search Fundamentals\n45 min · Any size"]:::search
+    Q1 -->|"Online presence"| WD["Workshop D\nLinkedIn for Job Seekers\n60 min · 8–15 participants"]:::linkedin
+    Q1 -->|"Money management"| WE["Workshop E\nFinancial Literacy\n45 min · Any size"]:::financial
+
+    WA --> CMD1["/workshop resume"]:::cmd
+    WB --> CMD2["/workshop interview"]:::cmd
+    WC --> CMD3["/workshop jobsearch"]:::cmd
+    WD --> CMD4["/workshop linkedin"]:::cmd
+    WE --> CMD5["/workshop financial"]:::cmd
+
+    classDef start fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef question fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef resume fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef interview fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef search fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef linkedin fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef financial fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef cmd fill:#f5f5f5,stroke:#9E9E9E,color:#000
+```
+
 ---
 
 ## WORKSHOP A: Resume in 60 Minutes

@@ -3,6 +3,41 @@
 Curated prompts organized by audience and scenario. Use these as training examples,
 demo scripts, or QA test cases.
 
+## Prompt Routing Overview
+
+```mermaid
+flowchart TD
+    P["50+ Prompts"]:::root --> JS["Job Seeker\nPrompts"]:::seeker
+    P --> ST["Staff\nPrompts"]:::staff
+    P --> MW["Multi-Step\nWorkflows"]:::multi
+    P --> EV["Evaluation\nEdge Cases"]:::eval
+
+    JS --> JS1["Getting Started\n→ Module 0 / Coach"]:::mod
+    JS --> JS2["Resume & Cover\n→ Modules 2–3"]:::mod
+    JS --> JS3["Applying\n→ Modules 4–6 / Multi"]:::mod
+    JS --> JS4["Interview\n→ Module 7"]:::mod
+    JS --> JS5["Career Planning\n→ Modules 1, 9, 14–18"]:::mod
+    JS --> JS6["Special Situations\n→ Population Routing"]:::mod
+
+    ST --> ST1["Intake & Triage\n→ Module 10"]:::smod
+    ST --> ST2["Case Documentation\n→ Modules 11–12"]:::smod
+    ST --> ST3["Employer Engagement\n→ Module 13"]:::smod
+    ST --> ST4["Program Operations\n→ Modules 0, 19"]:::smod
+
+    MW --> MW1["Full Application\nPipeline (5 steps)"]:::pipe
+    MW --> MW2["Career Transition\n(4 steps)"]:::pipe
+    MW --> MW3["Reentry Pipeline\n(5 steps)"]:::pipe
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef seeker fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef staff fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef multi fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef eval fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef mod fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef smod fill:#f8bbd0,stroke:#E91E63,color:#000
+    classDef pipe fill:#ffe0b2,stroke:#FF9800,color:#000
+```
+
 ---
 
 ## JOB SEEKER PROMPTS

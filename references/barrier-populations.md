@@ -5,6 +5,51 @@
 Used to adjust outputs, tone, program routing, and content for users in priority populations.
 Never make eligibility determinations — educational information only.
 
+## Population Detection & Routing Flow
+
+```mermaid
+flowchart TD
+    INPUT["User mentions\nsituation or context"]:::input --> DETECT{"Auto-detect\nbarrier population(s)"}:::detect
+
+    DETECT --> G1["Justice-involved"]:::pop1
+    DETECT --> G2["Veterans"]:::pop1
+    DETECT --> G3["Youth 14–24"]:::pop2
+    DETECT --> G4["Disabilities"]:::pop2
+    DETECT --> G5["SNAP/TANF"]:::pop3
+    DETECT --> G6["No diploma"]:::pop3
+    DETECT --> G7["English learner"]:::pop4
+    DETECT --> G8["Homeless"]:::pop4
+    DETECT --> G9["Older 55+"]:::pop5
+    DETECT --> G10["7 more groups..."]:::pop5
+
+    G1 --> ADJ["Per-Module Adjustments"]:::adjust
+    G2 --> ADJ
+    G3 --> ADJ
+    G4 --> ADJ
+    G5 --> ADJ
+    G6 --> ADJ
+    G7 --> ADJ
+    G8 --> ADJ
+    G9 --> ADJ
+    G10 --> ADJ
+
+    ADJ --> A1["Programs: route to\nspecific WIOA programs"]:::out
+    ADJ --> A2["Tone: trauma-informed,\nage-appropriate"]:::out
+    ADJ --> A3["Content: include/exclude\nspecific sections"]:::out
+    ADJ --> A4["Referrals: partner\nagencies flagged"]:::out
+    ADJ --> A5["Resume: skills-focused,\nno disclosure of barriers"]:::out
+
+    classDef input fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef detect fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef pop1 fill:#ffcdd2,stroke:#E91E63,color:#000
+    classDef pop2 fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef pop3 fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef pop4 fill:#fff9c4,stroke:#FFC107,color:#000
+    classDef pop5 fill:#e1bee7,stroke:#9C27B0,color:#000
+    classDef adjust fill:#f5f5f5,stroke:#9E9E9E,color:#000
+    classDef out fill:#e0f2f1,stroke:#009688,color:#000
+```
+
 ---
 
 ## WIOA-DEFINED INDIVIDUALS WITH BARRIERS TO EMPLOYMENT

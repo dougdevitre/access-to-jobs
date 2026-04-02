@@ -3,6 +3,67 @@
 All data in this skill is sourced from official government publications, federal agencies,
 and state workforce agencies. This file documents every source for audit and update purposes.
 
+## Data Refresh Schedule
+
+```mermaid
+gantt
+    title Data Refresh Timeline
+    dateFormat YYYY
+    axisFormat %Y
+
+    section State Plan Data
+    state-programs.md           :done, sp, 2024, 2026
+    state-training-pathways.md  :done, stp, 2024, 2026
+    barrier-populations.md      :done, bp, 2024, 2026
+    staff-workflows.md          :done, sw, 2024, 2026
+
+    section Annual Data
+    state-labor-market.md       :active, lm, 2025, 2026
+    local-area.md               :active, la, 2025, 2026
+    jobseeker-experience.md     :active, je, 2025, 2026
+
+    section Evergreen
+    resume-template.md          :crit, rt, 2024, 2028
+    cover-letter-template.md    :crit, ct, 2024, 2028
+```
+
+### Source Hierarchy
+
+```mermaid
+flowchart TD
+    subgraph fed["Federal Sources"]
+        WIOA["WIOA Statute"]:::fed
+        BLS["BLS OES / OOH"]:::fed
+        DOL["DOL ETA"]:::fed
+        ONET["O*NET"]:::fed
+    end
+    subgraph state["State Sources (Missouri)"]
+        PLAN["WIOA State Plan\nPY 2024–2027"]:::state
+        MERIC["MERIC / LMI"]:::state
+        OWD["Missouri OWD"]:::state
+        DOC["Missouri DOC"]:::state
+    end
+    subgraph third["Third-Party"]
+        LC["Lightcast"]:::third
+    end
+
+    WIOA --> PLAN
+    BLS --> MERIC
+    DOL --> OWD
+
+    PLAN --> SP["state-programs.md"]:::file
+    MERIC --> LM["state-labor-market.md"]:::file
+    PLAN --> TP["state-training-pathways.md"]:::file
+    OWD --> LA["local-area.md"]:::file
+    DOC --> BP["barrier-populations.md"]:::file
+    LC --> LM
+
+    classDef fed fill:#e8f5e9,stroke:#4CAF50,color:#000
+    classDef state fill:#fce4ec,stroke:#E91E63,color:#000
+    classDef third fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef file fill:#e8f4f8,stroke:#2196F3,color:#000
+```
+
 ---
 
 ## Primary Sources

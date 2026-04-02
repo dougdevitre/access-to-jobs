@@ -509,6 +509,66 @@ All in [`templates/`](templates/):
 
 All in [`schemas/`](schemas/):
 
+### Application Status Workflow
+
+```mermaid
+stateDiagram-v2
+    [*] --> drafting
+    drafting --> submitted : Apply
+    submitted --> followed_up : Follow up
+    submitted --> no_response : No reply
+    submitted --> rejected : Rejected
+    followed_up --> interview_scheduled : Interview invite
+    followed_up --> no_response : No reply
+    followed_up --> rejected : Rejected
+    interview_scheduled --> interviewed : Complete interview
+    interviewed --> thank_you_sent : Send thank you
+    thank_you_sent --> offer_received : Offer!
+    thank_you_sent --> rejected : Rejected
+    offer_received --> offer_accepted : Accept
+    offer_received --> offer_declined : Decline
+    submitted --> withdrawn : Withdraw
+    followed_up --> withdrawn : Withdraw
+    interview_scheduled --> withdrawn : Withdraw
+```
+
+### Progressive Intake Model
+
+```mermaid
+flowchart LR
+    subgraph phase1["Phase 1: Detection"]
+        D1["user_type"]:::detect
+        D2["populations[]"]:::detect
+    end
+    subgraph phase2["Phase 2: Core Info"]
+        C1["personal\n(name, location)"]:::core
+        C2["situation\n(status, urgency)"]:::core
+        C3["skills[]"]:::core
+    end
+    subgraph phase3["Phase 3: Module-Specific"]
+        M1["work_history[]"]:::module
+        M2["education[]"]:::module
+        M3["target\n(job, industry)"]:::module
+        M4["certifications[]"]:::module
+    end
+    subgraph phase4["Phase 4: Enrichment"]
+        E1["programs\n(enrollment)"]:::enrich
+        E2["readiness_scores"]:::enrich
+        E3["preferences\n(tone, format)"]:::enrich
+    end
+
+    phase1 --> phase2 --> phase3 --> phase4
+
+    style phase1 fill:#e8f4f8,stroke:#2196F3,color:#000
+    style phase2 fill:#e8f5e9,stroke:#4CAF50,color:#000
+    style phase3 fill:#fff3e0,stroke:#FF9800,color:#000
+    style phase4 fill:#f3e5f5,stroke:#9C27B0,color:#000
+    classDef detect fill:#bbdefb,stroke:#2196F3,color:#000
+    classDef core fill:#c8e6c9,stroke:#4CAF50,color:#000
+    classDef module fill:#ffe0b2,stroke:#FF9800,color:#000
+    classDef enrich fill:#e1bee7,stroke:#9C27B0,color:#000
+```
+
 | Schema | Purpose | Key Fields |
 |---|---|---|
 | `jobseeker-intake.json` | Progressive intake data model | personal, situation, populations[], skills[], work_history[], target, programs, readiness_scores, preferences |
@@ -566,6 +626,21 @@ This scaffolds `states/il/` with TODO template files. Then:
 
 ## Access To Family
 
+```mermaid
+flowchart TD
+    AT["Access To\nCivic Tech Initiative"]:::root --> AJ["Access to Justice\nLegal navigation"]:::pillar
+    AT --> AE["Access to Education\nK-12 + special needs"]:::pillar
+    AT --> AH["Access to Housing\nPropTech + housing nav"]:::pillar
+    AT --> AS["Access to Services\nSocial services"]:::pillar
+    AT --> AP["Access to Peace\nConflict resolution"]:::pillar
+    AT --> ASF["Access to Safety\nTrauma-informed safety"]:::pillar
+    AT --> JOBS["Access to Jobs\nWorkforce development"]:::current
+
+    classDef root fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef pillar fill:#f5f5f5,stroke:#9E9E9E,color:#000
+    classDef current fill:#e8f5e9,stroke:#4CAF50,stroke-width:3px,color:#000
+```
+
 | Pillar | Repository | Description |
 |---|---|---|
 | Access to Justice | [`access-to-justice`](https://github.com/cotrackpro/access-to-justice) | Legal navigation and court preparation |
@@ -585,6 +660,45 @@ Full citation table with URLs, data vintage, and refresh schedule: [`assets/data
 **Primary federal:** WIOA statute, BLS OES, DOL ETA, O*NET, WOTC, Federal Bonding Program
 
 **Missouri reference implementation:** Missouri WIOA Combined State Plan PY 2024–2027 (Jan 2026), MERIC, Lightcast, Missouri OWD, Missouri DOC
+
+---
+
+## CI/CD Pipeline
+
+```mermaid
+flowchart LR
+    subgraph trigger["Trigger"]
+        PR["Push / PR\nto main"]:::trigger
+    end
+    subgraph checks["GitHub Actions"]
+        J1["Validate JSON\nschemas + evals"]:::check
+        J2["Check internal\nMarkdown links"]:::check
+        J3["Validate state\ndeployments"]:::check
+        J4["Check required\nfiles exist"]:::check
+    end
+    subgraph result["Result"]
+        PASS["All pass"]:::pass
+        FAIL["Failure\n→ fix & retry"]:::fail
+    end
+
+    PR --> J1
+    PR --> J2
+    PR --> J3
+    PR --> J4
+    J1 --> PASS
+    J2 --> PASS
+    J3 --> PASS
+    J4 --> PASS
+    J1 -.->|"error"| FAIL
+    J2 -.->|"error"| FAIL
+    J3 -.->|"error"| FAIL
+    J4 -.->|"error"| FAIL
+
+    classDef trigger fill:#e8f4f8,stroke:#2196F3,color:#000
+    classDef check fill:#fff3e0,stroke:#FF9800,color:#000
+    classDef pass fill:#c8e6c9,stroke:#2E7D32,color:#000
+    classDef fail fill:#ffcdd2,stroke:#C62828,color:#000
+```
 
 ---
 
