@@ -16,7 +16,7 @@ description: >
   veterans, youth, dislocated workers, SNAP/TANF participants, or individuals with
   disabilities seeking employment support. Part of the "Access To" open-source civic
   tech initiative by CoTrackPro.
-version: 4.0.0
+version: 4.2.0
 author: Doug Devitre
 author_contact: dougdevitre@gmail.com
 organization: CoTrackPro
@@ -39,6 +39,25 @@ deployment: >
 
 Calm, professional, practical. No fabricated credentials. No discriminatory language.
 Focus: getting people hired.
+
+---
+
+## GROUNDING FRAMEWORKS
+
+This skill draws on seven established workforce development and economic mobility frameworks.
+Modules reference these frameworks automatically — users do not need to name them.
+
+| # | Framework | How it shapes outputs |
+|---|---|---|
+| 1 | **WIOA (Workforce Innovation and Opportunity Act)** | Program eligibility, co-enrollment, performance metrics, barrier population definitions, priority of service, ITA/OJT/IWT funding mechanisms. Primary statutory authority for all modules. |
+| 2 | **Career Pathways Framework** (DOL/ETA) | Stackable credentials, sector-based training ladders, NOW/NEXT/LATER tiering in Module 1, integrated education and training (IET) in Module 9, and progression from entry to middle-skill to advanced roles. |
+| 3 | **Talent Pipeline Management (TPM)** (U.S. Chamber of Commerce) | Employer-signaled demand drives job matching (Module 1), employer outreach scripts (Module 13), OJT/IWT/apprenticeship pitches, and the municipal talent pipeline model used in the Ferguson example. |
+| 4 | **Skills-Based Hiring / STARs Framework** (Opportunity@Work) | Resume and cover letter modules emphasize demonstrated skills over degree requirements. Action verbs, competency keywords, and ATS optimization target employers who have adopted skills-based practices. |
+| 5 | **Trauma-Informed Care (SAMHSA)** | Tone calibration across all modules — calm, empowering, never shaming. Population adjustments for reentry, foster care youth, DV survivors, and homeless individuals follow trauma-informed principles: safety, trustworthiness, peer support, empowerment, and cultural sensitivity. |
+| 6 | **Asset-Based Community Development (ABCD)** (Kretzmann & McKnight) | The municipal talent pipeline model (Ferguson example) maps existing community assets — anchor employers, training providers, faith institutions, community organizations — before identifying gaps. Modules 10–13 and 19 frame communities by strengths, not deficits. |
+| 7 | **DOL Good Jobs Principles** (2022) | Salary guidance (Module 18) references fair wages, benefits, predictable scheduling, and worker voice. Job matching (Module 1) flags roles meeting Good Jobs criteria when data is available. |
+
+**How frameworks interact:** Every module output passes through three layers — (1) WIOA compliance and program routing, (2) Career Pathways progression logic, and (3) population-specific adjustments informed by Trauma-Informed Care and Skills-Based Hiring. The TPM and ABCD frameworks activate primarily in staff modules, employer outreach, and municipal deployment scenarios.
 
 ---
 
@@ -66,6 +85,7 @@ Focus: getting people hired.
 | "Apply for this job" (all-in-one) | → MULTI-OUTPUT MODE | Multiple |
 | "Quick apply" | → QUICK MODE | Multiple |
 | "Coach me" / "Where do I start?" | → COACH MODE | Multiple |
+| "talent pipeline" / "municipal workforce plan" | → MUNICIPAL TALENT PIPELINE MODEL | `local-area.md` |
 
 ---
 
@@ -180,6 +200,101 @@ Return:
 2. Top 3 gaps
 3. Today's single action
 4. 7-day plan (MODULE 8)
+
+---
+
+## MUNICIPAL TALENT PIPELINE MODEL
+
+**Purpose:** Help municipalities, counties, and small cities use this skill to build a local
+workforce and talent pipeline strategy — connecting residents to jobs, employers to talent,
+and training providers to demand signals.
+
+**Grounding frameworks:** Talent Pipeline Management (TPM), Asset-Based Community Development (ABCD),
+Career Pathways, WIOA local workforce development.
+
+### How it works
+
+Any municipality can deploy this skill by customizing `references/local-area.md` with:
+1. Local anchor employers and their hiring needs
+2. Local training providers and credential programs
+3. Community organizations that serve barrier populations
+4. Municipal economic development priorities and target sectors
+
+The skill then routes residents to the right programs, generates job-ready materials targeting
+local employers, and gives municipal staff data-informed outreach scripts.
+
+### FERGUSON, MISSOURI — REFERENCE MUNICIPALITY
+
+Ferguson (pop. ~18,000) in north St. Louis County demonstrates how a smaller municipality
+can use Access to Jobs to strengthen its workforce and talent pipeline.
+
+**Why Ferguson:**
+- Part of the St. Louis Regional LWDA — residents access services through the St. Louis
+  County Missouri Job Center system
+- Significant workforce development needs: higher unemployment than county average,
+  concentration of barrier populations (reentry, SNAP/TANF, youth disconnected from school/work)
+- Active economic revitalization with new commercial development along West Florissant Avenue
+- Strong community organization network (faith-based, nonprofits, civic groups) that can
+  serve as workforce pipeline partners
+- Emerson Family Foundation, Ferguson 1000 Jobs Initiative, and other local efforts
+  demonstrate existing community investment in employment outcomes
+
+**Ferguson economic profile:**
+- North St. Louis County labor market: healthcare, retail, light manufacturing, logistics,
+  public sector, food service
+- Anchor employers accessible to Ferguson residents:
+  - **Healthcare:** SSM Health DePaul Hospital (Bridgeton), Christian Hospital (NW County),
+    BJC/Barnes-Jewish system, home health agencies
+  - **Retail/Service:** West Florissant corridor businesses, Emerson Electric (Ferguson),
+    Northwest Plaza redevelopment area employers
+  - **Logistics/Distribution:** Lambert Airport-adjacent warehousing and freight,
+    Earth City industrial corridor (15 min drive)
+  - **Public sector:** City of Ferguson, Ferguson-Florissant School District,
+    St. Louis County government, Metro transit
+  - **Skilled trades:** Construction trades tied to ongoing revitalization projects
+
+**Ferguson talent pipeline strategy (using this skill):**
+
+| Pipeline stage | Skill modules activated | Ferguson-specific action |
+|---|---|---|
+| **Awareness** | Module 0 (Eligibility) | Screen residents for WIOA, SNAP E&T (SkillUP), youth programs, reentry services at community events and partner sites |
+| **Assessment** | Module 14 (Readiness) | Run readiness assessments at Ferguson Public Library, faith sites, and community centers to identify gaps |
+| **Preparation** | Modules 2, 3, 7, 16 (Resume, Cover Letter, Interview, LinkedIn) | Generate job-ready materials targeting Ferguson-area employers; prep for local hiring events |
+| **Training** | Module 9 (Training Pathways) | Route to STLCC-Florissant Valley (closest community college), Ranken Technical College, and WIOA ITA-funded programs |
+| **Placement** | Modules 1, 4, 8 (Job Match, Apply, Action Plan) | Match to North County employers; generate action plans with realistic transit-accessible targets |
+| **Retention** | Module 15 (Job Retention) | 30/60/90-day plans for new hires; flag supportive services (childcare, transportation) |
+| **Employer engagement** | Modules 13, 19 (Outreach, Workshop) | Pitch OJT (up to 90% reimbursement), IWT, WOTC, and Federal Bonding to Ferguson-area employers |
+
+**Ferguson training providers:**
+- **St. Louis Community College — Florissant Valley:** CNA, LPN pathway, IT, business,
+  skilled trades; Fast Track Scholarship eligible
+- **Ranken Technical College:** Automotive, HVAC, electrical, plumbing, manufacturing technology
+- **St. Louis Agency on Training and Employment (SLATE):** Workforce services for City/County residents
+- **Urban League of Metropolitan St. Louis:** Job readiness, digital literacy, youth programs
+- **Ferguson community organizations:** Churches, Neighborhood associations, and civic groups
+  that can host workshops (Module 19) and serve as intake points
+
+**Key population considerations for Ferguson:**
+- **Reentry:** North County has significant reentry population; activate justice-involved
+  adjustments (no conviction disclosure, Fair Chance employers, Federal Bonding, DOC credentials)
+- **Youth (14–24):** Ferguson-Florissant School District pipeline; JAG, Futures, TANF subsidized
+  employment for low-income youth
+- **SNAP/TANF recipients:** High concentration; flag SkillUP, DSS OWCI LISTSERV, childcare supports
+- **Transit-dependent residents:** Metro bus routes constrain job search radius; action plans
+  (Module 8) should prioritize employers on MetroLink/MetroBus lines
+
+**Municipal staff use case:**
+A Ferguson city official, library director, or community organization leader can:
+1. Upload this skill to Claude
+2. Use Module 19 to run workforce workshops at community locations
+3. Use Module 10 for intake triage at community events
+4. Use Module 13 to pitch local employers on OJT and hiring incentives
+5. Track resident outcomes through the application tracker schema
+6. Report aggregate employment metrics aligned to WIOA performance benchmarks
+
+> **Replication note:** Any municipality can follow this pattern. Replace the Ferguson-specific
+> employers, training providers, and community organizations with local equivalents.
+> The module logic, frameworks, and population adjustments remain the same.
 
 ---
 

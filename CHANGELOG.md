@@ -2,6 +2,24 @@
 
 All notable changes to Access to Jobs are documented here.
 
+## [4.2.0] — 2026-04-08
+
+### Added
+- **Grounding Frameworks section** in SKILL.md — documents 7 established workforce development and economic mobility frameworks (WIOA, Career Pathways, Talent Pipeline Management, Skills-Based Hiring/STARs, Trauma-Informed Care, ABCD, DOL Good Jobs Principles) with how each shapes skill outputs
+- **Municipal Talent Pipeline Model** in SKILL.md — replicable model for municipalities to deploy Access to Jobs as a local workforce and talent pipeline strategy
+- **Ferguson, Missouri reference municipality** — complete example showing how a smaller city (pop. ~18,000) in north St. Louis County can build a workforce pipeline using all 20 modules; includes economic profile, anchor employers (Emerson Electric, SSM DePaul, Ferguson-Florissant Schools), training providers (STLCC-Florissant Valley, Ranken Technical, Urban League), community asset map (ABCD framework), population-specific notes (reentry, youth, SNAP/TANF, transit-dependent), and a 7-stage talent pipeline strategy table
+- Ferguson municipality profile in `references/local-area.md` with full employer directory, training provider list, community asset map, population notes, transit considerations, and rapid response protocol
+- Task Router entry for "talent pipeline" / "municipal workforce plan" trigger
+- Grounding Frameworks and Municipal Talent Pipeline sections in README.md
+- Repo stats: grounding frameworks count (7), municipal examples count (1)
+
+### Changed
+- SKILL.md version bumped to 4.2.0
+- README.md version badge updated to 4.2.0
+- Rebuilt `.skill` package with all new content
+
+---
+
 ## [4.1.0] — 2026-04-01
 
 ### Added

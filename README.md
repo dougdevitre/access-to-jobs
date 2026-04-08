@@ -5,7 +5,7 @@
 Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tech initiative by [CoTrackPro](https://cotrackpro.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Skill Version](https://img.shields.io/badge/version-4.1.0-blue.svg)](CHANGELOG.md)
+[![Skill Version](https://img.shields.io/badge/version-4.2.0-blue.svg)](CHANGELOG.md)
 [![State: Missouri](https://img.shields.io/badge/reference_state-Missouri-red.svg)](states/missouri/)
 [![Modules](https://img.shields.io/badge/modules-20-orange.svg)](assets/module-map.md)
 [![Populations](https://img.shields.io/badge/barrier_populations-15-purple.svg)](references/barrier-populations.md)
@@ -15,6 +15,8 @@ Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tec
 ## Table of Contents
 
 - [What It Does](#what-it-does)
+- [Grounding Frameworks](#grounding-frameworks)
+- [Municipal Talent Pipeline Model](#municipal-talent-pipeline-model)
 - [Who It Serves](#who-it-serves)
 - [Architecture](#architecture)
 - [Directory Structure](#directory-structure)
@@ -74,6 +76,46 @@ Access to Jobs is a Claude AI skill that provides a comprehensive workforce navi
 | **Multi-output** | "Apply for this job" | Resume + cover letter + application email in one pass |
 | **Quick** | "Quick apply" | 3-bullet summary + cover note + short email |
 | **Coach** | "Where do I start?" | Readiness assessment, top gaps, today's action, 7-day plan |
+
+---
+
+## Grounding Frameworks
+
+Access to Jobs is built on seven established workforce development and economic mobility frameworks:
+
+| # | Framework | Role in skill |
+|---|---|---|
+| 1 | **WIOA (Workforce Innovation and Opportunity Act)** | Primary statutory authority — program eligibility, co-enrollment, performance metrics, barrier population definitions, priority of service, ITA/OJT/IWT funding |
+| 2 | **Career Pathways Framework** (DOL/ETA) | Stackable credentials, sector-based training ladders, NOW/NEXT/LATER job tiering, integrated education and training (IET) |
+| 3 | **Talent Pipeline Management (TPM)** (U.S. Chamber of Commerce) | Employer-signaled demand drives job matching, employer outreach scripts, OJT/IWT/apprenticeship pitches, municipal talent pipeline model |
+| 4 | **Skills-Based Hiring / STARs Framework** (Opportunity@Work) | Resume and cover letter modules emphasize demonstrated skills over degrees; ATS optimization targets skills-based employers |
+| 5 | **Trauma-Informed Care** (SAMHSA) | Calm, empowering tone across all modules; population adjustments for reentry, foster care, DV survivors, and homeless individuals |
+| 6 | **Asset-Based Community Development (ABCD)** (Kretzmann & McKnight) | Municipal deployments map community assets (anchor employers, training providers, organizations) before identifying gaps |
+| 7 | **DOL Good Jobs Principles** (2022) | Salary guidance references fair wages, benefits, scheduling, and worker voice; job matching flags Good Jobs criteria |
+
+---
+
+## Municipal Talent Pipeline Model
+
+Municipalities can deploy Access to Jobs to build a local workforce and talent pipeline — connecting residents to jobs, employers to talent, and training providers to demand signals.
+
+### Ferguson, Missouri — Reference Example
+
+Ferguson (pop. ~18,000) in north St. Louis County demonstrates how a smaller city can use this skill to strengthen its workforce pipeline:
+
+| Pipeline stage | Skill modules | Ferguson action |
+|---|---|---|
+| **Awareness** | Module 0 (Eligibility) | Screen residents at community events, library, faith sites |
+| **Assessment** | Module 14 (Readiness) | Run readiness assessments to identify workforce gaps |
+| **Preparation** | Modules 2, 3, 7, 16 | Generate job-ready materials targeting North County employers |
+| **Training** | Module 9 (Pathways) | Route to STLCC-Florissant Valley, Ranken Technical, Urban League |
+| **Placement** | Modules 1, 4, 8 | Match to transit-accessible employers; action plans with realistic targets |
+| **Retention** | Module 15 | 30/60/90-day plans; flag childcare and transportation supports |
+| **Employer engagement** | Modules 13, 19 | Pitch OJT (up to 90% reimbursement), IWT, WOTC to Ferguson-area employers |
+
+Ferguson-specific details including anchor employers (Emerson Electric, SSM DePaul, Ferguson-Florissant Schools), training providers, community asset maps, and population-specific adjustments (reentry, youth, SNAP/TANF, transit-dependent) are in [`references/local-area.md`](references/local-area.md).
+
+> **Replication:** Any municipality can follow this pattern by replacing Ferguson-specific data with local equivalents. The module logic, frameworks, and population adjustments remain the same.
 
 ---
 
@@ -465,8 +507,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome state implementations, module
 | Metric | Count |
 |---|---|
 | Total files | 40+ |
-| Total content lines | 6,500+ |
+| Total content lines | 8,000+ |
+| Grounding frameworks | 7 |
 | Modules | 20 + 3 special modes |
+| Municipal examples | 1 (Ferguson, MO) |
 | Barrier populations | 15 |
 | Slash commands | 22 |
 | Output templates | 12 |

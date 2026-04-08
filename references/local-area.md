@@ -233,3 +233,192 @@ When a job seeker mentions they are currently receiving Unemployment Insurance (
 
 **Staff note:** UI claimants who engage with Job Center services have better re-employment
 outcomes. Every UI claimant is a warm lead for WIOA co-enrollment.
+
+---
+---
+
+# ALTERNATE CONFIGURATION: FERGUSON, MISSOURI
+## Municipal Talent Pipeline Example
+### Source: Census, MERIC, St. Louis County LWDA context
+
+> DEPLOYMENT NOTE: This section demonstrates how to configure the local-area file for
+> a specific municipality. Ferguson serves as a reference example for how smaller cities
+> can use Access to Jobs to build a workforce and talent pipeline strategy.
+> Replace this section with your own municipality's data when deploying.
+
+---
+
+## FERGUSON MUNICIPAL PROFILE
+
+**City of Ferguson, Missouri** — population ~18,000 (2020 Census)
+- Located in north St. Louis County
+- Part of the **St. Louis County Local Workforce Development Area (LWDA)**
+- **WIOA Region:** St. Louis Region (bi-state planning region)
+- Ferguson residents access WIOA services through St. Louis County Job Centers
+  and SLATE (St. Louis Agency on Training and Employment)
+
+---
+
+## FERGUSON ECONOMIC CONTEXT
+
+**North St. Louis County labor market:**
+- Mixed-income suburban area with significant workforce development needs
+- Higher unemployment rate than St. Louis County average
+- Concentration of WIOA barrier populations: reentry, SNAP/TANF recipients,
+  disconnected youth, single parents, individuals without post-secondary credentials
+- Active economic revitalization: West Florissant Avenue corridor redevelopment,
+  new commercial investment, and community-driven employment initiatives
+
+**Ferguson workforce characteristics:**
+- Many residents are transit-dependent (MetroBus/MetroLink constrain job search radius)
+- Strong community organization network creates workforce pipeline entry points
+- Ferguson-Florissant School District serves as a youth pipeline partner
+- Higher share of workers in service, retail, healthcare support, and logistics
+  compared to county average
+
+---
+
+## FERGUSON JOB CENTER ACCESS
+
+Ferguson residents access WIOA services through multiple points:
+
+**Missouri Job Center — St. Louis County**
+- Services: MoJobs registration, career advising, WIOA enrollment, veteran priority,
+  employer services, workshops, training referrals
+- Online access: jobs.mo.gov → "Find a Job Center" → St. Louis County
+
+**SLATE (St. Louis Agency on Training and Employment)**
+- Workforce services for City of St. Louis and St. Louis County residents
+- Career centers, job fairs, employer connections, training program referrals
+
+**Ferguson community access points (non-WIOA, but pipeline feeders):**
+- Ferguson Municipal Public Library — computer access, resume help, job search support
+- Faith-based organizations — intake, referral, wraparound support
+- Community centers and civic organizations — workshop hosting, outreach events
+
+---
+
+## KEY EMPLOYERS ACCESSIBLE TO FERGUSON RESIDENTS
+
+**Healthcare (largest demand sector):**
+- SSM Health DePaul Hospital (Bridgeton — 10 min)
+- Christian Hospital (NW St. Louis County)
+- BJC HealthCare / Barnes-Jewish system (metro-wide)
+- Home health agencies (high-volume CNA/HHA demand across North County)
+- DaVita and dialysis centers
+
+**Manufacturing / Distribution / Logistics:**
+- Emerson Electric (Ferguson headquarters campus)
+- Earth City industrial corridor (15 min — warehousing, freight, distribution)
+- Lambert Airport-adjacent logistics and cargo operations
+- Amazon fulfillment and delivery operations (Hazelwood/Bridgeton)
+
+**Retail / Service:**
+- West Florissant Avenue corridor businesses
+- Halls Ferry Road / Florissant Road commercial district
+- Restaurant and food service (consistently hiring)
+
+**Public Sector:**
+- City of Ferguson (municipal positions)
+- Ferguson-Florissant School District (paraprofessional, custodial, food service,
+  administrative — often entry-level with benefits)
+- St. Louis County government
+- Metro (transit authority — bus operators, maintenance)
+
+**Skilled Trades:**
+- Construction trades tied to West Florissant revitalization projects
+- HVAC, electrical, plumbing contractors serving North County residential/commercial
+
+---
+
+## FERGUSON TRAINING PROVIDERS
+
+Always verify current program availability at jobs.mo.gov/eligible-training-providers
+
+**Community Colleges:**
+- **St. Louis Community College — Florissant Valley (STLCC-FV)** — Closest campus to Ferguson
+  - Healthcare programs (CNA, LPN pathway, Medical Assisting, Phlebotomy)
+  - IT and cybersecurity pathways
+  - Business and accounting
+  - Skilled trades and manufacturing technology
+  - Participates in Fast Track Scholarship
+  - Many programs are ITA-eligible through WIOA
+
+**Technical / Vocational:**
+- **Ranken Technical College** (St. Louis) — Automotive, HVAC, electrical, plumbing,
+  manufacturing technology; strong employer connections; financial aid available
+- **Midwest Technical Institute** — CDL, medical, HVAC programs
+
+**Workforce Development Partners:**
+- **Urban League of Metropolitan St. Louis** — Job readiness training, digital literacy,
+  youth employment programs, Save Our Sons initiative
+- **SLATE** — Sector-based training, employer partnerships, career fairs
+- **St. Louis County Workforce Development** — WIOA-funded training, ITA coordination
+- **Goodwill Industries** — Job training, employment placement, retail skills
+
+**Adult Education:**
+- AEL programs through STLCC and community-based providers
+- Excel Center (adults 21+ — free diploma + industry credentials + childcare)
+- MOLearns virtual program (statewide)
+
+---
+
+## FERGUSON TALENT PIPELINE — COMMUNITY ASSET MAP
+
+Using the Asset-Based Community Development (ABCD) framework, Ferguson's workforce
+pipeline leverages existing community strengths:
+
+| Asset type | Ferguson examples | Pipeline role |
+|---|---|---|
+| **Anchor employers** | Emerson Electric, SSM DePaul, Ferguson-Florissant Schools | Demand signals, OJT hosts, hiring event partners |
+| **Training providers** | STLCC-Florissant Valley, Ranken, Urban League | Credential production, skills training, career pathways |
+| **Community organizations** | Churches, Ferguson Library, civic associations | Intake points, workshop hosts, wraparound referrals |
+| **Public institutions** | City of Ferguson, SLATE, St. Louis County WDB | Coordination, funding, performance tracking |
+| **Transit infrastructure** | MetroBus routes, MetroLink (nearby stations) | Defines accessible job search radius for residents |
+| **Youth pipeline** | Ferguson-Florissant School District, JAG, Futures | Early career exposure, work experience, credential starts |
+
+---
+
+## FERGUSON-SPECIFIC POPULATION NOTES
+
+**Reentry population (high priority for Ferguson):**
+- North County has one of the highest concentrations of returning citizens in the St. Louis metro
+- Activate all justice-involved adjustments: no conviction disclosure in materials,
+  Fair Chance employer targeting, Federal Bonding, DOC credential recognition
+- Route to OWD Reentry Specialists at Job Centers and community-based reentry organizations
+- WOTC employer incentive is a strong pitch for Ferguson-area employers
+
+**Youth (14–24):**
+- Ferguson-Florissant School District students and recent graduates
+- JAG (Jobs for America's Graduates) if available in district
+- TANF subsidized employment for youth at ≤185% poverty level
+- Futures Program for foster care youth ages 16–23
+- Urban League youth programs
+
+**SNAP/TANF recipients:**
+- High enrollment area — flag SkillUP (SNAP E&T) in every eligibility screening
+- DSS OWCI LISTSERV for hiring event notifications (opt-in via text)
+- Childcare and transportation supports critical — always include in action plans
+
+**Transit-dependent residents:**
+- Action plans (Module 8) must prioritize employers on MetroBus/MetroLink lines
+- Earth City corridor is reachable but requires transfers — note commute time
+- Remote/hybrid roles are high value for transit-limited residents
+
+---
+
+## FERGUSON RAPID RESPONSE PROTOCOL
+
+Same as statewide protocol. For layoffs in Ferguson or North St. Louis County:
+
+1. OWD Rapid Response Team notified for layoffs of 25+ workers
+2. On-site services coordinated through SLATE and St. Louis County Job Centers
+3. Workers referred to nearest Job Center for immediate WIOA enrollment
+4. Trade Act Navigator notified if trade-related layoff suspected
+
+**For smaller layoffs (< 25):** Informational packets and Job Center referral at minimum.
+
+**Staff action:** When a Ferguson resident mentions a layoff, screen for:
+- Mass layoff (25+)?
+- Trade-affected industry?
+- Currently receiving UI? (Route to RESEA, Coursera access, work search compliance)
