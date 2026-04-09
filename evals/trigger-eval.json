@@ -138,5 +138,26 @@
     "expected_populations": ["disability"],
     "should_trigger": true,
     "notes": "Should route to MVR/RSB and flag benefits counseling as critical step"
+  },
+  {
+    "prompt": "I want to apply for a federal government job on USAJobs.",
+    "expected_module": "MODULE 20",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should trigger Module 20 (Public Service Applications), NOT Module 2. Should ask about target agency, GS grade, and vacancy announcement."
+  },
+  {
+    "prompt": "Help me write a job description for a new position in my department.",
+    "expected_module": "MODULE 21",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should detect HR Manager mode and trigger Module 21. Should produce a 13-section job description with inclusive language."
+  },
+  {
+    "prompt": "I need to enter interview feedback into Workday for a candidate.",
+    "expected_module": "MODULE 22",
+    "expected_populations": [],
+    "should_trigger": true,
+    "notes": "Should trigger Module 22 (Workday Workflows). Should generate competency-by-competency feedback formatted for Workday fields."
   }
 ]

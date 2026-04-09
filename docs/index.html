@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access to Jobs — AI-Powered Workforce Navigator</title>
+    <meta name="description" content="Open-source, WIOA-grounded AI workforce navigator for job seekers, Job Center staff, and HR managers. 23 modules. State-deployable.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        brand: { 50:'#eff6ff', 100:'#dbeafe', 200:'#bfdbfe', 500:'#3b82f6', 600:'#2563eb', 700:'#1d4ed8', 800:'#1e40af', 900:'#1e3a5f' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #7c3aed 100%); }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .tab-btn.active { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .mermaid { background: transparent !important; }
+        .stat-card { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <a href="#" class="font-bold text-lg text-brand-800">Access to Jobs</a>
+        <div class="hidden md:flex gap-6 text-sm text-gray-600">
+            <a href="#features" class="hover:text-brand-600">Features</a>
+            <a href="#modules" class="hover:text-brand-600">Modules</a>
+            <a href="#architecture" class="hover:text-brand-600">Architecture</a>
+            <a href="#populations" class="hover:text-brand-600">Populations</a>
+            <a href="#deploy" class="hover:text-brand-600">Deploy</a>
+            <a href="#sponsor" class="hover:text-brand-600">Sponsor</a>
+        </div>
+        <a href="https://github.com/dougdevitre/access-to-jobs" class="text-sm font-medium px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700 transition">GitHub</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-gradient text-white pt-28 pb-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-6">
+            <span class="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            v4.2.3 &middot; Open Source &middot; MIT License
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            AI-Powered<br>Workforce Navigator
+        </h1>
+        <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+            Open-source, WIOA-grounded, state-deployable. 23 modules for job seekers,
+            Job Center staff, and HR managers. Default: Missouri (all 114 counties).
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://github.com/dougdevitre/access-to-jobs" class="px-8 py-3.5 bg-white text-brand-700 font-semibold rounded-xl hover:bg-blue-50 transition text-center">
+                View on GitHub
+            </a>
+            <a href="#modules" class="px-8 py-3.5 border-2 border-white/40 text-white font-semibold rounded-xl hover:bg-white/10 transition text-center">
+                Explore Modules
+            </a>
+        </div>
+        <!-- Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 max-w-3xl mx-auto">
+            <div class="stat-card rounded-xl p-4">
+                <div class="text-3xl font-bold">23</div>
+                <div class="text-blue-200 text-sm">Modules</div>
+            </div>
+            <div class="stat-card rounded-xl p-4">
+                <div class="text-3xl font-bold">15</div>
+                <div class="text-blue-200 text-sm">Barrier Populations</div>
+            </div>
+            <div class="stat-card rounded-xl p-4">
+                <div class="text-3xl font-bold">75+</div>
+                <div class="text-blue-200 text-sm">HR KPIs</div>
+            </div>
+            <div class="stat-card rounded-xl p-4">
+                <div class="text-3xl font-bold">34</div>
+                <div class="text-blue-200 text-sm">Slash Commands</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Three User Paths -->
+<section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Built for Three Audiences</h2>
+        <p class="text-gray-500 text-center mb-12 max-w-xl mx-auto">Tri-user detection automatically routes you to the right modules based on your language.</p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Job Seeker -->
+            <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-5">&#x1F4BC;</div>
+                <h3 class="text-xl font-bold mb-3">Job Seekers</h3>
+                <p class="text-gray-500 text-sm mb-4">Modules 0-9, 14-18, 20</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li>Program eligibility screening</li>
+                    <li>ATS-optimized resume + cover letter</li>
+                    <li>Interview prep with STAR coaching</li>
+                    <li>7-day action plans by urgency</li>
+                    <li>Training pathways with funding</li>
+                    <li>Total compensation calculator</li>
+                    <li>Government job applications</li>
+                </ul>
+            </div>
+            <!-- Staff -->
+            <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
+                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-5">&#x1F3E2;</div>
+                <h3 class="text-xl font-bold mb-3">Job Center Staff</h3>
+                <p class="text-gray-500 text-sm mb-4">Modules 10-13, 19</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li>5-minute intake and triage</li>
+                    <li>Case notes in 30 seconds</li>
+                    <li>Referral letter drafts</li>
+                    <li>Employer outreach scripts</li>
+                    <li>6 workshop facilitation guides</li>
+                    <li>WIOA performance tracking</li>
+                </ul>
+            </div>
+            <!-- HR Manager -->
+            <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
+                <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl mb-5">&#x1F4CA;</div>
+                <h3 class="text-xl font-bold mb-3">HR Managers</h3>
+                <p class="text-gray-500 text-sm mb-4">Modules 21-22</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li>Job description writing</li>
+                    <li>Structured interview guides</li>
+                    <li>Candidate evaluation scorecards</li>
+                    <li>75+ KPI performance dashboard</li>
+                    <li>Benefits benchmarking</li>
+                    <li>Workday copy/paste content</li>
+                    <li>EEO/ADA compliance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section id="features" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl border border-gray-100 card-hover">
+                <div class="text-2xl mb-3">&#x1F1FA;&#x1F1F8;</div>
+                <h3 class="font-semibold mb-2">Government Applications</h3>
+                <p class="text-sm text-gray-500">Federal resume (4-6 pages), KSA/CCAR narratives, civil service exam prep, veteran preference, Schedule A.</p>
+            </div>
+            <div class="p-6 rounded-2xl border border-gray-100 card-hover">
+                <div class="text-2xl mb-3">&#x1F4B0;</div>
+                <h3 class="font-semibold mb-2">Total Compensation Calculator</h3>
+                <p class="text-sm text-gray-500">Compare up to 3 offers: salary + health insurance + retirement + PTO + all benefits. Federal vs. private sector comparison.</p>
+            </div>
+            <div class="p-6 rounded-2xl border border-gray-100 card-hover">
+                <div class="text-2xl mb-3">&#x1F4CA;</div>
+                <h3 class="font-semibold mb-2">HR Performance Dashboard</h3>
+                <p class="text-sm text-gray-500">75+ KPIs across recruitment, retention, performance, compensation, compliance, workforce planning, and engagement.</p>
+            </div>
+            <div class="p-6 rounded-2xl border border-gray-100 card-hover">
+                <div class="text-2xl mb-3">&#x1F4BB;</div>
+                <h3 class="font-semibold mb-2">Workday Integration</h3>
+                <p class="text-sm text-gray-500">Copy/paste content for job requisitions, interview feedback, performance reviews, compensation changes, and onboarding.</p>
+            </div>
+            <div class="p-6 rounded-2xl border border-gray-100 card-hover">
+                <div class="text-2xl mb-3">&#x1F30E;</div>
+                <h3 class="font-semibold mb-2">State-Deployable</h3>
+                <p class="text-sm text-gray-500">Replace 4 files to deploy to any U.S. state. Missouri reference implementation included with all 114 counties.</p>
+            </div>
+            <div class="p-6 rounded-2xl border border-gray-100 card-hover">
+                <div class="text-2xl mb-3">&#x1F91D;</div>
+                <h3 class="font-semibold mb-2">Population-Aware</h3>
+                <p class="text-sm text-gray-500">Auto-detects and adjusts for 15 barrier populations: veterans, justice-involved, youth, disability, and more.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Module Browser -->
+<section id="modules" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">23 Modules + 3 Special Modes</h2>
+        <p class="text-gray-500 text-center mb-10">Click a tab to explore modules by user type.</p>
+
+        <!-- Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button onclick="showTab('seeker')" class="tab-btn active px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-seeker">Job Seekers (0-9, 14-18)</button>
+            <button onclick="showTab('staff')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-staff">Staff (10-13, 19)</button>
+            <button onclick="showTab('hr')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-hr">HR & Public Service (20-22)</button>
+            <button onclick="showTab('special')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-special">Special Modes</button>
+        </div>
+
+        <!-- Job Seeker -->
+        <div id="content-seeker" class="tab-content active">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 0</span><h4 class="font-semibold mt-1">Eligibility Screener</h4><p class="text-sm text-gray-500 mt-1">Routes to WIOA, SNAP E&T, VR, veteran services, and 20+ programs</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 1</span><h4 class="font-semibold mt-1">Job Matcher</h4><p class="text-sm text-gray-500 mt-1">Top 5 roles with NOW/NEXT/LATER tier + demand data</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 2</span><h4 class="font-semibold mt-1">Resume Builder</h4><p class="text-sm text-gray-500 mt-1">ATS-optimized, JD-tailored, never fabricated</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 3</span><h4 class="font-semibold mt-1">Cover Letter</h4><p class="text-sm text-gray-500 mt-1">3-4 paragraphs, tone variants, JD keyword matching</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Modules 4-6</span><h4 class="font-semibold mt-1">Emails</h4><p class="text-sm text-gray-500 mt-1">Application, follow-up, and thank-you emails</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 7</span><h4 class="font-semibold mt-1">Interview Prep</h4><p class="text-sm text-gray-500 mt-1">5 questions + STAR answers + coaching tips</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 8</span><h4 class="font-semibold mt-1">Action Plan</h4><p class="text-sm text-gray-500 mt-1">7-day plan calibrated to HIGH/MEDIUM/LOW urgency</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 9</span><h4 class="font-semibold mt-1">Training Pathways</h4><p class="text-sm text-gray-500 mt-1">Shortest path to credential + funding sources</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 14</span><h4 class="font-semibold mt-1">Readiness Assessment</h4><p class="text-sm text-gray-500 mt-1">7-dimension scorecard + top 3 gaps</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 15</span><h4 class="font-semibold mt-1">Job Retention</h4><p class="text-sm text-gray-500 mt-1">30/60/90-day plan for new hires</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 16</span><h4 class="font-semibold mt-1">LinkedIn Builder</h4><p class="text-sm text-gray-500 mt-1">Full profile: headline, summary, connections</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 17</span><h4 class="font-semibold mt-1">Job Fair Prep</h4><p class="text-sm text-gray-500 mt-1">Before/during/after kit + elevator pitch</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 18</span><h4 class="font-semibold mt-1">Salary + Total Comp</h4><p class="text-sm text-gray-500 mt-1">Market wages, negotiation, total compensation calculator</p></div>
+            </div>
+        </div>
+
+        <!-- Staff -->
+        <div id="content-staff" class="tab-content">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 10</span><h4 class="font-semibold mt-1">Intake & Triage</h4><p class="text-sm text-gray-500 mt-1">5-10 min structured assessment + priority routing</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 11</span><h4 class="font-semibold mt-1">Case Notes</h4><p class="text-sm text-gray-500 mt-1">MoJobs-compatible notes in 30 seconds</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 12</span><h4 class="font-semibold mt-1">Referral Letters</h4><p class="text-sm text-gray-500 mt-1">Formal referrals to VR, AEL, DSS, partners</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 13</span><h4 class="font-semibold mt-1">Employer Outreach</h4><p class="text-sm text-gray-500 mt-1">OJT, IWT, WOTC, Bonding, Apprenticeship scripts</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 19</span><h4 class="font-semibold mt-1">Workshop Guide</h4><p class="text-sm text-gray-500 mt-1">6 turnkey facilitation scripts</p></div>
+            </div>
+        </div>
+
+        <!-- HR -->
+        <div id="content-hr" class="tab-content">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-600">Module 20</span><h4 class="font-semibold mt-1">Public Service Applications</h4><p class="text-sm text-gray-500 mt-1">Federal/state/local gov hiring, KSA/CCAR, civil service exams, veteran preference, Schedule A</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-600">Module 21</span><h4 class="font-semibold mt-1">HR Manager Toolkit</h4><p class="text-sm text-gray-500 mt-1">Job descriptions, interviews, scorecards, 75+ KPI dashboard, benefits benchmarking, EEO compliance</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-600">Module 22</span><h4 class="font-semibold mt-1">Workday Workflows</h4><p class="text-sm text-gray-500 mt-1">Copy/paste content for Workday HCM: job reqs, reviews, onboarding, compensation, terminations</p></div>
+            </div>
+        </div>
+
+        <!-- Special -->
+        <div id="content-special" class="tab-content">
+            <div class="grid sm:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Multi-Output</span><h4 class="font-semibold mt-1">"Apply for this job"</h4><p class="text-sm text-gray-500 mt-1">Resume + cover letter + application email in one pass</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Quick Mode</span><h4 class="font-semibold mt-1">"Quick apply"</h4><p class="text-sm text-gray-500 mt-1">3-bullet summary + cover note + short email</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Coach Mode</span><h4 class="font-semibold mt-1">"Where do I start?"</h4><p class="text-sm text-gray-500 mt-1">Readiness score + top gaps + today's action + 7-day plan</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Architecture -->
+<section id="architecture" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-10">Architecture</h2>
+        <div class="bg-gray-50 rounded-2xl p-6 sm:p-10 border border-gray-100">
+            <div class="mermaid">
+flowchart TD
+    A[User Input] --> B{Tri-User Detection}
+    B -->|Job Seeker| C[Modules 0-9, 14-18]
+    B -->|Staff| D[Modules 10-13, 19]
+    B -->|HR Manager| E[Modules 20-22]
+    C --> F[Task Router]
+    D --> F
+    E --> F
+    F --> G[Module Execution]
+    G --> H[Population Adjustment Layer]
+    H --> I[Output - formatted per templates]
+
+    style A fill:#2563eb,color:#fff
+    style B fill:#7c3aed,color:#fff
+    style C fill:#059669,color:#fff
+    style D fill:#2563eb,color:#fff
+    style E fill:#ea580c,color:#fff
+    style I fill:#059669,color:#fff
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Populations -->
+<section id="populations" class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">15 Barrier Populations Served</h2>
+        <p class="text-gray-500 text-center mb-10 max-w-xl mx-auto">Auto-detects and adjusts tone, content, program routing, and materials for each population.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x2696;</div>Justice-involved</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F396;</div>Veterans</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F9D1;</div>Youth 14-24</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x267F;</div>Disabilities</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4B3;</div>SNAP/TANF</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4DA;</div>No diploma</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F30D;</div>English learners</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F3E0;</div>Homeless</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F9D3;</div>Older workers 55+</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F3E1;</div>Displaced homemakers</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F46A;</div>Single parents</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x23F3;</div>Long-term unemployed</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F9D2;</div>Foster care youth</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4C9;</div>Low income</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4CB;</div>UI claimants</div>
+        </div>
+    </div>
+</section>
+
+<!-- Deploy -->
+<section id="deploy" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-10">Deploy to Any State</h2>
+        <div class="bg-gray-50 rounded-2xl p-6 sm:p-10 border border-gray-100 mb-8">
+            <div class="mermaid">
+flowchart LR
+    A[deploy-state.sh] --> B[Replace 4 files]
+    B --> C[Customize 6 files]
+    C --> D[validate-state.sh]
+    D --> E[Test 81 evals]
+    E --> F[build-skill.sh]
+    F --> G[Upload .skill]
+
+    style A fill:#2563eb,color:#fff
+    style B fill:#dc2626,color:#fff
+    style C fill:#d97706,color:#fff
+    style D fill:#7c3aed,color:#fff
+    style F fill:#059669,color:#fff
+            </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl p-6 border border-gray-100">
+                <h3 class="font-semibold text-red-600 mb-3">Replace (Full Rewrite)</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>state-programs.md</li>
+                    <li>state-labor-market.md</li>
+                    <li>state-training-pathways.md</li>
+                    <li>local-area.md</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-gray-100">
+                <h3 class="font-semibold text-amber-600 mb-3">Customize (Light Edits)</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>barrier-populations.md</li>
+                    <li>action-plan-template.md</li>
+                    <li>staff-workflows.md</li>
+                    <li>public-service-hiring.md</li>
+                    <li>hr-manager-toolkit.md</li>
+                    <li>jobseeker-experience.md</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sponsor -->
+<section id="sponsor" class="py-20 px-4 bg-brand-800 text-white">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Support This Project</h2>
+        <p class="text-blue-200 mb-8 max-w-xl mx-auto">
+            Access to Jobs is 100% open source and free to use. Your sponsorship helps maintain the data,
+            expand to new states, and keep the project accessible to everyone who needs it.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <a href="https://github.com/sponsors/dougdevitre" class="px-8 py-3.5 bg-white text-brand-800 font-semibold rounded-xl hover:bg-blue-50 transition">
+                Sponsor on GitHub
+            </a>
+            <a href="https://github.com/dougdevitre/access-to-jobs" class="px-8 py-3.5 border-2 border-white/40 text-white font-semibold rounded-xl hover:bg-white/10 transition">
+                Star the Repo
+            </a>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-6 text-left">
+            <div class="stat-card rounded-xl p-5">
+                <h4 class="font-semibold mb-2">Maintain Data</h4>
+                <p class="text-sm text-blue-200">WIOA state plans, labor market data, and federal pay tables need annual updates.</p>
+            </div>
+            <div class="stat-card rounded-xl p-5">
+                <h4 class="font-semibold mb-2">Expand States</h4>
+                <p class="text-sm text-blue-200">Help deploy to more states beyond Missouri so more job seekers can access these tools.</p>
+            </div>
+            <div class="stat-card rounded-xl p-5">
+                <h4 class="font-semibold mb-2">Stay Free</h4>
+                <p class="text-sm text-blue-200">Keep the skill free and open source for the people who need it most.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-10 px-4 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <div>
+            <span class="font-semibold text-gray-700">Access to Jobs</span> &middot; Part of the
+            <a href="https://github.com/cotrackpro" class="text-brand-600 hover:underline">Access To</a> initiative by
+            <a href="https://cotrackpro.com" class="text-brand-600 hover:underline">CoTrackPro</a>
+        </div>
+        <div class="flex gap-6">
+            <a href="https://github.com/dougdevitre/access-to-jobs" class="hover:text-brand-600">GitHub</a>
+            <a href="https://github.com/dougdevitre/access-to-jobs/blob/main/LICENSE" class="hover:text-brand-600">MIT License</a>
+            <a href="https://github.com/dougdevitre/access-to-jobs/blob/main/CONTRIBUTING.md" class="hover:text-brand-600">Contribute</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'Inter' });
+
+    function showTab(name) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.getElementById('tab-' + name).classList.add('active');
+        document.getElementById('content-' + name).classList.add('active');
+    }
+</script>
+
+</body>
+</html>

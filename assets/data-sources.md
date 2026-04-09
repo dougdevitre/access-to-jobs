@@ -78,6 +78,36 @@ and state workforce agencies. This file documents every source for audit and upd
 - Credential Attainment: 63.95% → Source: Missouri OWD WIOA Annual Report
 - Services provided PY2024: 532,000+ to 70,000 individuals → Source: Missouri OWD
 
+### Public Service Hiring (Module 20)
+| Source | URL | Used In |
+|---|---|---|
+| USAJobs (Federal Job Board) | https://www.usajobs.gov/ | Federal hiring process, vacancy announcements |
+| OPM Qualification Standards | https://www.opm.gov/policy-data-oversight/classification-qualifications/ | GS grade requirements, specialized experience |
+| OPM General Schedule Pay Tables | https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/ | Federal salary data, locality pay |
+| VA Veteran Preference | https://www.fedshirevets.gov/job-seekers/veterans-preference/ | 5/10-point preference, VEOA, VRA |
+| OPM Schedule A Hiring | https://www.opm.gov/policy-data-oversight/disability-employment/hiring/ | Disability non-competitive hiring authority |
+| FEHB (Federal Health Benefits) | https://www.opm.gov/healthcare-insurance/healthcare/ | Federal benefits valuation |
+| TSP (Thrift Savings Plan) | https://www.tsp.gov/ | Federal retirement matching |
+| Missouri State Jobs | https://mocareers.mo.gov/ | State government hiring process |
+
+### HR Manager Toolkit (Module 21)
+| Source | URL | Used In |
+|---|---|---|
+| SHRM (Society for HR Management) | https://www.shrm.org/ | Job description best practices, benefits benchmarking |
+| EEOC Adverse Impact Guidance | https://www.eeoc.gov/laws/guidance/ | 80% rule, EEO compliance |
+| BLS Employer Costs for Employee Compensation | https://www.bls.gov/news.release/ecec.toc.htm | Benefits cost data by industry |
+| DOL ADA Employment | https://www.dol.gov/agencies/odep/ | ADA accommodation requirements |
+| EEOC Pre-Employment Inquiries | https://www.eeoc.gov/pre-employment-inquiries-and-medical-questions-made-employers | Prohibited interview questions |
+
+### Data Currency — New Modules
+
+| File | Data Vintage | Recommended Refresh |
+|---|---|---|
+| public-service-hiring.md | 2025 federal pay tables | Annually (when OPM publishes new GS tables) |
+| hr-manager-toolkit.md | 2025 SHRM/BLS benchmarks | Annually (when new SHRM survey publishes) |
+| workday-workflows.md | Evergreen (process-based) | As needed |
+| hr-metrics.json | Evergreen (schema) | As needed |
+
 ---
 
 ## Disclaimer

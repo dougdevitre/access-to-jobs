@@ -16,7 +16,7 @@ description: >
   veterans, youth, dislocated workers, SNAP/TANF participants, or individuals with
   disabilities seeking employment support. Part of the "Access To" open-source civic
   tech initiative by CoTrackPro.
-version: 4.0.0
+version: 4.2.3
 author: Doug Devitre
 author_contact: dougdevitre@gmail.com
 organization: CoTrackPro
