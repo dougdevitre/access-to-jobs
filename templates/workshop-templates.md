@@ -2,6 +2,26 @@
 
 Turnkey facilitation scripts for Job Center staff running group workshops.
 
+```mermaid
+flowchart LR
+    subgraph WS ["6 Workshop Scripts Available"]
+        direction TB
+        WA["A: Resume in 60 min<br/>ATS + bullet writing"]
+        WB["B: Interview Skills 90 min<br/>STAR + mock interviews"]
+        WC["C: Job Search 45 min<br/>jobs.mo.gov + alerts"]
+        WD["D: LinkedIn 60 min<br/>Profile + connections"]
+        WE["E: Financial Literacy 45 min<br/>Paycheck + budget"]
+        WF["F: Hiring Best Practices 90 min<br/>Structured interviews for managers"]
+    end
+
+    style WA fill:#2563eb,color:#fff
+    style WB fill:#059669,color:#fff
+    style WC fill:#7c3aed,color:#fff
+    style WD fill:#d97706,color:#fff
+    style WE fill:#dc2626,color:#fff
+    style WF fill:#ea580c,color:#fff
+```
+
 ---
 
 ## WORKSHOP A: Resume in 60 Minutes

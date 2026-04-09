@@ -4,6 +4,45 @@
 
 ---
 
+```mermaid
+flowchart TD
+    A[Participant Walks In] --> M10[Module 10: Intake & Triage<br/>5-10 min assessment]
+    M10 --> B{Priority Screening}
+    
+    B -->|Veteran| PQ[Priority Queue + DVOP]
+    B -->|SNAP/TANF| SK[SkillUP + DSS Screen]
+    B -->|Mass Layoff| RR[Rapid Response + TAA]
+    B -->|UI Claimant| RE[RESEA + Coursera]
+    B -->|Youth| YP[WIOA Youth Programs]
+    B -->|No Diploma| AEL[AEL Referral]
+    B -->|Disability| VR[MVR/RSB Referral]
+    B -->|Justice-Involved| RJ[Reentry Specialist]
+    
+    PQ --> SP[Service Plan + Next Steps]
+    SK --> SP
+    RR --> SP
+    RE --> SP
+    YP --> SP
+    AEL --> SP
+    VR --> SP
+    RJ --> SP
+    
+    SP --> M11[Module 11: Case Notes<br/>Document in MoJobs]
+    SP --> M12[Module 12: Referral Letters<br/>To partner agencies]
+    SP --> M13[Module 13: Employer Outreach<br/>OJT, IWT, WOTC pitches]
+    
+    M11 --> FU[Follow-Up + Performance Tracking]
+    M12 --> FU
+    M13 --> FU
+
+    style A fill:#2563eb,color:#fff
+    style M10 fill:#059669,color:#fff
+    style SP fill:#7c3aed,color:#fff
+    style FU fill:#dc2626,color:#fff
+```
+
+---
+
 ## MODULE 10: INTAKE & TRIAGE SCRIPT
 
 **Goal:** Help staff efficiently assess a new job seeker's situation, identify the right programs,

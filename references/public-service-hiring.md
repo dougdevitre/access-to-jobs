@@ -4,6 +4,46 @@
 
 ---
 
+```mermaid
+flowchart TD
+    A[Want a Government Job?] --> B{Which level?}
+    
+    B -->|Federal| F[USAJobs.gov]
+    B -->|State| S[State Job Portal<br/>mostatejobs.com]
+    B -->|Local| L[City/County/School<br/>District Website]
+    
+    F --> F1[Build Federal Resume<br/>4-6 pages, narrative format]
+    F1 --> F2[Write KSA Statements<br/>CCAR method]
+    F2 --> F3[Apply on USAJobs<br/>Before closing date]
+    F3 --> F4{HR Screens<br/>Qualifications}
+    F4 -->|Qualified| F5[Referred to<br/>Hiring Manager]
+    F4 -->|Not Qualified| F4a[Not Referred<br/>Review requirements]
+    F5 --> F6[Panel Interview<br/>Structured format]
+    F6 --> F7[Tentative Offer<br/>+ Background Check]
+    F7 --> F8[Final Offer<br/>30-120 days total]
+    
+    S --> S1[Complete State<br/>Application Form]
+    S1 --> S2[May Require<br/>Civil Service Exam]
+    S2 --> S3[Interview +<br/>Background Check]
+    
+    L --> L1[Follow Agency<br/>Instructions]
+    L1 --> L2[May Include<br/>Written/Physical Exam]
+    L2 --> L3[Interview +<br/>Background Check]
+
+    VP{Veteran?} -.->|+5 or +10 points| F4
+    VP -.->|+5 or +10 points| S2
+    DA{Disability?} -.->|Schedule A<br/>non-competitive| F5
+
+    style A fill:#2563eb,color:#fff
+    style F fill:#dc2626,color:#fff
+    style S fill:#059669,color:#fff
+    style L fill:#d97706,color:#fff
+    style VP fill:#7c3aed,color:#fff
+    style DA fill:#7c3aed,color:#fff
+```
+
+---
+
 ## GOVERNMENT HIRING IS DIFFERENT
 
 Government hiring follows **merit system principles** — candidates are evaluated on qualifications,

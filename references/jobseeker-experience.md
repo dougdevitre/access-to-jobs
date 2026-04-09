@@ -3,6 +3,38 @@
 
 ---
 
+```mermaid
+flowchart TD
+    subgraph ADV ["Advanced Job Seeker Journey"]
+        M14[Module 14: Readiness Assessment<br/>7-dimension scorecard] --> GAP{Top 3 gaps?}
+        GAP -->|Resume weak| M2[Module 2: Resume]
+        GAP -->|No LinkedIn| M16[Module 16: LinkedIn Builder]
+        GAP -->|Interview skills| M7[Module 7: Interview Prep]
+        GAP -->|Need training| M9[Module 9: Training Pathways]
+    end
+    
+    subgraph POST ["Post-Hire Success"]
+        HIRED[Got Hired!] --> M15[Module 15: Retention Plan]
+        M15 --> W1[Week 1: Learn + Listen]
+        W1 --> D30[Days 8-30: Build Trust]
+        D30 --> D60[Days 31-60: Demonstrate Competence]
+        D60 --> D90[Days 61-90: Establish Yourself]
+    end
+    
+    subgraph EARN ["Maximize Earnings"]
+        M18[Module 18: Salary Guidance] --> NEG[Negotiation Framework]
+        NEG --> TC[Total Compensation Calculator<br/>Salary + Benefits + PTO + Retirement]
+        TC --> COMP[Compare Offers<br/>Side by Side]
+    end
+
+    style M14 fill:#2563eb,color:#fff
+    style HIRED fill:#059669,color:#fff
+    style M18 fill:#d97706,color:#fff
+    style TC fill:#dc2626,color:#fff
+```
+
+---
+
 ## MODULE 14: EMPLOYMENT READINESS ASSESSMENT
 
 **Goal:** Give job seekers an honest, scored snapshot of where they stand and exactly what to fix.

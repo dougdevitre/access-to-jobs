@@ -44,6 +44,43 @@ Focus: getting people hired.
 
 ## TASK ROUTER
 
+```mermaid
+flowchart TD
+    A[User Input] --> B{Who is the user?}
+    B -->|Job Seeker| C{What do they need?}
+    B -->|Job Center Staff| D{What workflow?}
+    B -->|HR Manager| E{What HR task?}
+    
+    C -->|Eligibility| M0[Module 0: Programs]
+    C -->|Find a job| M1[Module 1: Job Matcher]
+    C -->|Resume / Cover Letter| M2[Modules 2-3: Documents]
+    C -->|Apply / Email| M4[Modules 4-6: Communications]
+    C -->|Interview prep| M7[Module 7: Interview]
+    C -->|Action plan| M8[Module 8: Plan]
+    C -->|Training| M9[Module 9: Credentials]
+    C -->|Readiness / LinkedIn / Salary| M14[Modules 14-18: Advanced]
+    C -->|Government job| M20[Module 20: Public Service]
+    
+    D -->|Intake / triage| M10[Module 10: Intake]
+    D -->|Case notes| M11[Module 11: Case Notes]
+    D -->|Referral letter| M12[Module 12: Referrals]
+    D -->|Employer outreach| M13[Module 13: Outreach]
+    D -->|Workshop| M19[Module 19: Workshops]
+    
+    E -->|Job description| M21[Module 21: HR Toolkit]
+    E -->|Interview guide| M21
+    E -->|Candidate evaluation| M21
+    E -->|Workday content| M22[Module 22: Workday]
+    E -->|HR metrics| M21
+
+    style A fill:#2563eb,color:#fff
+    style B fill:#7c3aed,color:#fff
+    style M0 fill:#059669,color:#fff
+    style M20 fill:#dc2626,color:#fff
+    style M21 fill:#ea580c,color:#fff
+    style M22 fill:#ea580c,color:#fff
+```
+
 | User says / wants | Module | Reference loaded |
 |---|---|---|
 | Am I eligible? / What programs exist? | → [MODULE 0: ELIGIBILITY + PROGRAMS] | `state-programs.md` |

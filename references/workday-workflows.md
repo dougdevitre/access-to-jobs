@@ -4,6 +4,41 @@
 
 ---
 
+```mermaid
+flowchart LR
+    AI[Claude AI<br/>Module 22] --> |Copy/Paste| WD[Workday HCM]
+    
+    subgraph Generated ["Content Generated"]
+        G1[Job Requisition<br/>Title + Description + KSAs]
+        G2[Interview Feedback<br/>Competency ratings + comments]
+        G3[Onboarding Tasks<br/>Pre-hire + 30/60/90 check-ins]
+        G4[Performance Review<br/>Manager comments + goals]
+        G5[Compensation Change<br/>Justification + market data]
+        G6[Termination/Exit<br/>Reason + exit interview]
+    end
+    
+    subgraph Fields ["Workday Fields"]
+        W1[Recruiting ><br/>Create Job Requisition]
+        W2[Recruiting ><br/>Interview Feedback]
+        W3[Onboarding ><br/>Task Checklist]
+        W4[Performance ><br/>Review Comments]
+        W5[Compensation ><br/>Change Request]
+        W6[Staffing ><br/>Termination]
+    end
+    
+    AI --> G1 --> W1
+    AI --> G2 --> W2
+    AI --> G3 --> W3
+    AI --> G4 --> W4
+    AI --> G5 --> W5
+    AI --> G6 --> W6
+
+    style AI fill:#2563eb,color:#fff
+    style WD fill:#005cb9,color:#fff
+```
+
+---
+
 ## PURPOSE
 
 This module generates **copy/paste-ready content** formatted for Workday's standard fields.

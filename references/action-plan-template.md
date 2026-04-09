@@ -1,6 +1,41 @@
 # 7-Day Action Plan Template
 ## Access to Jobs — Workforce Navigator — Module 8
 
+```mermaid
+flowchart LR
+    subgraph D1 ["Day 1: Foundation"]
+        D1A[Resume + LinkedIn<br/>+ 10 target jobs]
+    end
+    subgraph D2 ["Day 2: Apply"]
+        D2A[Tailor resume × 3<br/>Submit applications]
+    end
+    subgraph D3 ["Day 3: Network"]
+        D3A[Contact 2-3 people<br/>Join a group]
+    end
+    subgraph D4 ["Day 4: Apply + Skills"]
+        D4A[2 more apps<br/>Start free training]
+    end
+    subgraph D5 ["Day 5: Follow Up"]
+        D5A[Follow up on apps<br/>Send thank-yous]
+    end
+    subgraph D6 ["Day 6: Interview Prep"]
+        D6A[Practice STAR answers<br/>Prep questions to ask]
+    end
+    subgraph D7 ["Day 7: Review"]
+        D7A[Count progress<br/>Plan next week]
+    end
+    
+    D1 --> D2 --> D3 --> D4 --> D5 --> D6 --> D7
+
+    style D1 fill:#2563eb,color:#fff
+    style D2 fill:#059669,color:#fff
+    style D3 fill:#7c3aed,color:#fff
+    style D4 fill:#059669,color:#fff
+    style D5 fill:#d97706,color:#fff
+    style D6 fill:#dc2626,color:#fff
+    style D7 fill:#6b7280,color:#fff
+```
+
 ---
 
 ## URGENCY TIERS

@@ -7,6 +7,39 @@
 
 ---
 
+```mermaid
+flowchart TD
+    A[Job Seeker Walks In] --> B{What is your situation?}
+    
+    B -->|Veteran / Military Spouse| V[Priority Queue<br/>DVOP + Show-Me Heroes]
+    B -->|Recently Laid Off| DW[Dislocated Worker Program<br/>+ Rapid Response if 25+]
+    B -->|Receiving UI| UI[RESEA Appointment<br/>+ Coursera Access]
+    B -->|On SNAP/TANF| ST[SkillUP / MWA<br/>+ DSS Services]
+    B -->|Youth 14-24| Y[WIOA Youth<br/>+ JAG / Futures / Excel Center]
+    B -->|Has Disability| D[MVR / RSB Referral<br/>+ Supported Employment]
+    B -->|Justice-Involved| J[Reentry Specialist<br/>+ Fair Chance Employers]
+    B -->|No Diploma| ND[AEL / Excel Center<br/>+ GED/HiSET]
+    B -->|Adult, Low Income| AL[WIOA Adult - Priority<br/>+ Training ITA]
+    B -->|Adult, Standard| AS[WIOA Adult<br/>+ Wagner-Peyser]
+    
+    V --> JC[Missouri Job Center<br/>jobs.mo.gov]
+    DW --> JC
+    UI --> JC
+    ST --> JC
+    Y --> JC
+    D --> JC
+    J --> JC
+    ND --> JC
+    AL --> JC
+    AS --> JC
+
+    style A fill:#2563eb,color:#fff
+    style JC fill:#059669,color:#fff
+    style V fill:#7c3aed,color:#fff
+```
+
+---
+
 ## CORE WIOA PROGRAMS (Title I)
 
 ### Adult Program

@@ -4,6 +4,22 @@
 
 ---
 
+```mermaid
+flowchart LR
+    YOU[You] -->|I need a job| A[Find Programs<br/>+ Job Matches]
+    A --> B[Build Resume<br/>+ Cover Letter]
+    B --> C[Apply + Prep<br/>for Interview]
+    C --> D[Get Hired +<br/>90-Day Plan]
+    
+    style YOU fill:#2563eb,color:#fff
+    style A fill:#059669,color:#fff
+    style B fill:#d97706,color:#fff
+    style C fill:#7c3aed,color:#fff
+    style D fill:#dc2626,color:#fff
+```
+
+---
+
 ## What Can It Do For You?
 
 | Say this | The assistant will help with |

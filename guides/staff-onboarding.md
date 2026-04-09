@@ -5,6 +5,30 @@ Access to Jobs in their daily workflow.
 
 ---
 
+```mermaid
+flowchart TD
+    subgraph BEFORE ["Without Access to Jobs"]
+        B1[Write case notes manually<br/>15-20 min] 
+        B2[Draft referral letters<br/>10-15 min]
+        B3[Build resume with participant<br/>30-45 min]
+        B4[Research programs for eligibility<br/>10-20 min]
+    end
+    
+    subgraph AFTER ["With Access to Jobs"]
+        A1[/casenote → 2 min]
+        A2[/refer → 3 min]
+        A3[/resume → 10 min]
+        A4[/eligible → 2 min]
+    end
+    
+    BEFORE -->|AI-Assisted| AFTER
+    
+    style BEFORE fill:#dc2626,color:#fff
+    style AFTER fill:#059669,color:#fff
+```
+
+---
+
 ## Who This Is For
 
 - Career advisors and counselors at American Job Centers

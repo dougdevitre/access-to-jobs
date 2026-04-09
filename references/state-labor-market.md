@@ -6,6 +6,40 @@
 
 ## MISSOURI JOB TIER FRAMEWORK
 
+```mermaid
+flowchart LR
+    subgraph NOW ["🟢 NOW — Weeks to Start"]
+        N1[Retail / Customer Service]
+        N2[Home Health Aide]
+        N3[Warehouse / Laborer]
+        N4[Security Guard]
+        N5[Food Service / Cashier]
+    end
+    
+    subgraph NEXT ["🟡 NEXT — Months of Training"]
+        X1[CNA / LPN / Medical Asst]
+        X2[Electrician / Plumber / HVAC]
+        X3[IT Support / Help Desk]
+        X4[Welder / Machinist]
+        X5[Construction / Maintenance]
+    end
+    
+    subgraph LATER ["🔵 LATER — Degree Required"]
+        L1[Registered Nurse]
+        L2[Software Developer]
+        L3[Accountant / Analyst]
+        L4[Teacher]
+        L5[Health Services Manager]
+    end
+    
+    NOW -->|Short-term training<br/>or certification| NEXT
+    NEXT -->|Associate or<br/>bachelor's degree| LATER
+
+    style NOW fill:#059669,color:#fff
+    style NEXT fill:#d97706,color:#fff
+    style LATER fill:#2563eb,color:#fff
+```
+
 Missouri OWD classifies all occupations into three tiers based on required education/training:
 
 | Tier | Education Required | Training | Entry Speed |

@@ -3,6 +3,36 @@
 Quick-trigger commands for common workflows. Users can type these to jump
 directly to a module without conversational routing.
 
+```mermaid
+flowchart LR
+    subgraph JS ["Job Seeker Commands"]
+        direction TB
+        JS1["/resume /cover /apply"]
+        JS2["/interview /plan /train"]
+        JS3["/salary /totalcomp /coach"]
+        JS4["/govresume /ksa /govapply"]
+    end
+    
+    subgraph ST ["Staff Commands"]
+        direction TB
+        ST1["/intake /casenote"]
+        ST2["/refer /pitch"]
+        ST3["/workshop"]
+    end
+    
+    subgraph HR ["HR Manager Commands"]
+        direction TB
+        HR1["/jobdesc /interviewguide"]
+        HR2["/scorecard /onboard"]
+        HR3["/hrdashboard"]
+        HR4["/workday /wdjob /wdreview"]
+    end
+
+    style JS fill:#059669,color:#fff
+    style ST fill:#2563eb,color:#fff
+    style HR fill:#ea580c,color:#fff
+```
+
 ---
 
 ## Job Seeker Commands

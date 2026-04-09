@@ -4,6 +4,44 @@
 
 ---
 
+```mermaid
+flowchart TD
+    A[HR Manager] --> B{What do you need?}
+    
+    B -->|Hiring| C[Write Job Description]
+    C --> D[Build Structured Interview]
+    D --> E[Create Scoring Rubric]
+    E --> F[Evaluate Candidates]
+    F --> G[Make Offer +<br/>Total Comp Statement]
+    
+    B -->|Onboarding| H[Week 1 Checklist]
+    H --> I[30/60/90-Day<br/>Check-ins]
+    I --> J[Probationary Review]
+    
+    B -->|Performance| K[Set SMART Goals]
+    K --> L[Conduct Reviews]
+    L --> M[Track KPIs]
+    
+    B -->|Compliance| N[EEO Adverse Impact<br/>80% Rule]
+    N --> O[Pay Equity Audit]
+    O --> P[Training Compliance]
+    
+    B -->|Workday| Q[Module 22:<br/>Copy/Paste Content]
+    
+    B -->|WIOA Programs| R[OJT / IWT / WOTC<br/>Apprenticeship / Bonding]
+    
+    G --> M
+    J --> M
+    M -->|Track 75+ KPIs| S[HR Performance<br/>Dashboard]
+
+    style A fill:#ea580c,color:#fff
+    style S fill:#059669,color:#fff
+    style Q fill:#7c3aed,color:#fff
+    style R fill:#2563eb,color:#fff
+```
+
+---
+
 ## WHO THIS MODULE SERVES
 
 This module helps three types of hiring professionals:

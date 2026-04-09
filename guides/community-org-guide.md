@@ -5,6 +5,29 @@ organizations, and advocacy groups that want to use Access to Jobs to serve thei
 
 ---
 
+```mermaid
+flowchart TD
+    subgraph OPTIONS ["Three Setup Options"]
+        A[Option A: Claude.ai<br/>Upload .skill file<br/>15 min setup] 
+        B[Option B: Shared Kiosk<br/>Org account + bookmark<br/>30 min setup]
+        C[Option C: Staff-Assisted<br/>Train 1-2 staff members<br/>45 min setup]
+    end
+    
+    A --> SELF[Client Self-Service<br/>Simple questions]
+    B --> GUIDED[Guided Self-Service<br/>With printed commands]
+    C --> FULL[Full Staff Support<br/>Complex situations]
+    
+    SELF --> R[Results: Resume, Plans,<br/>Program Screening]
+    GUIDED --> R
+    FULL --> R
+
+    style A fill:#059669,color:#fff
+    style B fill:#d97706,color:#fff
+    style C fill:#2563eb,color:#fff
+```
+
+---
+
 ## Who This Is For
 
 - **Community Action Agencies** providing workforce services alongside housing, energy, and food assistance
