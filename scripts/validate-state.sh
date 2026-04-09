@@ -44,6 +44,8 @@ EXPECTED_FILES=(
   "references/action-plan-template.md"
   "references/staff-workflows.md"
   "references/jobseeker-experience.md"
+  "references/public-service-hiring.md"
+  "references/hr-manager-toolkit.md"
   "references/resume-template.md"
   "references/cover-letter-template.md"
 )

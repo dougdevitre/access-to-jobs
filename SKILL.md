@@ -63,6 +63,8 @@ Focus: getting people hired.
 | Job fair / hiring event prep | → [MODULE 17: JOB FAIR PREP] | `jobseeker-experience.md` |
 | Salary negotiation / is this offer good? | → [MODULE 18: SALARY GUIDANCE] | `jobseeker-experience.md` |
 | Run a workshop / facilitate a class | → [MODULE 19: WORKSHOP GUIDE] | `jobseeker-experience.md` |
+| Government job / public service / civil service | → [MODULE 20: PUBLIC SERVICE APPLICATIONS] | `public-service-hiring.md` |
+| Write a job description / build interview questions | → [MODULE 21: HR MANAGER TOOLKIT] | `hr-manager-toolkit.md` |
 | "Apply for this job" (all-in-one) | → MULTI-OUTPUT MODE | Multiple |
 | "Quick apply" | → QUICK MODE | Multiple |
 | "Coach me" / "Where do I start?" | → COACH MODE | Multiple |
@@ -83,6 +85,8 @@ Collect only what the active module requires. Do not ask for everything upfront.
 | Interview Prep | target_job_title |
 | Action Plan | target_job_title, urgency_level (default: medium) |
 | Training | current skills/education, target role or industry |
+| Public Service | target agency/level (federal/state/local), target role, veteran status |
+| HR Manager | position to fill, department, grade/level, required qualifications |
 
 ---
 
@@ -153,6 +157,13 @@ Send within 24 hours of interview. Reference specific conversation points.
 | "how much should I ask for" / "salary negotiation" | → MODULE 18: Salary & wage guidance |
 | "run a workshop" / "facilitate a class" | → MODULE 19: Workshop facilitator guide |
 
+### PUBLIC SERVICE & HR MANAGER
+
+| Trigger | Module |
+|---|---|
+| "government job" / "federal resume" / "civil service" / "USAJobs" / "state job" / "municipal" | → MODULE 20: Public service applications |
+| "write a job description" / "interview questions for hiring" / "evaluate candidates" / "hiring scorecard" / "onboard a new hire" | → MODULE 21: HR manager toolkit |
+
 ### LOCAL AREA LAYER (→ Load: `references/local-area.md`)
 
 Load whenever:
@@ -209,6 +220,9 @@ Detect whether the user is a **job seeker** or **staff member** and adjust accor
 **Staff signals:** "my participant," "case notes," "how do I explain," "employer outreach,"
 "intake," "performance metrics," "referral letter," "workshop"
 
+**HR manager signals:** "write a job description," "hiring for," "evaluate candidates,"
+"interview scorecard," "onboard," "position vacancy," "we need to hire," "recruitment plan"
+
 **Job seeker signals:** "I need a job," "help me apply," "my resume," "they offered me,"
 "interview," "I just got hired," "what programs can help me"
 
@@ -255,6 +269,8 @@ Detect whether the user is a **job seeker** or **staff member** and adjust accor
 | `references/barrier-populations.md` | All modules (population routing) | Light customization |
 | `references/staff-workflows.md` | Modules 10–13 (staff tools) | Light customization |
 | `references/jobseeker-experience.md` | Modules 14–19 (advanced job seeker) | Light customization |
+| `references/public-service-hiring.md` | Module 20 (government applications) | Light customization |
+| `references/hr-manager-toolkit.md` | Module 21 (HR manager tools) | Light customization |
 | `references/local-area.md` | All modules (local context) | **Replace per area** |
 
 **State deployment:** Files marked "Replace per state" must be rewritten with state-specific

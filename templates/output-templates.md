@@ -297,3 +297,307 @@ Examples:
 
 NOT: "Looking for opportunities" or "Unemployed" or "Open to work" (as headline)
 ```
+
+---
+
+## TEMPLATE: Government / Federal Resume (Module 20)
+
+```
+[FIRST LAST NAME]
+[Full Street Address]
+[City, State, ZIP Code]
+[Phone] | [Email]
+
+CITIZENSHIP: [U.S. Citizen / Authorized to work in the United States]
+VETERAN PREFERENCE: [5-point / 10-point / None] | DD-214 attached: [Yes/No]
+FEDERAL STATUS: [Current federal employee — Series/Grade/Tenure] or [Not a federal employee]
+SECURITY CLEARANCE: [Level, if any] | [Active / Inactive / None]
+
+─────────────────────────────────────────────────
+PROFESSIONAL SUMMARY
+─────────────────────────────────────────────────
+[3–5 sentences. Lead with total years of experience and specialization.
+Include key competencies matching the vacancy announcement. Reference
+scope: budgets managed, staff supervised, populations served.]
+
+─────────────────────────────────────────────────
+PROFESSIONAL EXPERIENCE
+─────────────────────────────────────────────────
+[Job Title] (GS-[Grade]/[Step] or equivalent)
+[Agency/Organization Name]
+[Full Address: Street, City, State, ZIP]
+[MM/YYYY – MM/YYYY or Present]
+Hours per week: [40 / Part-time: specify]
+Salary: [$XX,XXX per year / $XX.XX per hour]
+Supervisor: [Name, Phone] — May contact: [Yes / No]
+
+[Paragraph 1: Primary duties and scope of responsibility. Include program
+names, regulatory frameworks, and systems used. Describe the complexity
+and scope of assignments.]
+
+[Paragraph 2: Key accomplishments with quantified results. "Managed a
+$2.5M annual budget for workforce development programs serving 3,500
+participants across 12 counties. Increased program enrollment by 18%
+through targeted community outreach and partner agency coordination."]
+
+[Paragraph 3: Additional duties, special projects, or cross-functional
+work. Include any supervisory responsibility with number of staff.]
+
+• [Key accomplishment with measurable result]
+• [Key accomplishment with measurable result]
+• [Key accomplishment with measurable result]
+
+[Repeat for each position — include ALL relevant positions.
+Federal resumes should be 4–6 pages. Do NOT condense.]
+
+─────────────────────────────────────────────────
+EDUCATION
+─────────────────────────────────────────────────
+[Degree] — [Major/Field of Study]
+[Institution Name] | [City, State]
+[Date Conferred: MM/YYYY]
+GPA: [X.XX / 4.00] (include if required by announcement or if 3.0+)
+Credits: [XX semester hours / XX quarter hours] (if no degree — list hours completed)
+
+─────────────────────────────────────────────────
+CERTIFICATIONS & LICENSES
+─────────────────────────────────────────────────
+• [Certification Name] — [Issuing Body] | [Date Obtained] | [Expiration]
+
+─────────────────────────────────────────────────
+TRAINING & PROFESSIONAL DEVELOPMENT
+─────────────────────────────────────────────────
+• [Course Title] — [Provider] | [Date] | [Hours]
+
+─────────────────────────────────────────────────
+AWARDS & HONORS
+─────────────────────────────────────────────────
+• [Award Name] — [Granting Organization] | [Date] | [Reason]
+
+─────────────────────────────────────────────────
+VOLUNTEER EXPERIENCE (optional)
+─────────────────────────────────────────────────
+• [Role] — [Organization] | [Dates] | [Hours per week]
+  [Brief description of duties and impact]
+```
+
+---
+
+## TEMPLATE: KSA Statement — CCAR Method (Module 20)
+
+```
+## KSA: [Knowledge, Skill, or Ability as stated in the announcement]
+
+CONTEXT:
+[Where and when did you gain this knowledge/skill? Name the organization,
+your role, and the setting. 2–3 sentences.]
+
+CHALLENGE:
+[What specific problem, requirement, or task required you to demonstrate
+this KSA? Be specific about complexity and stakes. 2–3 sentences.]
+
+ACTION:
+[What did YOU personally do? Detail your approach, methods, tools, and
+decisions. This is the longest section — 4–6 sentences. Use first person.]
+
+RESULT:
+[What was the outcome? Quantify: numbers served, dollars saved, time
+reduced, scores improved, processes created. 2–3 sentences.]
+
+---
+
+Example:
+
+## KSA: Ability to analyze workforce data and make program recommendations
+
+CONTEXT:
+As a Workforce Program Analyst at the Missouri Office of Workforce
+Development (2023–2025), I was responsible for monitoring WIOA Adult
+program performance across 14 Local Workforce Development Areas.
+
+CHALLENGE:
+Employment Rate Q2 performance dropped below the federal threshold in
+3 LWDAs during PY2023, putting the state at risk of sanctions and
+requiring immediate root-cause analysis and corrective action.
+
+ACTION:
+I analyzed MoJobs service records, exit data, and employer engagement
+metrics for each underperforming area. I identified that the 3 LWDAs
+had significantly lower employer engagement rates and were relying on
+self-directed job search rather than direct employer referrals. I
+developed a targeted technical assistance plan that included monthly
+data review calls, peer learning sessions with high-performing areas,
+and a standardized employer outreach protocol using OJT and WOTC
+incentives as employer value propositions.
+
+RESULT:
+Within two quarters, all 3 LWDAs improved above the federal threshold.
+Employer engagement activities increased 45% across the targeted areas.
+The standardized outreach protocol was adopted statewide and contributed
+to a 12% increase in direct job placements in PY2024.
+```
+
+---
+
+## TEMPLATE: Job Description (Module 21)
+
+```
+## [POSITION TITLE]
+
+Department: [Department/Division Name]
+Reports to: [Supervisor Title]
+Classification: [Full-time / Part-time] | [Exempt / Non-exempt]
+Grade/Pay Band: [GS-XX / State Grade / Local Classification]
+Salary Range: $[Min] – $[Max] [per year / per hour]
+Location: [City, State] | [Remote / Hybrid / On-site]
+Posting Date: [Date] | Closing Date: [Date or "Open until filled"]
+
+─────────────────────────────────────────────────
+POSITION SUMMARY
+─────────────────────────────────────────────────
+[2–3 sentences describing the role's purpose, who it serves, and its
+impact on the organization's mission. Write in active voice.]
+
+─────────────────────────────────────────────────
+ESSENTIAL DUTIES & RESPONSIBILITIES
+─────────────────────────────────────────────────
+1. [Action verb + duty + scope/outcome. Rank by importance.]
+2. [Action verb + duty + scope/outcome.]
+3. [Action verb + duty + scope/outcome.]
+4. [Action verb + duty + scope/outcome.]
+5. [Action verb + duty + scope/outcome.]
+6. [Action verb + duty + scope/outcome.]
+7. [Action verb + duty + scope/outcome.]
+8. [Action verb + duty + scope/outcome.]
+[8–12 duties. Each starts with an action verb. Include percentages
+of time if helpful: "(30%) Manages caseload of 50 participants..."]
+
+─────────────────────────────────────────────────
+MINIMUM QUALIFICATIONS (Required)
+─────────────────────────────────────────────────
+Education: [Degree level] in [Field] or equivalent combination of
+           education and experience
+Experience: [X] years of [specific type of experience]
+Licenses:  [Required license/certification, if any]
+Other:     [Background check, driver's license, physical requirements]
+
+─────────────────────────────────────────────────
+PREFERRED QUALIFICATIONS (Desired)
+─────────────────────────────────────────────────
+• [Preferred qualification 1 — clearly labeled as preferred, not required]
+• [Preferred qualification 2]
+• [Preferred qualification 3]
+
+─────────────────────────────────────────────────
+KNOWLEDGE, SKILLS, AND ABILITIES
+─────────────────────────────────────────────────
+Knowledge of:
+• [Subject area 1]
+• [Subject area 2]
+
+Skill in:
+• [Skill 1]
+• [Skill 2]
+
+Ability to:
+• [Ability 1]
+• [Ability 2]
+
+─────────────────────────────────────────────────
+PHYSICAL REQUIREMENTS & WORKING CONDITIONS
+─────────────────────────────────────────────────
+[ADA-compliant description of physical demands. Use language like
+"must be able to" only for essential functions. Note: "Reasonable
+accommodations may be made to enable individuals with disabilities
+to perform the essential functions."]
+
+─────────────────────────────────────────────────
+BENEFITS
+─────────────────────────────────────────────────
+• [Health/dental/vision insurance]
+• [Retirement/pension]
+• [Paid leave — vacation, sick, holidays]
+• [Other: tuition reimbursement, flexible schedule, etc.]
+
+─────────────────────────────────────────────────
+EQUAL OPPORTUNITY EMPLOYER
+─────────────────────────────────────────────────
+[Organization Name] is an Equal Opportunity Employer. All qualified
+applicants will receive consideration for employment without regard
+to race, color, religion, sex, sexual orientation, gender identity,
+national origin, disability, veteran status, or any other protected
+class under applicable law.
+
+─────────────────────────────────────────────────
+HOW TO APPLY
+─────────────────────────────────────────────────
+Submit [resume, cover letter, references, application form] to:
+[URL / Email / Address]
+Application deadline: [Date]
+Questions? Contact: [Name] at [Phone/Email]
+```
+
+---
+
+## TEMPLATE: Interview Scorecard (Module 21)
+
+```
+## INTERVIEW SCORECARD
+
+Position: ________________________    Date: ____________
+Candidate: _______________________    Panelist: ________
+
+SCORING: 1 = Does not meet  |  2 = Partially meets  |  3 = Meets
+         4 = Exceeds        |  5 = Significantly exceeds
+
+──────────────────────────────────────────────────────────
+COMPETENCY 1: [Name — e.g., Customer/Public Service Orientation]
+Question: "[Exact question asked]"
+Score:  [ 1 ]  [ 2 ]  [ 3 ]  [ 4 ]  [ 5 ]
+Key observations:
+___________________________________________________________
+
+──────────────────────────────────────────────────────────
+COMPETENCY 2: [Name — e.g., Problem Solving]
+Question: "[Exact question asked]"
+Score:  [ 1 ]  [ 2 ]  [ 3 ]  [ 4 ]  [ 5 ]
+Key observations:
+___________________________________________________________
+
+──────────────────────────────────────────────────────────
+COMPETENCY 3: [Name — e.g., Teamwork & Collaboration]
+Question: "[Exact question asked]"
+Score:  [ 1 ]  [ 2 ]  [ 3 ]  [ 4 ]  [ 5 ]
+Key observations:
+___________________________________________________________
+
+──────────────────────────────────────────────────────────
+COMPETENCY 4: [Name — e.g., Compliance & Accountability]
+Question: "[Exact question asked]"
+Score:  [ 1 ]  [ 2 ]  [ 3 ]  [ 4 ]  [ 5 ]
+Key observations:
+___________________________________________________________
+
+──────────────────────────────────────────────────────────
+COMPETENCY 5: [Name — e.g., Communication]
+Question: "[Exact question asked]"
+Score:  [ 1 ]  [ 2 ]  [ 3 ]  [ 4 ]  [ 5 ]
+Key observations:
+___________________________________________________________
+
+──────────────────────────────────────────────────────────
+TOTAL SCORE: _______ / 25
+
+OVERALL IMPRESSION:
+___________________________________________________________
+
+STRENGTHS NOTED:
+___________________________________________________________
+
+CONCERNS NOTED:
+___________________________________________________________
+
+RECOMMENDATION:  [ ] Hire   [ ] Consider   [ ] Do not advance
+
+Panelist signature: ___________________  Date: ____________
+```

@@ -1,0 +1,74 @@
+[
+  {
+    "prompt": "Help me apply for a federal job",
+    "expected_module": "MODULE 20",
+    "notes": "Should trigger Module 20 (Public Service Applications), NOT Module 2 or Module 4. Should ask about target agency, GS grade, and whether user has the vacancy announcement."
+  },
+  {
+    "prompt": "Write me a federal resume for a GS-9 Program Analyst position at USDA",
+    "expected_module": "MODULE 20",
+    "notes": "Should trigger Module 20 federal resume format (4-6 pages, narrative style) — NOT the standard 1-page ATS resume from Module 2. Must include citizenship, veteran preference, hours/week, supervisor info for each position."
+  },
+  {
+    "prompt": "What is a KSA statement and how do I write one?",
+    "expected_module": "MODULE 20",
+    "notes": "Should explain Knowledge, Skills, and Abilities narratives and teach the CCAR method (Context, Challenge, Action, Result). May provide an example."
+  },
+  {
+    "prompt": "I'm a veteran applying for a GS-9 position. How do I claim preference points?",
+    "expected_module": "MODULE 20",
+    "expected_populations": ["veteran"],
+    "notes": "Should trigger Module 20 with veteran population adjustments. Must explain 5-point and 10-point preference, DD-214 requirement, VEOA, VRA, and 30% disabled veteran authority."
+  },
+  {
+    "prompt": "I have a disability. Can I get hired by the federal government without competing?",
+    "expected_module": "MODULE 20",
+    "expected_populations": ["disability"],
+    "notes": "Should explain Schedule A non-competitive hiring authority. Should mention how to obtain a Schedule A letter, connect to SPPC, and note that MVR/RSB can assist."
+  },
+  {
+    "prompt": "How do I prepare for a civil service exam for a police officer position?",
+    "expected_module": "MODULE 20",
+    "notes": "Should provide civil service exam preparation guidance. Should cover written knowledge tests, physical agility tests, and structured oral exams. Should recommend requesting study guides from the hiring agency."
+  },
+  {
+    "prompt": "I want to work for the state government in Missouri. How do I apply?",
+    "expected_module": "MODULE 20",
+    "notes": "Should explain Missouri state hiring process (mostatejobs.com), classified vs. unclassified service, veteran preference (5/10 points), and background check requirements."
+  },
+  {
+    "prompt": "Write a job description for a Workforce Development Specialist",
+    "expected_module": "MODULE 21",
+    "notes": "Should detect HR Manager mode and trigger Module 21. Should produce a complete job description with all 13 sections: title, classification, salary range, summary, essential duties, minimum/preferred qualifications, KSAs, physical requirements, benefits, EEO statement, application instructions."
+  },
+  {
+    "prompt": "Build me a structured interview guide for a Case Manager position with 5 competencies",
+    "expected_module": "MODULE 21",
+    "notes": "Should detect HR Manager mode. Should map competencies from case manager duties, create behavior-based questions for each, provide an anchored 1-5 scoring rubric, and suggest panel roles."
+  },
+  {
+    "prompt": "How do I evaluate candidates fairly? We have 4 finalists for a program coordinator role.",
+    "expected_module": "MODULE 21",
+    "notes": "Should provide a candidate evaluation framework including scorecard, independent scoring, calibration process, and EEO compliance checklist. Should warn against prohibited inquiries."
+  },
+  {
+    "prompt": "I just hired someone. Help me create an onboarding plan for their first 90 days.",
+    "expected_module": "MODULE 21",
+    "notes": "Should provide a structured onboarding plan with Week 1, 30-day, 60-day, and 90-day milestones. Should include manager check-in framework and warning signs to address."
+  },
+  {
+    "prompt": "What WIOA programs can help my business hire and train workers?",
+    "expected_module": "MODULE 21",
+    "notes": "Should explain OJT, IWT, WOTC, Federal Bonding, Apprenticeship, and Show-Me Heroes. Should include dollar amounts and direct employer to local Job Center Business Services Representative."
+  },
+  {
+    "prompt": "My participant wants to apply for a state government job. How is that different?",
+    "expected_module": "MODULE 20",
+    "notes": "Staff mode detected (\"my participant\"). Should trigger Module 20 with staff-facing guidance on how state government applications differ: longer format, merit system, exams, veteran preference. Should advise using /govresume instead of /resume."
+  },
+  {
+    "prompt": "Write me a resume for the Department of Education",
+    "expected_module": "MODULE 20",
+    "notes": "Ambiguous — could be federal or state Department of Education. Should ask whether federal (USAJobs) or state. If federal, trigger Module 20 federal resume. If state, trigger Module 20 state resume guidance."
+  }
+]

@@ -49,6 +49,36 @@ If any of these apply to you, just mention it — the assistant adjusts automati
 
 ---
 
+## Applying for Government Jobs?
+
+Government applications are different from private sector. Tell the assistant:
+
+| Say this | The assistant will help with |
+|---|---|
+| "I want a government job" | Federal, state, and local application guidance |
+| "Write me a federal resume" | 4–6 page government format resume |
+| "Help me write a KSA statement" | Knowledge, Skills, Abilities narrative |
+| "How do civil service exams work?" | Test preparation and what to expect |
+| "I'm a veteran — how do I get preference?" | Veteran preference points and special authorities |
+
+---
+
+## For Employers & HR Managers
+
+Are you hiring? This tool helps you too:
+
+| Say this | The assistant will help with |
+|---|---|
+| "Write a job description" | Clear, inclusive, compliant job posting |
+| "Build interview questions" | Structured interview guide with scoring rubric |
+| "Create a candidate scorecard" | Fair evaluation framework for your panel |
+| "Onboarding plan for new hire" | First 90 days manager checklist |
+| "What WIOA programs help employers?" | Free hiring subsidies and tax credits |
+
+**Tip:** Mention your industry and the position title for the best results.
+
+---
+
 ## Get Help In Person
 
 Visit your local **American Job Center**:

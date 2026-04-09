@@ -197,6 +197,31 @@ and it adapts.
 
 ---
 
+## HR Managers & Recruitment Professionals
+
+This skill also serves employers and HR professionals who need to improve their hiring practices.
+
+### When to Use Module 21
+
+| HR Manager Says | Command | What They Get |
+|---|---|---|
+| "I need to write a job description" | `/jobdesc` | Complete JD with inclusive language, EEO statement, KSAs |
+| "Build interview questions for this role" | `/interviewguide` | Structured interview with behavior-based questions + scoring rubric |
+| "How do I fairly evaluate candidates?" | `/scorecard` | Competency-based scorecard with 1–5 anchored rating scale |
+| "Create an onboarding plan" | `/onboard` | 90-day new hire checklist with manager check-ins |
+| "What WIOA programs help employers?" | `/pitch` | OJT, IWT, WOTC, Federal Bonding, Apprenticeship overview |
+
+### When to Use Module 20 (with participants)
+
+If a participant wants to apply for a government job:
+- Use `/govresume` instead of `/resume` — government resumes are 4–6 pages, not 1 page
+- Use `/ksa` to help write Knowledge, Skills, Abilities narratives
+- Use `/govapply` for the complete government application checklist
+- Always screen for veteran preference (5 or 10 points on government exams)
+- Flag Schedule A hiring for participants with disabilities
+
+---
+
 ## Cheat Sheet (Print This)
 
 ```
@@ -208,6 +233,7 @@ and it adapts.
 ║  /intake   → Triage a walk-in               ║
 ║  /eligible → Screen programs in real time    ║
 ║  /resume   → Build resume with participant   ║
+║  /govresume → Government resume (4-6 pages)  ║
 ║                                              ║
 ║  AFTER APPOINTMENTS                          ║
 ║  /casenote → Write case notes in 30 sec      ║
@@ -218,10 +244,18 @@ and it adapts.
 ║  /pitch IWT  → Incumbent Worker Training     ║
 ║  /pitch WOTC → Tax credit explanation        ║
 ║                                              ║
+║  HR MANAGER TOOLS                            ║
+║  /jobdesc        → Write job description     ║
+║  /interviewguide → Structured interview      ║
+║  /scorecard      → Candidate evaluation      ║
+║  /onboard        → New hire onboarding plan  ║
+║                                              ║
 ║  WORKSHOPS                                   ║
 ║  /workshop resume    → 60-min resume class   ║
 ║  /workshop interview → 90-min interview prep ║
 ║  /workshop jobsearch → 45-min job board tour ║
+║  /workshop hiring    → 90-min hiring best    ║
+║                        practices for mgrs    ║
 ║                                              ║
 ║  TIPS                                        ║
 ║  • Paste the full job description for best   ║
