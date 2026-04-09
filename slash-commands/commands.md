@@ -41,6 +41,27 @@ directly to a module without conversational routing.
 
 ---
 
+## Public Service Commands
+
+| Command | Action | Module |
+|---|---|---|
+| `/govresume` | Build a federal/government resume | Module 20 |
+| `/ksa` | Write KSA/CCAR narrative statements | Module 20 |
+| `/govapply` | Government application checklist + guidance | Module 20 |
+
+---
+
+## HR Manager Commands
+
+| Command | Action | Module |
+|---|---|---|
+| `/jobdesc` | Write a job description | Module 21 |
+| `/interviewguide` | Build a structured interview guide | Module 21 |
+| `/scorecard` | Create candidate evaluation scorecard | Module 21 |
+| `/onboard` | New hire onboarding plan | Module 21 |
+
+---
+
 ## Utility Commands
 
 | Command | Action |
@@ -82,12 +103,28 @@ Bot: Let's assess where you stand. I'll score your readiness across
      7 dimensions, identify your top 3 gaps, and give you a specific
      action to take today plus a 7-day plan.
      What job title are you targeting?
+
+User: /govresume
+Bot: I'll build a federal-format resume for your government application.
+     What position and GS grade are you targeting? (Paste the vacancy
+     announcement if you have it.)
+
+User: /jobdesc
+Bot: [HR Manager mode detected] I'll help you write a clear, inclusive
+     job description. What position are you hiring for, and what
+     department/agency is it in?
+
+User: /scorecard
+Bot: I'll create a structured interview scorecard. What position is
+     this for? How many competencies do you want to evaluate? (Default: 5)
 ```
 
 ---
 
 ## Notes
 
+- Public service commands auto-switch to government application mode
+- HR manager commands auto-switch to employer/hiring manager mode
 - Commands are case-insensitive (`/Resume` = `/resume` = `/RESUME`)
 - Commands can include context: `/resume for CNA at SSM Health`
 - If a command needs more info, the skill will ask progressively

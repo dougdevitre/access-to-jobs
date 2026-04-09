@@ -54,6 +54,35 @@
             "enum": ["NOW", "NEXT", "LATER"]
           },
           "salary_range": { "type": "string" },
+          "government_level": {
+            "type": "string",
+            "enum": ["federal", "state", "local", "none"],
+            "default": "none",
+            "description": "Whether this is a government application (Module 20)"
+          },
+          "vacancy_announcement_number": {
+            "type": "string",
+            "description": "USAJobs or state job board posting number"
+          },
+          "gs_grade": {
+            "type": "string",
+            "description": "Federal GS grade if applicable (e.g., GS-9)"
+          },
+          "announcement_closing_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Application deadline for government postings"
+          },
+          "veteran_preference_applied": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether veteran preference was claimed on this application"
+          },
+          "clearance_required": {
+            "type": "string",
+            "enum": ["none", "public_trust", "secret", "top_secret"],
+            "default": "none"
+          },
           "notes": { "type": "string" },
           "modules_used": {
             "type": "array",

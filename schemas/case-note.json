@@ -24,7 +24,10 @@
         "job_placement",
         "follow_up",
         "workshop",
-        "employer_engagement"
+        "employer_engagement",
+        "hr_consultation",
+        "recruitment_support",
+        "interview_panel_support"
       ]
     },
     "summary": {
@@ -81,6 +84,20 @@
     "co_enrollments": {
       "type": "array",
       "items": { "type": "string" }
+    },
+    "hr_manager_notes": {
+      "type": "object",
+      "description": "Additional context when service_type is hr_consultation, recruitment_support, or interview_panel_support",
+      "properties": {
+        "employer_name": { "type": "string" },
+        "position_title": { "type": "string" },
+        "number_of_positions": { "type": "integer", "minimum": 1 },
+        "wioa_programs_discussed": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "OJT, IWT, WOTC, Federal Bonding, Apprenticeship, etc."
+        }
+      }
     }
   }
 }

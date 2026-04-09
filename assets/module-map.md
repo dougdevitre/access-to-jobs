@@ -3,16 +3,16 @@
 ## System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        DUAL-USER DETECTION                         │
-│  Staff signals → STAFF MODE    Job seeker signals → SEEKER MODE    │
-└────────────────────────┬───────────────────┬────────────────────────┘
-                         │                   │
-          ┌──────────────▼──────┐  ┌─────────▼────────────────┐
-          │    STAFF MODULES    │  │   JOB SEEKER MODULES     │
-          │    10 · 11 · 12 · 13│  │   0–9 · 14–18            │
-          │    + Module 19      │  │   + Special Modes        │
-          └─────────────────────┘  └──────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           TRI-USER DETECTION                                    │
+│  Job seeker signals → SEEKER    Staff signals → STAFF    HR signals → HR MGR    │
+└─────────────┬──────────────────────┬──────────────────────┬─────────────────────┘
+              │                      │                      │
+   ┌──────────▼───────────┐ ┌───────▼──────────┐ ┌────────▼──────────┐
+   │  JOB SEEKER MODULES  │ │  STAFF MODULES   │ │  HR MGR / PUBLIC  │
+   │  0–9 · 14–18         │ │  10 · 11 · 12    │ │  SERVICE MODULES  │
+   │  + Special Modes     │ │  13 · 19         │ │  20 · 21          │
+   └──────────────────────┘ └──────────────────┘ └───────────────────┘
 ```
 
 ---
@@ -47,6 +47,8 @@
    │  state-training-pathways.md Module 9        │
    │  staff-workflows.md ─────── Modules 10–13   │
    │  jobseeker-experience.md ── Modules 14–19   │
+   │  public-service-hiring.md ─ Module 20       │
+   │  hr-manager-toolkit.md ──── Module 21       │
    │  barrier-populations.md ─── ALL modules     │
    │  local-area.md ──────────── ALL modules     │
    └─────────────────────────────────────────────┘
@@ -91,6 +93,13 @@
 | 12 | Referral Letter | participant, agency, reason | Formal referral letter | `staff-workflows.md` |
 | 13 | Employer Outreach | program to pitch | Cold call / pitch script | `staff-workflows.md` |
 
+### Public Service & HR Manager (Modules 20–21)
+
+| # | Module | Input | Output | Ref File |
+|---|---|---|---|---|
+| 20 | Public Service Applications | target agency/level, role, veteran status | Gov resume, KSA, checklist | `public-service-hiring.md` |
+| 21 | HR Manager Toolkit | position to fill, grade, qualifications | Job description, interview guide, scorecard | `hr-manager-toolkit.md` |
+
 ### Special Modes
 
 | Mode | Trigger | Output |
@@ -103,14 +112,14 @@
 
 ## Population Routing Matrix
 
-| Population | Module 0 | Module 1 | Module 2 | Module 3 | Module 7 | Module 8 | Module 9 |
-|---|---|---|---|---|---|---|---|
-| Justice-involved | Reentry programs | Fair Chance employers | No conviction disclosure | Skills-focused | Forward-looking answers | Federal Bonding flag | DOC vocational creds |
-| Veterans | Priority of service | Military skill translation | MOS → civilian titles | Mention service | Leadership examples | DVOP referral | GI Bill stacking |
-| Youth 14–24 | Youth programs | NOW-tier focus | Entry-level format | Lighter formality | Behavioral focus | Smaller daily actions | Subsidized employment |
-| Disability | MVR/RSB referral | Customized employment | Accommodations note | Strengths focus | ADA awareness | Benefits counseling | VR training funding |
-| SNAP/TANF | SkillUP/MWA | Any demand role | Standard | Standard | Standard | DSS LISTSERV | SkillUP training |
-| No diploma | AEL/Excel Center | NOW-tier only | Education → Skills lead | Frame learning | Transferable skills | GED as Day 1 action | IET model |
-| English learner | AEL ELL | Plain language roles | Simplified format | Plain language | Practice answers | Plain language steps | IET concurrent |
-| Homeless | Wraparound services | Flexible schedule roles | Job Center address OK | Standard | Realistic prep | Job Center access | Short-term certs |
-| Older (55+) | SCSEP | Experience-valued roles | Modernized format | Recent strengths | Age-redirect coaching | LinkedIn update | Upskill certs |
+| Population | Module 0 | Module 1 | Module 2 | Module 7 | Module 8 | Module 9 | Module 20 | Module 21 |
+|---|---|---|---|---|---|---|---|---|
+| Justice-involved | Reentry programs | Fair Chance employers | No conviction disclosure | Forward-looking answers | Federal Bonding flag | DOC vocational creds | Fair Chance Act; avoid positions with conduct bars | WOTC incentive for employer |
+| Veterans | Priority of service | Military skill translation | MOS → civilian titles | Leadership examples | DVOP referral | GI Bill stacking | 5/10-pt preference; VEOA/VRA authorities | Show-Me Heroes; OJT subsidy |
+| Youth 14–24 | Youth programs | NOW-tier focus | Entry-level format | Behavioral focus | Smaller daily actions | Subsidized employment | Pathways Program; state internships | TANF subsidized placement |
+| Disability | MVR/RSB referral | Customized employment | Accommodations note | ADA awareness | Benefits counseling | VR training funding | Schedule A hiring; SPPC contact | ADA accommodation in hiring |
+| SNAP/TANF | SkillUP/MWA | Any demand role | Standard | Standard | DSS LISTSERV | SkillUP training | Stable gov benefits ease transition | WOTC-eligible candidates |
+| No diploma | AEL/Excel Center | NOW-tier only | Education → Skills lead | Transferable skills | GED as Day 1 action | IET model | Limited below GS-2; credential first | Entry-level trades/maintenance |
+| English learner | AEL ELL | Plain language roles | Simplified format | Practice answers | Plain language steps | IET concurrent | Bilingual positions in demand | Language premium pay |
+| Homeless | Wraparound services | Flexible schedule roles | Job Center address OK | Realistic prep | Job Center access | Short-term certs | Standard gov application process | Standard |
+| Older (55+) | SCSEP | Experience-valued roles | Modernized format | Age-redirect coaching | LinkedIn update | Upskill certs | No mandatory retirement; strong benefits | Experience highly valued |

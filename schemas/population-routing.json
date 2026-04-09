@@ -30,7 +30,28 @@
               "cover_letter_guidance": { "type": "string" },
               "interview_guidance": { "type": "string" },
               "action_plan_guidance": { "type": "string" },
-              "training_guidance": { "type": "string" }
+              "training_guidance": { "type": "string" },
+              "public_service_guidance": {
+                "type": "string",
+                "description": "Adjustments when applying to government positions (Module 20)"
+              },
+              "veteran_preference_impact": {
+                "type": "string",
+                "description": "How veteran preference affects this population in government hiring"
+              },
+              "schedule_a_applicability": {
+                "type": "boolean",
+                "default": false,
+                "description": "Whether Schedule A non-competitive hiring applies"
+              },
+              "government_qualification_note": {
+                "type": "string",
+                "description": "Notes on government-specific qualification requirements for this population"
+              },
+              "hr_manager_guidance": {
+                "type": "string",
+                "description": "Guidance for HR managers hiring from this population (Module 21)"
+              }
             }
           },
           "priority_of_service": { "type": "boolean", "default": false },

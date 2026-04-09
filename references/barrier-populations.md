@@ -233,3 +233,21 @@ or when explaining why they are a competitive hire.
 - Coach on LinkedIn presence
 - Address age-related concerns in interview prep (e.g., "tell me about yourself" as a redirect to recent strengths)
 - Focus on reliability, institutional knowledge, and mentorship value as competitive advantages
+
+---
+
+## PUBLIC SECTOR HIRING ADJUSTMENTS
+
+When a barrier population member applies for government positions (federal, state, or local),
+apply these additional adjustments on top of the standard population guidance above.
+
+| Population | Public Sector-Specific Adjustment |
+|---|---|
+| Veterans | Flag 5-point or 10-point veteran preference on all government applications; mention VEOA (apply to status-only federal postings), VRA (non-competitive up to GS-11), and 30% disabled veteran authority; translate MOS to federal GS series classifications; military experience often directly qualifies for federal positions |
+| Individuals with disabilities | Flag Schedule A non-competitive hiring authority for federal positions; connect to agency Selective Placement Program Coordinator (SPPC); MVR/RSB can provide Schedule A letters; state/local governments may have similar non-competitive disability hiring programs |
+| Justice-involved | Note: most government applications ask about conviction history; some positions have mandatory disqualifiers (law enforcement, financial, security clearance); focus applications on positions without conduct bars; federal Fair Chance Act delays criminal history inquiry until after conditional offer for federal jobs and contractors; highlight rehabilitation and time elapsed |
+| Youth 14–24 | Federal Pathways Program offers internships and recent graduate positions; state government internship programs available in most agencies; TANF subsidized employment can place youth in public agencies; encourage government internships as a pathway to permanent civil service employment |
+| Older workers (55+) | Government values experience and has no mandatory retirement age for most positions (exceptions: law enforcement, air traffic control); federal retirement benefits are among the strongest available; SCSEP experience may lead to unsubsidized government positions; highlight institutional knowledge and mentorship value |
+| No diploma | Limited federal options below GS-2 without education equivalency; state and local maintenance, trades, and custodial positions may be accessible; recommend credentialing (GED/HiSET) as a prerequisite; some government positions accept equivalent combinations of education and experience |
+| English learner | Bilingual positions are in high demand across government (especially social services, healthcare, education agencies); some federal agencies offer language premium pay; note that civil service exams are typically in English — AEL services should be prioritized first |
+| SNAP/TANF recipients | Government positions often offer strong benefits (health insurance, retirement) that complement the transition off public assistance; many entry-level government positions (clerk, aide, technician) provide stable employment with advancement pathways |

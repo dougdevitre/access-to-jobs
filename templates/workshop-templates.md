@@ -189,6 +189,70 @@ Don't skip this step."
 
 ---
 
+## WORKSHOP F: Hiring Best Practices for Managers (90 Minutes)
+
+**Audience:** 8–15 HR managers, hiring managers, supervisors
+**Materials:** Projector, printed handouts (JD template, scorecard, EEO checklist), sample job description
+**Pre-work:** Bring a current job description or position vacancy you're hiring for
+
+### Agenda
+
+| Time | Section | Activity |
+|---|---|---|
+| 0:00–0:10 | Why Structured Hiring Matters | Evidence base + EEO liability risks |
+| 0:10–0:25 | Job Description Audit | Review attendees' JDs for clarity + inclusivity |
+| 0:25–0:45 | Building a Structured Interview | 5 steps: competencies → questions → rubric → panel → calibration |
+| 0:45–1:15 | Mock Panel Exercise | Conduct practice interview, score independently, calibrate as group |
+| 1:15–1:25 | WIOA Employer Programs | OJT, IWT, WOTC, Federal Bonding — free resources |
+| 1:25–1:30 | Q&A + Next Steps | Schedule follow-up with Business Services Rep |
+
+### Key Talking Points
+
+**Opening (0:00):**
+"Unstructured interviews are barely better than flipping a coin at predicting
+job performance. Structured interviews are twice as predictive and far more
+legally defensible. Today we're going to build a hiring process you can trust."
+
+**Job Description Audit (0:10):**
+"Let's look at your job descriptions. I want you to count how many items
+are in your 'required qualifications' list. Every unnecessary requirement
+shrinks your applicant pool. Research shows women and minorities are far
+less likely to apply unless they meet 100% of listed requirements — so
+that 'bachelor's degree required' line, if the job can be done without
+one, is costing you diverse candidates."
+
+**Structured Interview Build (0:25):**
+"Here are the 5 steps to a legally defensible, effective interview:
+1. Map competencies from the job description
+2. Write one behavior-based question per competency
+3. Create an anchored scoring rubric (what does a 1, 3, and 5 look like?)
+4. Assign panel roles (chair, technical evaluator, HR, note-taker)
+5. Score independently, then calibrate as a group"
+
+**Mock Exercise (0:45):**
+"Pair up. One person plays the candidate, one plays the interviewer. Use
+the question cards and the scorecard. After each answer, score it 1–5
+using the rubric. We'll compare scores as a group to see how calibrated
+we are — this is where most hiring committees discover they're scoring
+very differently."
+
+**WIOA Programs (1:15):**
+"Before you leave, I want you to know about free programs that can reduce
+your hiring costs. On-the-Job Training reimburses up to 90% of a new hire's
+wages during training. The Work Opportunity Tax Credit gives you $2,400 to
+$9,600 per eligible hire. And the Federal Bonding Program provides free
+fidelity bonds for candidates with criminal backgrounds. Your local Job
+Center Business Services Rep can set all of this up for you."
+
+### Handout Content
+- Job description template (from `references/hr-manager-toolkit.md`)
+- Structured interview guide (from `references/hr-manager-toolkit.md`)
+- Interview scorecard (from `templates/output-templates.md`)
+- EEO compliance checklist: prohibited questions, ADA accommodation, veteran preference
+- WIOA employer program one-pager: OJT, IWT, WOTC, Federal Bonding, Apprenticeship
+
+---
+
 ## GENERAL FACILITATION TIPS
 
 1. **Start on time.** Respect people who showed up early.

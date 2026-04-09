@@ -224,3 +224,194 @@ Thank you,
 [Staff Name] | [Title]
 [Job Center Name]
 ```
+
+---
+
+## HR MANAGER / EMPLOYER EMAILS
+
+### Interview Invitation to Candidate
+
+```
+Subject: Interview Invitation — [Position Title] — [Organization Name]
+
+Dear [Candidate Name],
+
+Thank you for your application for the [Position Title] position with
+[Organization Name]. We are pleased to invite you to interview.
+
+Date: [Day, Date]
+Time: [Time including time zone]
+Location: [Full address OR video link]
+Format: [Panel interview / One-on-one / Virtual]
+Estimated duration: [XX minutes]
+
+Please bring:
+- A government-issued photo ID
+- [Any additional documents: transcripts, certifications, portfolio]
+
+Parking/access: [Instructions]
+
+If you require any accommodations for the interview, please let me
+know in advance and we will be happy to arrange them.
+
+Please confirm your attendance by replying to this email by [date].
+If none of the above times work for your schedule, please contact me
+to arrange an alternative.
+
+Best regards,
+[HR Contact Name] | [Title]
+[Organization Name]
+[Phone] | [Email]
+```
+
+### Interview Reminder (24 Hours Before)
+
+```
+Subject: Reminder — Interview Tomorrow for [Position Title]
+
+Dear [Candidate Name],
+
+This is a friendly reminder about your interview tomorrow:
+
+Date: [Day, Date]
+Time: [Time]
+Location: [Address or video link]
+Contact upon arrival: [Name and phone number]
+
+We look forward to meeting you.
+
+Best,
+[HR Contact Name]
+[Phone]
+```
+
+### Rejection Letter — Non-Selected Candidate
+
+```
+Subject: Application Update — [Position Title] — [Organization Name]
+
+Dear [Candidate Name],
+
+Thank you for your interest in the [Position Title] position with
+[Organization Name] and for the time you invested in the application
+[and interview] process.
+
+After careful consideration, we have selected another candidate whose
+qualifications most closely match our current needs. This was a
+competitive process and your candidacy was given thorough review.
+
+We encourage you to apply for future openings that match your
+qualifications. [Open positions are posted at [URL].]
+
+We wish you the best in your career.
+
+Sincerely,
+[HR Contact Name] | [Title]
+[Organization Name]
+```
+
+### Reference Check Request
+
+```
+Subject: Employment Reference Request — [Candidate Name] for [Position Title]
+
+Dear [Reference Name],
+
+[Candidate Name] has applied for the position of [Position Title] with
+[Organization Name] and listed you as a professional reference.
+
+If you are willing, I would appreciate your feedback on the following:
+
+1. In what capacity and for how long did you work with [Candidate]?
+2. What were their primary responsibilities?
+3. How would you rate their [key competency from the position — e.g.,
+   attention to detail, teamwork, reliability]?
+4. Can you describe a situation where they demonstrated [relevant skill]?
+5. Would you rehire or recommend this person?
+
+You may respond by email or phone. I am available at [phone] during
+[hours]. I would appreciate a response by [date] if possible.
+
+This information will be kept confidential and used solely for
+employment evaluation purposes.
+
+Thank you,
+[HR Contact Name] | [Title]
+[Organization Name]
+[Phone] | [Email]
+```
+
+### Welcome Email to New Hire
+
+```
+Subject: Welcome to [Organization Name] — [New Hire Name]
+
+Dear [Name],
+
+Welcome to [Organization Name]! We are excited to have you join our
+team as [Position Title] starting [Start Date].
+
+Here's what to expect on your first day:
+
+Arrival time: [Time]
+Location: [Address + specific entrance/floor/room]
+Who to ask for: [Supervisor or HR contact name]
+What to bring: [Photo ID, signed offer letter, direct deposit info, etc.]
+Dress code: [Business professional / business casual / other]
+
+During your first week, you will:
+- Complete new hire orientation and required paperwork
+- Meet your team and key colleagues
+- Set up your workstation and system access
+- Begin your onboarding training plan
+
+Your supervisor, [Name], is looking forward to working with you.
+If you have any questions before your start date, don't hesitate to
+reach out to me at [phone/email].
+
+Welcome aboard!
+
+[HR Contact Name] | [Title]
+[Organization Name]
+[Phone] | [Email]
+```
+
+### Conditional Offer with Background Check Notice
+
+```
+Subject: Conditional Offer of Employment — [Position Title]
+
+Dear [Candidate Name],
+
+I am pleased to extend a conditional offer of employment for the
+position of [Position Title] with [Organization Name].
+
+Position: [Title]
+Department: [Department]
+Start date: [Proposed date, contingent on clearance]
+Salary: $[Amount] [per year / per hour]
+Reports to: [Supervisor name/title]
+
+This offer is contingent upon satisfactory completion of:
+- [ ] Background investigation
+- [ ] [Drug screening, if applicable]
+- [ ] [Reference verification]
+- [ ] [Education/credential verification]
+- [ ] [Security clearance, if applicable]
+
+Next steps:
+1. Sign and return the attached offer letter by [date]
+2. Complete the enclosed background check authorization form
+3. [Any additional steps]
+
+The background check process typically takes [X–X weeks]. We will
+notify you promptly upon completion.
+
+If you have any questions about the offer or the process, please
+contact me at [phone/email].
+
+Congratulations,
+[HR Contact Name] | [Title]
+[Organization Name]
+[Phone] | [Email]
+```

@@ -18,7 +18,7 @@
     },
     "user_type": {
       "type": "string",
-      "enum": ["job_seeker", "staff", "unknown"],
+      "enum": ["job_seeker", "staff", "hr_manager", "unknown"],
       "default": "unknown",
       "description": "Detected via dual-user detection logic"
     },
@@ -185,6 +185,64 @@
         "assessed_at": { "type": "string", "format": "date-time" }
       }
     },
+    "government_target": {
+      "type": "object",
+      "description": "Government-specific application data for Module 20",
+      "properties": {
+        "target_level": {
+          "type": "string",
+          "enum": ["federal", "state", "local", "any"],
+          "description": "Level of government being targeted"
+        },
+        "gs_grade": {
+          "type": "string",
+          "description": "Target GS grade (e.g., GS-5, GS-9, GS-12)"
+        },
+        "vacancy_announcement_number": {
+          "type": "string",
+          "description": "USAJobs or state job board posting ID"
+        },
+        "veteran_preference_claimed": {
+          "type": "boolean",
+          "default": false
+        },
+        "schedule_a_eligible": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disability non-competitive hiring authority"
+        },
+        "security_clearance": {
+          "type": "string",
+          "enum": ["none", "public_trust", "secret", "top_secret"],
+          "default": "none"
+        }
+      }
+    },
+    "hr_manager_context": {
+      "type": "object",
+      "description": "Context when user_type = hr_manager (Module 21)",
+      "properties": {
+        "agency_type": {
+          "type": "string",
+          "enum": ["federal", "state", "local", "private", "nonprofit"]
+        },
+        "hiring_role": {
+          "type": "string",
+          "description": "Position title being filled"
+        },
+        "department": {
+          "type": "string"
+        },
+        "positions_open": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "grade_level": {
+          "type": "string",
+          "description": "GS grade, state pay grade, or local classification"
+        }
+      }
+    },
     "preferences": {
       "type": "object",
       "properties": {
@@ -195,7 +253,7 @@
         },
         "resume_length": {
           "type": "string",
-          "enum": ["1_page", "2_page"],
+          "enum": ["1_page", "2_page", "federal_full"],
           "default": "1_page"
         }
       }

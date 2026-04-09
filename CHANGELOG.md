@@ -2,6 +2,40 @@
 
 All notable changes to Access to Jobs are documented here.
 
+## [4.2.0] — 2026-04-09
+
+### Added
+- **MODULE 20: Public Service & Government Applications** — federal (USAJobs), state, and local government hiring guidance including federal resume format (4–6 pages), KSA/CCAR narrative writing, GS grade qualification standards, civil service exam preparation, veteran preference (5/10-point), Schedule A disability hiring authority, and government application checklist
+- **MODULE 21: HR Manager Toolkit** — job description writing (13-section template with inclusive language guidance), structured interview building (competency mapping, behavior-based questions, anchored scoring rubrics), candidate evaluation framework (pre-screening, interview scorecard, ranking summary), EEO/ADA compliance in hiring, onboarding plans (90-day manager checklist), WIOA employer program reference, and workforce pipeline building
+- `references/public-service-hiring.md` — complete reference for Module 20 (federal, state, local government hiring processes)
+- `references/hr-manager-toolkit.md` — complete reference for Module 21 (job descriptions, interviews, evaluation, compliance, onboarding)
+- `evals/public-service-eval.json` — 14 test cases for government application and HR manager module routing
+- 4 new output templates: Government Resume, KSA Statement (CCAR), Job Description, Interview Scorecard
+- 6 new HR manager email templates: interview invitation, interview reminder, rejection letter, reference check request, welcome email, conditional offer with background check
+- Workshop F: Hiring Best Practices for Managers (90 minutes) — structured interview training for HR managers and supervisors
+- 7 new slash commands: `/govresume`, `/ksa`, `/govapply`, `/jobdesc`, `/interviewguide`, `/scorecard`, `/onboard`
+- ~20 new glossary terms for government HR (GS, KSA, OPM, Schedule A, VEOA, VRA, CCAR, USAJobs, Fair Chance Act, etc.)
+- Public sector hiring adjustments for all 9 barrier populations in `barrier-populations.md`
+- Public service and HR manager prompt sections in `prompt-library.md` (~20 new curated prompts)
+
+### Changed
+- **Tri-user detection** in SKILL.md: system now detects job seeker, Job Center staff, AND HR manager signals (previously only dual-user: job seeker vs. staff)
+- SKILL.md task router expanded with Module 20 and Module 21 routing
+- SKILL.md progressive intake table expanded with public service and HR manager fields
+- SKILL.md reference file table expanded with 2 new reference files
+- Module map architecture diagram updated from dual-user to tri-user layout
+- Module map quick reference and population routing matrix expanded with Module 20 and Module 21 columns
+- `schemas/jobseeker-intake.json`: added `hr_manager` user type, `government_target` object (target level, GS grade, vacancy number, veteran preference, Schedule A, clearance), `hr_manager_context` object, `federal_full` resume length option
+- `schemas/population-routing.json`: added `public_service_guidance`, `veteran_preference_impact`, `schedule_a_applicability`, `government_qualification_note`, and `hr_manager_guidance` fields
+- `schemas/application-tracker.json`: added government application fields (vacancy announcement number, GS grade, government level, announcement closing date, veteran preference, clearance required)
+- `schemas/case-note.json`: added `hr_consultation`, `recruitment_support`, `interview_panel_support` service types and `hr_manager_notes` object
+- `guides/quick-start.md`: added government job application section and employer/HR manager section
+- `guides/staff-onboarding.md`: added HR manager section with Module 20/21 workflows and updated cheat sheet with new commands
+- `scripts/deploy-state.sh`: now copies `public-service-hiring.md` and `hr-manager-toolkit.md` during state scaffolding
+- `scripts/validate-state.sh`: now validates presence of 2 new reference files
+
+---
+
 ## [4.1.0] — 2026-04-01
 
 ### Added
