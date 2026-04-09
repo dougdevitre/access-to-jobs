@@ -61,6 +61,10 @@ directly to a module without conversational routing.
 | `/scorecard` | Create candidate evaluation scorecard | Module 21 |
 | `/onboard` | New hire onboarding plan | Module 21 |
 | `/hrdashboard` | Generate HR performance dashboard | Module 21 |
+| `/workday` | Generate Workday-formatted content | Module 22 |
+| `/wdjob` | Workday job requisition content | Module 22 |
+| `/wdreview` | Workday performance review comments | Module 22 |
+| `/wdfeedback` | Workday interview feedback content | Module 22 |
 
 ---
 

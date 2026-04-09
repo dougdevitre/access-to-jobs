@@ -98,5 +98,6 @@ quick reference for staff.
 | VRA | Veterans Recruitment Appointment | Non-competitive federal hiring authority for disabled veterans and certain campaign veterans (up to GS-11) |
 | VR | Vocational Rehabilitation | Program providing training and job placement for people with disabilities |
 | WDB | Workforce Development Board | Same as LWDB; local governing board |
+| Workday | Workday HCM | Cloud-based human capital management platform used by many government and large employers for HR, recruiting, compensation, and performance management |
 | WIOA | Workforce Innovation and Opportunity Act | Federal law (2014) governing workforce development programs |
 | WOTC | Work Opportunity Tax Credit | Federal tax credit ($2,400–$9,600) for employers who hire from target groups |

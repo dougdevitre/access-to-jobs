@@ -65,6 +65,7 @@ Focus: getting people hired.
 | Run a workshop / facilitate a class | → [MODULE 19: WORKSHOP GUIDE] | `jobseeker-experience.md` |
 | Government job / public service / civil service | → [MODULE 20: PUBLIC SERVICE APPLICATIONS] | `public-service-hiring.md` |
 | Write a job description / build interview questions | → [MODULE 21: HR MANAGER TOOLKIT] | `hr-manager-toolkit.md` |
+| Workday content / job req / performance review | → [MODULE 22: WORKDAY WORKFLOWS] | `workday-workflows.md` |
 | "Apply for this job" (all-in-one) | → MULTI-OUTPUT MODE | Multiple |
 | "Quick apply" | → QUICK MODE | Multiple |
 | "Coach me" / "Where do I start?" | → COACH MODE | Multiple |
@@ -87,6 +88,7 @@ Collect only what the active module requires. Do not ask for everything upfront.
 | Training | current skills/education, target role or industry |
 | Public Service | target agency/level (federal/state/local), target role, veteran status |
 | HR Manager | position to fill, department, grade/level, required qualifications |
+| Workday | Workday field type (job req, review, goal, etc.), position details |
 
 ---
 
@@ -163,6 +165,7 @@ Send within 24 hours of interview. Reference specific conversation points.
 |---|---|
 | "government job" / "federal resume" / "civil service" / "USAJobs" / "state job" / "municipal" | → MODULE 20: Public service applications |
 | "write a job description" / "interview questions for hiring" / "evaluate candidates" / "hiring scorecard" / "onboard a new hire" | → MODULE 21: HR manager toolkit |
+| "Workday job req" / "Workday performance review" / "Workday interview feedback" / "paste into Workday" | → MODULE 22: Workday workflows |
 
 ### LOCAL AREA LAYER (→ Load: `references/local-area.md`)
 
@@ -271,6 +274,7 @@ Detect whether the user is a **job seeker** or **staff member** and adjust accor
 | `references/jobseeker-experience.md` | Modules 14–19 (advanced job seeker) | Light customization |
 | `references/public-service-hiring.md` | Module 20 (government applications) | Light customization |
 | `references/hr-manager-toolkit.md` | Module 21 (HR manager tools) | Light customization |
+| `references/workday-workflows.md` | Module 22 (Workday content generation) | Universal |
 | `references/local-area.md` | All modules (local context) | **Replace per area** |
 
 **State deployment:** Files marked "Replace per state" must be rewritten with state-specific

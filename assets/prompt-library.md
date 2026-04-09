@@ -179,6 +179,18 @@ How do I conduct a fair panel interview? What are the legal dos and don'ts?
 Help me calibrate our scoring after interviewing 4 candidates.
 ```
 
+### Workday Content
+```
+I need to create a job requisition in Workday for a Program Coordinator.
+Write Workday interview feedback for a candidate I just interviewed for Case Manager.
+Generate a Workday performance review comment for an employee who exceeded expectations.
+I need to write a compensation change justification in Workday for a market adjustment.
+Create Workday onboarding tasks for a new hire starting Monday.
+Write a Workday goal for increasing participant placement rates.
+I need to enter a termination reason and exit interview summary in Workday.
+Generate Workday-formatted candidate disposition reasons for 3 candidates we're declining.
+```
+
 ### Onboarding & Retention
 ```
 Create a 90-day onboarding plan for a new Case Manager.

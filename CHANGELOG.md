@@ -2,6 +2,18 @@
 
 All notable changes to Access to Jobs are documented here.
 
+## [4.2.3] — 2026-04-09
+
+### Added
+- **MODULE 22: Workday Workflows** — generates copy/paste-ready content for Workday HCM fields including job requisitions (posting title, description, qualifications, KSAs), candidate evaluation (interview feedback by competency, disposition reasons), onboarding tasks (pre-hire checklist, 30/60/90-day check-ins), performance reviews (manager comments, competency ratings, SMART goals), compensation changes (justification with compa-ratio and market data), job changes (transfer/promotion documentation), and termination/exit (separation reasons, exit interview summaries)
+- `references/workday-workflows.md` — complete reference for Module 22 with field-by-field content generation, character limits, and copy/paste workflow guide
+- 4 new slash commands: `/workday`, `/wdjob`, `/wdreview`, `/wdfeedback`
+- 8 new Workday-specific prompts in `prompt-library.md`
+- Updated SKILL.md task router, progressive intake, and reference file table for Module 22
+- Updated module map architecture diagram and quick reference
+
+---
+
 ## [4.2.2] — 2026-04-09
 
 ### Added
