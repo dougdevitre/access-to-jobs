@@ -25,6 +25,7 @@ directly to a module without conversational routing.
 | `/linkedin` | Build LinkedIn profile | Module 16 |
 | `/fair` | Job fair prep kit | Module 17 |
 | `/salary` | Salary negotiation guidance | Module 18 |
+| `/totalcomp` | Compare total compensation across offers | Module 18 |
 | `/coach` | Full coaching session (readiness + gaps + plan) | Coach Mode |
 
 ---

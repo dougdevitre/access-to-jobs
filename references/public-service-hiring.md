@@ -79,6 +79,82 @@ Federal positions use **OPM qualification standards** based on the job's **GS gr
 **Locality pay:** Federal salaries vary by location. The base rates above are adjusted
 upward by 15–45% depending on the duty station.
 
+### Federal Total Compensation — Why Government Pay Is More Than the Paycheck
+
+Federal benefits add 35–47% on top of base salary. A GS-9 position at $41,000 base
+is typically worth $55,000–$60,000 in total compensation.
+
+**Federal Employee Benefits Package:**
+
+| Benefit | What You Get | Estimated Annual Value (at $40K salary) |
+|---|---|---|
+| FEHB (health insurance) | Government pays ~75% of premium; 200+ plan choices | $8,000–$15,000 |
+| FEDVIP (dental/vision) | Optional; competitive group rates | $500–$1,500 |
+| FERS pension | 1% × years of service × high-3 avg salary; guaranteed for life | $3,200–$6,000 (employer contribution) |
+| TSP (like 401k) | Automatic 1% + match up to 5% you contribute | $1,600–$2,400 |
+| Paid holidays | 11 federal holidays per year | $1,692 |
+| Annual leave | 13 days/year (new); 20 days (3+ yrs); 26 days (15+ yrs) | $2,000–$4,000 |
+| Sick leave | 13 days/year, unlimited accumulation | $2,000 |
+| Basic life insurance | Salary + $2,000 at very low cost | $200–$400 |
+| FEGLI (optional life) | Up to 5x salary at group rates | Varies |
+| Long-term care | Federal Long-Term Care Insurance Program | Varies |
+| Flexible Spending (FSA) | Pre-tax medical and dependent care accounts | Tax savings $500–$2,000 |
+| Transit subsidy | Up to $300/month for commuting | $1,200–$3,600 |
+| Student loan repayment | Up to $10,000/year for qualifying positions | $0–$10,000 |
+| Telework/remote work | Many federal positions offer flexible arrangements | Commute savings vary |
+
+**Federal step increases (built-in raises without promotion):**
+```
+Steps 1→2, 2→3, 3→4:    1 year each    (~3% raise per step)
+Steps 4→5, 5→6, 6→7:    2 years each   (~3% raise per step)
+Steps 7→8, 8→9, 9→10:   3 years each   (~3% raise per step)
+
+Example: GS-9 Step 1 = $41,365 → GS-9 Step 10 = $53,776 (18 years, no promotion)
+Plus annual locality pay adjustments on top of step increases.
+```
+
+**Example: Federal vs. Private Sector Total Comp Comparison**
+```
+                            Federal GS-9        Private Sector
+                            ──────────────      ──────────────
+Base salary                 $41,365             $45,000
+Locality pay (20%)          $8,273              —
+Adjusted salary             $49,638             $45,000
+Health insurance (employer) $12,000             $7,000
+Retirement (FERS + TSP)     $6,000              $1,800 (401k 4% match)
+Pension value               $3,200              $0
+Paid leave (37 days)        $7,100              $3,500 (15 days)
+Life/disability insurance   $600                $400
+Transit subsidy             $2,400              $0
+Student loan repayment      $5,000              $0
+                            ──────────────      ──────────────
+TOTAL COMPENSATION          ~$85,938            ~$57,700
+```
+
+**Key takeaway for job seekers:** Federal base salary may look lower, but total compensation
+is often 25–50% higher than comparable private sector positions. Always calculate total comp
+before accepting or rejecting any offer.
+
+### State Government Benefits (Missouri as Reference)
+
+State benefits vary but typically include:
+- **Health insurance:** State group plan with employer subsidy (typically 60–80% of premium)
+- **Retirement:** Missouri State Employees' Retirement System (MOSERS) — defined benefit pension
+- **Paid leave:** Vacation (10–25 days based on tenure), sick leave (10+ days), 13 holidays
+- **Life insurance:** Basic coverage at no cost; optional supplemental
+- **Deferred compensation:** 457(b) plan available (like a 401k for government)
+- **Tuition reimbursement:** Available at many agencies
+- **Estimated benefits value:** 25–40% of base salary
+
+### Local Government Benefits
+
+City, county, and school district benefits vary widely but often include:
+- **Health insurance:** Group plans; quality varies by jurisdiction size
+- **Retirement:** Local pension plans or state-administered systems
+- **Paid leave:** Typically competitive with state government
+- **Key advantage:** Many local positions offer better work-life balance
+- **Estimated benefits value:** 25–38% of base salary
+
 ### Specialized Experience
 
 For most federal positions at GS-7 and above, you must demonstrate **specialized experience**

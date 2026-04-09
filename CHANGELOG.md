@@ -2,6 +2,21 @@
 
 All notable changes to Access to Jobs are documented here.
 
+## [4.2.2] — 2026-04-09
+
+### Added
+- **Total Compensation Calculator** in `jobseeker-experience.md` (Module 18 expansion) — teaches job seekers to calculate full offer value including health insurance ($6K–$22K), retirement matching (3–15%), PTO dollar value, life/disability insurance, tuition reimbursement, and all other benefits; includes 3-offer comparison worksheet and typical benefits-as-%-of-salary by employer type
+- **Federal Government Benefits Package** in `public-service-hiring.md` (Module 20) — complete FEHB, FERS pension, TSP matching, step increase schedule, leave accrual, transit subsidy, student loan repayment, and FSA; includes side-by-side federal vs. private sector total comp example showing a GS-9 at $86K total comp vs. private sector at $58K
+- **State and Local Government Benefits** in `public-service-hiring.md` — MOSERS pension, state health plan, 457(b), and local government benefits overview
+- **Competitive Compensation & Benefits Benchmarking** in `hr-manager-toolkit.md` (Module 21) — total comp formula for HR managers, benchmarking table by employer type (federal/state/local/large private/small private), competitor research sources, benefits gap analysis framework, and total compensation statement template for offer letters
+- **Total Compensation Comparison template** in `output-templates.md` — detailed 3-offer comparison with cash compensation, insurance, retirement, PTO, and other benefits sections
+- `/totalcomp` slash command for comparing offers side by side
+- ~15 new glossary terms: 401(k), Compa-ratio, eNPS, FEHB, FERS, FSA, HSA, MOSERS, Total Compensation, TSP
+- 6 new job seeker prompts for total compensation comparison
+- 12 new HR manager prompts for benefits benchmarking and pay equity
+
+---
+
 ## [4.2.1] — 2026-04-09
 
 ### Added

@@ -14,11 +14,13 @@ quick reference for staff.
 | AGR | Active Guard and Reserve | Military members serving full-time in Guard/Reserve units |
 | AJC | American Job Center | The national brand for local workforce offices (called "Missouri Job Centers" in MO) |
 | ATS | Applicant Tracking System | Software employers use to screen resumes by keyword before a human reads them |
+| 401(k) | Retirement Savings Plan | Employer-sponsored retirement account; employer may match a percentage of your contributions |
 | Ban-the-Box | Fair Chance Hiring Policy | Laws that delay criminal history questions until after an interview or conditional offer |
 | BLS | Bureau of Labor Statistics | Federal agency that tracks jobs, wages, and unemployment data |
 | CCAR | Context, Challenge, Action, Result | Method for writing KSA narratives in federal job applications |
 | CDA | Child Development Associate | National credential for early childhood educators |
 | Civil Service | Civil Service System | Government employment system based on merit (qualifications) rather than political appointment |
+| Compa-ratio | Compensation Ratio | Actual salary divided by the midpoint of the pay range; 1.0 means paid at market midpoint |
 | Competitive Service | Federal Competitive Service | Federal positions filled through open competition under OPM rules; most federal jobs fall here |
 | CNA | Certified Nursing Assistant | Entry-level healthcare credential; high demand nationwide |
 | CODL | Consolidated Omnibus Directors | Veterans' employment staff who do employer outreach |
@@ -31,11 +33,16 @@ quick reference for staff.
 | ETP | Eligible Training Provider |
 | Excepted Service | Federal Excepted Service | Federal positions not subject to standard competitive hiring rules; includes Schedule A, B, C, and D appointments | A school or program approved to receive WIOA training funds |
 | ETPL | Eligible Training Provider List | The state's official list of approved training programs |
+| eNPS | Employee Net Promoter Score | Measure of employee loyalty: "Would you recommend this workplace?" (score from -100 to +100) |
+| FEHB | Federal Employees Health Benefits | Federal government health insurance program with 200+ plan choices; government pays ~75% of premium |
+| FERS | Federal Employees Retirement System | Federal retirement system combining a pension, TSP (like 401k), and Social Security |
 | Fair Chance Act | Federal Fair Chance to Compete Act | Prohibits federal agencies and contractors from asking about criminal history before a conditional job offer |
+| FSA | Flexible Spending Account | Pre-tax account for medical or dependent care expenses; employer may contribute; "use it or lose it" each year |
 | GED | General Educational Development | High school equivalency test |
 | GS | General Schedule | Federal pay system with 15 grades (GS-1 to GS-15) and 10 steps within each grade |
 | GSP | Gross State Product | Total economic output of a state (like GDP for a state) |
-| HEALS | Health Education Accelerated Learning & Skills | Missouri initiative for fast-track healthcare training |
+| HEALS | Health Education Accelerated Learning & Skills |
+| HSA | Health Savings Account | Tax-advantaged account paired with high-deductible health plans; employer may contribute; funds roll over year to year | Missouri initiative for fast-track healthcare training |
 | HiSET | High School Equivalency Test | Alternative to GED for earning a high school equivalency |
 | HVAC | Heating, Ventilation, and Air Conditioning | Skilled trade with apprenticeship pathway |
 | IATC | Intern and Apprentice Tax Credit | Missouri tax credit ($1,500/person) for employers who hire apprentices |
@@ -55,6 +62,7 @@ quick reference for staff.
 | MERIC | Missouri Economic Research and Information Center | Missouri's LMI agency |
 | Merit System | Merit System Principles | Federal hiring principles requiring selection based on qualifications, not political affiliation or connections |
 | MOS | Military Occupational Specialty | Military job code (needs translation to civilian titles) |
+| MOSERS | Missouri State Employees' Retirement System | Missouri's defined-benefit pension for state employees; employer contributes 8–15% of salary |
 | MSG | Measurable Skill Gains | WIOA metric tracking documented learning progress during a program |
 | MVR | Missouri Vocational Rehabilitation | Missouri's VR program for people with disabilities |
 | MWA | Missouri Work Assistance | Missouri's TANF employment program |
@@ -80,7 +88,9 @@ quick reference for staff.
 | SNAP | Supplemental Nutrition Assistance Program |
 | SPPC | Selective Placement Program Coordinator | Federal agency staff who coordinates hiring of individuals with disabilities under Schedule A | Food stamps / food benefits |
 | STAR | Situation, Task, Action, Result | Interview answer framework |
-| TAA | Trade Adjustment Assistance | Federal program for workers laid off due to foreign trade |
+| TAA | Trade Adjustment Assistance |
+| Total Compensation | Total Comp / Total Rewards | The full value of a job: salary + health insurance + retirement + PTO + all other benefits; typically 25–47% more than base salary |
+| TSP | Thrift Savings Plan | Federal government retirement savings account (similar to 401k); government matches up to 5% of salary | Federal program for workers laid off due to foreign trade |
 | TANF | Temporary Assistance for Needy Families | Cash assistance program for families with children |
 | UI | Unemployment Insurance | Weekly benefit payments for people who lost their job |
 | USAJobs | USAJobs.gov | Federal government's official job board; all competitive service positions must be posted here |

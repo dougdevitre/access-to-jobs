@@ -50,6 +50,16 @@ I just got hired — what should I do my first week?
 How much should I ask for? They offered $15/hour for medical assistant.
 ```
 
+### Total Compensation
+```
+I got two job offers. Help me compare the total compensation.
+How much is my health insurance actually worth?
+Is a $37,000 federal job better than a $45,000 private sector job?
+What questions should I ask about benefits before accepting an offer?
+My offer doesn't include a pension but pays more. Which is better long-term?
+Help me calculate what my PTO is worth in dollars.
+```
+
 ### Special Situations
 ```
 I just got out of prison. I need work but I don't know where to start.

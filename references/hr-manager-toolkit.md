@@ -460,6 +460,106 @@ Build a sustainable talent pipeline by partnering with the workforce system:
 
 ---
 
+## COMPETITIVE COMPENSATION & BENEFITS BENCHMARKING
+
+### Why Benefits Benchmarking Matters
+
+Benefits represent 25–47% of total compensation cost. If your benefits package is below
+market, you'll lose candidates to competitors even if your base salary is competitive.
+If it's above market and you don't communicate it, candidates won't see its value.
+
+### Total Compensation Formula for HR Managers
+
+```
+TOTAL COMPENSATION COST PER EMPLOYEE =
+  Base salary
+  + Employer health insurance contribution
+  + Employer dental/vision contribution
+  + Employer retirement contribution (match + pension)
+  + Employer payroll taxes (FICA, FUTA, workers comp — typically 7.65–10%)
+  + PTO cost (paid days off × daily rate)
+  + Employer-paid life and disability insurance
+  + Tuition reimbursement (if used)
+  + Training and professional development
+  + All other employer-paid benefits
+```
+
+### Benefits Benchmarking by Employer Type
+
+Use this to compare your package against competitors in your sector:
+
+| Benefit | Federal Govt | State Govt | Local Govt | Large Private (500+) | Small Private (<50) |
+|---|---|---|---|---|---|
+| Health insurance (employer %) | ~75% of premium | 60–80% | 50–80% | 70–85% | 50–70% |
+| Health (employer annual cost) | $8K–$15K | $6K–$12K | $5K–$10K | $6K–$14K | $4K–$8K |
+| Retirement match | 5% TSP + pension | Pension (8–15%) | Pension or 3–6% match | 3–6% match | 0–4% match |
+| Pension? | Yes (FERS) | Usually yes | Varies | Rare | Very rare |
+| PTO (year 1, days) | 37 (vacation+sick+holidays) | 30–35 | 25–35 | 15–25 | 10–20 |
+| Life insurance | Basic free | Basic free | Often free | Often free | Varies |
+| Tuition reimbursement | Up to $10K/yr | $2K–$5K/yr | $1K–$3K/yr | $2K–$10K/yr | Rare |
+| Student loan repayment | Up to $10K/yr | Rare | Rare | Growing trend | Rare |
+| Flexible work | Expanding | Limited | Limited | Common | Common |
+
+### How to Research Competitor Benefits
+
+1. **BLS Employer Costs for Employee Compensation** (bls.gov/news.release/ecec.toc.htm)
+   — National and regional benefits cost data by industry and employer size
+2. **SHRM Employee Benefits Survey** (shrm.org)
+   — Annual survey of benefits offerings by organization size and industry
+3. **State compensation reports** — Many states publish employee compensation reports
+4. **Job postings** — Competitors' job ads often list benefits; collect and compare
+5. **Glassdoor / Indeed** — Benefits reviews from current/former employees
+6. **Your Job Center Business Services Rep** — Can share what local employers offer
+
+### Building a Competitive Benefits Package
+
+**Step 1 — Audit your current package**
+
+Calculate total employer cost per employee for each benefit component.
+Compare to the benchmarking table above for your employer type.
+
+**Step 2 — Identify gaps vs. competitors**
+
+| Benefit | Your Package | Market Median | Gap | Priority |
+|---|---|---|---|---|
+| Health (employer %) | ____% | ____% | ____% | High / Med / Low |
+| Retirement match | ____% | ____% | ____% | High / Med / Low |
+| PTO days (year 1) | ____ | ____ | ____ | High / Med / Low |
+| Tuition reimbursement | $____ | $____ | $____ | High / Med / Low |
+| Remote/flexible work | Y / N | Common? | ____ | High / Med / Low |
+
+**Step 3 — Communicate total comp to candidates**
+
+Most candidates only see the salary number. Help them see the full picture:
+
+```
+OFFER LETTER SUPPLEMENT — TOTAL COMPENSATION SUMMARY
+
+Position: [Title]
+Base Salary: $[Amount]/year
+
+Your Total Compensation Package:
+
+  Base salary:                          $XX,XXX
+  Employer health insurance:            $XX,XXX  (we pay XX% of premium)
+  Employer retirement contribution:     $X,XXX   (X% match on your contributions)
+  Pension (employer-funded):            $X,XXX   (X% of salary contributed annually)
+  Paid time off (XX days):              $X,XXX   value
+  Life and disability insurance:        $XXX
+  Tuition reimbursement (max):          $X,XXX
+  Other benefits:                       $X,XXX
+                                        ─────────
+  ESTIMATED TOTAL COMPENSATION:         $XX,XXX
+
+  This represents approximately XX% MORE than your base salary.
+```
+
+**Pro tip:** Including a total compensation statement with your offer letter increases
+offer acceptance rates by 10–15%. Candidates who see the full picture are less likely
+to accept a competitor's offer that appears higher on base salary alone.
+
+---
+
 ## HR PERFORMANCE DASHBOARD — COMPLETE KPI REFERENCE
 
 Track these metrics to measure HR effectiveness across the full employee lifecycle.
