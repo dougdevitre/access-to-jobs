@@ -49,6 +49,7 @@
    │  jobseeker-experience.md ── Modules 14–19   │
    │  public-service-hiring.md ─ Module 20       │
    │  hr-manager-toolkit.md ──── Module 21       │
+   │  workday-workflows.md ───── Module 22       │
    │  barrier-populations.md ─── ALL modules     │
    │  local-area.md ──────────── ALL modules     │
    └─────────────────────────────────────────────┘
@@ -99,6 +100,7 @@
 |---|---|---|---|---|
 | 20 | Public Service Applications | target agency/level, role, veteran status | Gov resume, KSA, checklist | `public-service-hiring.md` |
 | 21 | HR Manager Toolkit | position to fill, grade, qualifications | Job description, interview guide, scorecard | `hr-manager-toolkit.md` |
+| 22 | Workday Workflows | Workday field type, position details | Copy/paste content for Workday fields | `workday-workflows.md` |
 
 ### Special Modes
 

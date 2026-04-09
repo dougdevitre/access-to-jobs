@@ -3,6 +3,25 @@
 
 ---
 
+```mermaid
+flowchart TD
+    subgraph CL ["Cover Letter Structure"]
+        P1["Paragraph 1: HOOK<br/>Why this company + role<br/>DO NOT start with 'My name is...'"]
+        P2["Paragraph 2: PROOF<br/>2-3 accomplishments matched to JD<br/>Quantify. Mirror JD keywords."]
+        P3["Paragraph 3: FIT<br/>Why this company specifically<br/>Mission, values, reputation"]
+        P4["Paragraph 4: CLOSE<br/>Confident, not begging<br/>Request next step"]
+    end
+    
+    P1 --> P2 --> P3 --> P4
+    
+    style P1 fill:#2563eb,color:#fff
+    style P2 fill:#059669,color:#fff
+    style P3 fill:#7c3aed,color:#fff
+    style P4 fill:#d97706,color:#fff
+```
+
+---
+
 ## STRUCTURE (3–4 paragraphs, under 400 words)
 
 ### Paragraph 1 — HOOK

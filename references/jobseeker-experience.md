@@ -3,6 +3,38 @@
 
 ---
 
+```mermaid
+flowchart TD
+    subgraph ADV ["Advanced Job Seeker Journey"]
+        M14[Module 14: Readiness Assessment<br/>7-dimension scorecard] --> GAP{Top 3 gaps?}
+        GAP -->|Resume weak| M2[Module 2: Resume]
+        GAP -->|No LinkedIn| M16[Module 16: LinkedIn Builder]
+        GAP -->|Interview skills| M7[Module 7: Interview Prep]
+        GAP -->|Need training| M9[Module 9: Training Pathways]
+    end
+    
+    subgraph POST ["Post-Hire Success"]
+        HIRED[Got Hired!] --> M15[Module 15: Retention Plan]
+        M15 --> W1[Week 1: Learn + Listen]
+        W1 --> D30[Days 8-30: Build Trust]
+        D30 --> D60[Days 31-60: Demonstrate Competence]
+        D60 --> D90[Days 61-90: Establish Yourself]
+    end
+    
+    subgraph EARN ["Maximize Earnings"]
+        M18[Module 18: Salary Guidance] --> NEG[Negotiation Framework]
+        NEG --> TC[Total Compensation Calculator<br/>Salary + Benefits + PTO + Retirement]
+        TC --> COMP[Compare Offers<br/>Side by Side]
+    end
+
+    style M14 fill:#2563eb,color:#fff
+    style HIRED fill:#059669,color:#fff
+    style M18 fill:#d97706,color:#fff
+    style TC fill:#dc2626,color:#fff
+```
+
+---
+
 ## MODULE 14: EMPLOYMENT READINESS ASSESSMENT
 
 **Goal:** Give job seekers an honest, scored snapshot of where they stand and exactly what to fix.
@@ -277,6 +309,199 @@ is better than no employment — but your case manager can help you evaluate off
 long-term unemployed, etc.), some employers specifically seek WOTC-eligible candidates.
 This can slightly strengthen your position in negotiation — you're bringing a tax benefit.
 Ask your Job Center staff if you qualify.
+
+---
+
+## TOTAL COMPENSATION CALCULATOR
+
+**Goal:** Help job seekers see the FULL value of a job offer — not just the paycheck.
+
+**Why this matters:**
+Base salary is only 60–75% of what an employer actually pays to employ you. Two jobs that
+both pay $40,000/year can differ by $15,000–$25,000 in total value when you add benefits.
+A "lower paying" government job often beats a "higher paying" private sector job when you
+count health insurance, pension, and paid leave.
+
+### WHAT IS TOTAL COMPENSATION?
+
+Total compensation = everything the employer provides that has financial value:
+
+```
+BASE SALARY (your paycheck)
+  + Health insurance (employer's share of premium)
+  + Dental and vision insurance (employer's share)
+  + Retirement contributions (employer match / pension)
+  + Paid time off (vacation, sick, holidays — in dollar value)
+  + Life insurance (employer-paid)
+  + Disability insurance (employer-paid)
+  + Other benefits (tuition, bonuses, FSA/HSA, etc.)
+  ─────────────────────────────────────────
+  = TOTAL COMPENSATION (what the job is actually worth)
+```
+
+### HOW TO CALCULATE EACH COMPONENT
+
+**Health insurance — often the biggest benefit (worth $6,000–$22,000/year)**
+```
+Ask the employer: "What does the employee pay per paycheck for health insurance?"
+  → Typical employee cost: $50–$300 per paycheck (biweekly)
+  → Multiply by 26 = your annual cost
+  → The EMPLOYER typically pays 70–85% of the total premium
+
+Quick estimate if they won't share details:
+  Single coverage employer cost:    ~$6,000–$8,500/year
+  Employee + spouse:                ~$12,000–$16,000/year
+  Family coverage employer cost:    ~$16,000–$22,000/year
+
+Federal government (FEHB): employer pays ~75% of premium
+  → Estimated value: $8,000–$15,000/year depending on plan
+```
+
+**Retirement — can add 3–15% on top of your salary**
+```
+Private sector 401(k) match:
+  → "We match 50% up to 6%" means: at $40K salary, max match = $1,200/year
+  → "We match 100% up to 4%" means: at $40K salary, max match = $1,600/year
+  → Some employers match up to 6% dollar-for-dollar = $2,400/year at $40K
+
+State government pension:
+  → Employer typically contributes 8–15% of salary to pension fund
+  → At $40K salary, that's $3,200–$6,000/year in employer contributions
+  → PLUS you get a guaranteed pension at retirement (rare in private sector)
+
+Federal government (FERS):
+  → Automatic 1% of salary into TSP (no match required): $400/year at $40K
+  → Matching on first 5% you contribute: up to $2,000/year at $40K
+  → PLUS pension benefit (1% × years of service × high-3 average salary)
+  → Total federal retirement value: approximately 12–15% of salary
+```
+
+**Paid time off — has real dollar value**
+```
+Calculate: (annual salary / 2,080 hours) × (PTO hours per year)
+
+Example at $40,000/year ($19.23/hour):
+  10 vacation days = $1,538 value
+  5 sick days = $769 value
+  11 paid holidays = $1,692 value
+  TOTAL PTO VALUE = $3,999/year
+
+Federal government (new employee):
+  13 vacation days + 13 sick days + 11 holidays = 37 days
+  At GS-9 Step 1 ($41K): PTO value = ~$7,285/year
+  After 15 years: 26 vacation + 13 sick + 11 holidays = 50 days
+```
+
+**Life and disability insurance**
+```
+Basic life insurance (employer-paid):
+  → Typically 1x annual salary at no cost to you
+  → Value: $10–$30/month (or $120–$360/year)
+  → Federal: Basic life insurance = salary + $2,000 (very low employee cost)
+
+Disability insurance (employer-paid):
+  → Short-term: typically 60% of salary for 3–6 months
+  → Long-term: typically 60% of salary after short-term ends
+  → Value: $30–$80/month (or $360–$960/year)
+```
+
+**Other benefits to ask about and value**
+```
+Tuition reimbursement:      $2,000–$10,000/year (ask for max)
+Student loan repayment:     $100–$500/month ($1,200–$6,000/year)
+  → Federal: up to $10,000/year for qualifying positions
+HSA employer contribution:  $500–$1,500/year
+FSA (if offered):           Tax savings of 25–35% on medical/childcare expenses
+Professional development:   $500–$2,500/year
+Sign-on bonus:              $500–$5,000 (one-time; divide by expected years to annualize)
+Performance bonus:          2–10% of salary if targets met
+Commuter benefits:          $100–$300/month ($1,200–$3,600/year)
+Childcare assistance:       $1,000–$5,000/year
+Remote work savings:        $2,000–$5,000/year (gas, wear, food, clothing you don't spend)
+```
+
+### TOTAL COMPENSATION COMPARISON WORKSHEET
+
+```
+                                    OFFER A         OFFER B         OFFER C
+                                    ____________    ____________    ____________
+EMPLOYER:                           ____________    ____________    ____________
+JOB TITLE:                          ____________    ____________    ____________
+
+BASE SALARY
+  Annual salary                     $___________    $___________    $___________
+  Overtime eligible? (Y/N)          ____________    ____________    ____________
+  Estimated overtime value           $___________    $___________    $___________
+  Sign-on bonus (annualized)        $___________    $___________    $___________
+  Performance bonus (estimated)     $___________    $___________    $___________
+
+HEALTH & INSURANCE
+  Health insurance (employer share)  $___________    $___________    $___________
+  Dental insurance (employer share)  $___________    $___________    $___________
+  Vision insurance (employer share)  $___________    $___________    $___________
+  Life insurance (employer-paid)     $___________    $___________    $___________
+  Disability insurance (employer)    $___________    $___________    $___________
+  HSA employer contribution          $___________    $___________    $___________
+
+RETIREMENT
+  401(k)/403(b)/TSP match           $___________    $___________    $___________
+  Pension (employer contribution)    $___________    $___________    $___________
+
+PAID TIME OFF (dollar value)
+  Vacation days: ___× hourly rate   $___________    $___________    $___________
+  Sick days: ___ × hourly rate      $___________    $___________    $___________
+  Paid holidays: ___× hourly rate   $___________    $___________    $___________
+
+OTHER BENEFITS
+  Tuition reimbursement             $___________    $___________    $___________
+  Student loan repayment            $___________    $___________    $___________
+  Professional development          $___________    $___________    $___________
+  Childcare assistance              $___________    $___________    $___________
+  Commuter/parking benefit          $___________    $___________    $___________
+  Remote work savings               $___________    $___________    $___________
+  Other: _______________            $___________    $___________    $___________
+
+─────────────────────────────────────────────────────────────────────────────
+TOTAL COMPENSATION                  $___________    $___________    $___________
+
+BASE SALARY ALONE:                  $___________    $___________    $___________
+BENEFITS VALUE (Total - Base):      $___________    $___________    $___________
+BENEFITS AS % OF SALARY:            ___________%    ___________%    ___________%
+
+BEST TOTAL COMP OFFER:    □ A    □ B    □ C
+```
+
+### TYPICAL BENEFITS VALUE BY EMPLOYER TYPE
+
+| Employer Type | Typical Benefits as % of Salary | Estimated Annual Benefits Value at $40K Salary |
+|---|---|---|
+| Federal government | 35–47% | $14,000–$19,000 |
+| State government | 25–40% | $10,000–$16,000 |
+| Local government (city/county) | 25–38% | $10,000–$15,000 |
+| Large private employer (500+) | 25–35% | $10,000–$14,000 |
+| Mid-size private (50–499) | 20–30% | $8,000–$12,000 |
+| Small private (<50) | 10–25% | $4,000–$10,000 |
+| Part-time / no benefits | 0–5% | $0–$2,000 |
+
+**What this means:** A federal GS-7 position at $37,000 base is often worth $50,000–$54,000
+in total compensation. A private-sector job paying $42,000 with basic benefits may only be
+worth $50,000–$52,000. The "lower-paying" government job may actually pay the same or more.
+
+### QUESTIONS TO ASK ABOUT BENEFITS BEFORE ACCEPTING
+
+1. "What is the employer contribution for health insurance?" (single and family rates)
+2. "Do you offer a 401(k) or retirement plan? What is the employer match?"
+3. "How many vacation days, sick days, and paid holidays per year?"
+4. "Is there tuition reimbursement or student loan repayment assistance?"
+5. "Is there a sign-on bonus or annual performance bonus?"
+6. "When do benefits begin?" (Day 1? After 30 days? After 90 days?)
+7. "Is this position overtime-eligible?"
+8. "Is there a pension or defined-benefit retirement plan?"
+9. "What professional development or training budget is available?"
+10. "Are there flexible work arrangements (remote, hybrid, compressed schedule)?"
+
+**Tip for job seekers:** If an employer won't share specific benefits details before you accept,
+that's a yellow flag. Most legitimate employers provide a benefits summary with the offer.
 
 ---
 

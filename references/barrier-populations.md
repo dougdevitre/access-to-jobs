@@ -5,6 +5,36 @@
 Used to adjust outputs, tone, program routing, and content for users in priority populations.
 Never make eligibility determinations — educational information only.
 
+```mermaid
+flowchart TD
+    A[Detect Population] --> B{Which barrier?}
+    
+    B --> J[Justice-Involved]
+    B --> V[Veteran]
+    B --> Y[Youth 14-24]
+    B --> D[Disability]
+    B --> S[SNAP/TANF]
+    B --> ND[No Diploma]
+    B --> EL[English Learner]
+    B --> H[Homeless]
+    B --> O[Older Worker 55+]
+    
+    J --> JA[No conviction in resume<br/>Fair Chance employers<br/>Federal Bonding]
+    V --> VA[Priority of service<br/>MOS translation<br/>5/10-pt preference]
+    Y --> YA[Lighter tone<br/>Youth programs<br/>Smaller action steps]
+    D --> DA[MVR/RSB referral<br/>Schedule A hiring<br/>Benefits counseling]
+    S --> SA[SkillUP enrollment<br/>DSS LISTSERV<br/>Childcare support]
+    ND --> NDA[AEL / Excel Center<br/>IET model<br/>GED as Day 1 action]
+    EL --> ELA[Plain language<br/>AEL ELL services<br/>Bilingual positions]
+    H --> HA[Job Center access<br/>Wraparound services<br/>Realistic action steps]
+    O --> OA[Resume modernization<br/>SCSEP program<br/>Age-redirect coaching]
+
+    style A fill:#2563eb,color:#fff
+    style J fill:#dc2626,color:#fff
+    style V fill:#7c3aed,color:#fff
+    style D fill:#059669,color:#fff
+```
+
 ---
 
 ## WIOA-DEFINED INDIVIDUALS WITH BARRIERS TO EMPLOYMENT

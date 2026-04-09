@@ -2,6 +2,55 @@
 
 All notable changes to Access to Jobs are documented here.
 
+## [4.2.3] — 2026-04-09
+
+### Added
+- **MODULE 22: Workday Workflows** — generates copy/paste-ready content for Workday HCM fields including job requisitions (posting title, description, qualifications, KSAs), candidate evaluation (interview feedback by competency, disposition reasons), onboarding tasks (pre-hire checklist, 30/60/90-day check-ins), performance reviews (manager comments, competency ratings, SMART goals), compensation changes (justification with compa-ratio and market data), job changes (transfer/promotion documentation), and termination/exit (separation reasons, exit interview summaries)
+- `references/workday-workflows.md` — complete reference for Module 22 with field-by-field content generation, character limits, and copy/paste workflow guide
+- 4 new slash commands: `/workday`, `/wdjob`, `/wdreview`, `/wdfeedback`
+- 8 new Workday-specific prompts in `prompt-library.md`
+- Updated SKILL.md task router, progressive intake, and reference file table for Module 22
+- Updated module map architecture diagram and quick reference
+
+---
+
+## [4.2.2] — 2026-04-09
+
+### Added
+- **Total Compensation Calculator** in `jobseeker-experience.md` (Module 18 expansion) — teaches job seekers to calculate full offer value including health insurance ($6K–$22K), retirement matching (3–15%), PTO dollar value, life/disability insurance, tuition reimbursement, and all other benefits; includes 3-offer comparison worksheet and typical benefits-as-%-of-salary by employer type
+- **Federal Government Benefits Package** in `public-service-hiring.md` (Module 20) — complete FEHB, FERS pension, TSP matching, step increase schedule, leave accrual, transit subsidy, student loan repayment, and FSA; includes side-by-side federal vs. private sector total comp example showing a GS-9 at $86K total comp vs. private sector at $58K
+- **State and Local Government Benefits** in `public-service-hiring.md` — MOSERS pension, state health plan, 457(b), and local government benefits overview
+- **Competitive Compensation & Benefits Benchmarking** in `hr-manager-toolkit.md` (Module 21) — total comp formula for HR managers, benchmarking table by employer type (federal/state/local/large private/small private), competitor research sources, benefits gap analysis framework, and total compensation statement template for offer letters
+- **Total Compensation Comparison template** in `output-templates.md` — detailed 3-offer comparison with cash compensation, insurance, retirement, PTO, and other benefits sections
+- `/totalcomp` slash command for comparing offers side by side
+- ~15 new glossary terms: 401(k), Compa-ratio, eNPS, FEHB, FERS, FSA, HSA, MOSERS, Total Compensation, TSP
+- 6 new job seeker prompts for total compensation comparison
+- 12 new HR manager prompts for benefits benchmarking and pay equity
+
+---
+
+## [4.2.1] — 2026-04-09
+
+### Added
+- **HR Performance Dashboard** — comprehensive KPI reference in `hr-manager-toolkit.md` covering 10 metric categories with 75+ individual KPIs, targets, formulas, and action triggers
+  - Recruitment KPIs (9 metrics): time-to-fill, cost-per-hire, source of hire, applicant ratios, drop-off rate
+  - Retention KPIs (9 metrics): 90-day/1-year/2-year retention, voluntary/involuntary/regrettable turnover, tenure, by-source retention
+  - Employee Performance KPIs (6 metrics): review completion, performance distribution, high performer retention, PIP success
+  - Compensation KPIs (6 metrics): compa-ratio, pay equity, benefits utilization, overtime, total comp competitiveness
+  - Compliance KPIs (7 metrics): EEO adverse impact (80% rule), I-9 completion, training compliance, grievance resolution, accommodation response
+  - Workforce Planning KPIs (7 metrics): vacancy rate, internal fill rate, succession coverage, diversity by level, promotion rate
+  - Onboarding KPIs (5 metrics): task completion, time-to-productivity, new hire satisfaction, buddy effectiveness, first-year turnover
+  - Training & Development KPIs (7 metrics): hours per employee, completion rate, training ROI, skills gap closure, certification pass rate, WIOA training completion
+  - Employee Engagement KPIs (6 metrics): engagement score, eNPS, absenteeism, internal mobility, optional program participation, stay interviews
+  - WIOA Employer Success KPIs (6 metrics): OJT completion/conversion, WOTC retention, apprenticeship completion, Job Center referral quality, cost savings
+- HR Performance Dashboard template in `output-templates.md` — ready-to-fill quarterly tracking template with status indicators
+- `schemas/hr-metrics.json` — full JSON schema for HR performance data (all 10 categories)
+- `/hrdashboard` slash command — generates quarterly HR performance dashboard
+- 12 new HR performance prompts in `prompt-library.md` (turnover analysis, pay equity, adverse impact, engagement diagnostics, etc.)
+- Dashboard building guide: how to select starter metrics, set baselines, choose report cadence, and create action protocols
+
+---
+
 ## [4.2.0] — 2026-04-09
 
 ### Added

@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HRPerformanceMetrics",
+  "description": "Schema for tracking HR performance metrics across the full employee lifecycle. Used by Module 21 HR Manager Toolkit to generate dashboards and identify action items.",
+  "type": "object",
+  "properties": {
+    "organization": { "type": "string" },
+    "period": {
+      "type": "string",
+      "description": "Reporting period (e.g., Q1 2026, PY 2025-2026)"
+    },
+    "prepared_by": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "recruitment": {
+      "type": "object",
+      "properties": {
+        "time_to_fill_days": { "type": "number", "description": "Average days from posting to accepted offer" },
+        "time_to_hire_days": { "type": "number", "description": "Average days from first candidate contact to accepted offer" },
+        "cost_per_hire": { "type": "number", "description": "Total recruiting costs / total hires" },
+        "offer_acceptance_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "applicant_to_interview_ratio": { "type": "number", "description": "Applicants per interview slot" },
+        "interview_to_offer_ratio": { "type": "number" },
+        "applicant_drop_off_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "source_of_hire": {
+          "type": "object",
+          "properties": {
+            "job_center_referral_pct": { "type": "number" },
+            "job_board_pct": { "type": "number" },
+            "employee_referral_pct": { "type": "number" },
+            "direct_application_pct": { "type": "number" },
+            "job_fair_pct": { "type": "number" },
+            "other_pct": { "type": "number" }
+          }
+        },
+        "diversity_of_applicant_pool": { "type": "string", "description": "Qualitative assessment: reflects community / underrepresented / over-concentrated" }
+      }
+    },
+    "retention": {
+      "type": "object",
+      "properties": {
+        "retention_90_day_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "retention_1_year_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "retention_2_year_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "voluntary_turnover_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "involuntary_turnover_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "regrettable_turnover_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "average_tenure_months": { "type": "number" },
+        "turnover_by_department": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "department": { "type": "string" },
+              "voluntary_turnover_rate": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "properties": {
+        "review_completion_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "performance_distribution": {
+          "type": "object",
+          "properties": {
+            "exceeds_pct": { "type": "number" },
+            "meets_pct": { "type": "number" },
+            "below_pct": { "type": "number" }
+          }
+        },
+        "high_performer_retention_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "pip_success_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "goal_completion_rate": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "compensation": {
+      "type": "object",
+      "properties": {
+        "avg_compa_ratio": { "type": "number", "description": "Actual salary / midpoint of pay range" },
+        "pay_equity_gap_pct": { "type": "number", "description": "Largest demographic pay gap as percentage" },
+        "overtime_rate_pct": { "type": "number" },
+        "benefits_utilization_pct": { "type": "number" }
+      }
+    },
+    "compliance": {
+      "type": "object",
+      "properties": {
+        "eeo_adverse_impact_ratio": { "type": "number", "description": "Selection rate of protected group / majority group. Must be >0.80" },
+        "i9_completion_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "required_training_completion_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "grievance_avg_resolution_days": { "type": "number" },
+        "accommodation_response_days": { "type": "number" },
+        "open_grievances": { "type": "integer" }
+      }
+    },
+    "workforce_planning": {
+      "type": "object",
+      "properties": {
+        "vacancy_rate_pct": { "type": "number" },
+        "internal_fill_rate_pct": { "type": "number" },
+        "succession_coverage_pct": { "type": "number", "description": "% of critical roles with identified successors" },
+        "promotion_rate_pct": { "type": "number" },
+        "skills_gap_coverage_pct": { "type": "number" }
+      }
+    },
+    "onboarding": {
+      "type": "object",
+      "properties": {
+        "task_completion_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "new_hire_satisfaction_score": { "type": "number", "minimum": 1, "maximum": 5 },
+        "time_to_productivity_days": { "type": "number" },
+        "first_year_voluntary_turnover_pct": { "type": "number" }
+      }
+    },
+    "training": {
+      "type": "object",
+      "properties": {
+        "avg_training_hours_per_employee": { "type": "number" },
+        "training_completion_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "certification_pass_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "skills_gap_closure_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "tuition_reimbursement_utilization_pct": { "type": "number" }
+      }
+    },
+    "engagement": {
+      "type": "object",
+      "properties": {
+        "engagement_score": { "type": "number", "minimum": 1, "maximum": 5 },
+        "enps": { "type": "integer", "minimum": -100, "maximum": 100, "description": "Employee Net Promoter Score" },
+        "absenteeism_rate_pct": { "type": "number" },
+        "internal_mobility_rate_pct": { "type": "number" },
+        "optional_program_participation_pct": { "type": "number" }
+      }
+    },
+    "wioa_program_effectiveness": {
+      "type": "object",
+      "description": "For employers partnering with the workforce system",
+      "properties": {
+        "ojt_completion_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "ojt_to_permanent_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "wotc_credits_captured": { "type": "number" },
+        "apprenticeship_completion_rate": { "type": "number", "minimum": 0, "maximum": 100 },
+        "job_center_referral_quality_pct": { "type": "number" },
+        "wioa_cost_savings": { "type": "number" }
+      }
+    },
+    "action_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metric": { "type": "string" },
+          "current_value": { "type": "string" },
+          "target": { "type": "string" },
+          "status": { "type": "string", "enum": ["on_target", "watch", "action_needed"] },
+          "intervention": { "type": "string" },
+          "owner": { "type": "string" },
+          "review_date": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+}

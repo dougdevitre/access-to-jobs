@@ -4,6 +4,43 @@ This guide walks you through deploying the Access to Jobs workforce navigator to
 
 ---
 
+```mermaid
+flowchart TD
+    START[Deploy to New State] --> STEP1[Step 1: Run deploy-state.sh<br/>Creates directory + templates]
+    STEP1 --> STEP2[Step 2: Replace 4 Core Files]
+    
+    subgraph REPLACE ["Full Rewrite Required"]
+        R1[state-programs.md<br/>WIOA State Plan data]
+        R2[state-labor-market.md<br/>LMI agency + BLS data]
+        R3[state-training-pathways.md<br/>Training providers + funding]
+        R4[local-area.md<br/>Local employers + Job Center]
+    end
+    
+    STEP2 --> REPLACE
+    REPLACE --> STEP3[Step 3: Light Customization]
+    
+    subgraph CUSTOMIZE ["Update Location References"]
+        C1[barrier-populations.md]
+        C2[action-plan-template.md]
+        C3[staff-workflows.md]
+        C4[public-service-hiring.md]
+        C5[hr-manager-toolkit.md]
+    end
+    
+    STEP3 --> CUSTOMIZE
+    CUSTOMIZE --> STEP4[Step 4: Validate]
+    STEP4 --> VAL[Run validate-state.sh<br/>Check for TODOs + completeness]
+    VAL --> STEP5[Step 5: Test + Deploy]
+    STEP5 --> BUILD[Run build-skill.sh<br/>Package as .skill file]
+
+    style START fill:#2563eb,color:#fff
+    style REPLACE fill:#dc2626,color:#fff
+    style CUSTOMIZE fill:#d97706,color:#fff
+    style BUILD fill:#059669,color:#fff
+```
+
+---
+
 ## Overview
 
 | File | Action | Effort |

@@ -4,6 +4,31 @@ Thank you for your interest in contributing to the Access to Jobs workforce navi
 
 ---
 
+```mermaid
+flowchart TD
+    A[Want to Contribute?] --> B{How?}
+    
+    B -->|Deploy to new state| C[Replace 4 state files<br/>+ validate + test]
+    B -->|Improve modules| D[Fix bugs, add content,<br/>improve templates]
+    B -->|Add translations| E[Translate guides<br/>to new languages]
+    B -->|Add evaluations| F[Write test cases<br/>for edge scenarios]
+    B -->|Report issues| G[GitHub Issues<br/>for bugs or ideas]
+    
+    C --> PR[Pull Request]
+    D --> PR
+    E --> PR
+    F --> PR
+    G --> DISCUSS[Discussion]
+    
+    PR --> REVIEW[Review + Merge]
+
+    style A fill:#2563eb,color:#fff
+    style PR fill:#059669,color:#fff
+    style C fill:#dc2626,color:#fff
+```
+
+---
+
 ## Ways to Contribute
 
 ### 1. Deploy to a New State

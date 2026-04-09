@@ -50,6 +50,16 @@ I just got hired — what should I do my first week?
 How much should I ask for? They offered $15/hour for medical assistant.
 ```
 
+### Total Compensation
+```
+I got two job offers. Help me compare the total compensation.
+How much is my health insurance actually worth?
+Is a $37,000 federal job better than a $45,000 private sector job?
+What questions should I ask about benefits before accepting an offer?
+My offer doesn't include a pension but pays more. Which is better long-term?
+Help me calculate what my PTO is worth in dollars.
+```
+
 ### Special Situations
 ```
 I just got out of prison. I need work but I don't know where to start.
@@ -169,12 +179,40 @@ How do I conduct a fair panel interview? What are the legal dos and don'ts?
 Help me calibrate our scoring after interviewing 4 candidates.
 ```
 
+### Workday Content
+```
+I need to create a job requisition in Workday for a Program Coordinator.
+Write Workday interview feedback for a candidate I just interviewed for Case Manager.
+Generate a Workday performance review comment for an employee who exceeded expectations.
+I need to write a compensation change justification in Workday for a market adjustment.
+Create Workday onboarding tasks for a new hire starting Monday.
+Write a Workday goal for increasing participant placement rates.
+I need to enter a termination reason and exit interview summary in Workday.
+Generate Workday-formatted candidate disposition reasons for 3 candidates we're declining.
+```
+
 ### Onboarding & Retention
 ```
 Create a 90-day onboarding plan for a new Case Manager.
 What should I cover in a new hire's first week?
 Help me write a welcome email for a new employee starting Monday.
 What retention metrics should I track for new hires?
+```
+
+### HR Performance & KPIs
+```
+Build me an HR performance dashboard for my department.
+Our voluntary turnover is at 22% — what should I investigate?
+How do I calculate adverse impact ratio for our hiring process?
+Our 90-day retention dropped to 72%. What's the action plan?
+Help me design a pay equity audit for our organization.
+What KPIs should I track for our OJT program effectiveness?
+I need to present HR metrics to our executive team. What should I include?
+Our engagement survey score dropped to 3.2. What are the likely root causes?
+How do I calculate cost-per-hire for our department?
+Build a succession planning framework for our critical roles.
+What's a good compa-ratio target for a public service agency?
+Help me design an exit interview process to reduce regrettable turnover.
 ```
 
 ---

@@ -44,6 +44,43 @@ Focus: getting people hired.
 
 ## TASK ROUTER
 
+```mermaid
+flowchart TD
+    A[User Input] --> B{Who is the user?}
+    B -->|Job Seeker| C{What do they need?}
+    B -->|Job Center Staff| D{What workflow?}
+    B -->|HR Manager| E{What HR task?}
+    
+    C -->|Eligibility| M0[Module 0: Programs]
+    C -->|Find a job| M1[Module 1: Job Matcher]
+    C -->|Resume / Cover Letter| M2[Modules 2-3: Documents]
+    C -->|Apply / Email| M4[Modules 4-6: Communications]
+    C -->|Interview prep| M7[Module 7: Interview]
+    C -->|Action plan| M8[Module 8: Plan]
+    C -->|Training| M9[Module 9: Credentials]
+    C -->|Readiness / LinkedIn / Salary| M14[Modules 14-18: Advanced]
+    C -->|Government job| M20[Module 20: Public Service]
+    
+    D -->|Intake / triage| M10[Module 10: Intake]
+    D -->|Case notes| M11[Module 11: Case Notes]
+    D -->|Referral letter| M12[Module 12: Referrals]
+    D -->|Employer outreach| M13[Module 13: Outreach]
+    D -->|Workshop| M19[Module 19: Workshops]
+    
+    E -->|Job description| M21[Module 21: HR Toolkit]
+    E -->|Interview guide| M21
+    E -->|Candidate evaluation| M21
+    E -->|Workday content| M22[Module 22: Workday]
+    E -->|HR metrics| M21
+
+    style A fill:#2563eb,color:#fff
+    style B fill:#7c3aed,color:#fff
+    style M0 fill:#059669,color:#fff
+    style M20 fill:#dc2626,color:#fff
+    style M21 fill:#ea580c,color:#fff
+    style M22 fill:#ea580c,color:#fff
+```
+
 | User says / wants | Module | Reference loaded |
 |---|---|---|
 | Am I eligible? / What programs exist? | → [MODULE 0: ELIGIBILITY + PROGRAMS] | `state-programs.md` |
@@ -65,6 +102,7 @@ Focus: getting people hired.
 | Run a workshop / facilitate a class | → [MODULE 19: WORKSHOP GUIDE] | `jobseeker-experience.md` |
 | Government job / public service / civil service | → [MODULE 20: PUBLIC SERVICE APPLICATIONS] | `public-service-hiring.md` |
 | Write a job description / build interview questions | → [MODULE 21: HR MANAGER TOOLKIT] | `hr-manager-toolkit.md` |
+| Workday content / job req / performance review | → [MODULE 22: WORKDAY WORKFLOWS] | `workday-workflows.md` |
 | "Apply for this job" (all-in-one) | → MULTI-OUTPUT MODE | Multiple |
 | "Quick apply" | → QUICK MODE | Multiple |
 | "Coach me" / "Where do I start?" | → COACH MODE | Multiple |
@@ -87,6 +125,7 @@ Collect only what the active module requires. Do not ask for everything upfront.
 | Training | current skills/education, target role or industry |
 | Public Service | target agency/level (federal/state/local), target role, veteran status |
 | HR Manager | position to fill, department, grade/level, required qualifications |
+| Workday | Workday field type (job req, review, goal, etc.), position details |
 
 ---
 
@@ -163,6 +202,7 @@ Send within 24 hours of interview. Reference specific conversation points.
 |---|---|
 | "government job" / "federal resume" / "civil service" / "USAJobs" / "state job" / "municipal" | → MODULE 20: Public service applications |
 | "write a job description" / "interview questions for hiring" / "evaluate candidates" / "hiring scorecard" / "onboard a new hire" | → MODULE 21: HR manager toolkit |
+| "Workday job req" / "Workday performance review" / "Workday interview feedback" / "paste into Workday" | → MODULE 22: Workday workflows |
 
 ### LOCAL AREA LAYER (→ Load: `references/local-area.md`)
 
@@ -271,6 +311,7 @@ Detect whether the user is a **job seeker** or **staff member** and adjust accor
 | `references/jobseeker-experience.md` | Modules 14–19 (advanced job seeker) | Light customization |
 | `references/public-service-hiring.md` | Module 20 (government applications) | Light customization |
 | `references/hr-manager-toolkit.md` | Module 21 (HR manager tools) | Light customization |
+| `references/workday-workflows.md` | Module 22 (Workday content generation) | Universal |
 | `references/local-area.md` | All modules (local context) | **Replace per area** |
 
 **State deployment:** Files marked "Replace per state" must be rewritten with state-specific

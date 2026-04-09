@@ -15,6 +15,43 @@
 
 ---
 
+```mermaid
+flowchart TD
+    JC[Missouri Job Center<br/>St. Charles County] --> JS[Job Seekers]
+    JC --> EMP[Employers]
+    
+    subgraph SERVICES ["Services Available"]
+        S1[MoJobs Registration]
+        S2[Career Advising]
+        S3[Resume Help]
+        S4[Job Matching]
+        S5[WIOA Enrollment]
+        S6[Veteran Priority]
+        S7[Computer/Phone Access]
+    end
+    
+    subgraph LOCAL ["Local Employers"]
+        E1[Boeing / Amazon / WWT]
+        E2[SSM Health / Mercy / BJC]
+        E3[Retail / Service Corridor]
+        E4[Municipal / School Districts]
+    end
+    
+    subgraph TRAIN ["Training Providers"]
+        T1[St. Charles Community College]
+        T2[Career Center - CTE]
+        T3[Lindenwood University]
+    end
+    
+    JS --> SERVICES
+    EMP --> LOCAL
+    JC --> TRAIN
+
+    style JC fill:#2563eb,color:#fff
+```
+
+---
+
 # Local County Workforce Intelligence
 ## Configure for any local workforce area — default: St. Charles County
 ### Source: Missouri WIOA State Plan PY2024-2027 + local context

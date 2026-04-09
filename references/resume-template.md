@@ -3,6 +3,28 @@
 
 ---
 
+```mermaid
+flowchart TD
+    JD[Job Description] -->|Extract keywords| R[Your Resume]
+    R --> ATS{ATS Software<br/>Scans for Keywords}
+    ATS -->|Keywords match| HUMAN[Human Reviewer<br/>Sees your resume]
+    ATS -->|Keywords missing| REJECT[Filtered Out<br/>Never seen by human]
+    
+    HUMAN --> INT[Interview Invitation]
+    
+    R --- S1[Professional Summary<br/>2-3 sentences with JD keywords]
+    R --- S2[Core Skills<br/>10 skills mirroring JD]
+    R --- S3[Experience<br/>Action verb + task + result]
+    R --- S4[Education + Certifications]
+
+    style JD fill:#2563eb,color:#fff
+    style ATS fill:#d97706,color:#fff
+    style HUMAN fill:#059669,color:#fff
+    style REJECT fill:#dc2626,color:#fff
+```
+
+---
+
 ## ATS RULES
 
 1. Use standard section headings (Summary, Skills, Experience, Education)

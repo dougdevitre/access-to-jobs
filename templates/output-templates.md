@@ -601,3 +601,188 @@ RECOMMENDATION:  [ ] Hire   [ ] Consider   [ ] Do not advance
 
 Panelist signature: ___________________  Date: ____________
 ```
+
+---
+
+## TEMPLATE: HR Performance Dashboard (Module 21)
+
+```
+## HR PERFORMANCE DASHBOARD
+### [Organization Name] | Period: [Quarter/Year]
+### Prepared by: [HR Manager Name] | Date: [Date]
+
+══════════════════════════════════════════════════
+RECRUITMENT METRICS
+══════════════════════════════════════════════════
+Time-to-fill (avg days):       _____ | Target: <45 | Status: [ ]
+Cost-per-hire (avg):           $____ | Target: $___ | Status: [ ]
+Offer acceptance rate:         ____% | Target: 80%+ | Status: [ ]
+Applicant-to-interview ratio:  __:1  | Target: 4-8:1| Status: [ ]
+Source breakdown:
+  Job Center referrals:        ____%
+  Job boards:                  ____%
+  Employee referrals:          ____%
+  Direct/walk-in:              ____%
+
+══════════════════════════════════════════════════
+RETENTION METRICS
+══════════════════════════════════════════════════
+90-day retention:              ____% | Target: 85%+ | Status: [ ]
+1-year retention:              ____% | Target: 70%+ | Status: [ ]
+Voluntary turnover (annual):   ____% | Target: <15% | Status: [ ]
+Involuntary turnover (annual): ____% | Target: <8%  | Status: [ ]
+Regrettable turnover:          ____% | Target: <30% | Status: [ ]
+Average tenure (months):       _____
+
+══════════════════════════════════════════════════
+EMPLOYEE PERFORMANCE
+══════════════════════════════════════════════════
+Review completion rate:        ____% | Target: 95%+ | Status: [ ]
+Performance distribution:
+  Exceeds expectations:        ____%
+  Meets expectations:          ____%
+  Below expectations:          ____%
+High performer retention:      ____% | Target: 90%+ | Status: [ ]
+PIP success rate:              ____% | Target: 40-60%| Status: [ ]
+
+══════════════════════════════════════════════════
+COMPENSATION
+══════════════════════════════════════════════════
+Avg compa-ratio:               _____ | Target: 0.90-1.10 | Status: [ ]
+Pay equity gap (largest):      ____% | Target: <3%  | Status: [ ]
+Overtime rate:                 ____% | Target: <5%  | Status: [ ]
+
+══════════════════════════════════════════════════
+COMPLIANCE
+══════════════════════════════════════════════════
+EEO adverse impact ratio:      _____ | Target: >0.80 | Status: [ ]
+I-9 completion (within 3 days):____% | Target: 100% | Status: [ ]
+Required training completion:  ____% | Target: 95%+ | Status: [ ]
+Open grievances:               _____ | Avg days to resolve: _____
+
+══════════════════════════════════════════════════
+WORKFORCE PLANNING
+══════════════════════════════════════════════════
+Vacancy rate:                  ____% | Target: <8%  | Status: [ ]
+Internal fill rate:            ____% | Target: 25-40%| Status: [ ]
+Succession coverage (key roles):___% | Target: 80%+ | Status: [ ]
+
+══════════════════════════════════════════════════
+ONBOARDING
+══════════════════════════════════════════════════
+Onboarding task completion:    ____% | Target: 90%+ | Status: [ ]
+New hire satisfaction (30-day):___/5 | Target: 4.0+ | Status: [ ]
+First-year voluntary turnover: ____% | Target: <15% | Status: [ ]
+
+══════════════════════════════════════════════════
+TRAINING & DEVELOPMENT
+══════════════════════════════════════════════════
+Avg training hours/employee:   _____ | Target: 40+  | Status: [ ]
+Training completion rate:      ____% | Target: 85%+ | Status: [ ]
+Certification pass rate:       ____% | Target: 80%+ | Status: [ ]
+
+══════════════════════════════════════════════════
+ENGAGEMENT
+══════════════════════════════════════════════════
+Engagement score:              ___/5 | Target: 3.8+ | Status: [ ]
+eNPS:                          _____ | Target: +10  | Status: [ ]
+Absenteeism rate:              ____% | Target: <3%  | Status: [ ]
+
+══════════════════════════════════════════════════
+WIOA PROGRAM EFFECTIVENESS (if applicable)
+══════════════════════════════════════════════════
+OJT completion rate:           ____% | Target: 80%+ | Status: [ ]
+OJT-to-permanent conversion:   ____% | Target: 75%+ | Status: [ ]
+WOTC credits captured:         $____
+Job Center referral quality:   ____%
+WIOA cost savings this period: $____
+
+──────────────────────────────────────────────────
+STATUS KEY: [G] = On target  [Y] = Watch  [R] = Action needed
+
+TOP 3 ACTION ITEMS THIS PERIOD:
+1. ___________________________________________________
+2. ___________________________________________________
+3. ___________________________________________________
+
+NEXT REVIEW DATE: _______________
+```
+
+---
+
+## TEMPLATE: Total Compensation Comparison (Module 18 / Module 21)
+
+```
+## TOTAL COMPENSATION COMPARISON
+### Prepared for: [Name] | Date: [Date]
+
+                                OFFER A         OFFER B         OFFER C
+EMPLOYER:                       ____________    ____________    ____________
+POSITION:                       ____________    ____________    ____________
+SECTOR:                         ____________    ____________    ____________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CASH COMPENSATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Base salary (annual)            $___________    $___________    $___________
+Locality pay adjustment         $___________    $___________    $___________
+Sign-on bonus (÷ expected yrs)  $___________    $___________    $___________
+Performance bonus (estimated)   $___________    $___________    $___________
+Overtime (estimated annual)     $___________    $___________    $___________
+SUBTOTAL CASH:                  $___________    $___________    $___________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HEALTH & INSURANCE (employer-paid portion)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Health insurance                $___________    $___________    $___________
+Dental insurance                $___________    $___________    $___________
+Vision insurance                $___________    $___________    $___________
+Life insurance                  $___________    $___________    $___________
+Disability insurance            $___________    $___________    $___________
+HSA/FSA employer contribution   $___________    $___________    $___________
+SUBTOTAL INSURANCE:             $___________    $___________    $___________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RETIREMENT (employer-funded)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+401(k)/403(b)/TSP match         $___________    $___________    $___________
+Pension contribution            $___________    $___________    $___________
+Other retirement                $___________    $___________    $___________
+SUBTOTAL RETIREMENT:            $___________    $___________    $___________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAID TIME OFF (dollar value = days × daily rate)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Vacation (__ days × $__/day)    $___________    $___________    $___________
+Sick leave (__ days × $__/day)  $___________    $___________    $___________
+Holidays (__ days × $__/day)    $___________    $___________    $___________
+SUBTOTAL PTO:                   $___________    $___________    $___________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OTHER BENEFITS (annual value)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tuition reimbursement           $___________    $___________    $___________
+Student loan repayment          $___________    $___________    $___________
+Professional development        $___________    $___________    $___________
+Transit/commuter benefit        $___________    $___________    $___________
+Childcare assistance            $___________    $___________    $___________
+Remote work savings             $___________    $___________    $___________
+Other: _____________            $___________    $___________    $___________
+SUBTOTAL OTHER:                 $___________    $___________    $___________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                OFFER A         OFFER B         OFFER C
+TOTAL COMPENSATION:             $___________    $___________    $___________
+Benefits value (Total - Cash):  $___________    $___________    $___________
+Benefits as % of salary:        ___________%    ___________%    ___________%
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOTES:
+- Benefits start date: ________    ________    ________
+- Pension vesting: ________        ________    ________
+- Growth potential (step increases, promotion timeline):
+  ________________________________________________________________
+
+RECOMMENDATION: □ Offer A    □ Offer B    □ Offer C
+Rationale: ________________________________________________________
+```

@@ -4,6 +4,46 @@
 
 ---
 
+## STACKABLE CREDENTIAL PATHWAYS
+
+```mermaid
+flowchart TD
+    subgraph HC ["Healthcare Pathway"]
+        HC1[CPR / First Aid] --> HC2[CNA] --> HC3[LPN] --> HC4[RN - BSN]
+    end
+    
+    subgraph IT ["IT Pathway"]
+        IT1[CompTIA IT Fundamentals] --> IT2[CompTIA A+] --> IT3[Network+ / Security+] --> IT4[Cloud Certs / Degree]
+    end
+    
+    subgraph TR ["Skilled Trades Pathway"]
+        TR1[OSHA 10] --> TR2[Pre-Apprenticeship] --> TR3[Registered Apprenticeship] --> TR4[Journeyman]
+    end
+    
+    subgraph MF ["Manufacturing Pathway"]
+        MF1[WorkKeys NCRC] --> MF2[Forklift Cert] --> MF3[Industrial Maintenance] --> MF4[CNC Machinist]
+    end
+    
+    subgraph ECE ["Early Childhood Pathway"]
+        ECE1[Child Development Associate] --> ECE2[Associate Degree] --> ECE3[Bachelor's in Education]
+    end
+
+    F{Funding Sources} -.->|WIOA ITA| HC2
+    F -.->|Fast Track Scholarship| HC3
+    F -.->|SkillUP| MF2
+    F -.->|Apprenticeship| TR3
+    F -.->|VR Training| IT2
+    
+    style HC fill:#dc2626,color:#fff
+    style IT fill:#2563eb,color:#fff
+    style TR fill:#d97706,color:#fff
+    style MF fill:#7c3aed,color:#fff
+    style ECE fill:#059669,color:#fff
+    style F fill:#f59e0b,color:#000
+```
+
+---
+
 ## DECISION LOGIC
 
 1. Identify the target role and its Missouri tier (NOW / NEXT / LATER)

@@ -2,6 +2,23 @@
 
 Ready-to-customize email templates for job seeker and staff workflows.
 
+```mermaid
+flowchart TD
+    A{What email do<br/>you need?} -->|Applying| B[Application Email<br/>Module 4]
+    A -->|Following up| C[Follow-Up Email<br/>Module 5]
+    A -->|After interview| D[Thank You Email<br/>Module 6]
+    A -->|Networking| E[Warm / Cold /<br/>Informational]
+    A -->|Job offer| F[Accept or<br/>Decline]
+    A -->|References| G[Reference<br/>Request]
+    A -->|HR: Invite candidate| H[Interview<br/>Invitation]
+    A -->|HR: Decline candidate| I[Rejection<br/>Letter]
+    A -->|HR: New hire| J[Welcome Email +<br/>Conditional Offer]
+
+    style A fill:#2563eb,color:#fff
+    style B fill:#059669,color:#fff
+    style H fill:#ea580c,color:#fff
+```
+
 ---
 
 ## JOB SEEKER EMAILS
