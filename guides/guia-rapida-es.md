@@ -16,6 +16,8 @@
 | "¿Qué trabajos hay disponibles?" | Los 5 mejores empleos según sus habilidades |
 | "Necesito capacitación" | Ruta más corta a una certificación con opciones de financiamiento |
 | "Acabo de conseguir trabajo" | Plan de los primeros 90 días |
+| "Quiero trabajar para el gobierno" | Proceso de solicitud federal, estatal o local |
+| "Compare mis ofertas de trabajo" | Calculadora de compensación total (salario + beneficios) |
 
 ---
 

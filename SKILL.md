@@ -7,6 +7,16 @@ description: >
   letters, employer communications, interview prep, action planning, WIOA program/eligibility
   screening, training pathways, salary guidance, LinkedIn building, job fair prep, job retention
   plans, and staff workflows for Job Center employees. Trigger for ANY employment-related
+  request: "help me find a job", "write me a resume", "cover letter", "follow up on my
+  application", "interview questions", "what should I do next", "apply for this job",
+  "quick apply", "job search plan", "help me get hired", "am I eligible for WIOA",
+  "what programs can help me", "I need training", "I was laid off", "I just got out",
+  or any mention of applications, hiring, job titles, career transitions, or workforce
+  programs. Always trigger for workforce development, barrier populations, reentry,
+  veterans, youth, dislocated workers, SNAP/TANF participants, or individuals with
+  disabilities seeking employment support. Part of the "Access To" open-source civic
+  tech initiative by CoTrackPro.
+version: 4.2.3
   request: job search, resumes, cover letters, applications, interviews, career plans, WIOA
   eligibility, training, or workforce programs. Always trigger for barrier populations including
   reentry, veterans, youth, dislocated workers, SNAP/TANF participants, or individuals with

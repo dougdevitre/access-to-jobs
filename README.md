@@ -5,9 +5,9 @@
 Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tech initiative by [CoTrackPro](https://cotrackpro.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Skill Version](https://img.shields.io/badge/version-4.1.0-blue.svg)](CHANGELOG.md)
+[![Skill Version](https://img.shields.io/badge/version-4.2.3-blue.svg)](CHANGELOG.md)
 [![State: Missouri](https://img.shields.io/badge/reference_state-Missouri-red.svg)](states/missouri/)
-[![Modules](https://img.shields.io/badge/modules-20-orange.svg)](assets/module-map.md)
+[![Modules](https://img.shields.io/badge/modules-23-orange.svg)](assets/module-map.md)
 [![Populations](https://img.shields.io/badge/barrier_populations-15-purple.svg)](references/barrier-populations.md)
 
 ---
@@ -37,7 +37,7 @@ Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tec
 
 ## What It Does
 
-Access to Jobs is a Claude AI skill that provides a comprehensive workforce navigator for **job seekers** and **Job Center staff**. It is grounded in the federal WIOA (Workforce Innovation and Opportunity Act) framework and ships with a full **Missouri** reference implementation covering all 114 counties.
+Access to Jobs is a Claude AI skill that provides a comprehensive workforce navigator for **job seekers**, **Job Center staff**, and **HR managers**. It is grounded in the federal WIOA (Workforce Innovation and Opportunity Act) framework and ships with a full **Missouri** reference implementation covering all 114 counties.
 
 ### For Job Seekers (Modules 0–9, 14–18)
 
@@ -67,6 +67,20 @@ Access to Jobs is a Claude AI skill that provides a comprehensive workforce navi
 | Employer outreach scripts | Cold call scripts for OJT, IWT, WOTC, Federal Bonding, apprenticeship |
 | Workshop facilitator guides | Turnkey scripts for resume, interview, job search, LinkedIn, and financial literacy workshops |
 
+### For HR Managers & Public Service (Modules 20–22)
+
+| Capability | What It Produces |
+|---|---|
+| Government job applications | Federal resume (4–6 pages), KSA/CCAR narratives, civil service exam prep, veteran preference guidance, Schedule A disability hiring |
+| Total compensation calculator | Side-by-side comparison of salary + health insurance + retirement + PTO + all benefits across up to 3 offers |
+| Job description writing | 13-section inclusive job descriptions with EEO statement, KSAs, and ADA-compliant physical requirements |
+| Structured interview building | Competency mapping, behavior-based questions, anchored 1–5 scoring rubrics, panel role assignments |
+| Candidate evaluation | Pre-screening checklists, interview scorecards, post-interview ranking summaries with EEO compliance checks |
+| HR performance dashboard | 75+ KPIs across 10 categories (recruitment, retention, performance, compensation, compliance, workforce planning, onboarding, training, engagement, WIOA employer success) |
+| Benefits benchmarking | Total compensation formula, competitor analysis by employer type, total comp statement template for offer letters |
+| Workday integration | Copy/paste-ready content for Workday HCM: job requisitions, interview feedback, onboarding tasks, performance reviews, compensation justifications, terminations |
+| Onboarding plans | First-week checklist, 30/60/90-day manager check-ins, buddy program, probationary review framework |
+
 ### Special Modes
 
 | Mode | Trigger | Output |
@@ -82,6 +96,7 @@ Access to Jobs is a Claude AI skill that provides a comprehensive workforce navi
 ### Direct Users
 - **Job seekers** — unemployed, underemployed, career changers, new entrants
 - **Job Center staff** — career advisors, case managers, business services reps
+- **HR managers** — public service recruiters, hiring managers, workforce-connected employers
 - **Community organizations** — nonprofits, libraries, faith-based, reentry, shelters
 
 ### Barrier Populations (15 WIOA-defined groups)
@@ -111,14 +126,16 @@ The skill automatically detects and adjusts for:
 
 ```mermaid
 flowchart TD
-    A["👤 User Input"] --> B{"Dual-User Detection"}
-    B -->|"Job Seeker detected"| C["Modules 0–9, 14–18\nSpecial Modes"]
-    B -->|"Staff detected"| D["Modules 10–13, 19"]
-    C --> E["Task Router\n(maps intent → module)"]
-    D --> E
-    E --> F["Module Execution\n(loads only needed reference files)"]
-    F --> G["Population Adjustment Layer\n(auto-applies per detected barriers)"]
-    G --> H["Output\n(formatted per templates/)"]
+    A["User Input"] --> B{"Tri-User Detection"}
+    B -->|"Job Seeker"| C["Modules 0–9, 14–18\nSpecial Modes"]
+    B -->|"Staff"| D["Modules 10–13, 19"]
+    B -->|"HR Manager"| E["Modules 20–22"]
+    C --> F["Task Router\n(maps intent → module)"]
+    D --> F
+    E --> F
+    F --> G["Module Execution\n(loads only needed reference files)"]
+    G --> H["Population Adjustment Layer\n(auto-applies per detected barriers)"]
+    H --> I["Output\n(formatted per templates/)"]
 ```
 
 ### Module Tiers
@@ -151,7 +168,12 @@ flowchart LR
         M18["18 Salary"]
         M19["19 Workshop"]
     end
-    subgraph Tier4["Special Modes"]
+    subgraph Tier4["Tier 4 — HR & Public Service (20–22)"]
+        M20["20 Gov Apps"]
+        M21["21 HR Toolkit"]
+        M22["22 Workday"]
+    end
+    subgraph Special["Special Modes"]
         SM1["Multi-output"]
         SM2["Quick"]
         SM3["Coach"]
@@ -188,7 +210,7 @@ flowchart LR
     A["deploy-state.sh\n(scaffold)"] --> B["Replace 4 files\n(programs, LMI,\npathways, local)"]
     B --> C["Customize 4 files\n(location refs)"]
     C --> D["validate-state.sh"]
-    D --> E["Test with\n67 eval cases"]
+    D --> E["Test with\n81 eval cases"]
     E --> F["build-skill.sh\n(package)"]
     F --> G["Upload .skill\nor deploy via MCP"]
 ```
@@ -196,7 +218,7 @@ flowchart LR
 ### Design Principles
 - **Progressive disclosure** — collect only what the active module requires
 - **Progressive loading** — reference files loaded on demand, not all at once
-- **Dual-user detection** — auto-detects job seeker vs. staff from language signals
+- **Tri-user detection** — auto-detects job seeker vs. staff vs. HR manager from language signals
 - **Population-aware** — adjusts tone, content, and routing per barrier population
 - **State-deployable** — replace 4 files to deploy to any U.S. state
 - **Trauma-informed** — calm, professional, empathetic throughout
@@ -228,18 +250,22 @@ access-to-jobs/
 │   ├── cover-letter-template.md      ○ Structure, tone variants, template
 │   ├── action-plan-template.md       ◐ 7-day scaffold, urgency tiers
 │   ├── staff-workflows.md            ◐ Intake, case notes, referrals, outreach
-│   └── jobseeker-experience.md       ◐ Readiness, retention, LinkedIn, salary
+│   ├── jobseeker-experience.md       ◐ Readiness, retention, LinkedIn, salary
+│   ├── public-service-hiring.md      ◐ Federal/state/local gov applications
+│   ├── hr-manager-toolkit.md         ◐ Job descriptions, interviews, KPIs
+│   └── workday-workflows.md          ○ Workday HCM copy/paste content
 │
 ├── templates/                        OUTPUT FORMATS + READY-TO-USE CONTENT
 │   ├── output-templates.md           Every module's exact output structure
-│   ├── email-templates.md            12 extended email templates
-│   └── workshop-templates.md         5 full workshop scripts with agendas
+│   ├── email-templates.md            18 email templates (job seeker + staff + HR)
+│   └── workshop-templates.md         6 full workshop scripts with agendas
 │
 ├── schemas/                          JSON DATA SCHEMAS
 │   ├── jobseeker-intake.json         Progressive intake data model
 │   ├── application-tracker.json      Application tracking + status workflow
 │   ├── case-note.json                Staff case note (MoJobs-compatible)
-│   └── population-routing.json       Population → program → adjustment map
+│   ├── population-routing.json       Population → program → adjustment map
+│   └── hr-metrics.json               HR performance dashboard (75+ KPIs)
 │
 ├── assets/                           REFERENCE MATERIALS + KNOWLEDGE ASSETS
 │   ├── module-map.md                 Architecture diagram + module quick ref
@@ -261,7 +287,8 @@ access-to-jobs/
 │   ├── population-routing-eval.json  12 multi-population edge cases
 │   ├── output-quality-eval.json      8 output quality checklists
 │   ├── negative-eval.json            12 should-NOT-trigger test cases
-│   └── edge-cases-eval.json          15 ambiguous/boundary scenarios
+│   ├── edge-cases-eval.json          15 ambiguous/boundary scenarios
+│   └── public-service-eval.json      14 government + HR manager test cases
 │
 ├── states/                           STATE IMPLEMENTATIONS
 │   └── missouri/                     Reference implementation (default)
@@ -335,15 +362,27 @@ Full visual architecture: [`assets/module-map.md`](assets/module-map.md)
 | 18 | Salary Guidance | role, location, offer | Market data + negotiation |
 | 19 | Workshop Guide | workshop type | Full facilitation script |
 
+### Public Service & HR Manager Modules (20–22)
+
+| # | Module | Input | Output |
+|---|---|---|---|
+| 20 | Public Service Applications | target agency/level, role, veteran status | Government resume, KSA statements, application checklist |
+| 21 | HR Manager Toolkit | position to fill, grade, qualifications | Job description, interview guide, scorecard, HR dashboard |
+| 22 | Workday Workflows | Workday field type, position details | Copy/paste content for Workday HCM fields |
+
 ---
 
 ## Slash Commands
 
-22 quick-trigger commands. Full reference: [`slash-commands/commands.md`](slash-commands/commands.md)
+34 quick-trigger commands. Full reference: [`slash-commands/commands.md`](slash-commands/commands.md)
 
-**Job Seeker:** `/eligible` `/match` `/resume` `/cover` `/apply` `/quick` `/followup` `/thankyou` `/interview` `/plan` `/train` `/ready` `/hired` `/linkedin` `/fair` `/salary` `/coach`
+**Job Seeker:** `/eligible` `/match` `/resume` `/cover` `/apply` `/quick` `/followup` `/thankyou` `/interview` `/plan` `/train` `/ready` `/hired` `/linkedin` `/fair` `/salary` `/totalcomp` `/coach`
+
+**Public Service:** `/govresume` `/ksa` `/govapply`
 
 **Staff:** `/intake` `/casenote` `/refer` `/pitch` `/workshop`
+
+**HR Manager:** `/jobdesc` `/interviewguide` `/scorecard` `/onboard` `/hrdashboard` `/workday` `/wdjob` `/wdreview` `/wdfeedback`
 
 **Utility:** `/glossary` `/programs` `/local` `/track` `/help`
 
