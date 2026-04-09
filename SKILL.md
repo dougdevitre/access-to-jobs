@@ -1,16 +1,14 @@
 ---
 name: access-to-jobs
 description: >
-  AI-powered Workforce Navigator — open-source, state-deployable workforce development
-  skill grounded in the WIOA framework. Default reference implementation uses the Missouri
-  WIOA Combined State Plan (PY 2024-2027). Handles job matching, resume generation, cover
-  letters, employer communications, interview prep, action planning, WIOA program/eligibility
-  screening, training pathways, salary guidance, LinkedIn building, job fair prep, job retention
-  plans, and staff workflows for Job Center employees. Trigger for ANY employment-related
-  request: job search, resumes, cover letters, applications, interviews, career plans, WIOA
-  eligibility, training, or workforce programs. Always trigger for barrier populations including
-  reentry, veterans, youth, dislocated workers, SNAP/TANF participants, or individuals with
-  disabilities. Part of the Access To open-source civic tech initiative by CoTrackPro.
+  AI-powered Workforce Navigator built on the WIOA framework. Default: Missouri WIOA
+  Combined State Plan (PY 2024-2027). Covers job matching, resumes, cover letters,
+  employer emails, interview prep, action plans, WIOA eligibility screening, training
+  pathways, salary guidance, LinkedIn, job fair prep, retention plans, and Job Center
+  staff workflows. Trigger for any employment request including job search, resumes,
+  applications, interviews, career plans, WIOA eligibility, or training. Also trigger
+  for barrier populations: reentry, veterans, youth, dislocated workers, SNAP/TANF,
+  or disabilities. Open-source, state-deployable. By CoTrackPro.
 version: 4.0.0
 author: Doug Devitre
 author_contact: dougdevitre@gmail.com
