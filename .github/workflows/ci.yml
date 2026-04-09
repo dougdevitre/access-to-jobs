@@ -70,6 +70,7 @@ jobs:
           required_files=(
             "SKILL.md"
             "README.md"
+            "INSTALL.md"
             "LICENSE"
             "CONTRIBUTING.md"
             "DEPLOYMENT.md"

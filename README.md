@@ -10,6 +10,8 @@ Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tec
 [![Modules](https://img.shields.io/badge/modules-20-orange.svg)](assets/module-map.md)
 [![Populations](https://img.shields.io/badge/barrier_populations-15-purple.svg)](references/barrier-populations.md)
 
+> **Get started in 60 seconds:** [Download the .skill file](https://github.com/dougdevitre/access-to-jobs/releases/latest/download/access-to-jobs.skill), upload it to Claude.ai Settings → Skills, and start chatting. [Full install guide →](INSTALL.md)
+
 ---
 
 ## Table of Contents
@@ -18,7 +20,7 @@ Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tec
 - [Who It Serves](#who-it-serves)
 - [Architecture](#architecture)
 - [Directory Structure](#directory-structure)
-- [Installation](#installation)
+- [Installation](#installation) | [Full Install Guide](INSTALL.md)
 - [Module Reference](#module-reference)
 - [Slash Commands](#slash-commands)
 - [Population-Aware Routing](#population-aware-routing)
@@ -212,6 +214,7 @@ access-to-jobs/
 │                                     definitions, guardrails, output defaults
 │
 ├── README.md                         This file
+├── INSTALL.md                        Step-by-step skill download + install guide
 ├── LICENSE                           MIT
 ├── CONTRIBUTING.md                   Contribution guidelines + content standards
 ├── DEPLOYMENT.md                     Step-by-step state deployment guide
@@ -284,15 +287,37 @@ access-to-jobs/
 
 ## Installation
 
-### Claude.ai (Skill Upload)
-1. Download the `.skill` file from [Releases](https://github.com/cotrackpro/access-to-jobs/releases)
-2. Go to Claude.ai → Settings → Skills
-3. Upload the `.skill` file
-4. Start chatting — the skill activates on any employment-related request
+**Detailed step-by-step guide with screenshots:** [INSTALL.md](INSTALL.md)
 
-### Claude Code / MCP
-1. Clone: `git clone https://github.com/cotrackpro/access-to-jobs.git`
-2. Point your skill path to the `access-to-jobs/` directory
+### Option 1 — Claude.ai (Recommended for most users)
+
+| Step | Action |
+|------|--------|
+| 1. **Download** | [**Download access-to-jobs.skill**](https://github.com/dougdevitre/access-to-jobs/releases/latest/download/access-to-jobs.skill) (latest release) |
+| 2. **Open Claude** | Go to [claude.ai](https://claude.ai) and sign in (free or paid account) |
+| 3. **Open Settings** | Click your profile icon (bottom-left corner) → **Settings** |
+| 4. **Upload Skill** | Go to **Skills** tab → click **Add skill** → select the downloaded `.skill` file |
+| 5. **Start chatting** | The skill activates automatically on any employment-related request |
+
+**Try it:** Type *"I need help finding a job"* or *"Write me a resume for a warehouse position"*
+
+> **Tip:** You can also download previous versions from the [Releases page](https://github.com/dougdevitre/access-to-jobs/releases).
+
+### Option 2 — Claude Code / MCP (For developers)
+
+```bash
+git clone https://github.com/dougdevitre/access-to-jobs.git
+```
+
+Point your skill path to the `access-to-jobs/` directory.
+
+### Option 3 — Share with others
+
+Share this direct download link with anyone who needs it:
+```
+https://github.com/dougdevitre/access-to-jobs/releases/latest/download/access-to-jobs.skill
+```
+Or send them the [one-page install guide](INSTALL.md) — it's written in plain language for non-technical users.
 
 ---
 
@@ -388,6 +413,7 @@ All in [`schemas/`](schemas/):
 
 | Guide | Audience | Key Sections |
 |---|---|---|
+| [**INSTALL.md**](INSTALL.md) | **Anyone — download and install in 2 minutes** | **Direct download link, step-by-step upload to Claude.ai, troubleshooting, sharing instructions** |
 | [`community-org-guide.md`](guides/community-org-guide.md) | Nonprofits, libraries, shelters, reentry orgs, refugee agencies | 3 setup options, customization guide, population-specific deployment notes (reentry, DV, youth, immigrant), 30-min staff training session, impact measurement metrics, FAQ |
 | [`staff-onboarding.md`](guides/staff-onboarding.md) | Job Center career advisors, case managers, business services | 5-minute pitch to staff, 4 core workflows with examples, advanced workflows, common staff FAQ, WIOA performance metrics mapping, printable laminated cheat sheet |
 | [`quick-start.md`](guides/quick-start.md) | Job seekers using the skill directly | What it can do, what info to have ready, extra help by situation, privacy note |

@@ -1,0 +1,83 @@
+name: Release Skill File
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on version tags like v4.1.0, v4.2.0, etc.
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Build .skill file
+        run: |
+          chmod +x scripts/build-skill.sh
+          ./scripts/build-skill.sh access-to-jobs.skill
+
+      - name: Verify .skill file
+        run: |
+          echo "--- Verifying .skill file ---"
+          file access-to-jobs.skill
+          ls -lh access-to-jobs.skill
+          # Verify it's a valid zip
+          unzip -t access-to-jobs.skill > /dev/null 2>&1
+          echo "--- Contents ---"
+          unzip -l access-to-jobs.skill | tail -1
+          echo "✅ Skill file verified"
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          cat <<'NOTES' > release-notes.md
+          ## Access to Jobs — Skill File
+
+          ### How to Install
+
+          1. **Download** `access-to-jobs.skill` from the Assets section below
+          2. **Open** [claude.ai](https://claude.ai) and sign in
+          3. **Navigate** to Settings (bottom-left) → Skills
+          4. **Upload** the downloaded `.skill` file
+          5. **Start chatting** — the skill activates on any employment-related request
+
+          Try saying: *"I need help finding a job"* or *"Write me a resume"*
+
+          ### What's Included
+
+          - 20 workforce navigation modules + 3 special modes
+          - 15 barrier population auto-detection (veterans, justice-involved, youth, etc.)
+          - Missouri reference implementation (all 114 counties)
+          - 22 slash commands, 67 evaluation test cases
+          - Full WIOA framework compliance
+
+          See the [README](https://github.com/${{ github.repository }}/blob/main/README.md) for the complete module reference.
+
+          ### For Developers
+
+          To customize for your state:
+          ```bash
+          git clone https://github.com/${{ github.repository }}.git
+          cd access-to-jobs
+          ./scripts/deploy-state.sh <abbreviation> "<State Name>"
+          ```
+
+          See [DEPLOYMENT.md](https://github.com/${{ github.repository }}/blob/main/DEPLOYMENT.md) for the full guide.
+          NOTES
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Access to Jobs v${{ steps.version.outputs.VERSION }}"
+          body_path: release-notes.md
+          files: access-to-jobs.skill
+          draft: false
+          prerelease: false
+          make_latest: true
