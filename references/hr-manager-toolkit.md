@@ -458,13 +458,169 @@ Build a sustainable talent pipeline by partnering with the workforce system:
 5. **Sponsor apprenticeships** — Build credentialed workers trained to your specific standards
 6. **Engage with WIOA Business Services Representatives** — they are your free recruitment partner
 
-### Retention Metrics to Track
+---
 
-| Metric | Target | Why It Matters |
+## HR PERFORMANCE DASHBOARD — COMPLETE KPI REFERENCE
+
+Track these metrics to measure HR effectiveness across the full employee lifecycle.
+Organized by category with targets, formulas, and action triggers.
+
+### 1. RECRUITMENT KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| Time-to-fill | Days from posting to accepted offer | <45 days | >60 days = review JD requirements, sourcing channels, and salary competitiveness |
+| Time-to-hire | Days from first candidate contact to accepted offer | <30 days | >45 days = streamline interview process, reduce decision delays |
+| Cost-per-hire | (Internal recruiting costs + external costs) / total hires | Varies by role; track trend | >20% increase year-over-year = audit recruiting spend |
+| Source of hire | % of hires from each source (Job Center, job board, referral, direct) | Track which sources produce best quality | If one source dominates, diversify; track quality by source, not just volume |
+| Applicant-to-interview ratio | Number of applicants / number interviewed | 4:1 to 8:1 | >12:1 = JD may be too broad; <3:1 = JD may be too restrictive or sourcing insufficient |
+| Interview-to-offer ratio | Number interviewed / number of offers extended | 3:1 to 5:1 | >8:1 = interview criteria misaligned with JD; <2:1 = may not be seeing enough candidates |
+| Offer acceptance rate | Offers accepted / offers extended | 80%+ | <70% = compensation, culture, or process issue; survey declined candidates |
+| Applicant drop-off rate | % of applicants who start but don't complete application | <25% | >40% = simplify application process, reduce required fields |
+| Diversity of applicant pool | Demographics of applicant pool vs. available labor market | Reflect community | Significant gaps = review sourcing channels, JD language, outreach partners |
+
+### 2. RETENTION KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| 90-day retention | % of new hires still employed at 90 days | 85%+ | <80% = onboarding failure; review first-week experience, manager training |
+| 1-year retention | % of hires still employed at 12 months | 70%+ | <65% = systemic issue; conduct stay interviews, review compensation |
+| 2-year retention | % still employed at 24 months | 60%+ | Declining trend = career development or advancement gap |
+| Voluntary turnover rate | Voluntary separations / average headcount (annualized) | <15% | >20% = urgent; exit interviews, compensation audit, engagement survey |
+| Involuntary turnover rate | Involuntary separations / average headcount | <8% | >12% = hiring quality issue; review selection process and onboarding |
+| Regrettable turnover | High-performer departures / total departures | <30% | >40% = retention of top talent failing; review recognition, development, pay |
+| Turnover by department | Voluntary turnover rate by dept/team | Variance <5% across departments | Any dept >2x org average = investigate manager, workload, culture |
+| Average tenure | Average months/years of service | Trending upward | Declining = systemic retention issue |
+| Retention by hire source | 1-year retention by recruiting source | Compare across sources | Use to prioritize high-retention sources (e.g., referrals, Job Center) |
+
+### 3. EMPLOYEE PERFORMANCE KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| Performance review completion rate | % of reviews completed by deadline | 95%+ | <90% = hold managers accountable; simplify review process if overly complex |
+| Performance distribution | % in each rating category | Avoid extremes: not >30% "exceeds" or >15% "below" | >50% same rating = forced distribution or manager calibration issue |
+| High performer retention | % of top-rated employees retained year-over-year | 90%+ | <85% = flight risk; conduct stay interviews, review total compensation |
+| PIP success rate | % of PIPs resulting in performance improvement (not separation) | 40–60% | <30% = PIPs used too late; >70% = threshold for PIP may be too low |
+| Goal completion rate | % of individual goals met within review period | 70–80% | <60% = goals unrealistic or unsupported; >90% = goals too easy |
+| Manager effectiveness score | Average rating of managers by their direct reports | 3.5+ / 5 | <3.0 = management training needed; track by individual manager |
+
+### 4. COMPENSATION & BENEFITS KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| Compa-ratio | Actual salary / salary range midpoint | 0.90–1.10 | <0.85 = underpaying (retention risk); >1.15 = salary compression for peers |
+| Pay equity ratio | Average pay by demographic group for same role/level | Within 3% across groups | >5% gap = conduct formal pay equity audit; document remediation plan |
+| Benefits utilization | % of employees using each benefit offering | Track by benefit type | <20% utilization = benefit not valued; consider reallocating |
+| Overtime rate | Overtime hours / total hours worked | <5% for salaried; <10% for hourly | >15% sustained = understaffing; review workload distribution |
+| Internal equity spread | Salary range from lowest to highest for same role | Within published range | Anyone below minimum = immediate correction needed |
+| Total compensation competitiveness | Total comp (salary + benefits) vs. market median | 95–110% of market | <90% = significant flight risk for competitive talent |
+
+### 5. COMPLIANCE KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| EEO adverse impact ratio | Selection rate of protected group / selection rate of majority group | >0.80 (80% rule) | <0.80 = potential adverse impact; review selection criteria, interview scoring, and JD requirements |
+| I-9 completion rate | % of I-9s completed within 3 business days of hire | 100% | Any gap = immediate compliance risk; assign dedicated I-9 responsibility |
+| Required training completion | % of employees current on mandatory training (safety, ethics, harassment) | 95%+ | <90% = track by department and escalate non-completers |
+| Grievance resolution time | Average days from grievance filed to resolution | <30 days | >45 days = add resources to investigation process |
+| Accommodation request response time | Days from ADA accommodation request to interactive process initiation | <5 business days | >10 days = legal exposure; create standard response protocol |
+| Policy acknowledgment rate | % of employees who signed current handbook/policies | 100% | Any gap = track by department; tie to onboarding completion |
+| Applicant flow data accuracy | % of applicants with complete demographic data (voluntary) | >80% response rate | <60% = applicants may not trust confidentiality; review data collection language |
+
+### 6. WORKFORCE PLANNING KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| Vacancy rate | Open positions / total authorized positions | <8% | >12% = recruitment capacity issue or structural budget problem |
+| Internal fill rate | Internal hires / total hires | 25–40% | <15% = career development or posting visibility issue; >50% = may need fresh external perspectives |
+| Succession pipeline coverage | % of critical roles with identified successors | 80%+ for key roles | <60% = organizational risk; begin succession planning immediately |
+| Workforce diversity by level | Demographics at each level (entry, mid, senior, executive) | Representation improves at each level | Significant drop-off at senior levels = promotion equity or pipeline issue |
+| Promotion rate | Promotions / average headcount (annualized) | 8–15% | <5% = stagnation; >20% = title inflation risk |
+| Skills gap analysis | % of workforce meeting current competency requirements | >80% | <70% = targeted training investment needed |
+| FTE-to-workload ratio | Actual FTEs / workload-derived FTE requirement | 0.90–1.05 | <0.85 sustained = burnout risk; >1.10 = overstaffing or workload reduction |
+
+### 7. ONBOARDING KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| Onboarding task completion | % of assigned onboarding tasks completed by day 30 | 90%+ | <80% = onboarding process unclear or unsupported by manager |
+| Time-to-productivity | Days until new hire reaches expected performance level (manager assessment) | Role-dependent; track trend | Increasing trend = training gaps or hiring misfit |
+| New hire satisfaction | Survey score at 30 and 90 days | 4.0+ / 5 | <3.5 = investigate specific pain points; compare by department |
+| Buddy/mentor program effectiveness | New hire rating of mentor support | 4.0+ / 5 | <3.5 = reassign mentors or provide mentor training |
+| First-year voluntary turnover | % of new hires who voluntarily leave within 12 months | <15% | >20% = onboarding or job-preview issue; review realistic job preview practices |
+
+### 8. TRAINING & DEVELOPMENT KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| Training hours per employee | Total training hours / average headcount (annual) | 40+ hours/year | <20 hours = underinvestment; compare to industry benchmarks |
+| Training completion rate | % of enrolled employees completing training | 85%+ | <75% = content relevance issue, scheduling conflict, or manager not prioritizing |
+| Training ROI | (Post-training performance gain - training cost) / training cost | Positive | Negative ROI = reassess training content, delivery method, or audience targeting |
+| Skills gap closure rate | % of identified skills gaps closed within 12 months | 50%+ | <30% = training not aligned with actual gaps; conduct fresh needs assessment |
+| Certification attainment | % of employees earning required certifications on first attempt | 80%+ | <70% = training prep inadequate; provide study resources |
+| Tuition reimbursement utilization | % of eligible employees using tuition benefit | 15%+ | <5% = benefit not promoted; increase awareness |
+| WIOA training program completion | % of OJT/IWT participants completing training plan | 80%+ | <70% = training plan too ambitious or employer support insufficient |
+
+### 9. EMPLOYEE ENGAGEMENT KPIs
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| Engagement survey score | Annual/pulse survey composite score | 3.8+ / 5 (or 70%+ favorable) | <3.5 = significant engagement issue; drill down by question, department, manager |
+| Employee Net Promoter Score (eNPS) | "Would you recommend this workplace?" (Promoters - Detractors) | +10 to +30 | Negative eNPS = urgent culture investigation needed |
+| Absenteeism rate | Unscheduled absences / total scheduled workdays | <3% | >5% = investigate by team; may indicate burnout, morale, or management issues |
+| Internal mobility rate | Internal transfers or promotions / average headcount | 10–15% annually | <5% = career pathways unclear; >25% = instability or role misdesign |
+| Participation in optional programs | % of employees participating in wellness, development, ERGs | 30%+ | <15% = programs not valued or not accessible; survey for preferences |
+| Stay interview completion | % of critical-role employees with annual stay interview | 100% for top performers | Any gap for high performers = retention risk |
+
+### 10. WIOA EMPLOYER SUCCESS KPIs
+
+These metrics help employers who partner with the workforce system track the value of WIOA programs.
+
+| Metric | Formula / How to Measure | Target | Action Trigger |
+|---|---|---|---|
+| OJT completion rate | % of OJT participants completing the full training plan | 80%+ | <70% = training plan needs adjustment or candidate screening needs improvement |
+| OJT-to-permanent conversion | % of OJT participants retained as permanent employees | 75%+ | <60% = screen candidates more carefully or extend training period |
+| WOTC-eligible hire retention | 1-year retention of WOTC-certified hires | Same as non-WOTC hires | Significantly lower = additional onboarding support needed |
+| Apprenticeship completion | % of apprentices completing the full program | 70%+ | <60% = review apprentice selection, support, and wage progression |
+| Cost savings from WIOA programs | OJT reimbursement + WOTC credits + IWT offset vs. standard hiring cost | Positive net savings | If negative = WIOA programs not being utilized effectively; contact Job Center |
+| Job Center referral quality | % of Job Center-referred candidates who pass initial screening | 50%+ | <30% = communicate hiring criteria more clearly to Job Center staff |
+
+---
+
+### HOW TO BUILD YOUR HR DASHBOARD
+
+**Step 1 — Choose your metrics (don't track everything at once)**
+
+Start with 8–12 metrics across these must-track categories:
+- **Recruitment:** Time-to-fill + Cost-per-hire + Offer acceptance rate
+- **Retention:** 90-day retention + 1-year retention + Voluntary turnover
+- **Performance:** Review completion rate + High performer retention
+- **Compliance:** EEO adverse impact + Required training completion
+- **Engagement:** Engagement score or eNPS + Absenteeism rate
+
+**Step 2 — Set your baseline**
+
+Measure each metric for the trailing 12 months before setting targets. Targets should be:
+- Based on your actual performance, not aspirational
+- Adjusted annually based on trend
+- Benchmarked against industry/sector if data is available
+
+**Step 3 — Report cadence**
+
+| Metric Category | Review Frequency | Audience |
 |---|---|---|
-| 90-day retention | 85%+ | First 90 days predict long-term retention |
-| 1-year retention | 70%+ | Indicates organizational health |
-| Time-to-fill | <45 days | Longer = lost productivity + staff burnout |
-| Quality of hire (90-day review score) | 3.5+ / 5 | Validates your selection process |
-| Offer acceptance rate | 80%+ | Low = compensation or culture issue |
-| Diversity of applicant pool | Reflect community | Indicates inclusive recruitment practices |
+| Recruitment | Monthly | HR Director, Hiring Managers |
+| Retention | Quarterly | Executive team, HR Director |
+| Performance | Semi-annually (after review cycles) | Executive team, Managers |
+| Compensation | Annually (at budget cycle) | Executive team, Finance |
+| Compliance | Quarterly | HR Director, Legal/Compliance |
+| Engagement | After each survey cycle | All leadership |
+
+**Step 4 — Action protocol**
+
+When a metric hits its action trigger:
+1. Identify root cause (don't just report the number)
+2. Compare across departments/managers to isolate the issue
+3. Propose 1–2 specific interventions
+4. Set a re-measurement timeline (usually 1–2 quarters)
+5. Report back on whether the intervention worked

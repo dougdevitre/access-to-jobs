@@ -59,6 +59,7 @@ directly to a module without conversational routing.
 | `/interviewguide` | Build a structured interview guide | Module 21 |
 | `/scorecard` | Create candidate evaluation scorecard | Module 21 |
 | `/onboard` | New hire onboarding plan | Module 21 |
+| `/hrdashboard` | Generate HR performance dashboard | Module 21 |
 
 ---
 

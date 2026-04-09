@@ -2,6 +2,28 @@
 
 All notable changes to Access to Jobs are documented here.
 
+## [4.2.1] — 2026-04-09
+
+### Added
+- **HR Performance Dashboard** — comprehensive KPI reference in `hr-manager-toolkit.md` covering 10 metric categories with 75+ individual KPIs, targets, formulas, and action triggers
+  - Recruitment KPIs (9 metrics): time-to-fill, cost-per-hire, source of hire, applicant ratios, drop-off rate
+  - Retention KPIs (9 metrics): 90-day/1-year/2-year retention, voluntary/involuntary/regrettable turnover, tenure, by-source retention
+  - Employee Performance KPIs (6 metrics): review completion, performance distribution, high performer retention, PIP success
+  - Compensation KPIs (6 metrics): compa-ratio, pay equity, benefits utilization, overtime, total comp competitiveness
+  - Compliance KPIs (7 metrics): EEO adverse impact (80% rule), I-9 completion, training compliance, grievance resolution, accommodation response
+  - Workforce Planning KPIs (7 metrics): vacancy rate, internal fill rate, succession coverage, diversity by level, promotion rate
+  - Onboarding KPIs (5 metrics): task completion, time-to-productivity, new hire satisfaction, buddy effectiveness, first-year turnover
+  - Training & Development KPIs (7 metrics): hours per employee, completion rate, training ROI, skills gap closure, certification pass rate, WIOA training completion
+  - Employee Engagement KPIs (6 metrics): engagement score, eNPS, absenteeism, internal mobility, optional program participation, stay interviews
+  - WIOA Employer Success KPIs (6 metrics): OJT completion/conversion, WOTC retention, apprenticeship completion, Job Center referral quality, cost savings
+- HR Performance Dashboard template in `output-templates.md` — ready-to-fill quarterly tracking template with status indicators
+- `schemas/hr-metrics.json` — full JSON schema for HR performance data (all 10 categories)
+- `/hrdashboard` slash command — generates quarterly HR performance dashboard
+- 12 new HR performance prompts in `prompt-library.md` (turnover analysis, pay equity, adverse impact, engagement diagnostics, etc.)
+- Dashboard building guide: how to select starter metrics, set baselines, choose report cadence, and create action protocols
+
+---
+
 ## [4.2.0] — 2026-04-09
 
 ### Added

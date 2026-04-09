@@ -177,6 +177,22 @@ Help me write a welcome email for a new employee starting Monday.
 What retention metrics should I track for new hires?
 ```
 
+### HR Performance & KPIs
+```
+Build me an HR performance dashboard for my department.
+Our voluntary turnover is at 22% — what should I investigate?
+How do I calculate adverse impact ratio for our hiring process?
+Our 90-day retention dropped to 72%. What's the action plan?
+Help me design a pay equity audit for our organization.
+What KPIs should I track for our OJT program effectiveness?
+I need to present HR metrics to our executive team. What should I include?
+Our engagement survey score dropped to 3.2. What are the likely root causes?
+How do I calculate cost-per-hire for our department?
+Build a succession planning framework for our critical roles.
+What's a good compa-ratio target for a public service agency?
+Help me design an exit interview process to reduce regrettable turnover.
+```
+
 ---
 
 ## EVALUATION PROMPTS (Edge Cases)
