@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -258,7 +257,7 @@
     <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-10">Architecture</h2>
         <div class="bg-gray-50 rounded-2xl p-6 sm:p-10 border border-gray-100">
-            <div class="mermaid">
+            <pre class="mermaid">
 flowchart TD
     A[User Input] --> B{Tri-User Detection}
     B -->|Job Seeker| C[Modules 0-9, 14-18]
@@ -277,7 +276,7 @@ flowchart TD
     style D fill:#2563eb,color:#fff
     style E fill:#ea580c,color:#fff
     style I fill:#059669,color:#fff
-            </div>
+            </pre>
         </div>
     </div>
 </section>
@@ -312,7 +311,7 @@ flowchart TD
     <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-10">Deploy to Any State</h2>
         <div class="bg-gray-50 rounded-2xl p-6 sm:p-10 border border-gray-100 mb-8">
-            <div class="mermaid">
+            <pre class="mermaid">
 flowchart LR
     A[deploy-state.sh] --> B[Replace 4 files]
     B --> C[Customize 6 files]
@@ -326,7 +325,7 @@ flowchart LR
     style C fill:#d97706,color:#fff
     style D fill:#7c3aed,color:#fff
     style F fill:#059669,color:#fff
-            </div>
+            </pre>
         </div>
         <div class="grid sm:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl p-6 border border-gray-100">
@@ -403,14 +402,16 @@ flowchart LR
 </footer>
 
 <script>
-    mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'Inter' });
-
     function showTab(name) {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
         document.getElementById('tab-' + name).classList.add('active');
         document.getElementById('content-' + name).classList.add('active');
     }
+</script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'Inter' });
 </script>
 
 </body>
