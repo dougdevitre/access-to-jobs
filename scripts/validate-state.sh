@@ -55,10 +55,10 @@ for file in "${REQUIRED_FILES[@]}"; do
   filepath="${STATE_DIR}/${file}"
   if [[ ! -f "$filepath" ]]; then
     echo "❌ MISSING: ${filepath}"
-    ((ERRORS++))
+    ERRORS=$((ERRORS + 1))
   elif grep -q "^## TODO:" "$filepath" 2>/dev/null; then
     echo "⚠️  TODO:   ${filepath} still contains TODO placeholders"
-    ((WARNINGS++))
+    WARNINGS=$((WARNINGS + 1))
   else
     size=$(wc -c < "$filepath")
     echo "✅ OK:     ${filepath} (${size} bytes)"
@@ -71,7 +71,7 @@ for file in "${EXPECTED_FILES[@]}"; do
   filepath="${STATE_DIR}/${file}"
   if [[ ! -f "$filepath" ]]; then
     echo "⚠️  MISSING: ${filepath} (should be copied from references/)"
-    ((WARNINGS++))
+    WARNINGS=$((WARNINGS + 1))
   else
     echo "✅ OK:     ${filepath}"
   fi
@@ -83,7 +83,7 @@ if [[ -f "${STATE_DIR}/README.md" ]]; then
   echo "✅ OK:     ${STATE_DIR}/README.md"
 else
   echo "⚠️  MISSING: ${STATE_DIR}/README.md (recommended)"
-  ((WARNINGS++))
+  WARNINGS=$((WARNINGS + 1))
 fi
 
 echo ""
@@ -101,7 +101,7 @@ for schema in schemas/*.json; do
     echo "✅ OK:     ${schema}"
   else
     echo "❌ INVALID: ${schema}"
-    ((ERRORS++))
+    ERRORS=$((ERRORS + 1))
   fi
 done
 
@@ -111,7 +111,7 @@ for file in "${REQUIRED_FILES[@]}"; do
   filepath="${STATE_DIR}/${file}"
   if [[ -f "$filepath" ]] && ! grep -qi "source:" "$filepath" 2>/dev/null; then
     echo "⚠️  NO SOURCE: ${filepath} is missing a ### Source: citation"
-    ((WARNINGS++))
+    WARNINGS=$((WARNINGS + 1))
   fi
 done
 

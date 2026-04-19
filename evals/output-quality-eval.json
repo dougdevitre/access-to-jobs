@@ -63,7 +63,7 @@
   },
   {
     "prompt": "Quick apply to this: Medical Records Clerk at BJC HealthCare. Requirements: high school diploma, medical terminology knowledge, EMR experience preferred, attention to detail, HIPAA compliance.",
-    "expected_module": "QUICK_MODE",
+    "expected_module": "QUICK MODE",
     "quality_checks": [
       "Produces 3-bullet resume summary",
       "Produces 1-paragraph cover note",
