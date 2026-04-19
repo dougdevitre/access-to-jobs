@@ -274,7 +274,7 @@ access-to-jobs/
 │   └── glossary.md                   55+ WIOA/workforce acronyms defined
 │
 ├── slash-commands/                   QUICK-TRIGGER COMMANDS
-│   └── commands.md                   22 commands with usage examples
+│   └── commands.md                   40 commands with usage examples
 │
 ├── guides/                           AUDIENCE-SPECIFIC GUIDES
 │   ├── community-org-guide.md        For nonprofits, libraries, shelters
@@ -374,7 +374,7 @@ Full visual architecture: [`assets/module-map.md`](assets/module-map.md)
 
 ## Slash Commands
 
-34 quick-trigger commands. Full reference: [`slash-commands/commands.md`](slash-commands/commands.md)
+40 quick-trigger commands. Full reference: [`slash-commands/commands.md`](slash-commands/commands.md)
 
 **Job Seeker:** `/eligible` `/match` `/resume` `/cover` `/apply` `/quick` `/followup` `/thankyou` `/interview` `/plan` `/train` `/ready` `/hired` `/linkedin` `/fair` `/salary` `/totalcomp` `/coach`
 
@@ -505,9 +505,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome state implementations, module
 |---|---|
 | Total files | 40+ |
 | Total content lines | 6,500+ |
-| Modules | 20 + 3 special modes |
+| Modules | 23 (0–22) |
 | Barrier populations | 15 |
-| Slash commands | 22 |
+| Slash commands | 40 |
 | Output templates | 12 |
 | Email templates | 12 |
 | Workshop scripts | 5 |

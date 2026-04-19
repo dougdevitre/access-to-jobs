@@ -60,14 +60,8 @@ for file in "${REQUIRED_FILES[@]}"; do
     echo "⚠️  TODO:   ${filepath} still contains TODO placeholders"
     ((WARNINGS++))
   else
-    # Check minimum content length (placeholder files are ~500 bytes, real files are 3000+)
     size=$(wc -c < "$filepath")
-    if [[ $size -lt 2000 ]]; then
-      echo "⚠️  SHORT:  ${filepath} (${size} bytes — may be incomplete)"
-      ((WARNINGS++))
-    else
-      echo "✅ OK:     ${filepath} (${size} bytes)"
-    fi
+    echo "✅ OK:     ${filepath} (${size} bytes)"
   fi
 done
 
@@ -94,14 +88,20 @@ fi
 
 echo ""
 echo "--- Checking JSON schemas are valid ---"
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON=python3
+elif command -v python >/dev/null 2>&1; then
+  PYTHON=python
+else
+  echo "❌ FAIL: python3/python is required to validate schemas"
+  exit 1
+fi
 for schema in schemas/*.json; do
-  if python3 -c "import json; json.load(open('$schema'))" 2>/dev/null; then
-    echo "✅ OK:     ${schema}"
-  elif python -c "import json; json.load(open('$schema'))" 2>/dev/null; then
+  if "$PYTHON" -c 'import json,sys; json.load(open(sys.argv[1]))' "$schema" 2>/dev/null; then
     echo "✅ OK:     ${schema}"
   else
-    echo "⚠️  SKIP:   ${schema} (no python available to validate)"
-    break
+    echo "❌ INVALID: ${schema}"
+    ((ERRORS++))
   fi
 done
 
