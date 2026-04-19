@@ -17,11 +17,6 @@ description: >
   disabilities seeking employment support. Part of the "Access To" open-source civic
   tech initiative by CoTrackPro.
 version: 4.2.3
-  request: job search, resumes, cover letters, applications, interviews, career plans, WIOA
-  eligibility, training, or workforce programs. Always trigger for barrier populations including
-  reentry, veterans, youth, dislocated workers, SNAP/TANF participants, or individuals with
-  disabilities. Part of the Access To open-source civic tech initiative by CoTrackPro.
-version: 4.0.0
 author: Doug Devitre
 author_contact: dougdevitre@gmail.com
 organization: CoTrackPro

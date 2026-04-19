@@ -17,7 +17,7 @@ jobs:
           echo "--- Validating JSON files ---"
           errors=0
           for f in schemas/*.json evals/*.json; do
-            if python3 -c "import json; json.load(open('$f'))"; then
+            if python3 -c 'import json,sys; f=open(sys.argv[1]); json.load(f); f.close()' "$f"; then
               echo "✅ $f"
             else
               echo "❌ $f"
@@ -57,11 +57,11 @@ jobs:
       - name: Validate state deployments
         run: |
           echo "--- Validating state deployments ---"
+          chmod +x scripts/validate-state.sh
           for state_dir in states/*/; do
             state=$(basename "$state_dir")
             echo "Checking state: $state"
-            chmod +x scripts/validate-state.sh
-            ./scripts/validate-state.sh "$state" || true
+            ./scripts/validate-state.sh "$state"
           done
 
       - name: Check required files exist

@@ -14,6 +14,16 @@ if [[ -z "$STATE_ABBR" || -z "$STATE_NAME" ]]; then
   exit 1
 fi
 
+if [[ ! "$STATE_ABBR" =~ ^[A-Za-z]{2,}$ ]]; then
+  echo "Error: state abbreviation must be alphabetic (e.g., il, mo, tx)"
+  exit 1
+fi
+
+if [[ ! -d references ]]; then
+  echo "Error: references/ directory not found. Run this script from the repo root."
+  exit 1
+fi
+
 STATE_ABBR_LOWER=$(echo "$STATE_ABBR" | tr '[:upper:]' '[:lower:]')
 STATE_DIR="states/${STATE_ABBR_LOWER}"
 
@@ -116,19 +126,32 @@ cat > "${STATE_DIR}/references/local-area.md" << EOF
 ## - UI claimant protocol
 EOF
 
+copy_ref() {
+  local src="references/$1"
+  if [[ ! -f "$src" ]]; then
+    echo "❌ MISSING: $src — cannot scaffold ${STATE_DIR}/"
+    exit 1
+  fi
+  cp "$src" "${STATE_DIR}/references/"
+}
+
 # Copy files that need light customization
-cp references/barrier-populations.md "${STATE_DIR}/references/"
-cp references/action-plan-template.md "${STATE_DIR}/references/"
-cp references/staff-workflows.md "${STATE_DIR}/references/"
-cp references/jobseeker-experience.md "${STATE_DIR}/references/"
-cp references/public-service-hiring.md "${STATE_DIR}/references/"
-cp references/hr-manager-toolkit.md "${STATE_DIR}/references/"
+copy_ref barrier-populations.md
+copy_ref action-plan-template.md
+copy_ref staff-workflows.md
+copy_ref jobseeker-experience.md
+copy_ref public-service-hiring.md
+copy_ref hr-manager-toolkit.md
 
 # Copy universal files (no changes needed)
-cp references/resume-template.md "${STATE_DIR}/references/"
-cp references/cover-letter-template.md "${STATE_DIR}/references/"
+copy_ref resume-template.md
+copy_ref cover-letter-template.md
 
 # Copy SKILL.md
+if [[ ! -f SKILL.md ]]; then
+  echo "❌ MISSING: SKILL.md — cannot scaffold ${STATE_DIR}/"
+  exit 1
+fi
 cp SKILL.md "${STATE_DIR}/"
 
 echo ""
