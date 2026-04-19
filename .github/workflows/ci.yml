@@ -64,6 +64,22 @@ jobs:
             ./scripts/validate-state.sh "$state"
           done
 
+      - name: Validate evals against program registry
+        run: |
+          chmod +x scripts/validate-evals.sh
+          ./scripts/validate-evals.sh
+
+      - name: Lint SKILL.md frontmatter
+        run: |
+          python3 -m pip install --quiet pyyaml
+          chmod +x scripts/lint-frontmatter.py
+          python3 scripts/lint-frontmatter.py
+
+      - name: Lint slash-command count drift
+        run: |
+          chmod +x scripts/lint-command-counts.sh
+          ./scripts/lint-command-counts.sh
+
       - name: Check required files exist
         run: |
           echo "--- Checking required repo files ---"

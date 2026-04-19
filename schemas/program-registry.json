@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/dougdevitre/access-to-jobs/schemas/program-registry.json",
+  "title": "Access to Jobs — Module and Program Registry",
+  "description": "Canonical list of module IDs and WIOA program codes referenced by eval files. Consumed by scripts/validate-evals.sh to catch typos and unknown references in evals/*.json.",
+  "type": "object",
+  "required": ["modules", "programs"],
+  "properties": {
+    "modules": {
+      "description": "Canonical module identifiers. MODULE 0-22 are defined in SKILL.md; special modes cover multi-step or multi-output flows.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "MODULE 0",
+          "MODULE 1",
+          "MODULE 2",
+          "MODULE 3",
+          "MODULE 4",
+          "MODULE 5",
+          "MODULE 6",
+          "MODULE 7",
+          "MODULE 8",
+          "MODULE 9",
+          "MODULE 10",
+          "MODULE 11",
+          "MODULE 12",
+          "MODULE 13",
+          "MODULE 14",
+          "MODULE 15",
+          "MODULE 16",
+          "MODULE 17",
+          "MODULE 18",
+          "MODULE 19",
+          "MODULE 20",
+          "MODULE 21",
+          "MODULE 22",
+          "COACH MODE",
+          "QUICK MODE",
+          "MULTI-OUTPUT"
+        ]
+      }
+    },
+    "programs": {
+      "description": "WIOA and partner program codes referenced in evals. Extend this list when adding new programs to state-programs.md.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "AEL",
+          "AEL_ELL",
+          "DSS_childcare",
+          "DVOP",
+          "DVOP_itinerant",
+          "Excel_Center",
+          "Fair_Chance",
+          "Federal_Bonding",
+          "Futures_Program",
+          "IET",
+          "Job_Center_wraparound",
+          "MVR",
+          "MWA",
+          "Reentry_Connect",
+          "SCSEP",
+          "Show_Me_Heroes",
+          "SkillUP",
+          "TANF_subsidized",
+          "UI",
+          "WIOA_Dislocated_Worker",
+          "WIOA_Youth",
+          "benefits_counseling"
+        ]
+      }
+    }
+  },
+  "modules": [
+    "MODULE 0", "MODULE 1", "MODULE 2", "MODULE 3", "MODULE 4",
+    "MODULE 5", "MODULE 6", "MODULE 7", "MODULE 8", "MODULE 9",
+    "MODULE 10", "MODULE 11", "MODULE 12", "MODULE 13", "MODULE 14",
+    "MODULE 15", "MODULE 16", "MODULE 17", "MODULE 18", "MODULE 19",
+    "MODULE 20", "MODULE 21", "MODULE 22",
+    "COACH MODE", "QUICK MODE", "MULTI-OUTPUT"
+  ],
+  "programs": [
+    "AEL",
+    "AEL_ELL",
+    "DSS_childcare",
+    "DVOP",
+    "DVOP_itinerant",
+    "Excel_Center",
+    "Fair_Chance",
+    "Federal_Bonding",
+    "Futures_Program",
+    "IET",
+    "Job_Center_wraparound",
+    "MVR",
+    "MWA",
+    "Reentry_Connect",
+    "SCSEP",
+    "Show_Me_Heroes",
+    "SkillUP",
+    "TANF_subsidized",
+    "UI",
+    "WIOA_Dislocated_Worker",
+    "WIOA_Youth",
+    "benefits_counseling"
+  ]
+}
