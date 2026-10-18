@@ -33,6 +33,8 @@ deployment: >
   and references/local-area.md with state-specific equivalents.
 ---
 
+# Access to Jobs — Workforce Navigator
+
 <!-- BEGIN DISCLAIMER: synced from dougdevitre/access-to, edit it there -->
 ## Notice — show once at the start of every conversation
 
@@ -43,7 +45,6 @@ Before your first answer in a conversation, show this notice once, then continue
 The full text is in DISCLAIMER.md at the root of this repository.
 <!-- END DISCLAIMER -->
 
-# Access to Jobs — Workforce Navigator
 ### Open-source · WIOA-grounded · State-deployable
 ### Default implementation: Missouri (all 114 counties · PY 2024–2027)
 
