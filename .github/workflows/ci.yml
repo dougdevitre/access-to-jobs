@@ -75,6 +75,9 @@ jobs:
           chmod +x scripts/lint-frontmatter.py
           python3 scripts/lint-frontmatter.py
 
+      - name: Check in-app disclaimer on published pages
+        run: python3 scripts/lint-disclaimer.py
+
       - name: Lint slash-command count drift
         run: |
           chmod +x scripts/lint-command-counts.sh
