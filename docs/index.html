@@ -30,6 +30,9 @@
         .tab-content { display: none; }
         .tab-content.active { display: block; }
         .mermaid { background: transparent !important; }
+        /* Until Mermaid draws the diagram (slow network, blocked CDN, no JS) the
+           <pre> shows its source; wrap it so it never widens the page on phones. */
+        pre.mermaid { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
         .stat-card { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
         /* Disclaimer notice: 44px touch targets without spreading the sentence apart */
         .atd-tel, .atd-more { position: relative; }
