@@ -85,8 +85,9 @@ We use a JSON-based evaluation format. Add test cases to `evals/trigger-eval.jso
 1. Fork the repository
 2. Create a feature branch (`feature/illinois-deployment` or `fix/module-7-star-format`)
 3. Make your changes
-4. Test by uploading the skill to Claude and running sample prompts
-5. Submit a PR with a clear description of what changed and why
+4. Rebuild the package whenever the skill sources change: run `./scripts/build-skill.sh` and commit `access-to-jobs.skill` (Claude loads the package, not the repo; CI fails if it is stale)
+5. Test by uploading the skill to Claude and running sample prompts
+6. Submit a PR with a clear description of what changed and why
 
 ### Source Citation
 When adding or updating data, include the source in a comment or header:

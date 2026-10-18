@@ -89,6 +89,9 @@ jobs:
           chmod +x scripts/lint-command-counts.sh
           ./scripts/lint-command-counts.sh
 
+      - name: Check the skill package is up to date
+        run: python3 scripts/build-skill.py --check
+
       - name: Check required files exist
         run: |
           echo "--- Checking required repo files ---"
