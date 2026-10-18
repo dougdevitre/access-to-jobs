@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check that every published page can fit a 320px phone screen.
+"""Check that every published page fits and works on a 320px phone screen.
 
 GitHub Pages serves docs/. A page that is wider than the screen scrolls
 sideways, which hides content and the disclaimer's edges on phones. This
@@ -16,6 +16,15 @@ guards the causes we have hit:
      Tailwind class on the element.
   2. No fixed width or min-width above 320px, in CSS, inline styles or
      Tailwind arbitrary values such as w-[480px].
+  3. Every link and button is at least 44px tall (the house touch-target
+     rule). Accepted: a Tailwind min-h/h of 44px or more (min-h-[44px],
+     min-h-11, h-12), a <style> rule giving the element's class a min-height
+     or height of 44px or more (directly or on its ::after hit area), or
+     padding + line height + border that add up to 44px (py-3.5 on base text).
+     The nav and footer links were 20-36px tall.
+  4. A Mermaid flowchart laid out left-to-right must name the direction to
+     use on narrow screens (data-narrow-direction="TD") and the page script
+     must act on it. Seven steps side by side drew 14px tall at 375px.
 
 Exits 0 on success, 1 on any failure.
 """
@@ -42,6 +51,16 @@ ATTR = r"""\b{}\s*=\s*["']([^"']*)["']"""
 FIXED_WIDTH = re.compile(r"(?<![\w-])(?:min-)?width\s*:\s*(\d+(?:\.\d+)?)px", re.IGNORECASE)
 TW_WIDTH = re.compile(r"(?<![\w-])(?:min-)?w-\[(\d+(?:\.\d+)?)px\]")
 
+MIN_TAP = 44
+TARGET = re.compile(r"<(a|button)\b([^>]*)>(.*?)</\1>", re.IGNORECASE | re.DOTALL)
+TW_HEIGHT = re.compile(r"^(?:min-h|h)-(?:\[(\d+(?:\.\d+)?)px\]|(\d+(?:\.5)?))$")
+TW_PAD = re.compile(r"^p([ytb])?-(\d+(?:\.5)?)$")
+LINE_HEIGHT = {"text-xs": 16, "text-sm": 20, "text-base": 24, "text-lg": 28,
+               "text-xl": 28, "text-2xl": 32, "text-3xl": 36}
+BORDER = {"border": 2, "border-2": 4, "border-4": 8}
+CSS_HEIGHT = re.compile(r"(?<![\w-])(?:min-)?height\s*:\s*(\d+(?:\.\d+)?)px", re.IGNORECASE)
+HORIZONTAL = re.compile(r"^\s*(?:flowchart|graph)\s+(LR|RL)\b", re.IGNORECASE)
+
 
 def fitting_selectors(css: str) -> set[str]:
     """Simple selectors (`pre`, `.x`, `pre.x`) whose rule wraps or contains overflow."""
@@ -50,6 +69,31 @@ def fitting_selectors(css: str) -> set[str]:
         if FITS_DECL.search(body):
             found.update(s.strip() for s in selectors.split(","))
     return found
+
+
+def tall_classes(css: str) -> set[str]:
+    """Classes whose rule (or ::after hit area) is at least MIN_TAP px tall."""
+    found = set()
+    for selectors, body in RULE.findall(re.sub(r"/\*.*?\*/", "", css, flags=re.DOTALL)):
+        if any(float(h) >= MIN_TAP for h in CSS_HEIGHT.findall(body)):
+            found.update(re.findall(r"\.([\w-]+)", selectors))
+    return found
+
+
+def tap_height(classes: list[str], tall: set[str]) -> float:
+    """Estimated height in px of a link or button from its Tailwind classes."""
+    if tall.intersection(classes):
+        return MIN_TAP
+    explicit = [float(m[1]) if m[1] else float(m[2]) * 4
+                for m in map(TW_HEIGHT.match, classes) if m]
+    pad = {"t": 0.0, "b": 0.0}
+    for m in filter(None, map(TW_PAD.match, classes)):
+        for side in ("t", "b") if m[1] in (None, "y") else (m[1],):
+            pad[side] = float(m[2]) * 4
+    line = next((LINE_HEIGHT[c] for c in classes if c in LINE_HEIGHT), None)
+    border = max((BORDER[c] for c in classes if c in BORDER), default=0)
+    estimate = pad["t"] + pad["b"] + (line or LINE_HEIGHT["text-base"]) + border
+    return max([estimate, *explicit])
 
 
 def blank(match: re.Match) -> str:
@@ -80,6 +124,30 @@ def check(path: Path) -> list[str]:
             line = markup.count("\n", 0, match.start()) + 1
             errors.append(f"{path}:{line}: {label} #{n} neither wraps nor contains its overflow")
 
+    tall = tall_classes(css)
+    for match in TARGET.finditer(markup):
+        attrs = match.group(2)
+        classes = (re.search(ATTR.format("class"), attrs) or [None, ""])[1].split()
+        # Text inherited from an ancestor is unknown here; assume base size unless set.
+        height = tap_height(classes, tall)
+        if height < MIN_TAP:
+            text = re.sub(r"<[^>]+>|\s+", " ", match.group(3)).strip()[:30]
+            line = markup.count("\n", 0, match.start()) + 1
+            errors.append(f"{path}:{line}: <{match.group(1)}> {text!r} is about {height:g}px tall, under {MIN_TAP}px")
+
+    scripts = "\n".join(re.findall(r"<script\b[^>]*>(.*?)</script>", html, flags=re.IGNORECASE | re.DOTALL))
+    for match in re.finditer(r"<pre\b([^>]*)>(.*?)</pre>", markup, flags=re.IGNORECASE | re.DOTALL):
+        classes = (re.search(ATTR.format("class"), match.group(1)) or [None, ""])[1].split()
+        horizontal = HORIZONTAL.match(match.group(2))
+        if "mermaid" not in classes or not horizontal:
+            continue
+        narrow = re.search(ATTR.format("data-narrow-direction"), match.group(1))
+        line = markup.count("\n", 0, match.start()) + 1
+        if not narrow or narrow[1].upper() not in ("TD", "TB", "BT"):
+            errors.append(f"{path}:{line}: flowchart {horizontal[1]} has no vertical data-narrow-direction for phones")
+        elif "narrowDirection" not in scripts:
+            errors.append(f"{path}:{line}: data-narrow-direction is set but no page script reads it")
+
     for pattern, kind in ((FIXED_WIDTH, "CSS width"), (TW_WIDTH, "Tailwind width")):
         for match in pattern.finditer(html):
             if float(match.group(1)) > MAX_PX:
@@ -98,7 +166,8 @@ def main() -> int:
         print(f"❌ {e}")
     if errors:
         return 1
-    print(f"✅ No page content wider than {MAX_PX}px on all {len(pages)} published page(s)")
+    print(f"✅ No content wider than {MAX_PX}px, no tap target under {MIN_TAP}px and no sideways-only "
+          f"diagram on all {len(pages)} published page(s)")
     return 0
 
 

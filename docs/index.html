@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The page has one, light, theme: keep browser-drawn parts (scrollbars, controls) light too -->
+    <meta name="color-scheme" content="light">
     <title>Access to Jobs — AI-Powered Workforce Navigator</title>
     <meta name="description" content="Open-source, WIOA-grounded AI workforce navigator for job seekers, Job Center staff, and HR managers. 23 modules. State-deployable.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +24,23 @@
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #7c3aed 100%); }
+        /* Long words wrap instead of widening the page at large text sizes or 200% zoom */
+        main, footer { overflow-wrap: anywhere; }
+        .mermaid { overflow-wrap: normal; }
+        pre.mermaid > svg { display: block; margin: 0 auto; }
+        /* Darker middle and end stops keep the hero's white and blue-50 text above 4.5:1 */
+        .hero-gradient { background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 50%, #6d28d9 100%); }
         .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        @media (prefers-reduced-motion: no-preference) {
+            html { scroll-behavior: smooth; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+            .card-hover:hover { transform: none; }
+        }
+        a:focus-visible, button:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 2px; }
+        .hero-gradient a:focus-visible, #sponsor a:focus-visible { outline-color: #ffffff; }
         .tab-btn.active { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
@@ -40,43 +55,45 @@
             content: ""; position: absolute; top: 50%; left: 50%;
             width: max(100%, 44px); height: 44px; transform: translate(-50%, -50%);
         }
-        .atd-notice a:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; border-radius: 2px; }
+        .atd-notice a:focus-visible { outline: 2px solid #1e3a5f; outline-offset: 2px; border-radius: 2px; }
     </style>
 </head>
 <body class="font-sans text-gray-900 bg-white">
 
 <!-- Disclaimer (interim wording, pending attorney review) -->
-<aside class="atd-notice bg-brand-900 text-blue-100 text-sm leading-relaxed px-4 sm:px-6 py-3" aria-label="Disclaimer">
-    <p class="max-w-6xl mx-auto">Educational information only. Access to Jobs is not legal, medical, mental health, financial or safety advice, and using it creates no professional relationship. In danger now? Call <a class="atd-tel font-semibold text-white underline" href="tel:911">911</a>. For crisis support, call or text <a class="atd-tel font-semibold text-white underline" href="tel:988">988</a>. Confirm anything important with the official source or a licensed professional. <a class="atd-more font-semibold text-white underline" href="https://github.com/dougdevitre/access-to-jobs/blob/main/DISCLAIMER.md">Read the full disclaimer</a></p>
+<aside class="atd-notice bg-brand-50 text-brand-900 border-b border-brand-100 text-sm leading-relaxed px-4 sm:px-6 py-3" aria-label="Disclaimer">
+    <p class="max-w-6xl mx-auto">Educational information only. Access to Jobs is not legal, medical, mental health, financial or safety advice, and using it creates no professional relationship. In danger now? Call <a class="atd-tel font-semibold text-brand-800 underline" href="tel:911">911</a>. For crisis support, call or text <a class="atd-tel font-semibold text-brand-800 underline" href="tel:988">988</a>. Confirm anything important with the official source or a licensed professional. <a class="atd-more font-semibold text-brand-800 underline" href="https://github.com/dougdevitre/access-to-jobs/blob/main/DISCLAIMER.md">Read the full disclaimer</a></p>
 </aside>
 
 <!-- Navigation -->
-<nav class="sticky top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-        <a href="#" class="font-bold text-lg text-brand-800">Access to Jobs</a>
-        <div class="hidden md:flex gap-6 text-sm text-gray-600">
-            <a href="#features" class="hover:text-brand-600">Features</a>
-            <a href="#modules" class="hover:text-brand-600">Modules</a>
-            <a href="#architecture" class="hover:text-brand-600">Architecture</a>
-            <a href="#populations" class="hover:text-brand-600">Populations</a>
-            <a href="#deploy" class="hover:text-brand-600">Deploy</a>
-            <a href="#sponsor" class="hover:text-brand-600">Sponsor</a>
-        </div>
-        <a href="https://github.com/dougdevitre/access-to-jobs" class="text-sm font-medium px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700 transition">GitHub</a>
+<header class="sticky top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-1.5 flex justify-between items-center">
+        <a href="#" class="inline-flex items-center min-h-[44px] font-bold text-lg text-brand-800">Access to Jobs</a>
+        <nav aria-label="Sections" class="hidden md:flex gap-6 text-sm text-gray-600">
+            <a href="#features" class="inline-flex items-center min-h-[44px] hover:text-brand-600">Features</a>
+            <a href="#modules" class="inline-flex items-center min-h-[44px] hover:text-brand-600">Modules</a>
+            <a href="#architecture" class="inline-flex items-center min-h-[44px] hover:text-brand-600">Architecture</a>
+            <a href="#populations" class="inline-flex items-center min-h-[44px] hover:text-brand-600">Populations</a>
+            <a href="#deploy" class="inline-flex items-center min-h-[44px] hover:text-brand-600">Deploy</a>
+            <a href="#sponsor" class="inline-flex items-center min-h-[44px] hover:text-brand-600">Sponsor</a>
+        </nav>
+        <a href="https://github.com/dougdevitre/access-to-jobs" class="inline-flex items-center min-h-[44px] text-sm font-medium px-4 rounded-lg bg-brand-600 text-white hover:bg-brand-700 transition">GitHub</a>
     </div>
-</nav>
+</header>
+
+<main>
 
 <!-- Hero -->
 <section class="hero-gradient text-white pt-12 pb-20 px-4">
     <div class="max-w-4xl mx-auto text-center">
         <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-6">
-            <span class="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-green-400 motion-safe:animate-pulse" aria-hidden="true"></span>
             v4.2.3 &middot; Open Source &middot; MIT License
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
             AI-Powered<br>Workforce Navigator
         </h1>
-        <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+        <p class="text-lg sm:text-xl text-blue-50 max-w-2xl mx-auto mb-10">
             Open-source, WIOA-grounded, state-deployable. 23 modules for job seekers,
             Job Center staff, and HR managers. Default: Missouri (all 114 counties).
         </p>
@@ -92,19 +109,19 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 max-w-3xl mx-auto">
             <div class="stat-card rounded-xl p-4">
                 <div class="text-3xl font-bold">23</div>
-                <div class="text-blue-200 text-sm">Modules</div>
+                <div class="text-blue-50 text-sm">Modules</div>
             </div>
             <div class="stat-card rounded-xl p-4">
                 <div class="text-3xl font-bold">15</div>
-                <div class="text-blue-200 text-sm">Barrier Populations</div>
+                <div class="text-blue-50 text-sm">Barrier Populations</div>
             </div>
             <div class="stat-card rounded-xl p-4">
                 <div class="text-3xl font-bold">75+</div>
-                <div class="text-blue-200 text-sm">HR KPIs</div>
+                <div class="text-blue-50 text-sm">HR KPIs</div>
             </div>
             <div class="stat-card rounded-xl p-4">
                 <div class="text-3xl font-bold">34</div>
-                <div class="text-blue-200 text-sm">Slash Commands</div>
+                <div class="text-blue-50 text-sm">Slash Commands</div>
             </div>
         </div>
     </div>
@@ -118,7 +135,7 @@
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Job Seeker -->
             <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
-                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-5">&#x1F4BC;</div>
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-5" aria-hidden="true">&#x1F4BC;</div>
                 <h3 class="text-xl font-bold mb-3">Job Seekers</h3>
                 <p class="text-gray-500 text-sm mb-4">Modules 0-9, 14-18, 20</p>
                 <ul class="space-y-2 text-sm text-gray-600">
@@ -133,7 +150,7 @@
             </div>
             <!-- Staff -->
             <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
-                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-5">&#x1F3E2;</div>
+                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-5" aria-hidden="true">&#x1F3E2;</div>
                 <h3 class="text-xl font-bold mb-3">Job Center Staff</h3>
                 <p class="text-gray-500 text-sm mb-4">Modules 10-13, 19</p>
                 <ul class="space-y-2 text-sm text-gray-600">
@@ -147,7 +164,7 @@
             </div>
             <!-- HR Manager -->
             <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
-                <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl mb-5">&#x1F4CA;</div>
+                <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl mb-5" aria-hidden="true">&#x1F4CA;</div>
                 <h3 class="text-xl font-bold mb-3">HR Managers</h3>
                 <p class="text-gray-500 text-sm mb-4">Modules 21-22</p>
                 <ul class="space-y-2 text-sm text-gray-600">
@@ -170,32 +187,32 @@
         <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="p-6 rounded-2xl border border-gray-100 card-hover">
-                <div class="text-2xl mb-3">&#x1F1FA;&#x1F1F8;</div>
+                <div class="text-2xl mb-3" aria-hidden="true">&#x1F1FA;&#x1F1F8;</div>
                 <h3 class="font-semibold mb-2">Government Applications</h3>
                 <p class="text-sm text-gray-500">Federal resume (4-6 pages), KSA/CCAR narratives, civil service exam prep, veteran preference, Schedule A.</p>
             </div>
             <div class="p-6 rounded-2xl border border-gray-100 card-hover">
-                <div class="text-2xl mb-3">&#x1F4B0;</div>
+                <div class="text-2xl mb-3" aria-hidden="true">&#x1F4B0;</div>
                 <h3 class="font-semibold mb-2">Total Compensation Calculator</h3>
                 <p class="text-sm text-gray-500">Compare up to 3 offers: salary + health insurance + retirement + PTO + all benefits. Federal vs. private sector comparison.</p>
             </div>
             <div class="p-6 rounded-2xl border border-gray-100 card-hover">
-                <div class="text-2xl mb-3">&#x1F4CA;</div>
+                <div class="text-2xl mb-3" aria-hidden="true">&#x1F4CA;</div>
                 <h3 class="font-semibold mb-2">HR Performance Dashboard</h3>
                 <p class="text-sm text-gray-500">75+ KPIs across recruitment, retention, performance, compensation, compliance, workforce planning, and engagement.</p>
             </div>
             <div class="p-6 rounded-2xl border border-gray-100 card-hover">
-                <div class="text-2xl mb-3">&#x1F4BB;</div>
+                <div class="text-2xl mb-3" aria-hidden="true">&#x1F4BB;</div>
                 <h3 class="font-semibold mb-2">Workday Integration</h3>
                 <p class="text-sm text-gray-500">Copy/paste content for job requisitions, interview feedback, performance reviews, compensation changes, and onboarding.</p>
             </div>
             <div class="p-6 rounded-2xl border border-gray-100 card-hover">
-                <div class="text-2xl mb-3">&#x1F30E;</div>
+                <div class="text-2xl mb-3" aria-hidden="true">&#x1F30E;</div>
                 <h3 class="font-semibold mb-2">State-Deployable</h3>
                 <p class="text-sm text-gray-500">Replace 4 files to deploy to any U.S. state. Missouri reference implementation included with all 114 counties.</p>
             </div>
             <div class="p-6 rounded-2xl border border-gray-100 card-hover">
-                <div class="text-2xl mb-3">&#x1F91D;</div>
+                <div class="text-2xl mb-3" aria-hidden="true">&#x1F91D;</div>
                 <h3 class="font-semibold mb-2">Population-Aware</h3>
                 <p class="text-sm text-gray-500">Auto-detects and adjusts for 15 barrier populations: veterans, justice-involved, youth, disability, and more.</p>
             </div>
@@ -207,61 +224,61 @@
 <section id="modules" class="py-20 px-4 bg-gray-50">
     <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-4">23 Modules + 3 Special Modes</h2>
-        <p class="text-gray-500 text-center mb-10">Click a tab to explore modules by user type.</p>
+        <p class="text-gray-500 text-center mb-10" id="modules-hint">Choose a tab to explore modules by user type.</p>
 
         <!-- Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 mb-8">
-            <button onclick="showTab('seeker')" class="tab-btn active px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-seeker">Job Seekers (0-9, 14-18)</button>
-            <button onclick="showTab('staff')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-staff">Staff (10-13, 19)</button>
-            <button onclick="showTab('hr')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-hr">HR & Public Service (20-22)</button>
-            <button onclick="showTab('special')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-special">Special Modes</button>
+        <div class="flex flex-wrap justify-center gap-2 mb-8" role="tablist" aria-labelledby="modules-hint">
+            <button type="button" role="tab" aria-selected="true" aria-controls="content-seeker" onclick="showTab('seeker')" class="tab-btn active px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-seeker">Job Seekers (0-9, 14-18)</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="content-staff" tabindex="-1" onclick="showTab('staff')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-staff">Staff (10-13, 19)</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="content-hr" tabindex="-1" onclick="showTab('hr')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-hr">HR & Public Service (20-22)</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="content-special" tabindex="-1" onclick="showTab('special')" class="tab-btn px-5 py-2.5 rounded-lg text-sm font-medium border-2 border-gray-200 transition" id="tab-special">Special Modes</button>
         </div>
 
         <!-- Job Seeker -->
-        <div id="content-seeker" class="tab-content active">
+        <div id="content-seeker" class="tab-content active" role="tabpanel" aria-labelledby="tab-seeker" tabindex="0">
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 0</span><h4 class="font-semibold mt-1">Eligibility Screener</h4><p class="text-sm text-gray-500 mt-1">Routes to WIOA, SNAP E&T, VR, veteran services, and 20+ programs</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 1</span><h4 class="font-semibold mt-1">Job Matcher</h4><p class="text-sm text-gray-500 mt-1">Top 5 roles with NOW/NEXT/LATER tier + demand data</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 2</span><h4 class="font-semibold mt-1">Resume Builder</h4><p class="text-sm text-gray-500 mt-1">ATS-optimized, JD-tailored, never fabricated</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 3</span><h4 class="font-semibold mt-1">Cover Letter</h4><p class="text-sm text-gray-500 mt-1">3-4 paragraphs, tone variants, JD keyword matching</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Modules 4-6</span><h4 class="font-semibold mt-1">Emails</h4><p class="text-sm text-gray-500 mt-1">Application, follow-up, and thank-you emails</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 7</span><h4 class="font-semibold mt-1">Interview Prep</h4><p class="text-sm text-gray-500 mt-1">5 questions + STAR answers + coaching tips</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 8</span><h4 class="font-semibold mt-1">Action Plan</h4><p class="text-sm text-gray-500 mt-1">7-day plan calibrated to HIGH/MEDIUM/LOW urgency</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 9</span><h4 class="font-semibold mt-1">Training Pathways</h4><p class="text-sm text-gray-500 mt-1">Shortest path to credential + funding sources</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 14</span><h4 class="font-semibold mt-1">Readiness Assessment</h4><p class="text-sm text-gray-500 mt-1">7-dimension scorecard + top 3 gaps</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 15</span><h4 class="font-semibold mt-1">Job Retention</h4><p class="text-sm text-gray-500 mt-1">30/60/90-day plan for new hires</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 16</span><h4 class="font-semibold mt-1">LinkedIn Builder</h4><p class="text-sm text-gray-500 mt-1">Full profile: headline, summary, connections</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 17</span><h4 class="font-semibold mt-1">Job Fair Prep</h4><p class="text-sm text-gray-500 mt-1">Before/during/after kit + elevator pitch</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-600">Module 18</span><h4 class="font-semibold mt-1">Salary + Total Comp</h4><p class="text-sm text-gray-500 mt-1">Market wages, negotiation, total compensation calculator</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 0</span><h3 class="font-semibold mt-1">Eligibility Screener</h3><p class="text-sm text-gray-500 mt-1">Routes to WIOA, SNAP E&T, VR, veteran services, and 20+ programs</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 1</span><h3 class="font-semibold mt-1">Job Matcher</h3><p class="text-sm text-gray-500 mt-1">Top 5 roles with NOW/NEXT/LATER tier + demand data</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 2</span><h3 class="font-semibold mt-1">Resume Builder</h3><p class="text-sm text-gray-500 mt-1">ATS-optimized, JD-tailored, never fabricated</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 3</span><h3 class="font-semibold mt-1">Cover Letter</h3><p class="text-sm text-gray-500 mt-1">3-4 paragraphs, tone variants, JD keyword matching</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Modules 4-6</span><h3 class="font-semibold mt-1">Emails</h3><p class="text-sm text-gray-500 mt-1">Application, follow-up, and thank-you emails</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 7</span><h3 class="font-semibold mt-1">Interview Prep</h3><p class="text-sm text-gray-500 mt-1">5 questions + STAR answers + coaching tips</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 8</span><h3 class="font-semibold mt-1">Action Plan</h3><p class="text-sm text-gray-500 mt-1">7-day plan calibrated to HIGH/MEDIUM/LOW urgency</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 9</span><h3 class="font-semibold mt-1">Training Pathways</h3><p class="text-sm text-gray-500 mt-1">Shortest path to credential + funding sources</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 14</span><h3 class="font-semibold mt-1">Readiness Assessment</h3><p class="text-sm text-gray-500 mt-1">7-dimension scorecard + top 3 gaps</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 15</span><h3 class="font-semibold mt-1">Job Retention</h3><p class="text-sm text-gray-500 mt-1">30/60/90-day plan for new hires</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 16</span><h3 class="font-semibold mt-1">LinkedIn Builder</h3><p class="text-sm text-gray-500 mt-1">Full profile: headline, summary, connections</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 17</span><h3 class="font-semibold mt-1">Job Fair Prep</h3><p class="text-sm text-gray-500 mt-1">Before/during/after kit + elevator pitch</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-emerald-700">Module 18</span><h3 class="font-semibold mt-1">Salary + Total Comp</h3><p class="text-sm text-gray-500 mt-1">Market wages, negotiation, total compensation calculator</p></div>
             </div>
         </div>
 
         <!-- Staff -->
-        <div id="content-staff" class="tab-content">
+        <div id="content-staff" class="tab-content" role="tabpanel" aria-labelledby="tab-staff" tabindex="0">
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 10</span><h4 class="font-semibold mt-1">Intake & Triage</h4><p class="text-sm text-gray-500 mt-1">5-10 min structured assessment + priority routing</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 11</span><h4 class="font-semibold mt-1">Case Notes</h4><p class="text-sm text-gray-500 mt-1">MoJobs-compatible notes in 30 seconds</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 12</span><h4 class="font-semibold mt-1">Referral Letters</h4><p class="text-sm text-gray-500 mt-1">Formal referrals to VR, AEL, DSS, partners</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 13</span><h4 class="font-semibold mt-1">Employer Outreach</h4><p class="text-sm text-gray-500 mt-1">OJT, IWT, WOTC, Bonding, Apprenticeship scripts</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 19</span><h4 class="font-semibold mt-1">Workshop Guide</h4><p class="text-sm text-gray-500 mt-1">6 turnkey facilitation scripts</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 10</span><h3 class="font-semibold mt-1">Intake & Triage</h3><p class="text-sm text-gray-500 mt-1">5-10 min structured assessment + priority routing</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 11</span><h3 class="font-semibold mt-1">Case Notes</h3><p class="text-sm text-gray-500 mt-1">MoJobs-compatible notes in 30 seconds</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 12</span><h3 class="font-semibold mt-1">Referral Letters</h3><p class="text-sm text-gray-500 mt-1">Formal referrals to VR, AEL, DSS, partners</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 13</span><h3 class="font-semibold mt-1">Employer Outreach</h3><p class="text-sm text-gray-500 mt-1">OJT, IWT, WOTC, Bonding, Apprenticeship scripts</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-blue-600">Module 19</span><h3 class="font-semibold mt-1">Workshop Guide</h3><p class="text-sm text-gray-500 mt-1">6 turnkey facilitation scripts</p></div>
             </div>
         </div>
 
         <!-- HR -->
-        <div id="content-hr" class="tab-content">
+        <div id="content-hr" class="tab-content" role="tabpanel" aria-labelledby="tab-hr" tabindex="0">
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-600">Module 20</span><h4 class="font-semibold mt-1">Public Service Applications</h4><p class="text-sm text-gray-500 mt-1">Federal/state/local gov hiring, KSA/CCAR, civil service exams, veteran preference, Schedule A</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-600">Module 21</span><h4 class="font-semibold mt-1">HR Manager Toolkit</h4><p class="text-sm text-gray-500 mt-1">Job descriptions, interviews, scorecards, 75+ KPI dashboard, benefits benchmarking, EEO compliance</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-600">Module 22</span><h4 class="font-semibold mt-1">Workday Workflows</h4><p class="text-sm text-gray-500 mt-1">Copy/paste content for Workday HCM: job reqs, reviews, onboarding, compensation, terminations</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-700">Module 20</span><h3 class="font-semibold mt-1">Public Service Applications</h3><p class="text-sm text-gray-500 mt-1">Federal/state/local gov hiring, KSA/CCAR, civil service exams, veteran preference, Schedule A</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-700">Module 21</span><h3 class="font-semibold mt-1">HR Manager Toolkit</h3><p class="text-sm text-gray-500 mt-1">Job descriptions, interviews, scorecards, 75+ KPI dashboard, benefits benchmarking, EEO compliance</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-orange-700">Module 22</span><h3 class="font-semibold mt-1">Workday Workflows</h3><p class="text-sm text-gray-500 mt-1">Copy/paste content for Workday HCM: job reqs, reviews, onboarding, compensation, terminations</p></div>
             </div>
         </div>
 
         <!-- Special -->
-        <div id="content-special" class="tab-content">
+        <div id="content-special" class="tab-content" role="tabpanel" aria-labelledby="tab-special" tabindex="0">
             <div class="grid sm:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Multi-Output</span><h4 class="font-semibold mt-1">"Apply for this job"</h4><p class="text-sm text-gray-500 mt-1">Resume + cover letter + application email in one pass</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Quick Mode</span><h4 class="font-semibold mt-1">"Quick apply"</h4><p class="text-sm text-gray-500 mt-1">3-bullet summary + cover note + short email</p></div>
-                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Coach Mode</span><h4 class="font-semibold mt-1">"Where do I start?"</h4><p class="text-sm text-gray-500 mt-1">Readiness score + top gaps + today's action + 7-day plan</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Multi-Output</span><h3 class="font-semibold mt-1">"Apply for this job"</h3><p class="text-sm text-gray-500 mt-1">Resume + cover letter + application email in one pass</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Quick Mode</span><h3 class="font-semibold mt-1">"Quick apply"</h3><p class="text-sm text-gray-500 mt-1">3-bullet summary + cover note + short email</p></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100"><span class="text-xs font-mono text-purple-600">Coach Mode</span><h3 class="font-semibold mt-1">"Where do I start?"</h3><p class="text-sm text-gray-500 mt-1">Readiness score + top gaps + today's action + 7-day plan</p></div>
             </div>
         </div>
     </div>
@@ -271,26 +288,28 @@
 <section id="architecture" class="py-20 px-4">
     <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-10">Architecture</h2>
-        <div class="bg-gray-50 rounded-2xl p-6 sm:p-10 border border-gray-100">
+        <div class="bg-gray-50 rounded-2xl p-4 sm:p-10 border border-gray-100">
             <pre class="mermaid">
 flowchart TD
-    A[User Input] --> B{Tri-User Detection}
-    B -->|Job Seeker| C[Modules 0-9, 14-18]
-    B -->|Staff| D[Modules 10-13, 19]
-    B -->|HR Manager| E[Modules 20-22]
+    accTitle: How Access to Jobs routes a request
+    accDescr: User input goes to tri-user detection, which sends job seekers to modules 0-9 and 14-18, staff to modules 10-13 and 19, and HR managers to modules 20-22. All three go to the task router, then module execution, then the population adjustment layer, then output formatted per templates.
+    A[User Input] --> B{Tri-User<br/>Detection}
+    B -->|Job<br/>Seeker| C[Modules<br/>0-9, 14-18]
+    B -->|Staff| D[Modules<br/>10-13, 19]
+    B -->|HR<br/>Manager| E[Modules<br/>20-22]
     C --> F[Task Router]
     D --> F
     E --> F
     F --> G[Module Execution]
-    G --> H[Population Adjustment Layer]
-    H --> I[Output - formatted per templates]
+    G --> H[Population<br/>Adjustment Layer]
+    H --> I[Output - formatted<br/>per templates]
 
     style A fill:#2563eb,color:#fff
     style B fill:#7c3aed,color:#fff
-    style C fill:#059669,color:#fff
+    style C fill:#047857,color:#fff
     style D fill:#2563eb,color:#fff
-    style E fill:#ea580c,color:#fff
-    style I fill:#059669,color:#fff
+    style E fill:#c2410c,color:#fff
+    style I fill:#047857,color:#fff
             </pre>
         </div>
     </div>
@@ -302,21 +321,21 @@ flowchart TD
         <h2 class="text-3xl font-bold text-center mb-4">15 Barrier Populations Served</h2>
         <p class="text-gray-500 text-center mb-10 max-w-xl mx-auto">Auto-detects and adjusts tone, content, program routing, and materials for each population.</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x2696;</div>Justice-involved</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F396;</div>Veterans</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F9D1;</div>Youth 14-24</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x267F;</div>Disabilities</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4B3;</div>SNAP/TANF</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4DA;</div>No diploma</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F30D;</div>English learners</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F3E0;</div>Homeless</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F9D3;</div>Older workers 55+</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F3E1;</div>Displaced homemakers</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F46A;</div>Single parents</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x23F3;</div>Long-term unemployed</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F9D2;</div>Foster care youth</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4C9;</div>Low income</div>
-            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1">&#x1F4CB;</div>UI claimants</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x2696;</div>Justice-involved</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F396;</div>Veterans</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F9D1;</div>Youth 14-24</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x267F;</div>Disabilities</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F4B3;</div>SNAP/TANF</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F4DA;</div>No diploma</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F30D;</div>English learners</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F3E0;</div>Homeless</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F9D3;</div>Older workers 55+</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F3E1;</div>Displaced homemakers</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F46A;</div>Single parents</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x23F3;</div>Long-term unemployed</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F9D2;</div>Foster care youth</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F4C9;</div>Low income</div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100 text-sm"><div class="text-xl mb-1" aria-hidden="true">&#x1F4CB;</div>UI claimants</div>
         </div>
     </div>
 </section>
@@ -325,9 +344,13 @@ flowchart TD
 <section id="deploy" class="py-20 px-4">
     <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-10">Deploy to Any State</h2>
-        <div class="bg-gray-50 rounded-2xl p-6 sm:p-10 border border-gray-100 mb-8">
-            <pre class="mermaid">
+        <div class="bg-gray-50 rounded-2xl p-4 sm:p-10 border border-gray-100 mb-8">
+            <!-- Seven steps side by side shrink to unreadable text on phones and tablets, so
+                 below 1024px the page script draws this flowchart top-down (data-narrow-direction). -->
+            <pre class="mermaid" data-narrow-direction="TD">
 flowchart LR
+    accTitle: Deploying Access to Jobs to a new state
+    accDescr: Seven steps in order: run deploy-state.sh, replace 4 files, customize 6 files, run validate-state.sh, test 81 evals, run build-skill.sh, upload the .skill file.
     A[deploy-state.sh] --> B[Replace 4 files]
     B --> C[Customize 6 files]
     C --> D[validate-state.sh]
@@ -337,9 +360,9 @@ flowchart LR
 
     style A fill:#2563eb,color:#fff
     style B fill:#dc2626,color:#fff
-    style C fill:#d97706,color:#fff
+    style C fill:#b45309,color:#fff
     style D fill:#7c3aed,color:#fff
-    style F fill:#059669,color:#fff
+    style F fill:#047857,color:#fff
             </pre>
         </div>
         <div class="grid sm:grid-cols-2 gap-6">
@@ -353,7 +376,7 @@ flowchart LR
                 </ul>
             </div>
             <div class="bg-white rounded-xl p-6 border border-gray-100">
-                <h3 class="font-semibold text-amber-600 mb-3">Customize (Light Edits)</h3>
+                <h3 class="font-semibold text-amber-700 mb-3">Customize (Light Edits)</h3>
                 <ul class="text-sm text-gray-600 space-y-1">
                     <li>barrier-populations.md</li>
                     <li>action-plan-template.md</li>
@@ -385,48 +408,103 @@ flowchart LR
         </div>
         <div class="grid sm:grid-cols-3 gap-6 text-left">
             <div class="stat-card rounded-xl p-5">
-                <h4 class="font-semibold mb-2">Maintain Data</h4>
+                <h3 class="font-semibold mb-2">Maintain Data</h3>
                 <p class="text-sm text-blue-200">WIOA state plans, labor market data, and federal pay tables need annual updates.</p>
             </div>
             <div class="stat-card rounded-xl p-5">
-                <h4 class="font-semibold mb-2">Expand States</h4>
+                <h3 class="font-semibold mb-2">Expand States</h3>
                 <p class="text-sm text-blue-200">Help deploy to more states beyond Missouri so more job seekers can access these tools.</p>
             </div>
             <div class="stat-card rounded-xl p-5">
-                <h4 class="font-semibold mb-2">Stay Free</h4>
+                <h3 class="font-semibold mb-2">Stay Free</h3>
                 <p class="text-sm text-blue-200">Keep the skill free and open source for the people who need it most.</p>
             </div>
         </div>
     </div>
 </section>
 
+</main>
+
 <!-- Footer -->
-<footer class="py-10 px-4 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+<footer class="py-8 px-4 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4 text-sm text-gray-500 text-center sm:text-left">
         <div>
             <span class="font-semibold text-gray-700">Access to Jobs</span> &middot; Part of the
-            <a href="https://github.com/cotrackpro" class="text-brand-600 hover:underline">Access To</a> initiative by
-            <a href="https://cotrackpro.com" class="text-brand-600 hover:underline">CoTrackPro</a>
+            <a href="https://github.com/cotrackpro" class="inline-flex items-center min-h-[44px] text-brand-600 underline">Access To</a> initiative by
+            <a href="https://cotrackpro.com" class="inline-flex items-center min-h-[44px] text-brand-600 underline">CoTrackPro</a>
         </div>
-        <div class="flex gap-6">
-            <a href="https://github.com/dougdevitre/access-to-jobs" class="hover:text-brand-600">GitHub</a>
-            <a href="https://github.com/dougdevitre/access-to-jobs/blob/main/LICENSE" class="hover:text-brand-600">MIT License</a>
-            <a href="https://github.com/dougdevitre/access-to-jobs/blob/main/CONTRIBUTING.md" class="hover:text-brand-600">Contribute</a>
+        <div class="flex flex-wrap justify-center gap-x-6">
+            <a href="https://github.com/dougdevitre/access-to-jobs" class="inline-flex items-center min-h-[44px] hover:text-brand-600">GitHub</a>
+            <a href="https://github.com/dougdevitre/access-to-jobs/blob/main/LICENSE" class="inline-flex items-center min-h-[44px] hover:text-brand-600">MIT License</a>
+            <a href="https://github.com/dougdevitre/access-to-jobs/blob/main/CONTRIBUTING.md" class="inline-flex items-center min-h-[44px] hover:text-brand-600">Contribute</a>
         </div>
     </div>
 </footer>
 
 <script>
-    function showTab(name) {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        document.getElementById('tab-' + name).classList.add('active');
-        document.getElementById('content-' + name).classList.add('active');
+    function showTab(name, focus) {
+        document.querySelectorAll('.tab-btn').forEach(b => {
+            const on = b.id === 'tab-' + name;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-selected', on);
+            b.tabIndex = on ? 0 : -1;
+            if (on && focus) b.focus();
+        });
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id === 'content-' + name));
     }
+    // Left/Right arrows, Home and End move between tabs (WAI-ARIA tabs pattern)
+    document.querySelector('[role=tablist]').addEventListener('keydown', e => {
+        const tabs = [...document.querySelectorAll('.tab-btn')];
+        const i = tabs.indexOf(document.activeElement);
+        const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+        if (i < 0 || next === undefined) return;
+        e.preventDefault();
+        showTab(tabs[(next + tabs.length) % tabs.length].id.slice(4), true);
+    });
+</script>
+<!-- Mermaid is pinned to an exact release. A static ES module import cannot carry an
+     integrity attribute, so Subresource Integrity is declared in the import map for the
+     entry module and every module a flowchart loads; a changed file is refused, never run,
+     and the diagram is not drawn. Browsers without import-map integrity ignore the block.
+     Regenerate after a version bump: python3 scripts/mermaid-sri.py <version> -->
+<script type="importmap">
+{
+  "integrity": {
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.esm.min.mjs": "sha384-ngTqQFGZO/UNk+6W7oe9xpqFSOUHQUL8VAb6oHZdH492UegObDwoIkWN/nySekUR",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid-b1704b0f.js": "sha384-CNNrF6q2u6O24tVhjP6iVpfeotnYyorrBGDAd7Gg8zPEUFJwmWvih24wFmTOaEew",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/flowDiagram-v2-a69d45d2.js": "sha384-Pyy90F4DN+F3Je8a3bCNESb6hX4XWUXaJJoy86d7/02eGS8IKGXnwLs9+lHFREg2",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/flowDb-72621fe2.js": "sha384-ZvaeGtAPZPwUJ4545FTdAWihtUh5ta6MTvbgaU6bKtAOMMPLoq9Oesy2VbPc1Hoz",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/styles-9f9379cd.js": "sha384-5mc9PL+qr/y2Dx/ni0d8G41i8FT7VhrKoY49rKT5u6v6+hHTxisf0FcrJeQATL1f",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/graph-a5cd6100.js": "sha384-h+/A4pDk+6Qvc0Ccid5EHfCgEoLG18borBBkKZrlM1eqUH9I91W9Vk4i7DSti+U7",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/index-7fdd4085.js": "sha384-mos/JgAlrjn3LzYb6rowsEPosDlYWfYjhO2IbzZ3vCuQi5KH4kjyBmDcV4e4xIYR",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/layout-6f90a841.js": "sha384-YRbVJWqB4iSq5eKBv/oIQUkCZmpmIHUkS0Y4A0ZGfLSD9+p3GoUvgRgQkI9F4zAM",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/clone-9569b997.js": "sha384-NzE8WQzcwm4rUtKpoIvI3W4OlinauSZNCIuD8AwWpVOBQrzy7dj3lKAv8vnvoNDx",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/edges-8700df07.js": "sha384-mSHOhBP3jkZs6EhqYqNOepwYzVI/hRcn9gZqSnX+lKMd1ajXyB3eji1zVdN+fnpv",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/createText-4dbd4ca1.js": "sha384-5iu4aYUsiWVc7LrjWW9BbPqU+CU4epD2bogx526j3OG4ZZYoqXDdf6W0775k4/cL",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/line-8f37694c.js": "sha384-3jLXKdNYk/d+j2HslgJlEgGAuaftuzANUPVQ/4SAwU17mGJPxsWtEB2RhZn7pHnP",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/array-2ff2c7a6.js": "sha384-gBaxqsZ8swxV4v7zF1FNfX8zDwZU1vTZvXw4eC4dZZRSlocnz819tfG52NuvgZLo",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/path-428ebac9.js": "sha384-SjWQuOvMI6WlSFYjEHOsJi1+1dyL9fyb8CYHEnYOrwkRAgpASPBW6zBG3j4rrH9n",
+    "https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/channel-7f9aae89.js": "sha384-AUpfa7BkC7qT0LYiPc5mhH12AjXZgDXsWeoIzholRK2cBN/GGbAXmG/3A+M2lo0a"
+  }
+}
 </script>
 <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'Inter' });
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: false, theme: 'neutral', fontFamily: 'Inter' });
+    // A diagram with data-narrow-direction is drawn in that direction on narrow screens,
+    // and redrawn when the width crosses the breakpoint (rotation, resized window).
+    const narrow = matchMedia('(max-width: 1023px)');
+    const diagrams = [...document.querySelectorAll('pre.mermaid')].map(el => ({ el, source: el.innerHTML }));
+    async function draw() {
+        for (const { el, source } of diagrams) {
+            const dir = el.dataset.narrowDirection;
+            el.removeAttribute('data-processed');
+            el.innerHTML = dir && narrow.matches ? source.replace(/^(\s*flowchart\s+)(LR|RL)\b/, '$1' + dir) : source;
+        }
+        await mermaid.run({ nodes: diagrams.map(d => d.el) });
+    }
+    draw();
+    narrow.addEventListener('change', draw);
 </script>
 
 </body>
