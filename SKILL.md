@@ -20,7 +20,7 @@ version: 4.2.3
 author: Doug Devitre
 author_contact: dougdevitre@gmail.com
 organization: CoTrackPro
-repository: https://github.com/cotrackpro/access-to-jobs
+repository: https://github.com/dougdevitre/access-to-jobs
 category: workforce-development
 license: MIT
 pillar: Access to Jobs
@@ -347,4 +347,4 @@ work as-is or with minor location reference updates.
 
 **License:** MIT
 **Author:** Doug Devitre · CoTrackPro · dougdevitre@gmail.com
-**Repository:** https://github.com/cotrackpro/access-to-jobs
+**Repository:** https://github.com/dougdevitre/access-to-jobs

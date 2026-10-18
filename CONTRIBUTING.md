@@ -113,5 +113,5 @@ This project serves vulnerable populations including justice-involved individual
 ## Questions?
 
 - **Email:** dougdevitre@gmail.com
-- **GitHub Issues:** [cotrackpro/access-to-jobs/issues](https://github.com/cotrackpro/access-to-jobs/issues)
+- **GitHub Issues:** [dougdevitre/access-to-jobs/issues](https://github.com/dougdevitre/access-to-jobs/issues)
 - **LinkedIn:** [linkedin.com/in/dougdevitre](https://linkedin.com/in/dougdevitre)

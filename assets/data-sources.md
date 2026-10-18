@@ -25,9 +25,9 @@ and state workforce agencies. This file documents every source for audit and upd
 | Missouri WIOA Combined State Plan, PY 2024–2027 | Via jobs.mo.gov | state-programs.md, state-training-pathways.md |
 | MERIC (Missouri Economic Research and Information Center) | https://meric.mo.gov/ | state-labor-market.md |
 | Missouri OWD (Office of Workforce Development) | https://jobs.mo.gov/ | All Missouri-specific files |
-| Missouri Job Centers | https://jobs.mo.gov/find-a-job-center | local-area.md |
+| Missouri Job Centers | https://jobs.mo.gov/job-centers | local-area.md |
 | Missouri Connections | https://missouriconnections.org/ | Career exploration, WorkKeys |
-| Missouri Fast Track Scholarship | https://dhe.mo.gov/fasttrack | state-training-pathways.md |
+| Missouri Fast Track Scholarship | https://dhewd.mo.gov/initiatives/fast-track-workforce-incentive-grant | state-training-pathways.md |
 | Missouri DOC Employment Services | Via doc.mo.gov | barrier-populations.md |
 | Missouri Vocational Rehabilitation | https://dese.mo.gov/vocational-rehabilitation | state-programs.md |
 | MOLearns | https://molearns.org/ | state-programs.md |
@@ -94,10 +94,10 @@ and state workforce agencies. This file documents every source for audit and upd
 | Source | URL | Used In |
 |---|---|---|
 | SHRM (Society for HR Management) | https://www.shrm.org/ | Job description best practices, benefits benchmarking |
-| EEOC Adverse Impact Guidance | https://www.eeoc.gov/laws/guidance/ | 80% rule, EEO compliance |
+| EEOC Adverse Impact Guidance | https://www.eeoc.gov/guidance | 80% rule, EEO compliance |
 | BLS Employer Costs for Employee Compensation | https://www.bls.gov/news.release/ecec.toc.htm | Benefits cost data by industry |
 | DOL ADA Employment | https://www.dol.gov/agencies/odep/ | ADA accommodation requirements |
-| EEOC Pre-Employment Inquiries | https://www.eeoc.gov/pre-employment-inquiries-and-medical-questions-made-employers | Prohibited interview questions |
+| EEOC Pre-Employment Inquiries | https://www.eeoc.gov/prohibited-employment-policiespractices | Prohibited interview questions |
 
 ### Data Currency — New Modules
 
