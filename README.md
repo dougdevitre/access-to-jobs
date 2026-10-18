@@ -2,7 +2,7 @@
 
 **AI-powered Workforce Navigator** — open-source, state-deployable workforce development skill for Claude AI.
 
-Part of the **[Access To](https://github.com/cotrackpro)** open-source civic tech initiative by [CoTrackPro](https://cotrackpro.com).
+> Part of **[Access To](https://dougdevitre.org)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.org/#pillars) Built by [CoTrackPro](https://cotrackpro.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Skill Version](https://img.shields.io/badge/version-4.2.3-blue.svg)](CHANGELOG.md)
@@ -312,13 +312,13 @@ access-to-jobs/
 ## Installation
 
 ### Claude.ai (Skill Upload)
-1. Download the `.skill` file from [Releases](https://github.com/cotrackpro/access-to-jobs/releases)
+1. Download the `.skill` file from [Releases](https://github.com/dougdevitre/access-to-jobs/releases)
 2. Go to Claude.ai → Settings → Skills
 3. Upload the `.skill` file
 4. Start chatting — the skill activates on any employment-related request
 
 ### Claude Code / MCP
-1. Clone: `git clone https://github.com/cotrackpro/access-to-jobs.git`
+1. Clone: `git clone https://github.com/dougdevitre/access-to-jobs.git`
 2. Point your skill path to the `access-to-jobs/` directory
 
 ---
@@ -473,12 +473,12 @@ This scaffolds `states/il/` with TODO template files. Then:
 
 | Pillar | Repository | Description |
 |---|---|---|
-| Access to Justice | [`access-to-justice`](https://github.com/cotrackpro/access-to-justice) | Legal navigation and court preparation |
-| Access to Education | [`access-to-education`](https://github.com/cotrackpro/access-to-education) | Missouri K-12 + special needs education |
-| Access to Housing | [`access-to-housing`](https://github.com/cotrackpro/access-to-housing) | PropTech intelligence and housing navigation |
-| Access to Services | [`access-to-services`](https://github.com/cotrackpro/access-to-services) | Social services navigation and intake |
-| Access to Peace | [`access-to-peace`](https://github.com/cotrackpro/access-to-peace) | Conflict resolution and community safety |
-| Access to Safety | [`access-to-safety`](https://github.com/cotrackpro/access-to-safety) | Trauma-informed safety planning |
+| Access to Justice | [`access-to-justice`](https://github.com/dougdevitre/access-to-justice) | Legal navigation and court preparation |
+| Access to Education | [`access-to-education`](https://github.com/dougdevitre/access-to-education) | Missouri K-12 + special needs education |
+| Access to Housing | [`access-to-housing`](https://github.com/dougdevitre/access-to-housing) | PropTech intelligence and housing navigation |
+| Access to Services | [`access-to-services`](https://github.com/dougdevitre/access-to-services) | Social services navigation and intake |
+| Access to Peace | [`access-to-peace`](https://github.com/dougdevitre/access-to-peace) | Conflict resolution and community safety |
+| Access to Safety | [`access-to-safety`](https://github.com/dougdevitre/access-to-safety) | Trauma-informed safety planning |
 | **Access to Jobs** | **`access-to-jobs`** | **Workforce development and employment** |
 
 ---
@@ -538,4 +538,4 @@ MIT — see [LICENSE](LICENSE).
 | LinkedIn | [linkedin.com/in/dougdevitre](https://linkedin.com/in/dougdevitre) |
 | Phone | 314.496.5973 |
 | Web | [cotrackpro.com](https://cotrackpro.com) |
-| GitHub | [github.com/cotrackpro](https://github.com/cotrackpro) |
+| GitHub | [github.com/dougdevitre](https://github.com/dougdevitre) |
