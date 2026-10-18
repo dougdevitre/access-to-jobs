@@ -78,6 +78,9 @@ jobs:
       - name: Check in-app disclaimer on published pages
         run: python3 scripts/lint-disclaimer.py
 
+      - name: Check published pages fit a 320px phone
+        run: python3 scripts/lint-mobile-fit.py
+
       - name: Lint slash-command count drift
         run: |
           chmod +x scripts/lint-command-counts.sh
