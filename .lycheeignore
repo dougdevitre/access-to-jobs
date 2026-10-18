@@ -1,0 +1,31 @@
+# Exclusions for the Link check workflow (.github/workflows/link-check.yml).
+# One regular expression per line. Every entry says why it is skipped.
+
+# tel: links are phone numbers, not web pages, so there is nothing to fetch.
+^tel:
+# mailto: links are email addresses, not web pages.
+^mailto:
+
+# dougdevitre.org is down: the hub's CNAME was deleted on 2026-04-07.
+# temporary — remove when the domain is reattached
+^https?://(www\.)?dougdevitre\.org
+
+# wioaplans.ed.gov (WIOA State Plan portal) fails to connect from GitHub
+# runners, but the page loads normally (checked 2026-10-18). Runner blocking,
+# not a dead site.
+^https://wioaplans\.ed\.gov/?$
+
+# BROKEN — needs a human (found 2026-10-18)
+# MOLearns (virtual adult education): connection failed in the link check, and
+# the site refuses automated fetches, so it could not be confirmed either way.
+^https://molearns\.org/?$
+
+# BROKEN — needs a human (found 2026-10-18)
+# Missouri state job portal: connection refused. A replacement could not be
+# confirmed.
+^https://mostatejobs\.com/?$
+
+# BROKEN — needs a human (found 2026-10-18)
+# Old org's releases page (404). dougdevitre/access-to-jobs has no releases
+# yet, so there is no page with the .skill download to point to.
+^https://github\.com/cotrackpro/access-to-jobs/releases$

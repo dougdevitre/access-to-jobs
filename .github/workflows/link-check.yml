@@ -1,0 +1,110 @@
+name: Link check
+
+# Checks every external link users see with lychee, so a moved state agency
+# page, a dead federal guidance link or a renamed program site is caught
+# instead of being handed to a job seeker.
+#   - pull requests that touch content: fail and list each broken link
+#   - monthly schedule (and manual runs): open or update ONE issue,
+#     "Broken links (monthly check)", instead of failing silently
+# Many links in the skill are bare domains ("jobs.mo.gov"), which lychee does
+# not detect on its own, so "Collect links" turns them into https:// URLs.
+# Exclusions live in .lycheeignore, each with a comment saying why.
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.html"
+      - "references/**"
+      - "templates/**"
+      - "guides/**"
+      - "assets/**"
+      - "states/**"
+      - "slash-commands/**"
+      - "docs/**"
+      - ".lycheeignore"
+      - ".github/workflows/link-check.yml"
+  schedule:
+    - cron: "37 10 3 * *" # 10:37 UTC on the 3rd of each month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lychee:
+    name: Check external links
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Collect links
+        run: |
+          mkdir -p .lychee
+          # Bare domains (no scheme) in the docs, skill content and pages.
+          # CHANGELOG is history, not something users act on, so it is skipped.
+          grep -rhoE '(^|[^/@.a-zA-Z0-9-])([a-zA-Z0-9-]+\.)+(gov|org|com|net|us|edu)(/[A-Za-z0-9._~/?#=&%-]*[A-Za-z0-9/_-])?' \
+              --include='*.md' --include='*.html' --exclude=CHANGELOG.md \
+              --exclude-dir=.lychee --exclude-dir=.git --exclude-dir=node_modules . \
+            | sed -E 's#^[^a-zA-Z0-9]##' \
+            | sort -u | sed 's#^#https://#' > .lychee/bare-domains.txt
+          wc -l .lychee/bare-domains.txt
+
+      - name: Run lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          # 403 and 429 are accepted: many .gov sites refuse or rate-limit
+          # GitHub-hosted bots, and a bot block is not a dead link.
+          # 404, 410, DNS/connection errors and repeated 5xx still fail.
+          # tel: and mailto: are excluded in .lycheeignore.
+          args: >-
+            --no-progress
+            --max-concurrency 8
+            --max-retries 3
+            --timeout 20
+            --accept 200..=299,403,429
+            --exclude-path CHANGELOG.md
+            './**/*.md'
+            './**/*.html'
+            '.lychee/bare-domains.txt'
+          output: .lychee/report.md
+          fail: false
+          jobSummary: true
+
+      - name: Fail the pull request on broken links
+        if: github.event_name == 'pull_request' && steps.lychee.outputs.exit_code != '0'
+        run: |
+          echo "Broken links:"
+          grep -E '^\* \[' .lychee/report.md || cat .lychee/report.md
+          # One annotation listing every failure, readable from the checks API too.
+          list="$(grep -E '^\* \[' .lychee/report.md | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
+          [ -n "$list" ] || list="$(sed 's/%/%25/g' .lychee/report.md | head -200 | awk '{printf "%s%%0A", $0}')"
+          echo "::error title=Broken links::${list}"
+          exit 1
+
+      - name: Open or update the link-check issue
+        if: github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Broken links (monthly check)"
+          {
+            echo "The link check found broken links ([run]($RUN_URL))."
+            echo "Fix or replace each link, or add a commented exclusion to \`.lycheeignore\` if the site only blocks bots."
+            echo
+            cat .lychee/report.md
+          } > .lychee/issue.md
+          number="$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')"
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file .lychee/issue.md
+          else
+            gh issue create --title "$title" --body-file .lychee/issue.md
+          fi
