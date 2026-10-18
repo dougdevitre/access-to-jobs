@@ -8,6 +8,10 @@ GitHub Pages serves docs/, so every HTML page under docs/ must:
      crisis numbers are visible without scrolling or clicking.
   3. If the page takes input (form, input, select, textarea), also carry the
      one-time acknowledgment dialog under the versioned storage key.
+  4. Follow the page's theme. A page with no dark theme (no
+     prefers-color-scheme: dark rule, no dark: classes) must declare
+     <meta name="color-scheme" content="light"> and must not give the notice
+     a dark background, which drew a navy band above the white page.
 
 Exits 0 on success, 1 on any failure.
 """
@@ -27,6 +31,10 @@ NOTICE = (
 )
 FULL_LINK = "https://github.com/dougdevitre/access-to-jobs/blob/main/DISCLAIMER.md"
 INPUT = re.compile(r"<(form|input|select|textarea)\b", re.IGNORECASE)
+DARK_THEME = re.compile(r"prefers-color-scheme\s*:\s*dark|[\s\"']dark:[\w\[]", re.IGNORECASE)
+LIGHT_SCHEME = re.compile(r"""<meta\s+name=["']color-scheme["']\s+content=["']light["']""", re.IGNORECASE)
+# Tailwind backgrounds at shade 500 or darker, and black, count as dark
+DARK_BG = re.compile(r"(?<![\w:-])bg-(?:black|[a-z]+-(?:[5-9]00|950))(?![\w-])")
 
 
 def check(path: Path) -> list[str]:
@@ -42,6 +50,10 @@ def check(path: Path) -> list[str]:
         "notice ahead of the page content": notice > -1
         and (first_section == -1 or notice < first_section),
     }
+    if not DARK_THEME.search(html):
+        tag = re.search(r'<[a-z]+\b[^>]*class="atd-notice[^"]*"[^>]*>', html)
+        checks["light color-scheme declared (page has no dark theme)"] = LIGHT_SCHEME.search(html)
+        checks["notice on a light background like the page"] = tag and not DARK_BG.search(tag.group(0))
     if INPUT.search(html):
         checks["acknowledgment dialog"] = "<dialog" in html and ">I understand</button>" in html
         checks["versioned storage key"] = '"disclaimer-ack-v1"' in html
