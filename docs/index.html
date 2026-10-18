@@ -31,12 +31,24 @@
         .tab-content.active { display: block; }
         .mermaid { background: transparent !important; }
         .stat-card { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); }
+        /* Disclaimer notice: 44px touch targets without spreading the sentence apart */
+        .atd-tel, .atd-more { position: relative; }
+        .atd-tel::after, .atd-more::after {
+            content: ""; position: absolute; top: 50%; left: 50%;
+            width: max(100%, 44px); height: 44px; transform: translate(-50%, -50%);
+        }
+        .atd-notice a:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; border-radius: 2px; }
     </style>
 </head>
 <body class="font-sans text-gray-900 bg-white">
 
+<!-- Disclaimer (interim wording, pending attorney review) -->
+<aside class="atd-notice bg-brand-900 text-blue-100 text-sm leading-relaxed px-4 sm:px-6 py-3" aria-label="Disclaimer">
+    <p class="max-w-6xl mx-auto">Educational information only. Access to Jobs is not legal, medical, mental health, financial or safety advice, and using it creates no professional relationship. In danger now? Call <a class="atd-tel font-semibold text-white underline" href="tel:911">911</a>. For crisis support, call or text <a class="atd-tel font-semibold text-white underline" href="tel:988">988</a>. Confirm anything important with the official source or a licensed professional. <a class="atd-more font-semibold text-white underline" href="https://github.com/dougdevitre/access-to-jobs/blob/main/DISCLAIMER.md">Read the full disclaimer</a></p>
+</aside>
+
 <!-- Navigation -->
-<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+<nav class="sticky top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
         <a href="#" class="font-bold text-lg text-brand-800">Access to Jobs</a>
         <div class="hidden md:flex gap-6 text-sm text-gray-600">
@@ -52,7 +64,7 @@
 </nav>
 
 <!-- Hero -->
-<section class="hero-gradient text-white pt-28 pb-20 px-4">
+<section class="hero-gradient text-white pt-12 pb-20 px-4">
     <div class="max-w-4xl mx-auto text-center">
         <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-6">
             <span class="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
