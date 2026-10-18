@@ -1,0 +1,11 @@
+# Exclusions for the Link check workflow (.github/workflows/link-check.yml).
+# One regular expression per line. Every entry says why it is skipped.
+
+# tel: links are phone numbers, not web pages, so there is nothing to fetch.
+^tel:
+# mailto: links are email addresses, not web pages.
+^mailto:
+
+# dougdevitre.org is down: the hub's CNAME was deleted on 2026-04-07.
+# temporary — remove when the domain is reattached
+^https?://(www\.)?dougdevitre\.org
