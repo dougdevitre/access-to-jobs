@@ -7,7 +7,7 @@
 
 **AI-powered Workforce Navigator** — open-source, state-deployable workforce development skill for Claude AI.
 
-> Part of **[Access To](https://dougdevitre.org)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.org/#pillars) Built by [CoTrackPro](https://cotrackpro.com).
+> Part of **[Access To](https://dougdevitre.github.io/access-to/)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.github.io/access-to/about.html#pillars) Built by [CoTrackPro](https://cotrackpro.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Skill Version](https://img.shields.io/badge/version-4.2.3-blue.svg)](CHANGELOG.md)
@@ -110,7 +110,7 @@ The skill automatically detects and adjusts for:
 | Population | Key Adjustment |
 |---|---|
 | Justice-involved / reentry | No conviction disclosure; DOC credentials; Fair Chance employers; Federal Bonding |
-| Veterans and military spouses | Priority of service; MOS translation; DVOP/CODL; state OJT programs |
+| Veterans and military spouses | Priority of service; MOS translation; DVOP/LVER; state OJT programs |
 | Youth (14–24) | Lighter formality; youth-specific programs (JAG, Futures, Excel Center) |
 | Individuals with disabilities | VR referral; benefits counseling; customized/supported employment |
 | SNAP/TANF recipients | SNAP E&T; childcare/transportation supports; DSS coordination |

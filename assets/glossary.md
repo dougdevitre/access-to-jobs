@@ -23,7 +23,6 @@ quick reference for staff.
 | Compa-ratio | Compensation Ratio | Actual salary divided by the midpoint of the pay range; 1.0 means paid at market midpoint |
 | Competitive Service | Federal Competitive Service | Federal positions filled through open competition under OPM rules; most federal jobs fall here |
 | CNA | Certified Nursing Assistant | Entry-level healthcare credential; high demand nationwide |
-| CODL | Consolidated Omnibus Directors | Veterans' employment staff who do employer outreach |
 | CTE | Career and Technical Education | Hands-on job training programs, often at high schools or career centers |
 | DOC | Department of Corrections | State agency managing prisons and probation/parole |
 | DOL | Department of Labor | Federal agency overseeing workforce programs |
@@ -52,11 +51,12 @@ quick reference for staff.
 | IWT | Incumbent Worker Training | WIOA funding to upskill existing employees (prevents layoffs) |
 | JAG | Jobs for America's Graduates |
 | KSA | Knowledge, Skills, and Abilities | Narrative statements required for many federal job applications describing specific qualifications | School-based career development program for at-risk youth |
-| JVSG | Jobs for Veterans State Grants | Federal funding for DVOP and CODL veteran employment staff |
+| JVSG | Jobs for Veterans State Grants | Federal funding for DVOP and LVER veteran employment staff |
 | LAUS | Local Area Unemployment Statistics | BLS program that tracks unemployment by county/metro area |
 | Locality Pay | Federal Locality Pay Adjustment | Geographic pay adjustment added to federal GS base salary (15–45% depending on location) |
 | LMI | Labor Market Information | Data about jobs, wages, industries, and employment trends |
 | LPN | Licensed Practical Nurse | Mid-level nursing credential; NEXT-tier job |
+| LVER | Local Veterans' Employment Representative | Veterans' employment staff who do employer outreach |
 | LWDA | Local Workforce Development Area | A geographic region that operates its own WIOA programs |
 | LWDB | Local Workforce Development Board | Governing board for a local workforce area |
 | MERIC | Missouri Economic Research and Information Center | Missouri's LMI agency |

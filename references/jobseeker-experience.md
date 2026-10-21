@@ -261,7 +261,7 @@ Best,
 **Use when:** "how much should I ask for" / "they offered me X" / "salary negotiation" / "is this a good offer"
 
 **Missouri wage context:**
-- Missouri minimum wage 2025: $13.75/hour (check current rate)
+- Missouri minimum wage 2026: $15.00/hour (no longer adjusted for inflation each year; check current rate)
 - Living wage estimate for St. Charles County single adult: approximately $18–22/hour
 - WIOA median earnings target (Adult program, Q2 after exit): tracked statewide
 

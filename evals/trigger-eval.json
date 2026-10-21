@@ -46,7 +46,7 @@
     "expected_module": "MODULE 0",
     "expected_populations": ["veteran"],
     "should_trigger": true,
-    "notes": "Should flag priority of service, DVOP/CODL, Show-Me Heroes, military skill translation"
+    "notes": "Should flag priority of service, DVOP/LVER, Show-Me Heroes, military skill translation"
   },
   {
     "prompt": "I'm 17 and I dropped out of school. Can I get help finding a job?",
