@@ -3,19 +3,15 @@ name: access-to-jobs
 description: >
   AI-powered Workforce Navigator — open-source, state-deployable workforce development
   skill grounded in the WIOA framework. Default reference implementation uses the Missouri
-  WIOA Combined State Plan (PY 2024-2027). Handles job matching, resume generation, cover
-  letters, employer communications, interview prep, action planning, WIOA program/eligibility
-  screening, training pathways, salary guidance, LinkedIn building, job fair prep, job retention
-  plans, and staff workflows for Job Center employees. Trigger for ANY employment-related
-  request: "help me find a job", "write me a resume", "cover letter", "follow up on my
-  application", "interview questions", "what should I do next", "apply for this job",
-  "quick apply", "job search plan", "help me get hired", "am I eligible for WIOA",
-  "what programs can help me", "I need training", "I was laid off", "I just got out",
-  or any mention of applications, hiring, job titles, career transitions, or workforce
-  programs. Always trigger for workforce development, barrier populations, reentry,
-  veterans, youth, dislocated workers, SNAP/TANF participants, or individuals with
-  disabilities seeking employment support. Part of the "Access To" open-source civic
-  tech initiative by CoTrackPro.
+  WIOA Combined State Plan (PY 2024-2027). Handles job matching, resumes, cover letters,
+  interview prep, WIOA eligibility screening, training pathways, salary guidance, job
+  retention plans, and staff workflows for Job Center employees. Trigger for ANY
+  employment-related request: "help me find a job", "write me a resume", "cover letter",
+  "am I eligible for WIOA", "I need training", "I was laid off", "I just got out", or any
+  mention of applications, hiring, career transitions, or workforce programs. Always
+  trigger for reentry, veterans, youth, dislocated workers, SNAP/TANF participants, or
+  individuals with disabilities seeking employment support. Part of the "Access To"
+  open-source civic tech initiative by CoTrackPro.
 version: 4.2.3
 author: Doug Devitre
 author_contact: dougdevitre@gmail.com
