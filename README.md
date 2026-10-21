@@ -307,7 +307,8 @@ access-to-jobs/
 └── scripts/                          AUTOMATION + DEPLOYMENT
     ├── deploy-state.sh               Scaffolds new state with TODO templates
     ├── validate-state.sh             Validates state deployment completeness
-    └── build-skill.sh                Packages repo into .skill for upload
+    ├── build-skill.sh                Packages repo into .skill (root-level files)
+    └── build-skill-zip.sh            Builds dist/access-to-jobs.zip for claude.ai upload
 ```
 
 **Legend:** ★ = Replace per state | ◐ = Light customization | ○ = Universal (no changes)
@@ -317,10 +318,21 @@ access-to-jobs/
 ## Installation
 
 ### Claude.ai (Skill Upload)
-1. Download the `.skill` file from [Releases](https://github.com/dougdevitre/access-to-jobs/releases)
-2. Go to Claude.ai → Settings → Skills
-3. Upload the `.skill` file
-4. Start chatting — the skill activates on any employment-related request
+
+Add Access to Jobs to Claude at [claude.ai](https://claude.ai) in a few clicks. It works on the Free, Pro, Max, Team and Enterprise plans.
+
+1. **Download the install file:** [access-to-jobs.zip](https://github.com/dougdevitre/access-to-jobs/releases/download/skill-latest/access-to-jobs.zip)
+2. **Don't unzip it.** Claude needs the `.zip` file just as it downloaded.
+3. **Turn on code execution.** Skills need it.
+   - **Free, Pro or Max:** open **Settings > Capabilities** and turn on **Code execution and file creation**.
+   - **Team or Enterprise:** an organization owner opens **Organization settings > Plugins & skills**, clicks the **Policy** tab, and turns on both **Code execution and file creation** and **Skills**.
+4. **Upload it:** open **Customize > Skills**, click **+**, then **+ Create skill**, then **Upload a skill**, and choose `access-to-jobs.zip`.
+5. **Turn it on:** in **Customize > Skills**, switch on **access-to-jobs**. Claude will now use it for any employment-related request.
+
+These steps come from Claude's help center: [Use Skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+If the link 404s, the first release hasn't been published yet.
+
+Maintainers and forks: `scripts/build-skill-zip.sh` builds the same file into `dist/`. The Skill package workflow republishes it on every change to `main`.
 
 ### Claude Code / MCP
 1. Clone: `git clone https://github.com/dougdevitre/access-to-jobs.git`
