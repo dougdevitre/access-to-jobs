@@ -105,7 +105,7 @@ flowchart LR
 | Veteran OJT | Show-Me Heroes | State-specific |
 | Healthcare training | HEALS Initiative | State-specific |
 | Scholarship program | Fast Track Scholarship | State-specific |
-| Credential fund | Credential Training Fund | State-specific |
+| Credential fund | Credential Training Program | State-specific |
 | Employer training | Missouri One Start | State-specific |
 | State workforce agency | OWD (Office of Workforce Development) | State workforce agency |
 | State LMI agency | MERIC | State LMI agency |

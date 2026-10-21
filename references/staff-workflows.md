@@ -104,7 +104,7 @@ Does that sound helpful?"
 Job seeker walks in
        ↓
 Veteran or military spouse?
-  YES → Priority queue → DVOP/CODL screen → Show-Me Heroes OJT if applicable
+  YES → Priority queue → DVOP/LVER screen → Show-Me Heroes OJT if applicable
   NO ↓
 Currently on UI?
   YES → RESEA awareness → Coursera license → Work search = Job Center counts
@@ -229,7 +229,7 @@ jobs.mo.gov
 - AEL program: no diploma, low literacy, English learners
 - DSS OWCI: SNAP/TANF participants needing SkillUP or employment services
 - OWD Reentry Specialist: justice-involved participants
-- DVOP/CODL: veterans with significant barriers
+- DVOP/LVER: veterans with significant barriers
 - Community Action Agency: housing, utilities, emergency support
 - Excel Center: adults 21+ needing high school diploma
 

@@ -172,8 +172,8 @@ Always verify current program availability at jobs.mo.gov/community/missouri-eli
 
 **How to access:**
 - Identify veteran status at intake (all veterans get priority of service)
-- Connect veteran to DVOP/CODL staff at St. Charles Job Center
-- DVOP/CODL coordinates Show-Me Heroes OJT with employer
+- Connect veteran to DVOP/LVER staff at St. Charles Job Center
+- DVOP/LVER coordinates Show-Me Heroes OJT with employer
 
 **Staff note:** Always screen for veteran status at intake — it unlocks Show-Me Heroes,
 DVOP intensive services, and priority queue placement.

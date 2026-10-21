@@ -101,12 +101,12 @@ or when explaining why they are a competitive hire.
 - 341,191 civilian veterans (7.1% of population — above national average)
 - 43.2% of MO veterans employed in civilian labor force
 - Veteran unemployment rate: 2.7% (below national average of 3.0%)
-- DVOP and CODL conduct outreach to probation/parole offices (veteran-specific reentry)
+- DVOP and LVER conduct outreach to probation/parole offices (veteran-specific reentry)
 
 **Priority of service:**
 - All veterans receive immediate priority at Missouri Job Centers
-- Qualified Eligible with Barrier (QEB) veterans receive intensive DVOP/CODL case management
-- DVOP staff provide individualized career services; CODL conduct employer outreach
+- Qualified Eligible with Barrier (QEB) veterans receive intensive DVOP/LVER case management
+- DVOP staff provide individualized career services; LVER conduct employer outreach
 
 **Resume guidance:**
 - Translate military job titles to civilian equivalents (MOS to civilian role)
@@ -115,7 +115,7 @@ or when explaining why they are a competitive hire.
 
 **Output adjustments:**
 - Flag priority of service at Job Center in every action plan
-- Include DVOP/CODL referral in Module 0 routing
+- Include DVOP/LVER referral in Module 0 routing
 - Mention GI Bill interaction with WIOA services (recommend checking with Job Center)
 
 ---
@@ -236,14 +236,14 @@ or when explaining why they are a competitive hire.
 **Programs:**
 - MPWS wraparound services coordination
 - Job Centers: computer, phone, fax access available
-- DVOP/CODL conduct itinerant services at homeless shelters and service locations
-- Veterans: DVOP/CODL provide services at shelters; screened for eligibility by non-JVSG staff
+- DVOP/LVER conduct itinerant services at homeless shelters and service locations
+- Veterans: DVOP/LVER provide services at shelters; screened for eligibility by non-JVSG staff
 
 **Output adjustments:**
 - Include Job Center physical access (computers, phone) in action plans
 - Keep action plan steps realistic for unstable housing situations
 - Flag housing-stabilization services as a prerequisite step if user raises housing as a barrier
-- For veterans experiencing homelessness: flag DVOP/CODL outreach specifically
+- For veterans experiencing homelessness: flag DVOP/LVER outreach specifically
 
 ---
 
