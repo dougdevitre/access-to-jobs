@@ -75,6 +75,11 @@ jobs:
           chmod +x scripts/lint-frontmatter.py
           python3 scripts/lint-frontmatter.py
 
+      - name: Check SKILL.md frontmatter meets the claude.ai upload rules
+        run: |
+          python3 -c 'import yaml' 2>/dev/null || python3 -m pip install --quiet pyyaml
+          python3 .github/scripts/check-skill-frontmatter.py SKILL.md access-to-jobs
+
       - name: Check in-app disclaimer on published pages
         run: python3 scripts/lint-disclaimer.py
 
