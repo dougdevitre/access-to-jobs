@@ -35,7 +35,7 @@ flowchart TD
 - WIOA case managers (Adult, Dislocated Worker, Youth programs)
 - Business services / employer engagement staff
 - SNAP E&T (SkillUP) navigators
-- DVOP and CODL veteran employment specialists
+- DVOP and LVER veteran employment specialists
 - Reentry specialists
 - AEL instructors who also do job placement
 - Supervisors who want to improve team productivity

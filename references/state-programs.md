@@ -101,7 +101,7 @@ flowchart TD
 - **Youth:** TANF funds subsidized employment for youth ages 14–24 at ≤185% poverty level
 
 ### Jobs for Veterans State Grants (JVSG)
-- **Staff:** Disabled Veterans' Outreach Program (DVOP) and Consolidated Omnibus Directors (CODL)
+- **Staff:** Disabled Veterans' Outreach Program (DVOP) specialists, Local Veterans' Employment Representatives (LVER), and consolidated DVOP/LVER positions
 - **Priority:** Veterans with significant barriers to employment (Qualified Eligible with Barrier — QEB)
 - **Services:** Intensive case management, individualized career services
 - **Priority of Service:** ALL veterans receive priority service at Missouri Job Centers

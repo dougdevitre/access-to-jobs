@@ -403,7 +403,7 @@ through the traditional competitive hiring process.
 - Provide or assist in obtaining a Schedule A letter
 - Help prepare federal resumes tailored to Schedule A applications
 - Connect individuals with federal agency SPPCs
-- Coordinate with DVOP/CODL for veterans with disabilities
+- Coordinate with DVOP/LVER for veterans with disabilities
 
 ---
 
