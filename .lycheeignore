@@ -29,8 +29,3 @@
 # Old org's releases page (404). dougdevitre/access-to-jobs has no releases
 # yet, so there is no page with the .skill download to point to.
 ^https://github\.com/cotrackpro/access-to-jobs/releases$
-
-# The install file is published by .github/workflows/skill-package.yml when this
-# change reaches main, so it 404s until the first skill-latest release exists.
-# TEMPORARY: remove this line once the release is published.
-^https://github\.com/dougdevitre/access-to-jobs/releases/download/skill-latest/
