@@ -1,5 +1,7 @@
 # Compiled skill packages
 *.skill
+# claude.ai install zip, built by scripts/build-skill-zip.sh
+dist/
 
 # OS files
 .DS_Store
