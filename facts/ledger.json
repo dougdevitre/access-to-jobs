@@ -1,0 +1,101 @@
+{
+  "$comment": "Fact ledger: every phone number, dollar figure, deadline and program-status claim this skill makes, with the primary source it was checked against. scripts/check-facts.mjs fails CI when a fact is past its recheck date (verified_on + recheck_days, or the explicit recheck_on), when a listed file is missing, or when the value (or each string in match) no longer appears in its files. Recheck intervals: phone numbers 180 days; dollar figures and program status 90; annual-cycle figures use recheck_on with the next cycle's date. To update a fact, re-verify it on the source, set verified_on to that day and, if the wording changed, update value/match. Never add a fact you have not verified yourself, and never back-date verified_on.",
+  "recheck_days_default": 90,
+  "facts": [
+    {
+      "id": "usajobs-resume-page-limit",
+      "claim": "USAJOBS accepts federal resumes of no more than two pages and will not let you upload or build a longer one",
+      "value": "limited to 2 pages on USAJOBS",
+      "source": "https://help.usajobs.gov/faq/application/documents/resume/page-limit",
+      "verified_on": "2026-10-23",
+      "recheck_days": 90,
+      "files": ["references/public-service-hiring.md"]
+    },
+    {
+      "id": "wotc-lapsed",
+      "claim": "The Work Opportunity Tax Credit lapsed: no credit for wages paid to workers who begin work after December 31, 2025, and no extension enacted as of the verified date",
+      "value": "WOTC expired for workers who begin work after December 31, 2025",
+      "match": ["expired for workers who begin work after December 31, 2025", "expired after 12/31/2025"],
+      "source": "https://www.everycrsreport.com/files/2026-05-13_R43729_ab1bd03cea785873d6fc358b07e7fde0d2d5254c.html",
+      "verified_on": "2026-10-23",
+      "recheck_days": 90,
+      "files": [
+        "assets/glossary.md",
+        "assets/module-map.md",
+        "references/barrier-populations.md",
+        "references/hr-manager-toolkit.md",
+        "references/jobseeker-experience.md",
+        "references/staff-workflows.md",
+        "references/state-programs.md",
+        "states/missouri/references/state-programs.md"
+      ]
+    },
+    {
+      "id": "taa-no-new-petitions",
+      "claim": "Trade Adjustment Assistance has accepted no new petitions since the termination provision took effect on July 1, 2022; only workers certified and separated by June 30, 2022 may still qualify",
+      "value": "no new petitions since July 1, 2022",
+      "source": "https://www.dol.gov/agencies/eta/tradeact",
+      "verified_on": "2026-10-23",
+      "recheck_days": 90,
+      "files": [
+        "references/local-area.md",
+        "references/state-programs.md",
+        "states/missouri/references/local-area.md",
+        "states/missouri/references/state-programs.md"
+      ]
+    },
+    {
+      "id": "dol-us2jobs-help-line",
+      "claim": "U.S. Department of Labor / CareerOneStop toll-free help line for jobs, training and American Job Centers: 1-877-US2-JOBS",
+      "value": "1-877-872-5627",
+      "source": "https://www.careeronestop.org/Site/contact-us.aspx",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": [
+        "SKILL.md",
+        "references/local-area.md",
+        "references/state-labor-market.md",
+        "references/state-programs.md",
+        "references/state-training-pathways.md"
+      ]
+    },
+    {
+      "id": "dol-us2jobs-tty",
+      "claim": "TTY line for the US2-JOBS help line",
+      "value": "1-877-889-5627",
+      "source": "https://www.careeronestop.org/Site/contact-us.aspx",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["SKILL.md"]
+    },
+    {
+      "id": "988-spanish-options",
+      "claim": "988 Suicide & Crisis Lifeline in Spanish: call 988 and press 2, or text AYUDA to 988",
+      "value": "call 988 and press 2, or text AYUDA to 988",
+      "match": ["press 2", "AYUDA to 988"],
+      "source": "https://988lifeline.org/get-help/",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["SKILL.md"]
+    },
+    {
+      "id": "crisis-text-line",
+      "claim": "Crisis Text Line: text HOME to 741741 (English) or HOLA to 741741 (Spanish)",
+      "value": "HOME to 741741",
+      "match": ["HOME to 741741", "HOLA to 741741"],
+      "source": "https://www.crisistextline.org/blog/2021/10/15/hola-crisis-text-line-is-now-available-in-spanish/",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["SKILL.md"]
+    },
+    {
+      "id": "mo-minimum-wage-2026",
+      "claim": "Missouri minimum wage is $15.00 per hour from January 1, 2026, and HB 567 (2025) ended the annual CPI adjustment",
+      "value": "$15.00/hour",
+      "source": "https://labor.mo.gov/news/press-releases/minimum-wage-increases-1500-hour-2026",
+      "verified_on": "2026-10-23",
+      "recheck_on": "2027-01-01",
+      "files": ["references/jobseeker-experience.md"]
+    }
+  ]
+}
