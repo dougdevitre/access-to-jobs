@@ -7,7 +7,7 @@
   {
     "prompt": "Write me a federal resume for a GS-9 Program Analyst position at USDA",
     "expected_module": "MODULE 20",
-    "notes": "Should trigger Module 20 federal resume format (4-6 pages, narrative style) — NOT the standard 1-page ATS resume from Module 2. Must include citizenship, veteran preference, hours/week, supervisor info for each position."
+    "notes": "Should trigger Module 20 federal resume format (2-page USAJOBS limit, required details kept, long narrative cut) — NOT the standard 1-page ATS resume from Module 2. Must include citizenship, veteran preference, hours/week, supervisor info for each position."
   },
   {
     "prompt": "What is a KSA statement and how do I write one?",
@@ -59,7 +59,7 @@
   {
     "prompt": "What WIOA programs can help my business hire and train workers?",
     "expected_module": "MODULE 21",
-    "notes": "Should explain OJT, IWT, WOTC, Federal Bonding, Apprenticeship, and Show-Me Heroes. Should include dollar amounts and direct employer to local Job Center Business Services Representative."
+    "notes": "Should explain OJT, IWT, Federal Bonding, Apprenticeship, and Show-Me Heroes, and note that WOTC expired for workers who begin work after 12/31/2025 (check irs.gov for renewal). Should include dollar amounts and direct employer to local Job Center Business Services Representative."
   },
   {
     "prompt": "My participant wants to apply for a state government job. How is that different?",

@@ -331,24 +331,17 @@ Hours per week: [40 / Part-time: specify]
 Salary: [$XX,XXX per year / $XX.XX per hour]
 Supervisor: [Name, Phone] — May contact: [Yes / No]
 
-[Paragraph 1: Primary duties and scope of responsibility. Include program
-names, regulatory frameworks, and systems used. Describe the complexity
-and scope of assignments.]
+[1–2 sentences: Primary duties and scope of responsibility, using the
+announcement's language. Include program names or systems if relevant.]
 
-[Paragraph 2: Key accomplishments with quantified results. "Managed a
-$2.5M annual budget for workforce development programs serving 3,500
-participants across 12 counties. Increased program enrollment by 18%
-through targeted community outreach and partner agency coordination."]
-
-[Paragraph 3: Additional duties, special projects, or cross-functional
-work. Include any supervisory responsibility with number of staff.]
-
+• [Key accomplishment with measurable result, e.g. "Managed a $2.5M
+  annual budget for programs serving 3,500 participants in 12 counties."]
 • [Key accomplishment with measurable result]
-• [Key accomplishment with measurable result]
-• [Key accomplishment with measurable result]
+• [Supervisory responsibility, if any, with number of staff]
 
-[Repeat for each position — include ALL relevant positions.
-Federal resumes should be 4–6 pages. Do NOT condense.]
+[Repeat for each relevant position. Federal resumes are limited to 2 pages
+on USAJOBS. Keep the required details (hours per week, start and end dates,
+grade/series if federal) and cut long narrative.]
 
 ─────────────────────────────────────────────────
 EDUCATION

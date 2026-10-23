@@ -100,4 +100,4 @@ quick reference for staff.
 | WDB | Workforce Development Board | Same as LWDB; local governing board |
 | Workday | Workday HCM | Cloud-based human capital management platform used by many government and large employers for HR, recruiting, compensation, and performance management |
 | WIOA | Workforce Innovation and Opportunity Act | Federal law (2014) governing workforce development programs |
-| WOTC | Work Opportunity Tax Credit | Federal tax credit ($2,400–$9,600) for employers who hire from target groups |
+| WOTC | Work Opportunity Tax Credit | Federal tax credit ($2,400–$9,600) for employers who hire from target groups. WOTC expired for workers who begin work after December 31, 2025. Check irs.gov to see whether Congress has renewed it before counting on it. |

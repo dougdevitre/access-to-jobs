@@ -212,7 +212,9 @@ I'd like to share three specific ways we can help [Company]:
 1. Pre-screened candidates matched to your open positions
 2. On-the-Job Training (OJT) — we reimburse up to [50-90%] of wages
    during the training period
-3. Tax credits (WOTC) worth $2,400–$9,600 per eligible hire
+3. Federal Bonding — free fidelity bonds for eligible new hires
+   [Mention WOTC only if irs.gov shows Congress has renewed it; it expired
+   for workers who begin work after December 31, 2025.]
 
 Could we schedule a 20-minute conversation to see if there's a fit?
 I'm happy to come to you.

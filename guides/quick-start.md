@@ -72,7 +72,7 @@ Government applications are different from private sector. Tell the assistant:
 | Say this | The assistant will help with |
 |---|---|
 | "I want a government job" | Federal, state, and local application guidance |
-| "Write me a federal resume" | 4–6 page government format resume |
+| "Write me a federal resume" | Government-format resume within the 2-page USAJOBS limit |
 | "Help me write a KSA statement" | Knowledge, Skills, Abilities narrative |
 | "How do civil service exams work?" | Test preparation and what to expect |
 | "I'm a veteran — how do I get preference?" | Veteran preference points and special authorities |
