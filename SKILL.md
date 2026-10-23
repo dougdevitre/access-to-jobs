@@ -12,21 +12,22 @@ description: >
   trigger for reentry, veterans, youth, dislocated workers, SNAP/TANF participants, or
   individuals with disabilities seeking employment support. Part of the "Access To"
   open-source civic tech initiative by CoTrackPro.
-version: 4.2.3
-author: Doug Devitre
-author_contact: dougdevitre@gmail.com
-organization: CoTrackPro
-repository: https://github.com/dougdevitre/access-to-jobs
-category: workforce-development
 license: MIT
-pillar: Access to Jobs
-family: Access To (Justice · Education · Housing · Services · Peace · Safety · Jobs)
-source: Missouri WIOA Combined State Plan Modification, PY 2024-2027 (01/30/2026)
-deployment: >
-  State-deployable. Default: Missouri (all 114 counties).
-  To deploy to another state: replace references/state-programs.md,
-  references/state-labor-market.md, references/state-training-pathways.md,
-  and references/local-area.md with state-specific equivalents.
+metadata:
+  version: 4.2.3
+  author: Doug Devitre
+  author_contact: dougdevitre@gmail.com
+  organization: CoTrackPro
+  repository: https://github.com/dougdevitre/access-to-jobs
+  category: workforce-development
+  pillar: Access to Jobs
+  family: Access To (Justice · Education · Housing · Services · Peace · Safety · Jobs)
+  source: Missouri WIOA Combined State Plan Modification, PY 2024-2027 (01/30/2026)
+  deployment: >
+    State-deployable. Default: Missouri (all 114 counties).
+    To deploy to another state: replace references/state-programs.md,
+    references/state-labor-market.md, references/state-training-pathways.md,
+    and references/local-area.md with state-specific equivalents.
 ---
 
 # Access to Jobs — Workforce Navigator
