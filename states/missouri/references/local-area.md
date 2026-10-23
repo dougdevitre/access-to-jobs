@@ -135,7 +135,7 @@ Always verify current program availability at jobs.mo.gov/community/missouri-eli
 3. Meeting includes: DES (UI information), MJC representative (programs), union rep (if applicable)
 4. Handouts: Rapid Response brochure, DES UI fact sheet, MERIC Regional Real Time Labor Market Summary
 5. Trade Act Navigator notified if trade-related layoff suspected
-6. Workers informed of TAA petition filing (without promising certification)
+6. Workers told that TAA has taken no new petitions since July 1, 2022 (only workers certified earlier may still qualify)
 7. Referrals to Job Center initiated immediately
 
 **For layoffs of 24 or fewer:**

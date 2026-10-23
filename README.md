@@ -76,7 +76,7 @@ Access to Jobs is a Claude AI skill that provides a comprehensive workforce navi
 
 | Capability | What It Produces |
 |---|---|
-| Government job applications | Federal resume (4–6 pages), KSA/CCAR narratives, civil service exam prep, veteran preference guidance, Schedule A disability hiring |
+| Government job applications | Federal resume (2-page USAJOBS limit), KSA/CCAR narratives, civil service exam prep, veteran preference guidance, Schedule A disability hiring |
 | Total compensation calculator | Side-by-side comparison of salary + health insurance + retirement + PTO + all benefits across up to 3 offers |
 | Job description writing | 13-section inclusive job descriptions with EEO statement, KSAs, and ADA-compliant physical requirements |
 | Structured interview building | Competency mapping, behavior-based questions, anchored 1–5 scoring rubrics, panel role assignments |

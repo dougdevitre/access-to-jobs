@@ -83,9 +83,9 @@ Missouri WIOA Plan designates the following as barrier populations receiving pri
 - PY 2025: OWD staff embedded inside facilities for pre-release job search services
 - Federal Bonding Program — provides fidelity bonds to high-risk job seekers at no cost
 
-**Employer coaching note:** WOTC (Work Opportunity Tax Credit) is available to employers
-who hire justice-involved individuals — mention this when helping user prepare to negotiate
-or when explaining why they are a competitive hire.
+**Employer coaching note:** WOTC expired for workers who begin work after December 31, 2025. Check irs.gov to see whether Congress has renewed it before counting on it. If irs.gov shows it has been renewed, it can apply to
+employers who hire justice-involved individuals. The Federal Bonding Program (above) is a
+current incentive to mention when explaining why they are a competitive hire.
 
 **Output adjustments:**
 - Tone: Empowering, forward-looking, skills-focused

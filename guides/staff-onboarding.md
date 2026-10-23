@@ -238,7 +238,7 @@ This skill also serves employers and HR professionals who need to improve their 
 ### When to Use Module 20 (with participants)
 
 If a participant wants to apply for a government job:
-- Use `/govresume` instead of `/resume` — government resumes are 4–6 pages, not 1 page
+- Use `/govresume` instead of `/resume` — government resumes need hours per week, month/year dates and grade/series, within the 2-page USAJOBS limit
 - Use `/ksa` to help write Knowledge, Skills, Abilities narratives
 - Use `/govapply` for the complete government application checklist
 - Always screen for veteran preference (5 or 10 points on government exams)
@@ -257,7 +257,7 @@ If a participant wants to apply for a government job:
 ║  /intake   → Triage a walk-in               ║
 ║  /eligible → Screen programs in real time    ║
 ║  /resume   → Build resume with participant   ║
-║  /govresume → Government resume (4-6 pages)  ║
+║  /govresume → Government resume (2-page max) ║
 ║                                              ║
 ║  AFTER APPOINTMENTS                          ║
 ║  /casenote → Write case notes in 30 sec      ║

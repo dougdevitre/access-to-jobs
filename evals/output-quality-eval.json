@@ -31,7 +31,7 @@
       "AWS welding certification listed prominently",
       "Flags Fair Chance employers",
       "Mentions Federal Bonding Program",
-      "Mentions WOTC as competitive advantage",
+      "If WOTC is mentioned, says it expired for workers who begin work after 12/31/2025 and to check irs.gov for renewal",
       "Routes to Reentry Connect / OWD Reentry Specialist",
       "Tone is empowering and forward-looking, not pitying"
     ]
@@ -56,7 +56,7 @@
       "Provides wage context with source (BLS, MERIC, or state data)",
       "Indicates whether $14 is below/at/above market for the role and area",
       "Includes negotiation framework (5-step process)",
-      "Mentions WOTC if applicable",
+      "Does NOT present WOTC as current without noting it expired after 12/31/2025 (check irs.gov)",
       "Does NOT guarantee a specific outcome",
       "Suggests getting offer in writing before accepting"
     ]

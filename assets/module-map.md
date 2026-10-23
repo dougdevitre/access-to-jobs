@@ -116,11 +116,11 @@
 
 | Population | Module 0 | Module 1 | Module 2 | Module 7 | Module 8 | Module 9 | Module 20 | Module 21 |
 |---|---|---|---|---|---|---|---|---|
-| Justice-involved | Reentry programs | Fair Chance employers | No conviction disclosure | Forward-looking answers | Federal Bonding flag | DOC vocational creds | Fair Chance Act; avoid positions with conduct bars | WOTC incentive for employer |
+| Justice-involved | Reentry programs | Fair Chance employers | No conviction disclosure | Forward-looking answers | Federal Bonding flag | DOC vocational creds | Fair Chance Act; avoid positions with conduct bars | WOTC only if renewed (expired after 12/31/2025; check irs.gov) |
 | Veterans | Priority of service | Military skill translation | MOS → civilian titles | Leadership examples | DVOP referral | GI Bill stacking | 5/10-pt preference; VEOA/VRA authorities | Show-Me Heroes; OJT subsidy |
 | Youth 14–24 | Youth programs | NOW-tier focus | Entry-level format | Behavioral focus | Smaller daily actions | Subsidized employment | Pathways Program; state internships | TANF subsidized placement |
 | Disability | MVR/RSB referral | Customized employment | Accommodations note | ADA awareness | Benefits counseling | VR training funding | Schedule A hiring; SPPC contact | ADA accommodation in hiring |
-| SNAP/TANF | SkillUP/MWA | Any demand role | Standard | Standard | DSS LISTSERV | SkillUP training | Stable gov benefits ease transition | WOTC-eligible candidates |
+| SNAP/TANF | SkillUP/MWA | Any demand role | Standard | Standard | DSS LISTSERV | SkillUP training | Stable gov benefits ease transition | WOTC only if renewed (expired after 12/31/2025; check irs.gov) |
 | No diploma | AEL/Excel Center | NOW-tier only | Education → Skills lead | Transferable skills | GED as Day 1 action | IET model | Limited below GS-2; credential first | Entry-level trades/maintenance |
 | English learner | AEL ELL | Plain language roles | Simplified format | Practice answers | Plain language steps | IET concurrent | Bilingual positions in demand | Language premium pay |
 | Homeless | Wraparound services | Flexible schedule roles | Job Center address OK | Realistic prep | Job Center access | Short-term certs | Standard gov application process | Standard |

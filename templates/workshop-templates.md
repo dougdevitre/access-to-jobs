@@ -259,8 +259,9 @@ very differently."
 **WIOA Programs (1:15):**
 "Before you leave, I want you to know about free programs that can reduce
 your hiring costs. On-the-Job Training reimburses up to 90% of a new hire's
-wages during training. The Work Opportunity Tax Credit gives you $2,400 to
-$9,600 per eligible hire. And the Federal Bonding Program provides free
+wages during training. The Work Opportunity Tax Credit expired for workers who
+begin work after December 31, 2025, so check irs.gov to see whether Congress has
+renewed it before counting on it. And the Federal Bonding Program provides free
 fidelity bonds for candidates with criminal backgrounds. Your local Job
 Center Business Services Rep can set all of this up for you."
 
