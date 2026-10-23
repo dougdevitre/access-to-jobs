@@ -97,6 +97,15 @@ jobs:
       - name: Check the skill package is up to date
         run: python3 scripts/build-skill.py --check
 
+      # facts/ledger.json: every phone number, dollar figure, deadline and
+      # program-status claim, with its primary source and verified date. Fails
+      # when a fact is past its recheck date, a listed file is missing, or the
+      # text no longer carries the ledger's value.
+      - name: Check the fact ledger
+        run: |
+          node --test scripts/test/check-facts.test.mjs
+          node scripts/check-facts.mjs
+
       - name: Check required files exist
         run: |
           echo "--- Checking required repo files ---"
